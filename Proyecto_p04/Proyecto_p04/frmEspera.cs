@@ -16,5 +16,21 @@ namespace Proyecto_p04
         {
             InitializeComponent();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (progressBar1.Value == 100) 
+            {
+                timer1.Enabled = false;
+                this.Hide();
+                frmLogin login = new frmLogin();
+                login.Show();
+            }
+
+            if (progressBar1.Value <= 90)
+            {
+                progressBar1.Value = progressBar1.Value + 10;
+            }
+        }
     }
 }
