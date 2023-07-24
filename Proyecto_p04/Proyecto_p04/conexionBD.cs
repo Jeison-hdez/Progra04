@@ -14,6 +14,7 @@ namespace Proyecto_p04
             SqlConnection cmd = new SqlConnection("SERVER=DESKTOP-MPLP2PA\\SQLEXPRESS;DATABASE=planilla;Integrated security=true");
             cmd.Open();
             return cmd;
+
         }
     }
 }
