@@ -15,7 +15,6 @@ namespace Proyecto_p04
         public frmEspera()
         {
             InitializeComponent();
-
         }
     }
 }
