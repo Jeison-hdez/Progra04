@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Proyecto_p04
 {
-    public partial class frmLogin : Form
+    public partial class frmUsuarios : Form
     {
-        public frmLogin()
+        public frmUsuarios()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUser_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
