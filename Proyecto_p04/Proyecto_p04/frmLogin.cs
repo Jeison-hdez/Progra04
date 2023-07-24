@@ -15,6 +15,7 @@ namespace Proyecto_p04
         public frmLogin()
         {
             InitializeComponent();
+
         }
     }
 }
