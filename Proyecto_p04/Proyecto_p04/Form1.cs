@@ -16,5 +16,14 @@ namespace Proyecto_p04
         {
             InitializeComponent();
         }
+
+        private void Usuario_Click(object sender, EventArgs e)
+        {
+            AbrirCaja abrirCaja = new AbrirCaja();
+            abrirCaja.Show();
+
+
+
+        }
     }
 }
