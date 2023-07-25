@@ -46,26 +46,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbrirCaja.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AbrirCaja.Designer.cs">
-      <DependentUpon>AbrirCaja.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion.cs" />
+    <Compile Include="conexionBD.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEspera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEspera.Designer.cs">
+      <DependentUpon>frmEspera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentanilla01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentanilla01.Designer.cs">
+      <DependentUpon>frmVentanilla01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AbrirCaja.resx">
-      <DependentUpon>AbrirCaja.cs</DependentUpon>
+    <EmbeddedResource Include="frmEspera.resx">
+      <DependentUpon>frmEspera.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmVentanilla01.resx">
+      <DependentUpon>frmVentanilla01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
