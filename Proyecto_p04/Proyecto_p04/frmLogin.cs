@@ -17,14 +17,37 @@ namespace Proyecto_p04
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
-        private void txtUser_TextChanged(object sender, EventArgs e)
+        private void btnIngresar_Click(object sender, EventArgs e)
         {
+            if ((txtUsuario.Text != "USUARIO") && (txtPassword.Text != "CLAVE"))
+            {
+                Login(txtPassword.Text.Trim(), txtUsuario.Text.Trim());
+            }
+        }
 
+        public void Login(string pass, string usuario)
+        {
+            Clases.Usuarios login = new Clases.Usuarios();
+            login.Usuario = usuario;
+            login.Password = pass;
+            int resultado = Clases.UsuariosDAL.LoginUser(login);
+            if (resultado > 0)
+            {
+                this.Hide();
+                Globales.Usuario = login.Usuario;
+                Globales.Nivel = login.Nivel;
+                frmPrincipal frmP = new frmPrincipal();
+                frmP.Show();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o Password no válido!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

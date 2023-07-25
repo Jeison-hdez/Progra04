@@ -11,7 +11,7 @@ namespace Proyecto_p04
     {
         public static SqlConnection conectarBD()
         {
-            SqlConnection cmd = new SqlConnection("SERVER=LAPTOP-PORRRASC\\SQLEXPRESS;DATABASE=planilla;Integrated security=true");
+            SqlConnection cmd = new SqlConnection("SERVER=DESKTOP-MPLP2PA\\SQLEXPRESS;DATABASE=DB_proyecto04;Integrated security=true");
             cmd.Open();
             return cmd;
 
