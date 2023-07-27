@@ -16,5 +16,13 @@ namespace Proyecto_p04
         {
             InitializeComponent();
         }
+
+        private void btnRegistrarUsuario_Click(object sender, EventArgs e)
+        {
+            //Se redirecciona a el frm Usuario
+
+            frmUsuario frmUsuario = new frmUsuario();
+            frmUsuario.Show();
+        }
     }
 }

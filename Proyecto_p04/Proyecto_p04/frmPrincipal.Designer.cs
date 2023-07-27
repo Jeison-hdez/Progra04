@@ -31,11 +31,14 @@ namespace Proyecto_p04
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnRegistrarUsuario = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel1.Controls.Add(this.btnRegistrarUsuario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -50,6 +53,17 @@ namespace Proyecto_p04
             this.panel2.Size = new System.Drawing.Size(800, 386);
             this.panel2.TabIndex = 1;
             // 
+            // btnRegistrarUsuario
+            // 
+            this.btnRegistrarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarUsuario.Location = new System.Drawing.Point(698, 9);
+            this.btnRegistrarUsuario.Name = "btnRegistrarUsuario";
+            this.btnRegistrarUsuario.Size = new System.Drawing.Size(90, 46);
+            this.btnRegistrarUsuario.TabIndex = 0;
+            this.btnRegistrarUsuario.Text = "Registro Usuario";
+            this.btnRegistrarUsuario.UseVisualStyleBackColor = true;
+            this.btnRegistrarUsuario.Click += new System.EventHandler(this.btnRegistrarUsuario_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -61,6 +75,7 @@ namespace Proyecto_p04
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -69,5 +84,6 @@ namespace Proyecto_p04
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnRegistrarUsuario;
     }
 }
