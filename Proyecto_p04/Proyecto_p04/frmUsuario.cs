@@ -13,12 +13,14 @@ using System.Data.SqlClient;
 
 namespace Proyecto_p04
 {
+
     public partial class frmUsuario : Form
     {
         public frmUsuario()
         {
             InitializeComponent();
         }
+        //conexion a la BD
 
         private void frmUsuario_Load(object sender, EventArgs e)
         {
@@ -27,6 +29,7 @@ namespace Proyecto_p04
             dataGridView1.DataSource = LLenar_grid();
         }
 
+        //Llenar y conectar grid
         public DataTable LLenar_grid()
         {
             conexionBD.conectarBD();
