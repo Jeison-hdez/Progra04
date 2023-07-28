@@ -58,6 +58,7 @@ namespace Proyecto_p04
         private void button1_Click(object sender, EventArgs e)
         {
             //Es la instrucion para guardar la informacio de los clientes de la ventanilla
+
         }
     }
 }
