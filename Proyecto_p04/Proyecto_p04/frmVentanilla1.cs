@@ -60,5 +60,10 @@ namespace Proyecto_p04
             //Es la instrucion para guardar la informacio de los clientes de la ventanilla
 
         }
+
+        private void checkBox8_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
