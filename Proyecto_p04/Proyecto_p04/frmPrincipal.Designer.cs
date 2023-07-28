@@ -30,28 +30,28 @@ namespace Proyecto_p04
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnRegistrarUsuario = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnVentanilla1 = new System.Windows.Forms.Button();
+            this.btnVentanilla2 = new System.Windows.Forms.Button();
+            this.btnVentanilla3 = new System.Windows.Forms.Button();
+            this.btnVentanilla4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel1.Controls.Add(this.btnVentanilla4);
+            this.panel1.Controls.Add(this.btnVentanilla3);
+            this.panel1.Controls.Add(this.btnVentanilla2);
+            this.panel1.Controls.Add(this.btnVentanilla1);
             this.panel1.Controls.Add(this.btnRegistrarUsuario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 64);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 64);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 386);
-            this.panel2.TabIndex = 1;
             // 
             // btnRegistrarUsuario
             // 
@@ -63,6 +63,55 @@ namespace Proyecto_p04
             this.btnRegistrarUsuario.Text = "Registro Usuario";
             this.btnRegistrarUsuario.UseVisualStyleBackColor = true;
             this.btnRegistrarUsuario.Click += new System.EventHandler(this.btnRegistrarUsuario_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 64);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 386);
+            this.panel2.TabIndex = 1;
+            // 
+            // btnVentanilla1
+            // 
+            this.btnVentanilla1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentanilla1.Location = new System.Drawing.Point(12, 9);
+            this.btnVentanilla1.Name = "btnVentanilla1";
+            this.btnVentanilla1.Size = new System.Drawing.Size(90, 46);
+            this.btnVentanilla1.TabIndex = 1;
+            this.btnVentanilla1.Text = "Ventanilla 1";
+            this.btnVentanilla1.UseVisualStyleBackColor = true;
+            this.btnVentanilla1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnVentanilla2
+            // 
+            this.btnVentanilla2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentanilla2.Location = new System.Drawing.Point(108, 9);
+            this.btnVentanilla2.Name = "btnVentanilla2";
+            this.btnVentanilla2.Size = new System.Drawing.Size(90, 46);
+            this.btnVentanilla2.TabIndex = 2;
+            this.btnVentanilla2.Text = "Ventanilla 2";
+            this.btnVentanilla2.UseVisualStyleBackColor = true;
+            // 
+            // btnVentanilla3
+            // 
+            this.btnVentanilla3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentanilla3.Location = new System.Drawing.Point(204, 9);
+            this.btnVentanilla3.Name = "btnVentanilla3";
+            this.btnVentanilla3.Size = new System.Drawing.Size(90, 46);
+            this.btnVentanilla3.TabIndex = 3;
+            this.btnVentanilla3.Text = "Ventanilla 3";
+            this.btnVentanilla3.UseVisualStyleBackColor = true;
+            // 
+            // btnVentanilla4
+            // 
+            this.btnVentanilla4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentanilla4.Location = new System.Drawing.Point(300, 9);
+            this.btnVentanilla4.Name = "btnVentanilla4";
+            this.btnVentanilla4.Size = new System.Drawing.Size(90, 46);
+            this.btnVentanilla4.TabIndex = 4;
+            this.btnVentanilla4.Text = "Ventanilla 4";
+            this.btnVentanilla4.UseVisualStyleBackColor = true;
             // 
             // frmPrincipal
             // 
@@ -85,5 +134,9 @@ namespace Proyecto_p04
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnRegistrarUsuario;
+        private System.Windows.Forms.Button btnVentanilla4;
+        private System.Windows.Forms.Button btnVentanilla3;
+        private System.Windows.Forms.Button btnVentanilla2;
+        private System.Windows.Forms.Button btnVentanilla1;
     }
 }

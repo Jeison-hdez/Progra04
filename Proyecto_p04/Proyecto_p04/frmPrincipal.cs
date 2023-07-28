@@ -24,5 +24,12 @@ namespace Proyecto_p04
             frmUsuario frmUsuario = new frmUsuario();
             frmUsuario.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Se redirecciona a el frm ventanilla 1
+            frmVentanilla1 frmVentanilla = new frmVentanilla1();
+            frmVentanilla.Show();
+        }
     }
 }
