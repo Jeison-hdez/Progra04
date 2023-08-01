@@ -28,8 +28,21 @@ namespace Proyecto_p04
         private void button1_Click(object sender, EventArgs e)
         {
             //Se redirecciona a el frm ventanilla 1
-            frmVentanilla1 frmVentanilla = new frmVentanilla1();
-            frmVentanilla.Show();
+            frmVentanilla1 frmVentanilla1 = new frmVentanilla1();
+            frmVentanilla1.Show();
+        }
+
+        private void btnVentanilla2_Click(object sender, EventArgs e)
+        {
+            //Se redirecciona a el frm ventanilla 2
+            frmVentanilla2 frmVentanilla2 = new frmVentanilla2();
+            frmVentanilla2.Show();
+        }
+
+        private void btnVentanilla3_Click(object sender, EventArgs e)
+        {
+            //Se redirecciona a el frm ventanilla 
+            
         }
     }
 }
