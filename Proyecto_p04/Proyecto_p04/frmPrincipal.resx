@@ -117,4 +117,39 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pbCerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnCAEDNQIBILD9AAAAsklEQVQ4T6WT7Q3CMAxEO0s2QELs
+        P0P5T1kAwQbhXWqDaWNVCk9yZfnOTr881VoLcSXuxHk6QB7zqqeooMR5EukQaeZxZhWXNf/QHaKaaZFb
+        JvwMUW61yNdDciIeqgZexIVItdbsUMhOyU/egtA7LbI/eQuGbMhxs8A0PgDD+CMgjL9ECumnIlLNm//7
+        kbhoMSL7WwTVTIssEuY1b3SbHWnmcdoyaZ01REuVNjvymJeeWt59q5VA/w8ITgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="pbMaximizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnCAEDNTopIghjAAAAZUlEQVQ4T+2TwQ2AMAwDO0lZhQdC
+        rEzhAVvBy/VJDJACz1o6KYpiv+IkaTC7uU1U3G4mE4D5MIuZgnB7mkIAaXNqFB68DGh89mHhwdgDegDG
+        XwK+vPLFQKsoxusyUediWuu8SsoVcGeUOV95uEYAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="pbMinimizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnCAEDNSI6TpA1AAAAQUlEQVQ4T2MYBYMB/P//XxCInYHY
+        hUQM0iMIMuAaEJMLroIMuAphkwWugAwQAGInIMbmTHwYpEcAGhKjYAABAwMAv9rmJSDZs0sAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="pbRestaurar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnCAEEAgqas45+AAAAiElEQVQ4T5WQXQrAIAyDPddw75Pd
+        /wJu93CxFMXMv34QWLqkUB2TUrqhF1rxQEFrFf1xqB2CjIei2gqGST+XdLPmBVC5uQw3kSzU3CzDTSTL
+        BfYzJMsF9jMkywX2MyTLBfYzJMsF2PyoXu0QZE4o9hYEKC9ZEaHrt8CMZUE3i5ntZgZD280Nzn34myr+
+        PxLL8QAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

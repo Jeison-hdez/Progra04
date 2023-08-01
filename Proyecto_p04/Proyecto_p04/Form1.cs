@@ -19,8 +19,8 @@ namespace Proyecto_p04
 
         private void Usuario_Click(object sender, EventArgs e)
         {
-            AbrirCaja abrirCaja = new AbrirCaja();
-            abrirCaja.Show();
+            //AbrirCaja abrirCaja = new AbrirCaja();
+            //abrirCaja.Show();
 
 
 

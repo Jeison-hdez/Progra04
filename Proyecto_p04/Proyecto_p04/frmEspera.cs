@@ -23,8 +23,10 @@ namespace Proyecto_p04
             {
                 timer1.Enabled = false;
                 this.Hide();
-                frmLogin login = new frmLogin();
-                login.Show();
+                //frmLogin login = new frmLogin();
+                //login.Show();
+                frmPrincipal prin = new frmPrincipal();
+                prin.Show();
             }
 
             if (progressBar1.Value <= 90)

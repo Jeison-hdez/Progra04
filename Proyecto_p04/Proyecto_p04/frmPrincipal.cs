@@ -17,19 +17,34 @@ namespace Proyecto_p04
             InitializeComponent();
         }
 
-        private void btnRegistrarUsuario_Click(object sender, EventArgs e)
+        private void pbCerrar_Click(object sender, EventArgs e)
         {
-            //Se redirecciona a el frm Usuario
-
-            frmUsuario frmUsuario = new frmUsuario();
-            frmUsuario.Show();
+            Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pbMaximizar_Click(object sender, EventArgs e)
         {
-            //Se redirecciona a el frm ventanilla 1
-            frmVentanilla1 frmVentanilla = new frmVentanilla1();
-            frmVentanilla.Show();
+            this.WindowState = FormWindowState.Maximized;
+            pbMaximizar.Visible = false;
+            pbRestaurar.Visible = true;
+        }
+
+        private void pbRestaurar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            pbMaximizar.Visible = true;
+            pbRestaurar.Visible = false;
+        }
+
+        private void pbMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnVentanilla1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
