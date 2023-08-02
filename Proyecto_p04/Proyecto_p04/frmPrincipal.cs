@@ -17,40 +17,34 @@ namespace Proyecto_p04
             InitializeComponent();
         }
 
-        private void btnRegistrarUsuario_Click(object sender, EventArgs e)
+        private void pbCerrar_Click(object sender, EventArgs e)
         {
-            //Se redirecciona a el frm Usuario
-
-            frmUsuario frmUsuario = new frmUsuario();
-            frmUsuario.Show();
+            Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pbMaximizar_Click(object sender, EventArgs e)
         {
-            //Se redirecciona a el frm ventanilla 1
-            frmVentanilla1 frmVentanilla1 = new frmVentanilla1();
-            frmVentanilla1.Show();
+            this.WindowState = FormWindowState.Maximized;
+            pbMaximizar.Visible = false;
+            pbRestaurar.Visible = true;
         }
 
-        private void btnVentanilla2_Click(object sender, EventArgs e)
+        private void pbRestaurar_Click(object sender, EventArgs e)
         {
-            //Se redirecciona a el frm ventanilla 2
-            frmVentanilla2 frmVentanilla2 = new frmVentanilla2();
-            frmVentanilla2.Show();
+            this.WindowState = FormWindowState.Normal;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            pbMaximizar.Visible = true;
+            pbRestaurar.Visible = false;
         }
 
-        private void btnVentanilla3_Click(object sender, EventArgs e)
+        private void pbMinimizar_Click(object sender, EventArgs e)
         {
-            //Se redirecciona a el frm ventanilla 3
-            frmVentanilla3 frmVentanilla3 = new frmVentanilla3();
-            frmVentanilla3.Show();
+            this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnVentanilla4_Click(object sender, EventArgs e)
+        private void btnVentanilla1_Click(object sender, EventArgs e)
         {
-            //Se redirecciona a el frm ventanilla 4
-            frmVentanilla4 frmVentanilla4 = new frmVentanilla4();
-            frmVentanilla4.Show();
+
         }
     }
 }
