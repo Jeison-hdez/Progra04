@@ -31,20 +31,26 @@ namespace Proyecto_p04
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.pnlTitutlo = new System.Windows.Forms.Panel();
-            this.pnlMenu = new System.Windows.Forms.Panel();
-            this.pnlContainer = new System.Windows.Forms.Panel();
-            this.pbCerrar = new System.Windows.Forms.PictureBox();
-            this.pbMaximizar = new System.Windows.Forms.PictureBox();
-            this.pbMinimizar = new System.Windows.Forms.PictureBox();
             this.pbRestaurar = new System.Windows.Forms.PictureBox();
-            this.btnVentanilla1 = new System.Windows.Forms.Button();
+            this.pbMinimizar = new System.Windows.Forms.PictureBox();
+            this.pbMaximizar = new System.Windows.Forms.PictureBox();
+            this.pbCerrar = new System.Windows.Forms.PictureBox();
+            this.pnlMenu = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVentanilla1 = new System.Windows.Forms.Button();
+            this.pnlContainer = new System.Windows.Forms.Panel();
+            this.btnVentanilla4 = new System.Windows.Forms.Button();
+            this.btnVentanilla3 = new System.Windows.Forms.Button();
+            this.btnVentanilla2 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pnlTitutlo.SuspendLayout();
-            this.pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMaximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRestaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMaximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
+            this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTitutlo
@@ -60,35 +66,27 @@ namespace Proyecto_p04
             this.pnlTitutlo.Size = new System.Drawing.Size(1300, 66);
             this.pnlTitutlo.TabIndex = 0;
             // 
-            // pnlMenu
+            // pbRestaurar
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(153)))), ((int)(((byte)(165)))));
-            this.pnlMenu.Controls.Add(this.panel1);
-            this.pnlMenu.Controls.Add(this.btnVentanilla1);
-            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlMenu.Location = new System.Drawing.Point(0, 66);
-            this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(237, 584);
-            this.pnlMenu.TabIndex = 1;
+            this.pbRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("pbRestaurar.Image")));
+            this.pbRestaurar.Location = new System.Drawing.Point(1246, 12);
+            this.pbRestaurar.Name = "pbRestaurar";
+            this.pbRestaurar.Size = new System.Drawing.Size(18, 19);
+            this.pbRestaurar.TabIndex = 3;
+            this.pbRestaurar.TabStop = false;
+            this.pbRestaurar.Click += new System.EventHandler(this.pbRestaurar_Click);
             // 
-            // pnlContainer
+            // pbMinimizar
             // 
-            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(237, 66);
-            this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(1063, 584);
-            this.pnlContainer.TabIndex = 2;
-            // 
-            // pbCerrar
-            // 
-            this.pbCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbCerrar.Image")));
-            this.pbCerrar.Location = new System.Drawing.Point(1270, 12);
-            this.pbCerrar.Name = "pbCerrar";
-            this.pbCerrar.Size = new System.Drawing.Size(18, 19);
-            this.pbCerrar.TabIndex = 0;
-            this.pbCerrar.TabStop = false;
-            this.pbCerrar.Click += new System.EventHandler(this.pbCerrar_Click);
+            this.pbMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pbMinimizar.Image")));
+            this.pbMinimizar.Location = new System.Drawing.Point(1222, 12);
+            this.pbMinimizar.Name = "pbMinimizar";
+            this.pbMinimizar.Size = new System.Drawing.Size(18, 19);
+            this.pbMinimizar.TabIndex = 2;
+            this.pbMinimizar.TabStop = false;
+            this.pbMinimizar.Click += new System.EventHandler(this.pbMinimizar_Click);
             // 
             // pbMaximizar
             // 
@@ -102,27 +100,41 @@ namespace Proyecto_p04
             this.pbMaximizar.Visible = false;
             this.pbMaximizar.Click += new System.EventHandler(this.pbMaximizar_Click);
             // 
-            // pbMinimizar
+            // pbCerrar
             // 
-            this.pbMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pbMinimizar.Image")));
-            this.pbMinimizar.Location = new System.Drawing.Point(1222, 12);
-            this.pbMinimizar.Name = "pbMinimizar";
-            this.pbMinimizar.Size = new System.Drawing.Size(18, 19);
-            this.pbMinimizar.TabIndex = 2;
-            this.pbMinimizar.TabStop = false;
-            this.pbMinimizar.Click += new System.EventHandler(this.pbMinimizar_Click);
+            this.pbCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbCerrar.Image")));
+            this.pbCerrar.Location = new System.Drawing.Point(1270, 12);
+            this.pbCerrar.Name = "pbCerrar";
+            this.pbCerrar.Size = new System.Drawing.Size(18, 19);
+            this.pbCerrar.TabIndex = 0;
+            this.pbCerrar.TabStop = false;
+            this.pbCerrar.Click += new System.EventHandler(this.pbCerrar_Click);
             // 
-            // pbRestaurar
+            // pnlMenu
             // 
-            this.pbRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("pbRestaurar.Image")));
-            this.pbRestaurar.Location = new System.Drawing.Point(1246, 12);
-            this.pbRestaurar.Name = "pbRestaurar";
-            this.pbRestaurar.Size = new System.Drawing.Size(18, 19);
-            this.pbRestaurar.TabIndex = 3;
-            this.pbRestaurar.TabStop = false;
-            this.pbRestaurar.Click += new System.EventHandler(this.pbRestaurar_Click);
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(153)))), ((int)(((byte)(165)))));
+            this.pnlMenu.Controls.Add(this.panel4);
+            this.pnlMenu.Controls.Add(this.panel3);
+            this.pnlMenu.Controls.Add(this.panel2);
+            this.pnlMenu.Controls.Add(this.btnVentanilla2);
+            this.pnlMenu.Controls.Add(this.btnVentanilla3);
+            this.pnlMenu.Controls.Add(this.btnVentanilla4);
+            this.pnlMenu.Controls.Add(this.panel1);
+            this.pnlMenu.Controls.Add(this.btnVentanilla1);
+            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlMenu.Location = new System.Drawing.Point(0, 66);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(213, 584);
+            this.pnlMenu.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel1.Location = new System.Drawing.Point(0, 85);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(39, 32);
+            this.panel1.TabIndex = 1;
             // 
             // btnVentanilla1
             // 
@@ -138,13 +150,79 @@ namespace Proyecto_p04
             this.btnVentanilla1.UseVisualStyleBackColor = true;
             this.btnVentanilla1.Click += new System.EventHandler(this.btnVentanilla1_Click);
             // 
-            // panel1
+            // pnlContainer
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.panel1.Location = new System.Drawing.Point(0, 85);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(8, 32);
-            this.panel1.TabIndex = 1;
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(213, 66);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(1087, 584);
+            this.pnlContainer.TabIndex = 2;
+            // 
+            // btnVentanilla4
+            // 
+            this.btnVentanilla4.FlatAppearance.BorderSize = 0;
+            this.btnVentanilla4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.btnVentanilla4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentanilla4.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentanilla4.Location = new System.Drawing.Point(10, 241);
+            this.btnVentanilla4.Name = "btnVentanilla4";
+            this.btnVentanilla4.Size = new System.Drawing.Size(226, 32);
+            this.btnVentanilla4.TabIndex = 2;
+            this.btnVentanilla4.Text = "Ventanilla 04";
+            this.btnVentanilla4.UseVisualStyleBackColor = true;
+            this.btnVentanilla4.Click += new System.EventHandler(this.btnVentanilla4_Click);
+            // 
+            // btnVentanilla3
+            // 
+            this.btnVentanilla3.FlatAppearance.BorderSize = 0;
+            this.btnVentanilla3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.btnVentanilla3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentanilla3.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentanilla3.Location = new System.Drawing.Point(10, 192);
+            this.btnVentanilla3.Name = "btnVentanilla3";
+            this.btnVentanilla3.Size = new System.Drawing.Size(226, 32);
+            this.btnVentanilla3.TabIndex = 3;
+            this.btnVentanilla3.Text = "Ventanilla 03";
+            this.btnVentanilla3.UseVisualStyleBackColor = true;
+            this.btnVentanilla3.Click += new System.EventHandler(this.btnVentanilla3_Click);
+            // 
+            // btnVentanilla2
+            // 
+            this.btnVentanilla2.FlatAppearance.BorderSize = 0;
+            this.btnVentanilla2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.btnVentanilla2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentanilla2.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentanilla2.Location = new System.Drawing.Point(10, 137);
+            this.btnVentanilla2.Name = "btnVentanilla2";
+            this.btnVentanilla2.Size = new System.Drawing.Size(226, 32);
+            this.btnVentanilla2.TabIndex = 4;
+            this.btnVentanilla2.Text = "Ventanilla 02";
+            this.btnVentanilla2.UseVisualStyleBackColor = true;
+            this.btnVentanilla2.Click += new System.EventHandler(this.btnVentanilla2_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel2.Location = new System.Drawing.Point(-1, 135);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(39, 32);
+            this.panel2.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel3.Location = new System.Drawing.Point(-1, 191);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(39, 32);
+            this.panel3.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel4.Location = new System.Drawing.Point(0, 241);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(39, 32);
+            this.panel4.TabIndex = 5;
             // 
             // frmPrincipal
             // 
@@ -161,11 +239,11 @@ namespace Proyecto_p04
             this.Text = "frmPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlTitutlo.ResumeLayout(false);
-            this.pnlMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMaximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRestaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMaximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
+            this.pnlMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -181,5 +259,11 @@ namespace Proyecto_p04
         private System.Windows.Forms.PictureBox pbRestaurar;
         private System.Windows.Forms.Button btnVentanilla1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnVentanilla2;
+        private System.Windows.Forms.Button btnVentanilla3;
+        private System.Windows.Forms.Button btnVentanilla4;
     }
 }
