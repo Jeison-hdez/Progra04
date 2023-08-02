@@ -62,6 +62,7 @@ namespace Proyecto_p04
             this.btnVentanilla4.TabIndex = 4;
             this.btnVentanilla4.Text = "Ventanilla 4";
             this.btnVentanilla4.UseVisualStyleBackColor = true;
+            this.btnVentanilla4.Click += new System.EventHandler(this.btnVentanilla4_Click);
             // 
             // btnVentanilla3
             // 
@@ -109,6 +110,7 @@ namespace Proyecto_p04
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 64);
             this.panel2.Name = "panel2";

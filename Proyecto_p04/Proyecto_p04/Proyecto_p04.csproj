@@ -50,7 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\conexionBD.cs" />
-    <Compile Include="frmUsuario.cs" />
+    <Compile Include="frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmUsuario.Designer.cs">
       <DependentUpon>frmUsuario.cs</DependentUpon>
     </Compile>
@@ -60,9 +62,23 @@
     <Compile Include="frmVentanilla1.Designer.cs">
       <DependentUpon>frmVentanilla1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVentanilla2.cs" />
+    <Compile Include="frmVentanilla2.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmVentanilla2.Designer.cs">
       <DependentUpon>frmVentanilla2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentanilla3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentanilla3.Designer.cs">
+      <DependentUpon>frmVentanilla3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentanilla4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentanilla4.Designer.cs">
+      <DependentUpon>frmVentanilla4.cs</DependentUpon>
     </Compile>
     <Compile Include="Globales.cs" />
     <Compile Include="Clases\UsuariosDAL.cs" />
@@ -72,19 +88,27 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEspera.cs" />
+    <Compile Include="frmEspera.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmEspera.Designer.cs">
       <DependentUpon>frmEspera.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs" />
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipal.cs" />
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="GradientPanel.cs" />
+    <Compile Include="GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Clases\Usuarios.cs" />
@@ -105,6 +129,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmVentanilla2.resx">
       <DependentUpon>frmVentanilla2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentanilla3.resx">
+      <DependentUpon>frmVentanilla3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentanilla4.resx">
+      <DependentUpon>frmVentanilla4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
