@@ -24,9 +24,9 @@ namespace Proyecto_p04
 
         private void frmUsuario_Load(object sender, EventArgs e)
         {
-            conexionBD.conectarBD();
-            MessageBox.Show("Conexion Exitosa!!!");
-            dataGridView1.DataSource = LLenar_grid();
+            //conexionBD.conectarBD();
+            //MessageBox.Show("Conexion Exitosa!!!");
+            //dataGridView1.DataSource = LLenar_grid();
         }
 
         //Llenar y conectar grid

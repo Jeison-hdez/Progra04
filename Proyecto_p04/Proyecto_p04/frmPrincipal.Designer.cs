@@ -36,21 +36,21 @@ namespace Proyecto_p04
             this.pbMaximizar = new System.Windows.Forms.PictureBox();
             this.pbCerrar = new System.Windows.Forms.PictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnReportes = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnPermisos = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnManUsuarios = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnVentanilla4 = new System.Windows.Forms.Button();
+            this.btnVentanilla3 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnVentanilla2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnVentanilla1 = new System.Windows.Forms.Button();
             this.pnlContainer = new System.Windows.Forms.Panel();
-            this.btnVentanilla2 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnVentanilla3 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnVentanilla4 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnManUsuarios = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnPermisos = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.btnReportes = new System.Windows.Forms.Button();
             this.pnlTitutlo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
@@ -69,8 +69,9 @@ namespace Proyecto_p04
             this.pnlTitutlo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitutlo.Location = new System.Drawing.Point(0, 0);
             this.pnlTitutlo.Name = "pnlTitutlo";
-            this.pnlTitutlo.Size = new System.Drawing.Size(1300, 66);
+            this.pnlTitutlo.Size = new System.Drawing.Size(1300, 48);
             this.pnlTitutlo.TabIndex = 0;
+            this.pnlTitutlo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitutlo_MouseDown);
             // 
             // pbRestaurar
             // 
@@ -135,10 +136,139 @@ namespace Proyecto_p04
             this.pnlMenu.Controls.Add(this.panel1);
             this.pnlMenu.Controls.Add(this.btnVentanilla1);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlMenu.Location = new System.Drawing.Point(0, 66);
+            this.pnlMenu.Location = new System.Drawing.Point(0, 48);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(237, 584);
+            this.pnlMenu.Size = new System.Drawing.Size(237, 602);
             this.pnlMenu.TabIndex = 1;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel7.Location = new System.Drawing.Point(0, 417);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(8, 32);
+            this.panel7.TabIndex = 11;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel6.Location = new System.Drawing.Point(0, 381);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(8, 32);
+            this.panel6.TabIndex = 9;
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.FlatAppearance.BorderSize = 0;
+            this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.Location = new System.Drawing.Point(10, 417);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(226, 32);
+            this.btnReportes.TabIndex = 12;
+            this.btnReportes.Text = "Reportería";
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel5.Location = new System.Drawing.Point(0, 345);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(8, 32);
+            this.panel5.TabIndex = 7;
+            // 
+            // btnPermisos
+            // 
+            this.btnPermisos.FlatAppearance.BorderSize = 0;
+            this.btnPermisos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.btnPermisos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPermisos.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPermisos.Location = new System.Drawing.Point(10, 381);
+            this.btnPermisos.Name = "btnPermisos";
+            this.btnPermisos.Size = new System.Drawing.Size(226, 32);
+            this.btnPermisos.TabIndex = 10;
+            this.btnPermisos.Text = "Permisos Usuarios";
+            this.btnPermisos.UseVisualStyleBackColor = true;
+            this.btnPermisos.Click += new System.EventHandler(this.btnPermisos_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel4.Location = new System.Drawing.Point(0, 189);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(8, 32);
+            this.panel4.TabIndex = 5;
+            // 
+            // btnManUsuarios
+            // 
+            this.btnManUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnManUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.btnManUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManUsuarios.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManUsuarios.Location = new System.Drawing.Point(10, 345);
+            this.btnManUsuarios.Name = "btnManUsuarios";
+            this.btnManUsuarios.Size = new System.Drawing.Size(226, 32);
+            this.btnManUsuarios.TabIndex = 8;
+            this.btnManUsuarios.Text = "Mantenimiento Usuarios";
+            this.btnManUsuarios.UseVisualStyleBackColor = true;
+            this.btnManUsuarios.Click += new System.EventHandler(this.btnManUsuarios_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel3.Location = new System.Drawing.Point(0, 153);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(8, 32);
+            this.panel3.TabIndex = 3;
+            // 
+            // btnVentanilla4
+            // 
+            this.btnVentanilla4.FlatAppearance.BorderSize = 0;
+            this.btnVentanilla4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.btnVentanilla4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentanilla4.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentanilla4.Location = new System.Drawing.Point(10, 189);
+            this.btnVentanilla4.Name = "btnVentanilla4";
+            this.btnVentanilla4.Size = new System.Drawing.Size(226, 32);
+            this.btnVentanilla4.TabIndex = 6;
+            this.btnVentanilla4.Text = "Ventanilla 04";
+            this.btnVentanilla4.UseVisualStyleBackColor = true;
+            // 
+            // btnVentanilla3
+            // 
+            this.btnVentanilla3.FlatAppearance.BorderSize = 0;
+            this.btnVentanilla3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.btnVentanilla3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentanilla3.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentanilla3.Location = new System.Drawing.Point(10, 153);
+            this.btnVentanilla3.Name = "btnVentanilla3";
+            this.btnVentanilla3.Size = new System.Drawing.Size(226, 32);
+            this.btnVentanilla3.TabIndex = 4;
+            this.btnVentanilla3.Text = "Ventanilla 03";
+            this.btnVentanilla3.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel2.Location = new System.Drawing.Point(0, 119);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(8, 32);
+            this.panel2.TabIndex = 2;
+            // 
+            // btnVentanilla2
+            // 
+            this.btnVentanilla2.FlatAppearance.BorderSize = 0;
+            this.btnVentanilla2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.btnVentanilla2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentanilla2.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentanilla2.Location = new System.Drawing.Point(10, 119);
+            this.btnVentanilla2.Name = "btnVentanilla2";
+            this.btnVentanilla2.Size = new System.Drawing.Size(226, 32);
+            this.btnVentanilla2.TabIndex = 2;
+            this.btnVentanilla2.Text = "Ventanilla 02";
+            this.btnVentanilla2.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -165,136 +295,11 @@ namespace Proyecto_p04
             // pnlContainer
             // 
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(237, 66);
+            this.pnlContainer.Location = new System.Drawing.Point(237, 48);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(1063, 584);
+            this.pnlContainer.Size = new System.Drawing.Size(1063, 602);
             this.pnlContainer.TabIndex = 2;
-            // 
-            // btnVentanilla2
-            // 
-            this.btnVentanilla2.FlatAppearance.BorderSize = 0;
-            this.btnVentanilla2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.btnVentanilla2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentanilla2.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVentanilla2.Location = new System.Drawing.Point(10, 119);
-            this.btnVentanilla2.Name = "btnVentanilla2";
-            this.btnVentanilla2.Size = new System.Drawing.Size(226, 32);
-            this.btnVentanilla2.TabIndex = 2;
-            this.btnVentanilla2.Text = "Ventanilla 02";
-            this.btnVentanilla2.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.panel2.Location = new System.Drawing.Point(0, 119);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(8, 32);
-            this.panel2.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.panel3.Location = new System.Drawing.Point(0, 153);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(8, 32);
-            this.panel3.TabIndex = 3;
-            // 
-            // btnVentanilla3
-            // 
-            this.btnVentanilla3.FlatAppearance.BorderSize = 0;
-            this.btnVentanilla3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.btnVentanilla3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentanilla3.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVentanilla3.Location = new System.Drawing.Point(10, 153);
-            this.btnVentanilla3.Name = "btnVentanilla3";
-            this.btnVentanilla3.Size = new System.Drawing.Size(226, 32);
-            this.btnVentanilla3.TabIndex = 4;
-            this.btnVentanilla3.Text = "Ventanilla 03";
-            this.btnVentanilla3.UseVisualStyleBackColor = true;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.panel4.Location = new System.Drawing.Point(0, 189);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(8, 32);
-            this.panel4.TabIndex = 5;
-            // 
-            // btnVentanilla4
-            // 
-            this.btnVentanilla4.FlatAppearance.BorderSize = 0;
-            this.btnVentanilla4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.btnVentanilla4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentanilla4.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVentanilla4.Location = new System.Drawing.Point(10, 189);
-            this.btnVentanilla4.Name = "btnVentanilla4";
-            this.btnVentanilla4.Size = new System.Drawing.Size(226, 32);
-            this.btnVentanilla4.TabIndex = 6;
-            this.btnVentanilla4.Text = "Ventanilla 04";
-            this.btnVentanilla4.UseVisualStyleBackColor = true;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.panel5.Location = new System.Drawing.Point(0, 345);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(8, 32);
-            this.panel5.TabIndex = 7;
-            // 
-            // btnManUsuarios
-            // 
-            this.btnManUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnManUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.btnManUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManUsuarios.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManUsuarios.Location = new System.Drawing.Point(10, 345);
-            this.btnManUsuarios.Name = "btnManUsuarios";
-            this.btnManUsuarios.Size = new System.Drawing.Size(226, 32);
-            this.btnManUsuarios.TabIndex = 8;
-            this.btnManUsuarios.Text = "Mantenimiento Usuarios";
-            this.btnManUsuarios.UseVisualStyleBackColor = true;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.panel6.Location = new System.Drawing.Point(0, 381);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(8, 32);
-            this.panel6.TabIndex = 9;
-            // 
-            // btnPermisos
-            // 
-            this.btnPermisos.FlatAppearance.BorderSize = 0;
-            this.btnPermisos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.btnPermisos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPermisos.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPermisos.Location = new System.Drawing.Point(10, 381);
-            this.btnPermisos.Name = "btnPermisos";
-            this.btnPermisos.Size = new System.Drawing.Size(226, 32);
-            this.btnPermisos.TabIndex = 10;
-            this.btnPermisos.Text = "Permisos Usuarios";
-            this.btnPermisos.UseVisualStyleBackColor = true;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.panel7.Location = new System.Drawing.Point(0, 417);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(8, 32);
-            this.panel7.TabIndex = 11;
-            // 
-            // btnReportes
-            // 
-            this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.Location = new System.Drawing.Point(10, 417);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(226, 32);
-            this.btnReportes.TabIndex = 12;
-            this.btnReportes.Text = "Reportería";
-            this.btnReportes.UseVisualStyleBackColor = true;
+            this.pnlContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContainer_Paint);
             // 
             // frmPrincipal
             // 
@@ -310,6 +315,7 @@ namespace Proyecto_p04
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.pnlTitutlo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).EndInit();

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Services;
 
 namespace Proyecto_p04
 {
@@ -19,7 +21,15 @@ namespace Proyecto_p04
 
         private void pbCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Desea salir del Sistema ?", "Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else 
+            {
+
+            }
         }
 
         private void pbMaximizar_Click(object sender, EventArgs e)
@@ -44,7 +54,54 @@ namespace Proyecto_p04
 
         private void btnVentanilla1_Click(object sender, EventArgs e)
         {
+            AbrirFormdentroForm(new frmVentanilla1());
+        }
 
+        private void pnlContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void pnlTitutlo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x122, 0xf012, 0);
+        }
+
+        private void AbrirFormdentroForm(object formAbrir) 
+        {
+            if(this.pnlContainer.Controls.Count>0)
+                this.pnlContainer.Controls.RemoveAt(0);
+            Form frm = formAbrir as Form;
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            this.pnlContainer.Controls.Add(frm);
+            this.pnlContainer.Tag = frm;
+            frm.Show();
+        }
+
+        private void btnManUsuarios_Click(object sender, EventArgs e)
+        {
+            AbrirFormdentroForm(new frmUsuario());
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPermisos_Click(object sender, EventArgs e)
+        {
+            AbrirFormdentroForm(new frmPermisosUsuarios());
         }
     }
 }
