@@ -60,22 +60,55 @@ namespace Proyecto_p04
 
         private void dgvAvion1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //llenar el texBox=Avion1, con el nombre o codigo del avion(informacion en el grid)
+
+            txtAvion1.Text = dgvAvion1.CurrentRow.Cells[0].Value.ToString();
         }
 
         private void dgvAvion2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //llenar el texBox=Avion2, con el nombre o codigo del avion(informacion en el grid)
+            txtAvion2.Text = dgvAvion2.CurrentRow.Cells[0].Value.ToString();
         }
 
         private void dgvAvion3_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //llenar el texBox=Avion3, con el nombre o codigo del avion(informacion en el grid)
+            txtAvion3.Text = dgvAvion3.CurrentRow.Cells[0].Value.ToString();
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+       
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
-            //Es el boton de guardar
+            //Codigo Guardar
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            //Codigo Modificar
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            //Codigo Eliminar
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+         limpiar_txt();
+        }
+
+         public void limpiar_txt()
+         {
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtIdentidicacion.Clear();
+            txtPaisOrigen.Clear();
+            txtAvion1.Clear();
+            txtAvion2.Clear();
+            txtAvion3.Clear();
+
+        }
+
+        private void dgvAerolinea_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

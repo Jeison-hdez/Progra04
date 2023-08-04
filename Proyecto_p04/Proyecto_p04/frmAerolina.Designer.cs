@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAerolina));
             this.dgvAerolinea = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -51,11 +52,22 @@
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAerolinea)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvion1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvion2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvion3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAerolinea
@@ -63,9 +75,11 @@
             this.dgvAerolinea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAerolinea.Location = new System.Drawing.Point(29, 297);
             this.dgvAerolinea.Name = "dgvAerolinea";
+            this.dgvAerolinea.ReadOnly = true;
             this.dgvAerolinea.Size = new System.Drawing.Size(675, 312);
             this.dgvAerolinea.TabIndex = 0;
             this.dgvAerolinea.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAerolinea_CellClick);
+            this.dgvAerolinea.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAerolinea_CellContentClick);
             // 
             // label1
             // 
@@ -80,6 +94,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(29, 186);
+            this.txtCodigo.MaxLength = 20;
             this.txtCodigo.Multiline = true;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 26);
@@ -89,7 +104,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(408, 23);
+            this.label2.Location = new System.Drawing.Point(416, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(603, 55);
             this.label2.TabIndex = 3;
@@ -98,6 +113,7 @@
             // txtIdentidicacion
             // 
             this.txtIdentidicacion.Location = new System.Drawing.Point(219, 186);
+            this.txtIdentidicacion.MaxLength = 20;
             this.txtIdentidicacion.Multiline = true;
             this.txtIdentidicacion.Name = "txtIdentidicacion";
             this.txtIdentidicacion.Size = new System.Drawing.Size(167, 26);
@@ -116,6 +132,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(29, 255);
+            this.txtNombre.MaxLength = 20;
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(167, 26);
@@ -134,6 +151,7 @@
             // txtPaisOrigen
             // 
             this.txtPaisOrigen.Location = new System.Drawing.Point(219, 255);
+            this.txtPaisOrigen.MaxLength = 20;
             this.txtPaisOrigen.Multiline = true;
             this.txtPaisOrigen.Name = "txtPaisOrigen";
             this.txtPaisOrigen.Size = new System.Drawing.Size(167, 26);
@@ -174,6 +192,7 @@
             this.dgvAvion1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAvion1.Location = new System.Drawing.Point(790, 307);
             this.dgvAvion1.Name = "dgvAvion1";
+            this.dgvAvion1.ReadOnly = true;
             this.dgvAvion1.Size = new System.Drawing.Size(567, 68);
             this.dgvAvion1.TabIndex = 13;
             this.dgvAvion1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAvion1_CellClick);
@@ -183,6 +202,7 @@
             this.dgvAvion2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAvion2.Location = new System.Drawing.Point(790, 416);
             this.dgvAvion2.Name = "dgvAvion2";
+            this.dgvAvion2.ReadOnly = true;
             this.dgvAvion2.Size = new System.Drawing.Size(567, 72);
             this.dgvAvion2.TabIndex = 14;
             this.dgvAvion2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAvion2_CellClick);
@@ -192,6 +212,7 @@
             this.dgvAvion3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAvion3.Location = new System.Drawing.Point(790, 536);
             this.dgvAvion3.Name = "dgvAvion3";
+            this.dgvAvion3.ReadOnly = true;
             this.dgvAvion3.Size = new System.Drawing.Size(567, 73);
             this.dgvAvion3.TabIndex = 15;
             this.dgvAvion3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAvion3_CellClick);
@@ -199,6 +220,7 @@
             // txtAvion1
             // 
             this.txtAvion1.Location = new System.Drawing.Point(811, 270);
+            this.txtAvion1.MaxLength = 20;
             this.txtAvion1.Multiline = true;
             this.txtAvion1.Name = "txtAvion1";
             this.txtAvion1.Size = new System.Drawing.Size(171, 26);
@@ -207,6 +229,7 @@
             // txtAvion3
             // 
             this.txtAvion3.Location = new System.Drawing.Point(811, 504);
+            this.txtAvion3.MaxLength = 20;
             this.txtAvion3.Multiline = true;
             this.txtAvion3.Name = "txtAvion3";
             this.txtAvion3.Size = new System.Drawing.Size(171, 26);
@@ -215,6 +238,7 @@
             // txtAvion2
             // 
             this.txtAvion2.Location = new System.Drawing.Point(811, 384);
+            this.txtAvion2.MaxLength = 20;
             this.txtAvion2.Multiline = true;
             this.txtAvion2.Name = "txtAvion2";
             this.txtAvion2.Size = new System.Drawing.Size(171, 26);
@@ -273,16 +297,85 @@
     "nes en el comboBox (1-3), se aviliten los compas para selecionar los aviones reg" +
     "istrados";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(861, 203);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox4.TabIndex = 32;
+            this.pictureBox4.TabStop = false;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(766, 203);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(89, 34);
+            this.btnLimpiar.TabIndex = 31;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(861, 163);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox3.TabIndex = 30;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Location = new System.Drawing.Point(766, 163);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(89, 34);
+            this.btnModificar.TabIndex = 29;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(710, 203);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox2.TabIndex = 28;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(615, 203);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(89, 34);
+            this.btnEliminar.TabIndex = 27;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(710, 163);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(1256, 629);
+            this.btnGuardar.Location = new System.Drawing.Point(615, 163);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(101, 43);
-            this.btnGuardar.TabIndex = 24;
+            this.btnGuardar.Size = new System.Drawing.Size(89, 34);
+            this.btnGuardar.TabIndex = 25;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // frmAerolina
             // 
@@ -290,6 +383,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1393, 677);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
@@ -321,6 +421,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvion1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvion2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvion3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,6 +455,13 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnGuardar;
     }
 }

@@ -106,7 +106,7 @@ namespace Proyecto_p04
 
         private void btnManAerolineas_Click(object sender, EventArgs e)
         {
-            //Hacer la redireccion hacia el frm Aerolinas
+            AbrirFormdentroForm(new frmAerolina());
         }
 
         private void btnVentanilla2_Click(object sender, EventArgs e)
@@ -122,6 +122,16 @@ namespace Proyecto_p04
         private void btnVentanilla4_Click(object sender, EventArgs e)
         {
             AbrirFormdentroForm(new frmVentanilla4());
+        }
+
+        private void btnManPiloto_Click(object sender, EventArgs e)
+        {
+            AbrirFormdentroForm(new frmPiloto());
+        }
+
+        private void btnManAvion_Click(object sender, EventArgs e)
+        {
+            //AbrirFormdentroForm(new frmAvion()); 
         }
     }
 }

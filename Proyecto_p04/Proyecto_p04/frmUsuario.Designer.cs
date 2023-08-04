@@ -43,8 +43,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.txtNivel = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -53,6 +51,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.cbNivel = new System.Windows.Forms.ComboBox();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -82,6 +82,7 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(209, 311);
+            this.txtPassword.MaxLength = 20;
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(145, 29);
@@ -100,6 +101,7 @@
             // txtIdentificacion
             // 
             this.txtIdentificacion.Location = new System.Drawing.Point(622, 311);
+            this.txtIdentificacion.MaxLength = 20;
             this.txtIdentificacion.Multiline = true;
             this.txtIdentificacion.Name = "txtIdentificacion";
             this.txtIdentificacion.Size = new System.Drawing.Size(161, 29);
@@ -133,7 +135,8 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(36, 367);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1209, 268);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(1007, 268);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -197,27 +200,11 @@
             this.pictureBox3.TabIndex = 14;
             this.pictureBox3.TabStop = false;
             // 
-            // txtNivel
-            // 
-            this.txtNivel.Location = new System.Drawing.Point(805, 311);
-            this.txtNivel.Multiline = true;
-            this.txtNivel.Name = "txtNivel";
-            this.txtNivel.Size = new System.Drawing.Size(126, 29);
-            this.txtNivel.TabIndex = 15;
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(953, 311);
-            this.txtEstado.Multiline = true;
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(132, 29);
-            this.txtEstado.TabIndex = 17;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(950, 290);
+            this.label5.Location = new System.Drawing.Point(911, 290);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 18);
             this.label5.TabIndex = 16;
@@ -229,16 +216,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(377, 9);
+            this.label6.Location = new System.Drawing.Point(293, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(468, 55);
             this.label6.TabIndex = 18;
             this.label6.Text = "Registro de Usuario";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(36, 256);
+            this.txtID.MaxLength = 20;
             this.txtID.Multiline = true;
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(60, 29);
@@ -259,6 +248,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(374, 311);
+            this.txtNombre.MaxLength = 20;
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(227, 29);
@@ -294,12 +284,32 @@
             this.pictureBox4.TabIndex = 24;
             this.pictureBox4.TabStop = false;
             // 
+            // cbNivel
+            // 
+            this.cbNivel.FormattingEnabled = true;
+            this.cbNivel.Location = new System.Drawing.Point(805, 311);
+            this.cbNivel.MaxLength = 20;
+            this.cbNivel.Name = "cbNivel";
+            this.cbNivel.Size = new System.Drawing.Size(74, 21);
+            this.cbNivel.TabIndex = 25;
+            // 
+            // cbEstado
+            // 
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Location = new System.Drawing.Point(914, 311);
+            this.cbEstado.MaxLength = 20;
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(74, 21);
+            this.cbEstado.TabIndex = 26;
+            // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1278, 677);
+            this.ClientSize = new System.Drawing.Size(1086, 677);
+            this.Controls.Add(this.cbEstado);
+            this.Controls.Add(this.cbNivel);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.txtNombre);
@@ -307,9 +317,7 @@
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtNivel);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.pictureBox2);
@@ -355,8 +363,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox txtNivel;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtID;
@@ -365,5 +371,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.ComboBox cbNivel;
+        private System.Windows.Forms.ComboBox cbEstado;
     }
 }

@@ -44,3 +44,12 @@ C:\Users\jeiso\Documents\TRABAJO\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Pr
 C:\Users\jeiso\Documents\TRABAJO\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmVentanilla2.resources
 C:\Users\jeiso\Documents\TRABAJO\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmVentanilla3.resources
 C:\Users\jeiso\Documents\TRABAJO\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmVentanilla4.resources
+C:\Users\Hewlett Packard\OneDrive\Documentos\GitHub\Progra04\Proyecto_p04\Proyecto_p04\bin\Debug\Proyecto_p04.exe.config
+C:\Users\Hewlett Packard\OneDrive\Documentos\GitHub\Progra04\Proyecto_p04\Proyecto_p04\bin\Debug\Proyecto_p04.exe
+C:\Users\Hewlett Packard\OneDrive\Documentos\GitHub\Progra04\Proyecto_p04\Proyecto_p04\bin\Debug\Proyecto_p04.pdb
+C:\Users\Hewlett Packard\OneDrive\Documentos\GitHub\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmAerolina.resources
+C:\Users\Hewlett Packard\OneDrive\Documentos\GitHub\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmPermisosUsuarios.resources
+C:\Users\Hewlett Packard\OneDrive\Documentos\GitHub\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmVentanilla1.resources
+C:\Users\Hewlett Packard\OneDrive\Documentos\GitHub\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmVentanilla2.resources
+C:\Users\Hewlett Packard\OneDrive\Documentos\GitHub\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmVentanilla3.resources
+C:\Users\Hewlett Packard\OneDrive\Documentos\GitHub\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmVentanilla4.resources

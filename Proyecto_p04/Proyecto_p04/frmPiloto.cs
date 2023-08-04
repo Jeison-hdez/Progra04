@@ -8,50 +8,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
-using System.Data.SqlClient;
 
 namespace Proyecto_p04
 {
-    public partial class frmVentanilla1 : Form
+    public partial class frmPiloto : Form
     {
-        public frmVentanilla1()
+        public frmPiloto()
         {
             InitializeComponent();
         }
 
-        private void frmVentanilla1_Load(object sender, EventArgs e)
+        private void frmPiloto_Load(object sender, EventArgs e)
         {
-
             //conexionBD.conectarBD();
             //MessageBox.Show("Conexion Exitosa!!!");
-            //dataGridView1.DataSource = LLenar_grid();
+            //dgvAerolinea.DataSource = LLenar_grid1();
 
         }
-        public DataTable LLenar_grid()
+        public DataTable LLenar_grid1()
         {
-            //se llena el grid con la tabla de vuelos
+            //se llena el grid con la tabla de aerolina
 
             conexionBD.conectarBD();
             DataTable dt = new DataTable();
-            string consultar = "SELECT * FROM tbl_vuelos";
+            string consultar = "SELECT * FROM tbl_Piloto"; //Crear la tabla en BD para lenar el grid
             SqlCommand cmd = new SqlCommand(consultar, conexionBD.conectarBD());
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             return dt;
-        }
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtNV.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            txtDestino.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-        }
-
-        
-
-        private void checkBox8_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -70,20 +54,29 @@ namespace Proyecto_p04
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
-        { 
+        {
+
             limpiar_txt();
         }
 
         public void limpiar_txt()
         {
-            txtCedula.Clear();
-            txtDestino.Clear();
-            txtHoraFecha.Clear();
-            txtId.Clear();
-            txtNV.Clear();
-            txtUsuario.Clear();
+            txtCodigo.Clear();
             txtNombre.Clear();
+            txtIdentidicacion.Clear();
+            txtAñosE.Clear();
+            txtNacionalidad.Clear();
 
+        }
+
+        private void dgvAerolinea_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCodigo.Text = dgvPiloto.CurrentRow.Cells[0].Value.ToString();
+            txtIdentidicacion.Text = dgvPiloto.CurrentRow.Cells[1].Value.ToString();
+            txtNombre.Text = dgvPiloto.CurrentRow.Cells[2].Value.ToString();
+            txtNombre.Text = dgvPiloto.CurrentRow.Cells[3].Value.ToString();
+            txtAñosE.Text = dgvPiloto.CurrentRow.Cells[4].Value.ToString();
+            txtNacionalidad.Text = dgvPiloto.CurrentRow.Cells[5].Value.ToString();
         }
     }
 }

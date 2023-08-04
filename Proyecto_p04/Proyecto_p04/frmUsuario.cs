@@ -49,8 +49,7 @@ namespace Proyecto_p04
             txtPassword.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             txtNombre.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             txtIdentificacion.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            txtEstado.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            txtNivel.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            
         }
 
 
@@ -75,6 +74,8 @@ namespace Proyecto_p04
         //Modificar datos
         private void btnModificar_Click(object sender, EventArgs e)
         {
+
+            
             conexionBD.conectarBD();
             string actualizar = "UPDATE tbl_usuarios SET Id=@Id,Usuario=@Usuario,Contraseña=@Contraseña,Nombre=@Nombre,Identificacion=@Identififcacion," +
                 "Id_Nivel=@ID-Nivel,Estado=@Estado WHERE Id=@Id";
@@ -112,12 +113,15 @@ namespace Proyecto_p04
         public void limpiar_txt()
         {
             txtID.Clear();
-            txtEstado.Clear();
             txtNombre.Clear();
             txtIdentificacion.Clear();
-            txtNivel.Clear();
-            txtEstado.Clear();
             txtUsuario.Clear();
+            txtPassword.Clear();
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
 
         }
     }
