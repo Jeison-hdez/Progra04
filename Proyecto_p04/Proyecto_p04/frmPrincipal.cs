@@ -103,5 +103,10 @@ namespace Proyecto_p04
         {
             AbrirFormdentroForm(new frmPermisosUsuarios());
         }
+
+        private void btnManAerolineas_Click(object sender, EventArgs e)
+        {
+            //Hacer la redireccion hacia el frm Aerolinas
+        }
     }
 }
