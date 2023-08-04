@@ -36,6 +36,10 @@ namespace Proyecto_p04
             this.pbMaximizar = new System.Windows.Forms.PictureBox();
             this.pbCerrar = new System.Windows.Forms.PictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnManAerolineas = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnReportes = new System.Windows.Forms.Button();
@@ -51,10 +55,6 @@ namespace Proyecto_p04
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnVentanilla1 = new System.Windows.Forms.Button();
             this.pnlContainer = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.btnManAerolineas = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.pnlTitutlo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
@@ -148,6 +148,50 @@ namespace Proyecto_p04
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(237, 602);
             this.pnlMenu.TabIndex = 1;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel9.Location = new System.Drawing.Point(-2, 467);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(8, 32);
+            this.panel9.TabIndex = 15;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(8, 467);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(226, 32);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Mantenimiento Avion";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel8.Location = new System.Drawing.Point(-2, 429);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(8, 32);
+            this.panel8.TabIndex = 13;
+            // 
+            // btnManAerolineas
+            // 
+            this.btnManAerolineas.FlatAppearance.BorderSize = 0;
+            this.btnManAerolineas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.btnManAerolineas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManAerolineas.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManAerolineas.Location = new System.Drawing.Point(8, 429);
+            this.btnManAerolineas.Name = "btnManAerolineas";
+            this.btnManAerolineas.Size = new System.Drawing.Size(226, 32);
+            this.btnManAerolineas.TabIndex = 14;
+            this.btnManAerolineas.Text = "Mantenimiento Aerolineas";
+            this.btnManAerolineas.UseVisualStyleBackColor = true;
+            this.btnManAerolineas.Click += new System.EventHandler(this.btnManAerolineas_Click);
             // 
             // panel7
             // 
@@ -308,49 +352,6 @@ namespace Proyecto_p04
             this.pnlContainer.Size = new System.Drawing.Size(1063, 602);
             this.pnlContainer.TabIndex = 2;
             this.pnlContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContainer_Paint);
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.panel8.Location = new System.Drawing.Point(-2, 429);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(8, 32);
-            this.panel8.TabIndex = 13;
-            // 
-            // btnManAerolineas
-            // 
-            this.btnManAerolineas.FlatAppearance.BorderSize = 0;
-            this.btnManAerolineas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.btnManAerolineas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManAerolineas.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManAerolineas.Location = new System.Drawing.Point(8, 429);
-            this.btnManAerolineas.Name = "btnManAerolineas";
-            this.btnManAerolineas.Size = new System.Drawing.Size(226, 32);
-            this.btnManAerolineas.TabIndex = 14;
-            this.btnManAerolineas.Text = "Mantenimiento Aerolineas";
-            this.btnManAerolineas.UseVisualStyleBackColor = true;
-            this.btnManAerolineas.Click += new System.EventHandler(this.btnManAerolineas_Click);
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.panel9.Location = new System.Drawing.Point(-2, 467);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(8, 32);
-            this.panel9.TabIndex = 15;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(8, 467);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(226, 32);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Mantenimiento Avion";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmPrincipal
             // 

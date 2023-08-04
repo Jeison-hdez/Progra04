@@ -61,9 +61,9 @@
             // dgvAerolinea
             // 
             this.dgvAerolinea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAerolinea.Location = new System.Drawing.Point(29, 270);
+            this.dgvAerolinea.Location = new System.Drawing.Point(29, 297);
             this.dgvAerolinea.Name = "dgvAerolinea";
-            this.dgvAerolinea.Size = new System.Drawing.Size(675, 339);
+            this.dgvAerolinea.Size = new System.Drawing.Size(675, 312);
             this.dgvAerolinea.TabIndex = 0;
             this.dgvAerolinea.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAerolinea_CellClick);
             // 
@@ -97,7 +97,7 @@
             // 
             // txtIdentidicacion
             // 
-            this.txtIdentidicacion.Location = new System.Drawing.Point(154, 186);
+            this.txtIdentidicacion.Location = new System.Drawing.Point(219, 186);
             this.txtIdentidicacion.Multiline = true;
             this.txtIdentidicacion.Name = "txtIdentidicacion";
             this.txtIdentidicacion.Size = new System.Drawing.Size(167, 26);
@@ -107,7 +107,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(150, 163);
+            this.label3.Location = new System.Drawing.Point(215, 163);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 20);
             this.label3.TabIndex = 4;
@@ -115,7 +115,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(347, 186);
+            this.txtNombre.Location = new System.Drawing.Point(29, 255);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(167, 26);
@@ -125,7 +125,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(343, 163);
+            this.label4.Location = new System.Drawing.Point(25, 232);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 6;
@@ -133,7 +133,7 @@
             // 
             // txtPaisOrigen
             // 
-            this.txtPaisOrigen.Location = new System.Drawing.Point(537, 186);
+            this.txtPaisOrigen.Location = new System.Drawing.Point(219, 255);
             this.txtPaisOrigen.Multiline = true;
             this.txtPaisOrigen.Name = "txtPaisOrigen";
             this.txtPaisOrigen.Size = new System.Drawing.Size(167, 26);
@@ -143,7 +143,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(533, 163);
+            this.label5.Location = new System.Drawing.Point(215, 232);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(126, 20);
             this.label5.TabIndex = 8;
@@ -289,7 +289,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1393, 684);
+            this.ClientSize = new System.Drawing.Size(1393, 677);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);

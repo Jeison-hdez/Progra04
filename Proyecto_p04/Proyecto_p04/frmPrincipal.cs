@@ -108,5 +108,10 @@ namespace Proyecto_p04
         {
             //Hacer la redireccion hacia el frm Aerolinas
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
