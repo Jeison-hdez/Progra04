@@ -37,3 +37,6 @@ C:\Users\jeiso\Documents\GitHub\Progra04\Proyecto_p04\Proyecto_p04\bin\Debug\Pro
 C:\Users\jeiso\Documents\GitHub\Progra04\Proyecto_p04\Proyecto_p04\bin\Debug\Proyecto_p04.exe
 C:\Users\jeiso\Documents\GitHub\Progra04\Proyecto_p04\Proyecto_p04\bin\Debug\Proyecto_p04.pdb
 C:\Users\jeiso\Documents\GitHub\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmPermisosUsuarios.resources
+C:\Users\jeiso\Documents\TRABAJO\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmPermisosUsuarios.resources
+C:\Users\jeiso\Documents\TRABAJO\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmUsuario.resources
+C:\Users\jeiso\Documents\TRABAJO\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmVentanilla1.resources
