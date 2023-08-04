@@ -85,8 +85,7 @@ namespace Proyecto_p04
             cmd.Parameters.AddWithValue("@Contraseña", txtPassword.Text);
             cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
             cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
-            cmd.Parameters.AddWithValue("@Id_Nivel", txtNivel.Text);
-            cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
+            
             cmd.ExecuteNonQuery();
 
             MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
