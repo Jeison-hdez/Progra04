@@ -127,8 +127,8 @@ namespace Proyecto_p04
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(153)))), ((int)(((byte)(165)))));
-            this.pnlMenu.Controls.Add(this.panel10);
             this.pnlMenu.Controls.Add(this.btnManPiloto);
+            this.pnlMenu.Controls.Add(this.panel10);
             this.pnlMenu.Controls.Add(this.panel9);
             this.pnlMenu.Controls.Add(this.btnManAvion);
             this.pnlMenu.Controls.Add(this.panel8);
@@ -150,7 +150,7 @@ namespace Proyecto_p04
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 48);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(237, 602);
+            this.pnlMenu.Size = new System.Drawing.Size(164, 602);
             this.pnlMenu.TabIndex = 1;
             // 
             // panel10
@@ -163,15 +163,17 @@ namespace Proyecto_p04
             // 
             // btnManPiloto
             // 
+            this.btnManPiloto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnManPiloto.FlatAppearance.BorderSize = 0;
             this.btnManPiloto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
             this.btnManPiloto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManPiloto.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManPiloto.Location = new System.Drawing.Point(8, 505);
+            this.btnManPiloto.Location = new System.Drawing.Point(3, 505);
             this.btnManPiloto.Name = "btnManPiloto";
             this.btnManPiloto.Size = new System.Drawing.Size(226, 32);
             this.btnManPiloto.TabIndex = 18;
-            this.btnManPiloto.Text = "Mantenimiento Piloto";
+            this.btnManPiloto.Text = "     Gestión Piloto";
+            this.btnManPiloto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManPiloto.UseVisualStyleBackColor = true;
             this.btnManPiloto.Click += new System.EventHandler(this.btnManPiloto_Click);
             // 
@@ -194,7 +196,8 @@ namespace Proyecto_p04
             this.btnManAvion.Name = "btnManAvion";
             this.btnManAvion.Size = new System.Drawing.Size(226, 32);
             this.btnManAvion.TabIndex = 16;
-            this.btnManAvion.Text = "Mantenimiento Avion";
+            this.btnManAvion.Text = "    Gestión Avion";
+            this.btnManAvion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManAvion.UseVisualStyleBackColor = true;
             this.btnManAvion.Click += new System.EventHandler(this.btnManAvion_Click);
             // 
@@ -217,7 +220,8 @@ namespace Proyecto_p04
             this.btnManAerolineas.Name = "btnManAerolineas";
             this.btnManAerolineas.Size = new System.Drawing.Size(226, 32);
             this.btnManAerolineas.TabIndex = 14;
-            this.btnManAerolineas.Text = "Mantenimiento Aerolineas";
+            this.btnManAerolineas.Text = "Gestión Aerolineas";
+            this.btnManAerolineas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManAerolineas.UseVisualStyleBackColor = true;
             this.btnManAerolineas.Click += new System.EventHandler(this.btnManAerolineas_Click);
             // 
@@ -248,7 +252,8 @@ namespace Proyecto_p04
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(226, 32);
             this.btnReportes.TabIndex = 12;
-            this.btnReportes.Text = "Reportería";
+            this.btnReportes.Text = "       Reportería";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReportes.UseVisualStyleBackColor = true;
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
@@ -272,6 +277,7 @@ namespace Proyecto_p04
             this.btnPermisos.Size = new System.Drawing.Size(226, 32);
             this.btnPermisos.TabIndex = 10;
             this.btnPermisos.Text = "Permisos Usuarios";
+            this.btnPermisos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPermisos.UseVisualStyleBackColor = true;
             this.btnPermisos.Click += new System.EventHandler(this.btnPermisos_Click);
             // 
@@ -293,7 +299,8 @@ namespace Proyecto_p04
             this.btnManUsuarios.Name = "btnManUsuarios";
             this.btnManUsuarios.Size = new System.Drawing.Size(226, 32);
             this.btnManUsuarios.TabIndex = 8;
-            this.btnManUsuarios.Text = "Mantenimiento Usuarios";
+            this.btnManUsuarios.Text = "  Gestión Usuarios";
+            this.btnManUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManUsuarios.UseVisualStyleBackColor = true;
             this.btnManUsuarios.Click += new System.EventHandler(this.btnManUsuarios_Click);
             // 
@@ -316,7 +323,8 @@ namespace Proyecto_p04
             this.btnVentanilla4.Name = "btnVentanilla4";
             this.btnVentanilla4.Size = new System.Drawing.Size(226, 32);
             this.btnVentanilla4.TabIndex = 6;
-            this.btnVentanilla4.Text = "Ventanilla 04";
+            this.btnVentanilla4.Text = "     Ventanilla 04";
+            this.btnVentanilla4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentanilla4.UseVisualStyleBackColor = true;
             this.btnVentanilla4.Click += new System.EventHandler(this.btnVentanilla4_Click);
             // 
@@ -331,7 +339,8 @@ namespace Proyecto_p04
             this.btnVentanilla3.Name = "btnVentanilla3";
             this.btnVentanilla3.Size = new System.Drawing.Size(226, 32);
             this.btnVentanilla3.TabIndex = 4;
-            this.btnVentanilla3.Text = "Ventanilla 03";
+            this.btnVentanilla3.Text = "     Ventanilla 03";
+            this.btnVentanilla3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentanilla3.UseVisualStyleBackColor = true;
             this.btnVentanilla3.Click += new System.EventHandler(this.btnVentanilla3_Click);
             // 
@@ -354,7 +363,8 @@ namespace Proyecto_p04
             this.btnVentanilla2.Name = "btnVentanilla2";
             this.btnVentanilla2.Size = new System.Drawing.Size(226, 32);
             this.btnVentanilla2.TabIndex = 2;
-            this.btnVentanilla2.Text = "Ventanilla 02";
+            this.btnVentanilla2.Text = "     Ventanilla 02";
+            this.btnVentanilla2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentanilla2.UseVisualStyleBackColor = true;
             this.btnVentanilla2.Click += new System.EventHandler(this.btnVentanilla2_Click);
             // 
@@ -377,7 +387,8 @@ namespace Proyecto_p04
             this.btnVentanilla1.Name = "btnVentanilla1";
             this.btnVentanilla1.Size = new System.Drawing.Size(226, 32);
             this.btnVentanilla1.TabIndex = 0;
-            this.btnVentanilla1.Text = "Ventanilla 01";
+            this.btnVentanilla1.Text = "     Ventanilla 01";
+            this.btnVentanilla1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentanilla1.UseVisualStyleBackColor = true;
             this.btnVentanilla1.Click += new System.EventHandler(this.btnVentanilla1_Click);
             // 
@@ -385,9 +396,9 @@ namespace Proyecto_p04
             // 
             this.pnlContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(237, 48);
+            this.pnlContainer.Location = new System.Drawing.Point(164, 48);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(1063, 602);
+            this.pnlContainer.Size = new System.Drawing.Size(1136, 602);
             this.pnlContainer.TabIndex = 2;
             this.pnlContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContainer_Paint);
             // 
