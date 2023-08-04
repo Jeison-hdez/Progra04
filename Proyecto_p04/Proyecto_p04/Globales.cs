@@ -11,5 +11,7 @@ namespace Proyecto_p04
     {
         public static string Usuario { get; set; }
         public static int Nivel { get; set; }
+        public static int NombreUsuario { get; set; }
+        public static int identificacionUsuario { get; set; }
     }
 }

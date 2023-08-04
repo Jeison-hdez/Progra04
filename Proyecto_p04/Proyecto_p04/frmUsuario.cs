@@ -24,9 +24,9 @@ namespace Proyecto_p04
 
         private void frmUsuario_Load(object sender, EventArgs e)
         {
-            //conexionBD.conectarBD();
-            //MessageBox.Show("Conexion Exitosa!!!");
-            //dataGridView1.DataSource = LLenar_grid();
+            conexionBD.conectarBD();
+            MessageBox.Show("Conexion Exitosa!!!");
+            dataGridView1.DataSource = LLenar_grid();
         }
 
         //Llenar y conectar grid
@@ -57,22 +57,19 @@ namespace Proyecto_p04
         //Guardar/Registra el nuevo usuario
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            conexionBD.conectarBD();
-            string insertar = "INSERT INTO tbl_usuarios(Id,Usuario,Contraseña,Nombre,Identificacion,Id_Nivel,Estado) " +
-                "VALUES(@Id,@Usuario,@Contraseña,@Nombre,@Identificacion,@Id_Nivel,@Estado)";
-            SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
-            cmd.Parameters.AddWithValue("@Id", txtID.Text);
-            cmd.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
-            cmd.Parameters.AddWithValue("@Contraseña", txtPassword.Text);
-            cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-            cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
-            cmd.Parameters.AddWithValue("@Id_Nivel", txtNivel.Text);
-            cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
-            cmd.ExecuteNonQuery();
+            Clases.Usuarios user = new Clases.Usuarios();
+            user.Usuario = txtUsuario.Text;
+            user.Password = txtPassword.Text;
+            user.Nombre = txtNombre.Text;
+            user.identificacion = txtIdentificacion.Text;
 
+            int resultado = Clases.UsuariosDAL.InsertUser(user);
 
-            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-            dataGridView1.DataSource = LLenar_grid();
+            if (resultado > 0) 
+            {
+                MessageBox.Show("Los datos fueron agregados de forma exitosa!!!");
+                dataGridView1.DataSource = LLenar_grid();
+            }
         }
 
         //Modificar datos

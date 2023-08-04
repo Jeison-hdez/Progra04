@@ -29,5 +29,18 @@ namespace Proyecto_p04.Clases
             catch { }
             return resultado;
         }
+
+        public static int InsertUser(Usuarios rUsuarios)
+        {
+            int resultado = 0;
+
+            SqlCommand cmd = new SqlCommand(string.Format("insert into tbl_usuarios(Usuario,Contrasena,Nombre,Identificacion,Id_Nivel,Estado) values('{0}','{1}', '{2}', '{3}', 1, 1);", rUsuarios.Usuario, rUsuarios.Password, rUsuarios.Nombre, rUsuarios.identificacion), conexionBD.conectarBD());
+            try
+            {
+                resultado = cmd.ExecuteNonQuery();
+            }
+            catch { }
+            return resultado;
+        }
     }
 }
