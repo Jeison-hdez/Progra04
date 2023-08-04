@@ -109,9 +109,19 @@ namespace Proyecto_p04
             //Hacer la redireccion hacia el frm Aerolinas
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnVentanilla2_Click(object sender, EventArgs e)
         {
+            AbrirFormdentroForm(new frmVentanilla2());
+        }
 
+        private void btnVentanilla3_Click(object sender, EventArgs e)
+        {
+            AbrirFormdentroForm(new frmVentanilla3());
+        }
+
+        private void btnVentanilla4_Click(object sender, EventArgs e)
+        {
+            AbrirFormdentroForm(new frmVentanilla4());
         }
     }
 }

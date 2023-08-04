@@ -169,7 +169,6 @@ namespace Proyecto_p04
             this.button1.TabIndex = 16;
             this.button1.Text = "Mantenimiento Avion";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel8
             // 
@@ -287,6 +286,7 @@ namespace Proyecto_p04
             this.btnVentanilla4.TabIndex = 6;
             this.btnVentanilla4.Text = "Ventanilla 04";
             this.btnVentanilla4.UseVisualStyleBackColor = true;
+            this.btnVentanilla4.Click += new System.EventHandler(this.btnVentanilla4_Click);
             // 
             // btnVentanilla3
             // 
@@ -300,6 +300,7 @@ namespace Proyecto_p04
             this.btnVentanilla3.TabIndex = 4;
             this.btnVentanilla3.Text = "Ventanilla 03";
             this.btnVentanilla3.UseVisualStyleBackColor = true;
+            this.btnVentanilla3.Click += new System.EventHandler(this.btnVentanilla3_Click);
             // 
             // panel2
             // 
@@ -321,6 +322,7 @@ namespace Proyecto_p04
             this.btnVentanilla2.TabIndex = 2;
             this.btnVentanilla2.Text = "Ventanilla 02";
             this.btnVentanilla2.UseVisualStyleBackColor = true;
+            this.btnVentanilla2.Click += new System.EventHandler(this.btnVentanilla2_Click);
             // 
             // panel1
             // 
