@@ -185,6 +185,7 @@ namespace Proyecto_p04
             // 
             // btnManAvion
             // 
+            this.btnManAvion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnManAvion.FlatAppearance.BorderSize = 0;
             this.btnManAvion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
             this.btnManAvion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -207,6 +208,7 @@ namespace Proyecto_p04
             // 
             // btnManAerolineas
             // 
+            this.btnManAerolineas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnManAerolineas.FlatAppearance.BorderSize = 0;
             this.btnManAerolineas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
             this.btnManAerolineas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -237,6 +239,7 @@ namespace Proyecto_p04
             // 
             // btnReportes
             // 
+            this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReportes.FlatAppearance.BorderSize = 0;
             this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -259,6 +262,7 @@ namespace Proyecto_p04
             // 
             // btnPermisos
             // 
+            this.btnPermisos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPermisos.FlatAppearance.BorderSize = 0;
             this.btnPermisos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
             this.btnPermisos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -303,6 +307,7 @@ namespace Proyecto_p04
             // 
             // btnVentanilla4
             // 
+            this.btnVentanilla4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVentanilla4.FlatAppearance.BorderSize = 0;
             this.btnVentanilla4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
             this.btnVentanilla4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -317,6 +322,7 @@ namespace Proyecto_p04
             // 
             // btnVentanilla3
             // 
+            this.btnVentanilla3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVentanilla3.FlatAppearance.BorderSize = 0;
             this.btnVentanilla3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
             this.btnVentanilla3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -339,6 +345,7 @@ namespace Proyecto_p04
             // 
             // btnVentanilla2
             // 
+            this.btnVentanilla2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVentanilla2.FlatAppearance.BorderSize = 0;
             this.btnVentanilla2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
             this.btnVentanilla2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -361,6 +368,7 @@ namespace Proyecto_p04
             // 
             // btnVentanilla1
             // 
+            this.btnVentanilla1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVentanilla1.FlatAppearance.BorderSize = 0;
             this.btnVentanilla1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
             this.btnVentanilla1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -375,6 +383,7 @@ namespace Proyecto_p04
             // 
             // pnlContainer
             // 
+            this.pnlContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContainer.Location = new System.Drawing.Point(237, 48);
             this.pnlContainer.Name = "pnlContainer";
