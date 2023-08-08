@@ -190,7 +190,7 @@
             // dgvAvion1
             // 
             this.dgvAvion1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAvion1.Location = new System.Drawing.Point(790, 307);
+            this.dgvAvion1.Location = new System.Drawing.Point(746, 297);
             this.dgvAvion1.Name = "dgvAvion1";
             this.dgvAvion1.ReadOnly = true;
             this.dgvAvion1.Size = new System.Drawing.Size(567, 68);
@@ -200,7 +200,7 @@
             // dgvAvion2
             // 
             this.dgvAvion2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAvion2.Location = new System.Drawing.Point(790, 416);
+            this.dgvAvion2.Location = new System.Drawing.Point(746, 406);
             this.dgvAvion2.Name = "dgvAvion2";
             this.dgvAvion2.ReadOnly = true;
             this.dgvAvion2.Size = new System.Drawing.Size(567, 72);
@@ -210,7 +210,7 @@
             // dgvAvion3
             // 
             this.dgvAvion3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAvion3.Location = new System.Drawing.Point(790, 536);
+            this.dgvAvion3.Location = new System.Drawing.Point(746, 526);
             this.dgvAvion3.Name = "dgvAvion3";
             this.dgvAvion3.ReadOnly = true;
             this.dgvAvion3.Size = new System.Drawing.Size(567, 73);
@@ -219,7 +219,7 @@
             // 
             // txtAvion1
             // 
-            this.txtAvion1.Location = new System.Drawing.Point(811, 270);
+            this.txtAvion1.Location = new System.Drawing.Point(767, 260);
             this.txtAvion1.MaxLength = 20;
             this.txtAvion1.Multiline = true;
             this.txtAvion1.Name = "txtAvion1";
@@ -228,7 +228,7 @@
             // 
             // txtAvion3
             // 
-            this.txtAvion3.Location = new System.Drawing.Point(811, 504);
+            this.txtAvion3.Location = new System.Drawing.Point(767, 494);
             this.txtAvion3.MaxLength = 20;
             this.txtAvion3.Multiline = true;
             this.txtAvion3.Name = "txtAvion3";
@@ -237,7 +237,7 @@
             // 
             // txtAvion2
             // 
-            this.txtAvion2.Location = new System.Drawing.Point(811, 384);
+            this.txtAvion2.Location = new System.Drawing.Point(767, 374);
             this.txtAvion2.MaxLength = 20;
             this.txtAvion2.Multiline = true;
             this.txtAvion2.Name = "txtAvion2";
@@ -248,7 +248,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(786, 276);
+            this.label8.Location = new System.Drawing.Point(742, 266);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(24, 20);
             this.label8.TabIndex = 19;
@@ -258,7 +258,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(786, 390);
+            this.label9.Location = new System.Drawing.Point(742, 380);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(24, 20);
             this.label9.TabIndex = 20;
@@ -268,7 +268,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(786, 510);
+            this.label10.Location = new System.Drawing.Point(742, 500);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(24, 20);
             this.label10.TabIndex = 21;
@@ -382,7 +382,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1393, 677);
+            this.ClientSize = new System.Drawing.Size(1337, 677);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.pictureBox3);

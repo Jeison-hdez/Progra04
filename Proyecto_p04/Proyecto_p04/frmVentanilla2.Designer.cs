@@ -2388,7 +2388,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(364, 310);
+            this.label9.Location = new System.Drawing.Point(288, 310);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 18);
             this.label9.TabIndex = 398;
@@ -2398,7 +2398,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(364, 252);
+            this.label8.Location = new System.Drawing.Point(288, 252);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(138, 18);
             this.label8.TabIndex = 397;
@@ -2406,7 +2406,7 @@
             // 
             // txtDestino
             // 
-            this.txtDestino.Location = new System.Drawing.Point(367, 331);
+            this.txtDestino.Location = new System.Drawing.Point(291, 331);
             this.txtDestino.MaxLength = 20;
             this.txtDestino.Multiline = true;
             this.txtDestino.Name = "txtDestino";
@@ -2416,7 +2416,7 @@
             // 
             // txtNV
             // 
-            this.txtNV.Location = new System.Drawing.Point(367, 273);
+            this.txtNV.Location = new System.Drawing.Point(291, 273);
             this.txtNV.MaxLength = 20;
             this.txtNV.Multiline = true;
             this.txtNV.Name = "txtNV";
@@ -2427,7 +2427,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(367, 93);
+            this.dataGridView1.Location = new System.Drawing.Point(291, 93);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(502, 144);
@@ -2438,7 +2438,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(364, 72);
+            this.label7.Location = new System.Drawing.Point(288, 72);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(284, 18);
             this.label7.TabIndex = 393;
@@ -2447,7 +2447,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(364, 129);
+            this.label6.Location = new System.Drawing.Point(304, 129);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 392;
@@ -2541,7 +2541,7 @@
             // txtNumeroVentanilla
             // 
             this.txtNumeroVentanilla.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroVentanilla.Location = new System.Drawing.Point(754, 9);
+            this.txtNumeroVentanilla.Location = new System.Drawing.Point(678, 9);
             this.txtNumeroVentanilla.Multiline = true;
             this.txtNumeroVentanilla.Name = "txtNumeroVentanilla";
             this.txtNumeroVentanilla.ReadOnly = true;
@@ -2553,7 +2553,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(467, 9);
+            this.label1.Location = new System.Drawing.Point(391, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(293, 31);
             this.label1.TabIndex = 379;
@@ -2562,7 +2562,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1144, 133);
+            this.pictureBox4.Location = new System.Drawing.Point(1068, 133);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(34, 34);
             this.pictureBox4.TabIndex = 575;
@@ -2571,7 +2571,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(1049, 133);
+            this.btnLimpiar.Location = new System.Drawing.Point(973, 133);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(89, 34);
             this.btnLimpiar.TabIndex = 574;
@@ -2582,7 +2582,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1144, 93);
+            this.pictureBox3.Location = new System.Drawing.Point(1068, 93);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 34);
             this.pictureBox3.TabIndex = 573;
@@ -2591,7 +2591,7 @@
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(1049, 93);
+            this.btnModificar.Location = new System.Drawing.Point(973, 93);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(89, 34);
             this.btnModificar.TabIndex = 572;
@@ -2602,7 +2602,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(993, 133);
+            this.pictureBox2.Location = new System.Drawing.Point(917, 133);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 34);
             this.pictureBox2.TabIndex = 571;
@@ -2611,7 +2611,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(898, 133);
+            this.btnEliminar.Location = new System.Drawing.Point(822, 133);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(89, 34);
             this.btnEliminar.TabIndex = 570;
@@ -2622,7 +2622,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(993, 93);
+            this.pictureBox5.Location = new System.Drawing.Point(917, 93);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(34, 34);
             this.pictureBox5.TabIndex = 569;
@@ -2631,7 +2631,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(898, 93);
+            this.btnGuardar.Location = new System.Drawing.Point(822, 93);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(89, 34);
             this.btnGuardar.TabIndex = 568;
@@ -2654,7 +2654,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1205, 728);
+            this.ClientSize = new System.Drawing.Size(1124, 728);
             this.Controls.Add(this.txtUsuarios);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnLimpiar);

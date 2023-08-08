@@ -52,6 +52,12 @@ namespace Proyecto_p04
             this.WindowState = FormWindowState.Minimized;
         }
 
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnVentanilla1_Click(object sender, EventArgs e)
         {
             AbrirFormdentroForm(new frmVentanilla1());

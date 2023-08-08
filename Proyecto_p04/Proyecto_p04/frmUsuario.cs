@@ -86,6 +86,7 @@ namespace Proyecto_p04
             cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
             cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
             
+
             cmd.ExecuteNonQuery();
 
             MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
