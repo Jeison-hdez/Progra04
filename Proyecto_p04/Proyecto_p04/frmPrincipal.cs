@@ -137,7 +137,11 @@ namespace Proyecto_p04
 
         private void btnManAvion_Click(object sender, EventArgs e)
         {
-            //AbrirFormdentroForm(new frmAvion()); 
+            // Crear una instancia del formulario frmAviones
+            frmAviones avionesForm = new frmAviones();
+
+            // Mostrar el formulario frmAviones
+            avionesForm.Show();
         }
     }
 }

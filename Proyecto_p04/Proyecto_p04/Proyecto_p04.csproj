@@ -56,6 +56,12 @@
     <Compile Include="frmAerolina.Designer.cs">
       <DependentUpon>frmAerolina.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAviones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAviones.Designer.cs">
+      <DependentUpon>frmAviones.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPermisosUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     <Compile Include="Clases\Usuarios.cs" />
     <EmbeddedResource Include="frmAerolina.resx">
       <DependentUpon>frmAerolina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAviones.resx">
+      <DependentUpon>frmAviones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEspera.resx">
       <DependentUpon>frmEspera.cs</DependentUpon>
