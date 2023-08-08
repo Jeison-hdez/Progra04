@@ -54,3 +54,25 @@ C:\Users\Hewlett Packard\OneDrive\Documentos\GitHub\Progra04\Proyecto_p04\Proyec
 C:\Users\Hewlett Packard\OneDrive\Documentos\GitHub\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmVentanilla3.resources
 C:\Users\Hewlett Packard\OneDrive\Documentos\GitHub\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmVentanilla4.resources
 C:\Users\Hewlett Packard\OneDrive\Documentos\GitHub\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmPiloto.resources
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\bin\Debug\Proyecto_p04.exe.config
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\bin\Debug\Proyecto_p04.exe
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\bin\Debug\Proyecto_p04.pdb
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.csproj.AssemblyReference.cache
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.csproj.SuggestedBindingRedirects.cache
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmAerolina.resources
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmAviones.resources
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmEspera.resources
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmLogin.resources
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmPermisosUsuarios.resources
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmPiloto.resources
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmPrincipal.resources
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmUsuario.resources
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmVentanilla1.resources
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmVentanilla2.resources
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmVentanilla3.resources
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmVentanilla4.resources
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.Properties.Resources.resources
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.csproj.GenerateResource.cache
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.csproj.CoreCompileInputs.cache
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.exe
+D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.pdb
