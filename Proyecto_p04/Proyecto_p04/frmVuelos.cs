@@ -135,9 +135,9 @@ namespace Proyecto_p04
         {
             //Codigo Guardar
             conexionBD.conectarBD();
-            string insertar = "INSERT INTO tbl_vuelos(Id,Identificacin,Estado,Nombre,PaisOrigen) VALUES(@Id,@Identificacin,@Estado,@Nombre,@PaisOrigen)";
+            string insertar = "INSERT INTO tbl_vuelos(Estado,Destino) VALUES(@Estado,@Destino)";
             SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
-            cmd.Parameters.AddWithValue("@Id", txtCodigo.Text);
+            
             cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
             cmd.Parameters.AddWithValue("@Destino", txtVueloSeleccionado.Text);
             cmd.ExecuteNonQuery();
@@ -157,10 +157,10 @@ namespace Proyecto_p04
         {
             //Codigo Modificar
             conexionBD.conectarBD();
-            string actualizar = "UPDATE tbl_vuelos SET Id=@Id,Identificacion=@Identificacion,Estado=@Estado,Nombre=@Nombre,PaisOrigen=@PaisOrigen," +
+            string actualizar = "UPDATE tbl_vuelos SET Estado=@Estado,Destino=@Destino," +
             "WHERE Id=@Id";
             SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
-            cmd.Parameters.AddWithValue("@Id", txtCodigo.Text);
+            
             cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
             cmd.Parameters.AddWithValue("@Destino", txtVueloSeleccionado.Text);
 
@@ -172,9 +172,9 @@ namespace Proyecto_p04
         {
             //Codigo Eliminar
             conexionBD.conectarBD();
-            string eliminar = "DELETE FROM tbl_aerolineas WHERE Id=@Id";
+            string eliminar = "DELETE FROM tbl_vuelos WHERE Id=@Id";
             SqlCommand cmd = new SqlCommand(eliminar, conexionBD.conectarBD());
-            cmd.Parameters.AddWithValue("@Id", txtCodigo.Text);
+            
             cmd.ExecuteNonQuery();
 
             MessageBox.Show("Los datosfueron Eliminados!!!");
@@ -189,7 +189,7 @@ namespace Proyecto_p04
 
         public void limpiar_txt()
         {
-            txtCodigo.Clear();
+            
             txtEstado.Clear();
             txtVueloSeleccionado.Clear();
         }

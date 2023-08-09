@@ -36,6 +36,8 @@ namespace Proyecto_p04
             this.pbMaximizar = new System.Windows.Forms.PictureBox();
             this.pbCerrar = new System.Windows.Forms.PictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.btnManPiloto = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -57,8 +59,6 @@ namespace Proyecto_p04
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnVentanilla1 = new System.Windows.Forms.Button();
             this.pnlContainer = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.pnlTitutlo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
@@ -157,6 +157,22 @@ namespace Proyecto_p04
             this.pnlMenu.Size = new System.Drawing.Size(164, 602);
             this.pnlMenu.TabIndex = 1;
             // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel12.Location = new System.Drawing.Point(0, 283);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(183, 5);
+            this.panel12.TabIndex = 15;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel11.Location = new System.Drawing.Point(-11, 161);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(183, 5);
+            this.panel11.TabIndex = 14;
+            // 
             // btnManPiloto
             // 
             this.btnManPiloto.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -200,7 +216,7 @@ namespace Proyecto_p04
             this.btnManAvion.Name = "btnManAvion";
             this.btnManAvion.Size = new System.Drawing.Size(226, 32);
             this.btnManAvion.TabIndex = 16;
-            this.btnManAvion.Text = "    Gestión Avion";
+            this.btnManAvion.Text = "    Gestión Vuelos";
             this.btnManAvion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManAvion.UseVisualStyleBackColor = true;
             this.btnManAvion.Click += new System.EventHandler(this.btnManAvion_Click);
@@ -405,22 +421,6 @@ namespace Proyecto_p04
             this.pnlContainer.Size = new System.Drawing.Size(1136, 602);
             this.pnlContainer.TabIndex = 2;
             this.pnlContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContainer_Paint);
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.panel11.Location = new System.Drawing.Point(-11, 161);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(183, 5);
-            this.panel11.TabIndex = 14;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.panel12.Location = new System.Drawing.Point(0, 283);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(183, 5);
-            this.panel12.TabIndex = 15;
             // 
             // frmPrincipal
             // 

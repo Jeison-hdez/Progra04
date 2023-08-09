@@ -42,9 +42,9 @@ namespace Proyecto_p04
         {
             //Codigo Guardar
             conexionBD.conectarBD();
-            string insertar = "INSERT INTO tbl_pilotos(Id,Identificacin,Nombre,AñosExpe,Nacionalidad) VALUES(@Id,@Identificacin,@Nombre,@AñosExpe,@Nacionalidad)";
+            string insertar = "INSERT INTO tbl_pilotos(Identificacion,Nombre,AñosExpe,Nacionalidad) VALUES(@Identificacion,@Nombre,@AñosExpe,@Nacionalidad)";
             SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
-            cmd.Parameters.AddWithValue("@Id", txtId.Text);
+            
             cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
             cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
             cmd.Parameters.AddWithValue("@AñosExpe", txtAñosE.Text);
@@ -60,10 +60,10 @@ namespace Proyecto_p04
         {
             //Codigo Modificar
             conexionBD.conectarBD();
-            string actualizar = "UPDATE tbl_pilotos SET Id=@Id,Identificacion=@Identificacion,Nombre=@Nombre,@AñosExpe=AñosExpe,@Nacionalidad=Nacionalidad" +
+            string actualizar = "UPDATE tbl_pilotos SET Identificacion=@Identificacion,Nombre=@Nombre,@AñosExpe=AñosExpe,@Nacionalidad=Nacionalidad" +
             "WHERE Id=@Id";
             SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
-            cmd.Parameters.AddWithValue("@Id", txtId.Text);
+            
             cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
             cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
             cmd.Parameters.AddWithValue("@AñosExpe", txtAñosE.Text);
