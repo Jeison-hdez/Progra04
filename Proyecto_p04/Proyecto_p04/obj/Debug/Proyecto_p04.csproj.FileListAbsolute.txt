@@ -76,3 +76,4 @@ D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Pro
 D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.csproj.CoreCompileInputs.cache
 D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.exe
 D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.pdb
+C:\Users\Hewlett Packard\OneDrive\Documentos\GitHub\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmAviones.resources

@@ -49,6 +49,8 @@
             this.dgvPiloto = new System.Windows.Forms.DataGridView();
             this.txtNacionalidad = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -251,12 +253,33 @@
             this.label6.TabIndex = 50;
             this.label6.Text = "Nacionalidad";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(218, 221);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 20);
+            this.label7.TabIndex = 52;
+            this.label7.Text = "Aerolinea";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(222, 244);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 53;
+            // 
             // frmPiloto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1070, 545);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.txtNacionalidad);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtAñosE);
@@ -312,5 +335,7 @@
         private System.Windows.Forms.DataGridView dgvPiloto;
         private System.Windows.Forms.TextBox txtNacionalidad;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
