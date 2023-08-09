@@ -13,5 +13,6 @@ namespace Proyecto_p04.Clases
         public string Nombre { get; set; }
         public string identificacion { get; set; }
         public int Nivel { get; set; }
+        public int idPerfil { get; set; }
     }
 }

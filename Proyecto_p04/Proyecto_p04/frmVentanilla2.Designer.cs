@@ -2904,6 +2904,7 @@
             this.Controls.Add(this.checkBox14);
             this.Controls.Add(this.checkBox15);
             this.Controls.Add(this.checkBox16);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVentanilla2";
             this.Text = "frmVentanilla2";
             this.Load += new System.EventHandler(this.frmVentanilla2_Load);

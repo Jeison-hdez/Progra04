@@ -2285,6 +2285,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNumeroVentanilla);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVentanilla4";
             this.Text = "frmVentanilla4";
             this.Load += new System.EventHandler(this.frmVentanilla4_Load);
