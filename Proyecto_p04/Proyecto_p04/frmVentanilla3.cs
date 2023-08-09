@@ -1412,7 +1412,7 @@ namespace Proyecto_p04
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtId.Text = dataGridView2.CurrentRow.Cells[0].Value.ToString();
-            txtNumeroVentanilla.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
+            
             txtNombre.Text = dataGridView2.CurrentRow.Cells[2].Value.ToString();
             txtIdentificacion.Text = dataGridView2.CurrentRow.Cells[3].Value.ToString();
             txtHoraFecha.Text = dataGridView2.CurrentRow.Cells[4].Value.ToString();
