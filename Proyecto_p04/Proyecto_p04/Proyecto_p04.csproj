@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Clases\conexionBD.cs" />
     <Compile Include="Clases\NivelesUsuariosDAL.cs" />
+    <Compile Include="Clases\pilotosDAL.cs" />
     <Compile Include="frmAerolina.cs">
       <SubType>Form</SubType>
     </Compile>

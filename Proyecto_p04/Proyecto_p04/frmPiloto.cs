@@ -65,8 +65,6 @@ namespace Proyecto_p04
             txtNombre.Clear();
             txtIdentidicacion.Clear();
             txtAñosE.Clear();
-            txtNacionalidad.Clear();
-
         }
 
         private void dgvAerolinea_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -76,7 +74,24 @@ namespace Proyecto_p04
             txtNombre.Text = dgvPiloto.CurrentRow.Cells[2].Value.ToString();
             txtNombre.Text = dgvPiloto.CurrentRow.Cells[3].Value.ToString();
             txtAñosE.Text = dgvPiloto.CurrentRow.Cells[4].Value.ToString();
-            txtNacionalidad.Text = dgvPiloto.CurrentRow.Cells[5].Value.ToString();
+        }
+
+        public void paises() 
+        {
+            DataTable dt = new DataTable();
+            cbPaises.ValueMember = "id";
+            cbPaises.DisplayMember = "pais";
+            cbPaises.Items.Insert(0, " - Seleccione Nacionalidad");
+            dt = Clases.pilotosDAL.getPaises();
+            int i = 0;
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow item in dt.Rows)
+                {
+                    cbPaises.Items.Insert(Convert.ToInt32(dt.Rows[i]["id"]), dt.Rows[i]["nombre"].ToString());
+                    i++;
+                }
+            }
         }
     }
 }
