@@ -1411,14 +1411,15 @@ namespace Proyecto_p04
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            txtNombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            txtIdentificacion.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            txtHoraFecha.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            txtUsuario.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            txtVuelo.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            //txtVuelo.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString(); este es para el asiento
-            txtNumeroVentanilla.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            txtId.Text = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+            txtNumeroVentanilla.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
+            txtNombre.Text = dataGridView2.CurrentRow.Cells[2].Value.ToString();
+            txtIdentificacion.Text = dataGridView2.CurrentRow.Cells[3].Value.ToString();
+            txtHoraFecha.Text = dataGridView2.CurrentRow.Cells[4].Value.ToString();
+            txtUsuario.Text = dataGridView2.CurrentRow.Cells[5].Value.ToString();
+            txtVuelo.Text = dataGridView2.CurrentRow.Cells[6].Value.ToString();
+            //txtVuelo.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString(); este es para el asiento
+
         }
     }
 }
