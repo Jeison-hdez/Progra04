@@ -22,25 +22,35 @@ namespace Proyecto_p04
             InitializeComponent();
         }
 
-
-
-
-
         private void frmVentanilla1_Load(object sender, EventArgs e)
         {
 
             conexionBD.conectarBD();
             MessageBox.Show("Conexion Exitosa!!!");
-            dataGridView1.DataSource = LLenar_grid();
+            dataGridView1.DataSource = LLenar_grid1();
+            dataGridView2.DataSource = LLenar_grid2();
 
         }
-        public DataTable LLenar_grid()
+        public DataTable LLenar_grid1()
         {
             //se llena el grid con la tabla de vuelos
 
             conexionBD.conectarBD();
             DataTable dt = new DataTable();
             string consultar = "SELECT * FROM tbl_vuelos";
+            SqlCommand cmd = new SqlCommand(consultar, conexionBD.conectarBD());
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable LLenar_grid2()
+        {
+            //se llena el grid con la tabla de ventanilla
+
+            conexionBD.conectarBD();
+            DataTable dt = new DataTable();
+            string consultar = "SELECT * FROM tbl_ventanilla";
             SqlCommand cmd = new SqlCommand(consultar, conexionBD.conectarBD());
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -1409,6 +1419,23 @@ namespace Proyecto_p04
             frmVentanilla1 frmVentanilla1 = new frmVentanilla1();
             frmVentanilla1.Close();
 
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txtNombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtIdentificacion.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txtHoraFecha.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            txtUsuario.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            txtVuelo.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            //txtVuelo.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString(); este es para el asiento
+            txtNumeroVentanilla.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }
