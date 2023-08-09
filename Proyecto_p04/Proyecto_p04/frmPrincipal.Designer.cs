@@ -36,8 +36,8 @@ namespace Proyecto_p04
             this.pbMaximizar = new System.Windows.Forms.PictureBox();
             this.pbCerrar = new System.Windows.Forms.PictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.btnManPiloto = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnManAvion = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -57,6 +57,8 @@ namespace Proyecto_p04
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnVentanilla1 = new System.Windows.Forms.Button();
             this.pnlContainer = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.pnlTitutlo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
@@ -127,6 +129,8 @@ namespace Proyecto_p04
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(153)))), ((int)(((byte)(165)))));
+            this.pnlMenu.Controls.Add(this.panel12);
+            this.pnlMenu.Controls.Add(this.panel11);
             this.pnlMenu.Controls.Add(this.btnManPiloto);
             this.pnlMenu.Controls.Add(this.panel10);
             this.pnlMenu.Controls.Add(this.panel9);
@@ -153,14 +157,6 @@ namespace Proyecto_p04
             this.pnlMenu.Size = new System.Drawing.Size(164, 602);
             this.pnlMenu.TabIndex = 1;
             // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.panel10.Location = new System.Drawing.Point(-2, 505);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(8, 32);
-            this.panel10.TabIndex = 17;
-            // 
             // btnManPiloto
             // 
             this.btnManPiloto.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -168,7 +164,7 @@ namespace Proyecto_p04
             this.btnManPiloto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
             this.btnManPiloto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManPiloto.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManPiloto.Location = new System.Drawing.Point(3, 505);
+            this.btnManPiloto.Location = new System.Drawing.Point(10, 247);
             this.btnManPiloto.Name = "btnManPiloto";
             this.btnManPiloto.Size = new System.Drawing.Size(226, 32);
             this.btnManPiloto.TabIndex = 18;
@@ -177,10 +173,18 @@ namespace Proyecto_p04
             this.btnManPiloto.UseVisualStyleBackColor = true;
             this.btnManPiloto.Click += new System.EventHandler(this.btnManPiloto_Click);
             // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel10.Location = new System.Drawing.Point(0, 247);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(8, 32);
+            this.panel10.TabIndex = 17;
+            // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.panel9.Location = new System.Drawing.Point(-2, 467);
+            this.panel9.Location = new System.Drawing.Point(0, 209);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(8, 32);
             this.panel9.TabIndex = 15;
@@ -192,7 +196,7 @@ namespace Proyecto_p04
             this.btnManAvion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
             this.btnManAvion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManAvion.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManAvion.Location = new System.Drawing.Point(8, 467);
+            this.btnManAvion.Location = new System.Drawing.Point(10, 209);
             this.btnManAvion.Name = "btnManAvion";
             this.btnManAvion.Size = new System.Drawing.Size(226, 32);
             this.btnManAvion.TabIndex = 16;
@@ -204,7 +208,7 @@ namespace Proyecto_p04
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.panel8.Location = new System.Drawing.Point(-2, 429);
+            this.panel8.Location = new System.Drawing.Point(0, 171);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(8, 32);
             this.panel8.TabIndex = 13;
@@ -216,7 +220,7 @@ namespace Proyecto_p04
             this.btnManAerolineas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
             this.btnManAerolineas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManAerolineas.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManAerolineas.Location = new System.Drawing.Point(8, 429);
+            this.btnManAerolineas.Location = new System.Drawing.Point(10, 171);
             this.btnManAerolineas.Name = "btnManAerolineas";
             this.btnManAerolineas.Size = new System.Drawing.Size(226, 32);
             this.btnManAerolineas.TabIndex = 14;
@@ -228,7 +232,7 @@ namespace Proyecto_p04
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.panel7.Location = new System.Drawing.Point(0, 301);
+            this.panel7.Location = new System.Drawing.Point(0, 365);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(8, 32);
             this.panel7.TabIndex = 11;
@@ -236,7 +240,7 @@ namespace Proyecto_p04
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.panel6.Location = new System.Drawing.Point(0, 265);
+            this.panel6.Location = new System.Drawing.Point(0, 329);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(8, 32);
             this.panel6.TabIndex = 9;
@@ -248,7 +252,7 @@ namespace Proyecto_p04
             this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportes.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.Location = new System.Drawing.Point(10, 301);
+            this.btnReportes.Location = new System.Drawing.Point(10, 365);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(226, 32);
             this.btnReportes.TabIndex = 12;
@@ -260,7 +264,7 @@ namespace Proyecto_p04
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.panel5.Location = new System.Drawing.Point(0, 229);
+            this.panel5.Location = new System.Drawing.Point(0, 293);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(8, 32);
             this.panel5.TabIndex = 7;
@@ -272,7 +276,7 @@ namespace Proyecto_p04
             this.btnPermisos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
             this.btnPermisos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPermisos.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPermisos.Location = new System.Drawing.Point(10, 265);
+            this.btnPermisos.Location = new System.Drawing.Point(10, 329);
             this.btnPermisos.Name = "btnPermisos";
             this.btnPermisos.Size = new System.Drawing.Size(226, 32);
             this.btnPermisos.TabIndex = 10;
@@ -295,7 +299,7 @@ namespace Proyecto_p04
             this.btnManUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
             this.btnManUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManUsuarios.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManUsuarios.Location = new System.Drawing.Point(10, 229);
+            this.btnManUsuarios.Location = new System.Drawing.Point(10, 293);
             this.btnManUsuarios.Name = "btnManUsuarios";
             this.btnManUsuarios.Size = new System.Drawing.Size(226, 32);
             this.btnManUsuarios.TabIndex = 8;
@@ -402,6 +406,22 @@ namespace Proyecto_p04
             this.pnlContainer.TabIndex = 2;
             this.pnlContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContainer_Paint);
             // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel11.Location = new System.Drawing.Point(-11, 161);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(183, 5);
+            this.panel11.TabIndex = 14;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel12.Location = new System.Drawing.Point(0, 283);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(183, 5);
+            this.panel12.TabIndex = 15;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -456,5 +476,7 @@ namespace Proyecto_p04
         private System.Windows.Forms.Button btnManAvion;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button btnManPiloto;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel11;
     }
 }

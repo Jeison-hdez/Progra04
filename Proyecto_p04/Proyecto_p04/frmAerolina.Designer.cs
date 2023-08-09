@@ -171,7 +171,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(986, 163);
+            this.label6.Location = new System.Drawing.Point(911, 171);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(174, 20);
             this.label6.TabIndex = 10;
@@ -181,7 +181,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1024, 215);
+            this.label7.Location = new System.Drawing.Point(949, 223);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 15);
             this.label7.TabIndex = 12;
@@ -193,7 +193,7 @@
             this.dgvAvion1.Location = new System.Drawing.Point(746, 297);
             this.dgvAvion1.Name = "dgvAvion1";
             this.dgvAvion1.ReadOnly = true;
-            this.dgvAvion1.Size = new System.Drawing.Size(567, 68);
+            this.dgvAvion1.Size = new System.Drawing.Size(483, 68);
             this.dgvAvion1.TabIndex = 13;
             this.dgvAvion1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAvion1_CellClick);
             // 
@@ -203,7 +203,7 @@
             this.dgvAvion2.Location = new System.Drawing.Point(746, 406);
             this.dgvAvion2.Name = "dgvAvion2";
             this.dgvAvion2.ReadOnly = true;
-            this.dgvAvion2.Size = new System.Drawing.Size(567, 72);
+            this.dgvAvion2.Size = new System.Drawing.Size(483, 72);
             this.dgvAvion2.TabIndex = 14;
             this.dgvAvion2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAvion2_CellClick);
             // 
@@ -213,7 +213,7 @@
             this.dgvAvion3.Location = new System.Drawing.Point(746, 526);
             this.dgvAvion3.Name = "dgvAvion3";
             this.dgvAvion3.ReadOnly = true;
-            this.dgvAvion3.Size = new System.Drawing.Size(567, 73);
+            this.dgvAvion3.Size = new System.Drawing.Size(483, 73);
             this.dgvAvion3.TabIndex = 15;
             this.dgvAvion3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAvion3_CellClick);
             // 
@@ -281,14 +281,14 @@
             "1",
             "2",
             "3"});
-            this.comboBox1.Location = new System.Drawing.Point(1048, 191);
+            this.comboBox1.Location = new System.Drawing.Point(973, 199);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(55, 21);
             this.comboBox1.TabIndex = 22;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(1166, 151);
+            this.textBox1.Location = new System.Drawing.Point(1091, 159);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(167, 93);
