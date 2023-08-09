@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -131,67 +130,6 @@ namespace Proyecto_p04
         private void lstMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            //Codigo Guardar
-            conexionBD.conectarBD();
-            string insertar = "INSERT INTO tbl_vuelos(Id,Identificacin,Estado,Nombre,PaisOrigen) VALUES(@Id,@Identificacin,@Estado,@Nombre,@PaisOrigen)";
-            SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
-            cmd.Parameters.AddWithValue("@Id", txtCodigo.Text);
-            cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
-            cmd.Parameters.AddWithValue("@Destino", txtVueloSeleccionado.Text);
-            cmd.ExecuteNonQuery();
-
-
-            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-            
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            //Codigo Modificar
-            conexionBD.conectarBD();
-            string actualizar = "UPDATE tbl_vuelos SET Id=@Id,Identificacion=@Identificacion,Estado=@Estado,Nombre=@Nombre,PaisOrigen=@PaisOrigen," +
-            "WHERE Id=@Id";
-            SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
-            cmd.Parameters.AddWithValue("@Id", txtCodigo.Text);
-            cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
-            cmd.Parameters.AddWithValue("@Destino", txtVueloSeleccionado.Text);
-
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            //Codigo Eliminar
-            conexionBD.conectarBD();
-            string eliminar = "DELETE FROM tbl_aerolineas WHERE Id=@Id";
-            SqlCommand cmd = new SqlCommand(eliminar, conexionBD.conectarBD());
-            cmd.Parameters.AddWithValue("@Id", txtCodigo.Text);
-            cmd.ExecuteNonQuery();
-
-            MessageBox.Show("Los datosfueron Eliminados!!!");
-        }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            limpiar_txt();
-        }
-
-        public void limpiar_txt()
-        {
-            txtCodigo.Clear();
-            txtEstado.Clear();
-            txtVueloSeleccionado.Clear();
-        }
-
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
-            frmAerolina frmAerolina = new frmAerolina();
-            frmAerolina.Close();
         }
     }
 }
