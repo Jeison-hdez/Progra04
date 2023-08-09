@@ -42,7 +42,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtNV = new System.Windows.Forms.TextBox();
+            this.txtVuelo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.Panel_Asientos = new System.Windows.Forms.PictureBox();
@@ -222,12 +222,15 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Panel_Asientos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -355,15 +358,15 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // txtNV
+            // txtVuelo
             // 
-            this.txtNV.Location = new System.Drawing.Point(316, 273);
-            this.txtNV.MaxLength = 20;
-            this.txtNV.Multiline = true;
-            this.txtNV.Name = "txtNV";
-            this.txtNV.ReadOnly = true;
-            this.txtNV.Size = new System.Drawing.Size(502, 29);
-            this.txtNV.TabIndex = 16;
+            this.txtVuelo.Location = new System.Drawing.Point(316, 273);
+            this.txtVuelo.MaxLength = 20;
+            this.txtVuelo.Multiline = true;
+            this.txtVuelo.Name = "txtVuelo";
+            this.txtVuelo.ReadOnly = true;
+            this.txtVuelo.Size = new System.Drawing.Size(502, 29);
+            this.txtVuelo.TabIndex = 16;
             // 
             // label8
             // 
@@ -2064,12 +2067,34 @@
             this.txtUsuario.Size = new System.Drawing.Size(213, 29);
             this.txtUsuario.TabIndex = 197;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1081, 664);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox1.TabIndex = 398;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Location = new System.Drawing.Point(986, 664);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(89, 34);
+            this.btnAtras.TabIndex = 397;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // frmVentanilla1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1134, 710);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnLimpiar);
@@ -2248,7 +2273,7 @@
             this.Controls.Add(this.Panel_Asientos);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtNV);
+            this.Controls.Add(this.txtVuelo);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -2274,6 +2299,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2294,7 +2320,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtNV;
+        private System.Windows.Forms.TextBox txtVuelo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox Panel_Asientos;
@@ -2474,5 +2500,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnAtras;
     }
 }
