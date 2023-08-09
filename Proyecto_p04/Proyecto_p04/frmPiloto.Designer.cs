@@ -62,9 +62,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(248, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(603, 55);
+            this.label2.Size = new System.Drawing.Size(586, 55);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Mantenimineto Aerolineas";
+            this.label2.Text = "Mantenimineto de Pilotos";
             // 
             // pictureBox4
             // 
