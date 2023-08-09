@@ -138,7 +138,7 @@ namespace Proyecto_p04
         private void btnManAvion_Click(object sender, EventArgs e)
         {
             
-            frmAviones avionesForm = new frmAviones();
+            frmVuelos avionesForm = new frmVuelos();
 
             // Mostrar el formulario frmAviones
             avionesForm.Show();

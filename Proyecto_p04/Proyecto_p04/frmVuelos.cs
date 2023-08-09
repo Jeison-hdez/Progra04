@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_p04
 {
-    public partial class frmAviones : Form
+    public partial class frmVuelos : Form
     {
-        public frmAviones()
+        public frmVuelos()
         {
             InitializeComponent();
             CargarDatosEnListBoxes();

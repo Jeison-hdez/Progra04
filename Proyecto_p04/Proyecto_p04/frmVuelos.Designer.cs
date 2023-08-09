@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_p04
 {
-    partial class frmAviones
+    partial class frmVuelos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAviones));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVuelos));
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.lstVuelo = new System.Windows.Forms.ListBox();
             this.lstMarca = new System.Windows.Forms.ListBox();

@@ -42,12 +42,7 @@ namespace Proyecto_p04
 
         private void dgvAerolinea_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //para llenar los textBox= codigo, nombre, identificacion, pais de Origen, con la informacion de los grid=Aerolinea
-            txtID.Text = dgvAerolinea.CurrentRow.Cells[0].Value.ToString();
-            txtIdentidicacion.Text = dgvAerolinea.CurrentRow.Cells[1].Value.ToString();
-            txtEstado.Text = dgvAerolinea.CurrentRow.Cells[3].Value.ToString();
-            txtNombre.Text = dgvAerolinea.CurrentRow.Cells[4].Value.ToString();
-            txtPaisOrigen.Text = dgvAerolinea.CurrentRow.Cells[5].Value.ToString();
+            
         }
 
 
@@ -55,7 +50,7 @@ namespace Proyecto_p04
         {
             //Codigo Guardar
             conexionBD.conectarBD();
-            string insertar = "INSERT INTO Estudiantes(Id,Identificacin,Estado,Nombre,PaisOrigen) VALUES(@Id,@Identificacin,@Estado,@Nombre,@PaisOrigen)";
+            string insertar = "INSERT INTO tbl_aerolineas(Id,Identificacin,Estado,Nombre,PaisOrigen) VALUES(@Id,@Identificacin,@Estado,@Nombre,@PaisOrigen)";
             SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
             cmd.Parameters.AddWithValue("@Id", txtID.Text);
             cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
@@ -74,14 +69,14 @@ namespace Proyecto_p04
         {
             //Codigo Modificar
             conexionBD.conectarBD();
-            string actualizar = "UPDATE tbl_usuarios SET Id=@Id,Identificacion=@Identificacion,Contraseña=@Contraseña,Nombre=@Nombre,Identificacion=@Identififcacion," +
-                "Id_Nivel=@ID-Nivel,Estado=@Estado WHERE Id=@Id";
+            string actualizar = "UPDATE tbl_aerolineas SET Id=@Id,Identificacion=@Identificacion,Estado=@Estado,Nombre=@Nombre,PaisOrigen=@PaisOrigen," +
+            "WHERE Id=@Id";
             SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
             cmd.Parameters.AddWithValue("@Id", txtID.Text);
             cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion);
-            cmd.Parameters.AddWithValue("@Estado", txtEstado);
+            cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
             cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-            cmd.Parameters.AddWithValue("@PaisOrigen", txtIdentificacion.Text);
+            cmd.Parameters.AddWithValue("@PaisOrigen", txtPaisOrigen.Text);
 
 
             cmd.ExecuteNonQuery();
@@ -92,6 +87,14 @@ namespace Proyecto_p04
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             //Codigo Eliminar
+            conexionBD.conectarBD();
+            string eliminar = "DELETE FROM tbl_aerolineas WHERE Id=@Id";
+            SqlCommand cmd = new SqlCommand(eliminar, conexionBD.conectarBD());
+            cmd.Parameters.AddWithValue("@Id", txtID.Text);
+            cmd.ExecuteNonQuery();
+
+            MessageBox.Show("Los datosfueron Eliminados!!!");
+            dgvAerolinea.DataSource = LLenar_grid();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -101,8 +104,9 @@ namespace Proyecto_p04
 
          public void limpiar_txt()
          {
-            
+            txtID.Clear();  
             txtNombre.Clear();
+            txtEstado.Clear();
             txtIdentidicacion.Clear();
             txtPaisOrigen.Clear();
             
@@ -110,7 +114,20 @@ namespace Proyecto_p04
 
         private void dgvAerolinea_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            //para llenar los textBox= codigo, nombre, identificacion, pais de Origen, con la informacion de los grid=Aerolinea
+            txtID.Text = dgvAerolinea.CurrentRow.Cells[0].Value.ToString();
+            txtIdentidicacion.Text = dgvAerolinea.CurrentRow.Cells[1].Value.ToString();
+            txtEstado.Text = dgvAerolinea.CurrentRow.Cells[3].Value.ToString();
+            txtNombre.Text = dgvAerolinea.CurrentRow.Cells[4].Value.ToString();
+            txtPaisOrigen.Text = dgvAerolinea.CurrentRow.Cells[5].Value.ToString();
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            frmAerolina frmAerolina = new frmAerolina();
+            frmAerolina.Close();
+        }
+
+   
     }
 }
