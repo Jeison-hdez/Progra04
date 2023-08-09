@@ -201,6 +201,11 @@ namespace Proyecto_p04
 
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     

@@ -121,5 +121,11 @@ namespace Proyecto_p04
         {
 
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            frmUsuario frmUsuario = new frmUsuario();
+            frmUsuario.Close();
+        }
     }
 }

@@ -63,35 +63,30 @@ namespace Proyecto_p04
         {
             //Codigo Guardar
 
-            
-
             conexionBD.conectarBD();
-            string insertar = "INSERT INTO tbl_aerolineas(Id,Nombre,Identificacin,HoraFecha,Usuario,Destino,Asiento) VALUES(@Id,@Nombre,@Identificacin,@HoraFecha,@Usuario,@Destino,@Asiento)";
+            string insertar = "INSERT INTO tbl_ventanilla(Id,Nombre,Identificacin,HoraFecha,Usuario,Destino,Asiento,NumeroV) VALUES(@Id,@Nombre,@Identificacin,@HoraFecha,@Usuario,@Destino,@Asiento,@NumeroV)";
             SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
             cmd.Parameters.AddWithValue("@Id", txtId.Text);
             cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
             cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
             cmd.Parameters.AddWithValue("@HoraFecha", txtHoraFecha.Text);
             cmd.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
-            cmd.Parameters.AddWithValue("@Destino", txtNV.Text);
+            cmd.Parameters.AddWithValue("@Destino", txtVuelo.Text);
+            cmd.Parameters.AddWithValue("@NumeroV", txtNumeroVentanilla);
             //cmd.Parameters.AddWithValue("@Asiento",  control); //esta es la variable para los nombres de los chbt
 
             cmd.ExecuteNonQuery();
 
 
             MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-            dataGridView1.DataSource = LLenar_grid();
-
-
-
-
+           
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             //Codigo Modificar
             conexionBD.conectarBD();
-            string actualizar = "UPDATE tbl_aerolineas SET Id=@Id,Identificacion=@Identificacion,Estado=@Estado,Nombre=@Nombre,PaisOrigen=@PaisOrigen," +
+            string actualizar = "UPDATE tbl_ventanilla SET Id=@Id,Nombre=@Nombre,Identificacion=@Identificacion,HoraFecha=@HoraFecha,Usuario=@Usuario,Destino=@Destino,NumeroV=@NumeroV" +
             "WHERE Id=@Id";
             SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
             cmd.Parameters.AddWithValue("@Id", txtId.Text);
@@ -99,18 +94,27 @@ namespace Proyecto_p04
             cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
             cmd.Parameters.AddWithValue("@HoraFecha", txtHoraFecha.Text);
             cmd.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
-            cmd.Parameters.AddWithValue("@Destino", txtNV.Text);
+            cmd.Parameters.AddWithValue("@Destino", txtVuelo.Text);
+            cmd.Parameters.AddWithValue("@NumeroV", txtNumeroVentanilla);
             //cmd.Parameters.AddWithValue("@Asiento", Asientos()); //esta es la variable para los nombres de los chbt
 
 
             cmd.ExecuteNonQuery();
             MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-            dataGridView1.DataSource = LLenar_grid();
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             //Codigo Eliminar
+            conexionBD.conectarBD();
+            string eliminar = "DELETE FROM tbl_ventanilla WHERE Id=@Id";
+            SqlCommand cmd = new SqlCommand(eliminar, conexionBD.conectarBD());
+            cmd.Parameters.AddWithValue("@Id", txtId.Text);
+            cmd.ExecuteNonQuery();
+
+            MessageBox.Show("Los datosfueron Eliminados!!!");
+            
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -123,7 +127,7 @@ namespace Proyecto_p04
             txtIdentificacion.Clear();
             txtHoraFecha.Clear();
             txtId.Clear();
-            txtNV.Clear();
+            txtVuelo.Clear();
             txtUsuario.Clear();
             txtNombre.Clear();
 
@@ -1397,7 +1401,14 @@ namespace Proyecto_p04
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txtVuelo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            frmVentanilla1 frmVentanilla1 = new frmVentanilla1();
+            frmVentanilla1.Close();
+
         }
     }
 }
