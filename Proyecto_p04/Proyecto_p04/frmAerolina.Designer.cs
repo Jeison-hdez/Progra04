@@ -414,6 +414,7 @@
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvAerolinea);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAerolina";
             this.Text = "frmAerolina";
             this.Load += new System.EventHandler(this.frmAerolina_Load);

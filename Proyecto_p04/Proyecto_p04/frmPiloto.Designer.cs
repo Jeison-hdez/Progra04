@@ -277,6 +277,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPiloto";
             this.Text = "frmPiloto";
             this.Load += new System.EventHandler(this.frmPiloto_Load);
