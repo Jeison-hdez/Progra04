@@ -45,11 +45,9 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtEstado = new System.Windows.Forms.TextBox();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAtras = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.Codigo = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -226,14 +224,6 @@
             this.txtEstado.TabIndex = 393;
             this.txtEstado.Text = "1";
             // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(933, 230);
-            this.txtCodigo.Multiline = true;
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(121, 34);
-            this.txtCodigo.TabIndex = 394;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -264,16 +254,6 @@
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 397;
             this.label2.Text = "Estado";
-            // 
-            // Codigo
-            // 
-            this.Codigo.AutoSize = true;
-            this.Codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codigo.Location = new System.Drawing.Point(930, 211);
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Size = new System.Drawing.Size(46, 13);
-            this.Codigo.TabIndex = 398;
-            this.Codigo.Text = "Codigo";
             // 
             // label3
             // 
@@ -314,11 +294,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.Codigo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnAtras);
-            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnLimpiar);
@@ -367,11 +345,9 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtEstado;
-        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label Codigo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

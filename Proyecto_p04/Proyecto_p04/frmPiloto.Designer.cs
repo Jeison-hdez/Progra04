@@ -44,13 +44,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtIdentidicacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.dgvPiloto = new System.Windows.Forms.DataGridView();
             this.txtNacionalidad = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -206,25 +206,6 @@
             this.label3.TabIndex = 44;
             this.label3.Text = "Identificacion";
             // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(28, 178);
-            this.txtId.MaxLength = 20;
-            this.txtId.Multiline = true;
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 26);
-            this.txtId.TabIndex = 43;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 155);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "Codigo";
-            // 
             // dgvPiloto
             // 
             this.dgvPiloto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -272,6 +253,26 @@
             this.btnAtras.TabIndex = 52;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 155);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Codigo";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(28, 178);
+            this.txtId.MaxLength = 20;
+            this.txtId.Multiline = true;
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(100, 26);
+            this.txtId.TabIndex = 43;
             // 
             // frmPiloto
             // 
@@ -333,12 +334,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtIdentidicacion;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvPiloto;
         private System.Windows.Forms.TextBox txtNacionalidad;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtId;
     }
 }
