@@ -74,8 +74,6 @@ namespace Proyecto_p04
         //Modificar datos
         private void btnModificar_Click(object sender, EventArgs e)
         {
-
-            
             conexionBD.conectarBD();
             string actualizar = "UPDATE tbl_usuarios SET Id=@Id,Usuario=@Usuario,Contraseña=@Contraseña,Nombre=@Nombre,Identificacion=@Identififcacion," +
                 "Id_Nivel=@ID-Nivel,Estado=@Estado WHERE Id=@Id";
@@ -88,7 +86,6 @@ namespace Proyecto_p04
             
 
             cmd.ExecuteNonQuery();
-
             MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
             dataGridView1.DataSource = LLenar_grid();
         }

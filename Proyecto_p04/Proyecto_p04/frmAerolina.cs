@@ -20,14 +20,14 @@ namespace Proyecto_p04
 
         private void frmAerolina_Load(object sender, EventArgs e)
         {
-            
+            conexionBD.conectarBD();
             MessageBox.Show("Conexion Exitosa!!!");
-            dgvAerolinea.DataSource = LLenar_grid2();
+            dgvAerolinea.DataSource = LLenar_grid();
             
         }
 
 
-        public DataTable LLenar_grid2()
+        public DataTable LLenar_grid()
         {
             //se llena el grid con la tabla de de la informacion del avion, esta es para los 3 grid
 
@@ -43,31 +43,50 @@ namespace Proyecto_p04
         private void dgvAerolinea_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //para llenar los textBox= codigo, nombre, identificacion, pais de Origen, con la informacion de los grid=Aerolinea
+            txtID.Text = dgvAerolinea.CurrentRow.Cells[0].Value.ToString();
+            txtIdentidicacion.Text = dgvAerolinea.CurrentRow.Cells[1].Value.ToString();
+            txtEstado.Text = dgvAerolinea.CurrentRow.Cells[3].Value.ToString();
+            txtNombre.Text = dgvAerolinea.CurrentRow.Cells[4].Value.ToString();
+            txtPaisOrigen.Text = dgvAerolinea.CurrentRow.Cells[5].Value.ToString();
         }
 
-       
+
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             //Codigo Guardar
+            conexionBD.conectarBD();
+            string insertar = "INSERT INTO Estudiantes(Id,Identificacin,Estado,Nombre,PaisOrigen) VALUES(@Id,@Identificacin,@Estado,@Nombre,@PaisOrigen)";
+            SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
+            cmd.Parameters.AddWithValue("@Id", txtID.Text);
+            cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
+            cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
+            cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+            cmd.Parameters.AddWithValue("@PaisOrigen", txtPaisOrigen.Text);
+            cmd.ExecuteNonQuery();
 
-            Clases.aerolinea aero = new Clases.aerolinea();
-            aero.Identificacion = txtIdentidicacion.Text;
-            aero.Descripcion = txtNombre.Text;
-            aero.Estado = "1";
-            aero.PaisOrigen = txtPaisOrigen.Text;
 
-            int resultado = Clases.aerolineaDAL.InserAerolinea(aero);
-
-            if (resultado > 0)
-            {
-                MessageBox.Show("Los datos fueron agregados de forma exitosa!!!");
-                dgvAerolinea.DataSource = LLenar_grid2();
-            }
+            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
+            dgvAerolinea.DataSource = LLenar_grid();
+            
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             //Codigo Modificar
+            conexionBD.conectarBD();
+            string actualizar = "UPDATE tbl_usuarios SET Id=@Id,Identificacion=@Identificacion,Contraseña=@Contraseña,Nombre=@Nombre,Identificacion=@Identififcacion," +
+                "Id_Nivel=@ID-Nivel,Estado=@Estado WHERE Id=@Id";
+            SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
+            cmd.Parameters.AddWithValue("@Id", txtID.Text);
+            cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion);
+            cmd.Parameters.AddWithValue("@Estado", txtEstado);
+            cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+            cmd.Parameters.AddWithValue("@PaisOrigen", txtIdentificacion.Text);
+
+
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
+            dgvAerolinea.DataSource = LLenar_grid();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

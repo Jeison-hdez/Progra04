@@ -49,8 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\aerolinea.cs" />
-    <Compile Include="Clases\aerolineaDAL.cs" />
     <Compile Include="Clases\conexionBD.cs" />
     <Compile Include="Clases\NivelesUsuariosDAL.cs" />
     <Compile Include="frmAerolina.cs">
