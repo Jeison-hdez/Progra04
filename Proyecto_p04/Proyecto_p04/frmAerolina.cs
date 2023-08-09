@@ -20,7 +20,7 @@ namespace Proyecto_p04
 
         private void frmAerolina_Load(object sender, EventArgs e)
         {
-            conexionBD.conectarBD();
+            
             MessageBox.Show("Conexion Exitosa!!!");
             dgvAerolinea.DataSource = LLenar_grid2();
             
@@ -31,7 +31,7 @@ namespace Proyecto_p04
         {
             //se llena el grid con la tabla de de la informacion del avion, esta es para los 3 grid
 
-            conexionBD.conectarBD();
+            
             DataTable dt = new DataTable();
             string consultar = "SELECT * FROM tbl_aerolineas"; //Crear la tabla en BD para llenar el grid
             SqlCommand cmd = new SqlCommand(consultar, conexionBD.conectarBD());
@@ -45,14 +45,10 @@ namespace Proyecto_p04
             //para llenar los textBox= codigo, nombre, identificacion, pais de Origen, con la informacion de los grid=Aerolinea
         }
 
-        
-
        
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             //Codigo Guardar
-
-
 
             Clases.aerolinea aero = new Clases.aerolinea();
             aero.Identificacion = txtIdentidicacion.Text;
@@ -91,7 +87,6 @@ namespace Proyecto_p04
             txtIdentidicacion.Clear();
             txtPaisOrigen.Clear();
             
-
         }
 
         private void dgvAerolinea_CellContentClick(object sender, DataGridViewCellEventArgs e)
