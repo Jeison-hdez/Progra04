@@ -44,7 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtIdentidicacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPiloto = new System.Windows.Forms.DataGridView();
             this.txtNacionalidad = new System.Windows.Forms.TextBox();
@@ -206,14 +206,14 @@
             this.label3.TabIndex = 44;
             this.label3.Text = "Identificacion";
             // 
-            // txtCodigo
+            // txtId
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(28, 178);
-            this.txtCodigo.MaxLength = 20;
-            this.txtCodigo.Multiline = true;
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 26);
-            this.txtCodigo.TabIndex = 43;
+            this.txtId.Location = new System.Drawing.Point(28, 178);
+            this.txtId.MaxLength = 20;
+            this.txtId.Multiline = true;
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 26);
+            this.txtId.TabIndex = 43;
             // 
             // label1
             // 
@@ -289,7 +289,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtIdentidicacion);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPiloto);
             this.Controls.Add(this.pictureBox4);
@@ -333,7 +333,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtIdentidicacion;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvPiloto;
         private System.Windows.Forms.TextBox txtNacionalidad;

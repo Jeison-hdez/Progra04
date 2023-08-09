@@ -34,7 +34,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.txtIdentificacion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtHoraFecha = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,9 +43,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtNV = new System.Windows.Forms.TextBox();
-            this.txtDestino = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.Panel_Asientos = new System.Windows.Forms.PictureBox();
             this.f1 = new System.Windows.Forms.CheckBox();
@@ -97,7 +95,7 @@
             this.c14 = new System.Windows.Forms.CheckBox();
             this.c12 = new System.Windows.Forms.CheckBox();
             this.c11 = new System.Windows.Forms.CheckBox();
-            this.c1 = new System.Windows.Forms.CheckBox();
+            this.c10 = new System.Windows.Forms.CheckBox();
             this.c8 = new System.Windows.Forms.CheckBox();
             this.c7 = new System.Windows.Forms.CheckBox();
             this.b21 = new System.Windows.Forms.CheckBox();
@@ -280,14 +278,14 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "ID";
             // 
-            // txtCedula
+            // txtIdentificacion
             // 
-            this.txtCedula.Location = new System.Drawing.Point(12, 208);
-            this.txtCedula.MaxLength = 20;
-            this.txtCedula.Multiline = true;
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(213, 29);
-            this.txtCedula.TabIndex = 7;
+            this.txtIdentificacion.Location = new System.Drawing.Point(12, 208);
+            this.txtIdentificacion.MaxLength = 20;
+            this.txtIdentificacion.Multiline = true;
+            this.txtIdentificacion.Name = "txtIdentificacion";
+            this.txtIdentificacion.Size = new System.Drawing.Size(213, 29);
+            this.txtIdentificacion.TabIndex = 7;
             // 
             // label4
             // 
@@ -355,6 +353,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(502, 144);
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txtNV
             // 
@@ -363,18 +362,8 @@
             this.txtNV.Multiline = true;
             this.txtNV.Name = "txtNV";
             this.txtNV.ReadOnly = true;
-            this.txtNV.Size = new System.Drawing.Size(213, 29);
+            this.txtNV.Size = new System.Drawing.Size(502, 29);
             this.txtNV.TabIndex = 16;
-            // 
-            // txtDestino
-            // 
-            this.txtDestino.Location = new System.Drawing.Point(316, 331);
-            this.txtDestino.MaxLength = 20;
-            this.txtDestino.Multiline = true;
-            this.txtDestino.Name = "txtDestino";
-            this.txtDestino.ReadOnly = true;
-            this.txtDestino.Size = new System.Drawing.Size(213, 29);
-            this.txtDestino.TabIndex = 17;
             // 
             // label8
             // 
@@ -382,19 +371,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(313, 252);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 18);
+            this.label8.Size = new System.Drawing.Size(211, 18);
             this.label8.TabIndex = 18;
-            this.label8.Text = "Número de Vuelo";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(313, 310);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 18);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Destino";
+            this.label8.Text = "Número de Vuelo / Destino";
             // 
             // label10
             // 
@@ -874,14 +853,14 @@
             this.c11.TabIndex = 69;
             this.c11.UseVisualStyleBackColor = true;
             // 
-            // c1
+            // c10
             // 
-            this.c1.AutoSize = true;
-            this.c1.Location = new System.Drawing.Point(355, 587);
-            this.c1.Name = "c1";
-            this.c1.Size = new System.Drawing.Size(15, 14);
-            this.c1.TabIndex = 68;
-            this.c1.UseVisualStyleBackColor = true;
+            this.c10.AutoSize = true;
+            this.c10.Location = new System.Drawing.Point(355, 587);
+            this.c10.Name = "c10";
+            this.c10.Size = new System.Drawing.Size(15, 14);
+            this.c10.TabIndex = 68;
+            this.c10.UseVisualStyleBackColor = true;
             // 
             // c8
             // 
@@ -2220,7 +2199,7 @@
             this.Controls.Add(this.c14);
             this.Controls.Add(this.c12);
             this.Controls.Add(this.c11);
-            this.Controls.Add(this.c1);
+            this.Controls.Add(this.c10);
             this.Controls.Add(this.c8);
             this.Controls.Add(this.c7);
             this.Controls.Add(this.d21);
@@ -2268,9 +2247,7 @@
             this.Controls.Add(this.f1);
             this.Controls.Add(this.Panel_Asientos);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtDestino);
             this.Controls.Add(this.txtNV);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label7);
@@ -2278,7 +2255,7 @@
             this.Controls.Add(this.Usuario);
             this.Controls.Add(this.txtHoraFecha);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtCedula);
+            this.Controls.Add(this.txtIdentificacion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label3);
@@ -2309,7 +2286,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.TextBox txtIdentificacion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtHoraFecha;
         private System.Windows.Forms.Label label5;
@@ -2318,9 +2295,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtNV;
-        private System.Windows.Forms.TextBox txtDestino;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox Panel_Asientos;
         private System.Windows.Forms.CheckBox f1;
@@ -2372,7 +2347,7 @@
         private System.Windows.Forms.CheckBox c14;
         private System.Windows.Forms.CheckBox c12;
         private System.Windows.Forms.CheckBox c11;
-        private System.Windows.Forms.CheckBox c1;
+        private System.Windows.Forms.CheckBox c10;
         private System.Windows.Forms.CheckBox c8;
         private System.Windows.Forms.CheckBox c7;
         private System.Windows.Forms.CheckBox b21;
