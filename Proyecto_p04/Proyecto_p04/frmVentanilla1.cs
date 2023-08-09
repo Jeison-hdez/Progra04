@@ -15,10 +15,16 @@ namespace Proyecto_p04
 {
     public partial class frmVentanilla1 : Form
     {
+
+
         public frmVentanilla1()
         {
             InitializeComponent();
         }
+
+
+
+
 
         private void frmVentanilla1_Load(object sender, EventArgs e)
         {
@@ -57,14 +63,83 @@ namespace Proyecto_p04
         {
             //Codigo Guardar
 
+            
+
+            conexionBD.conectarBD();
+            string insertar = "INSERT INTO tbl_aerolineas(Id,Nombre,Identificacin,HoraFecha,Usuario,Destino,Asiento) VALUES(@Id,@Nombre,@Identificacin,@HoraFecha,@Usuario,@Destino,@Asiento)";
+            SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
+            cmd.Parameters.AddWithValue("@Id", txtId.Text);
+            cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+            cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
+            cmd.Parameters.AddWithValue("@HoraFecha", txtHoraFecha.Text);
+            cmd.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
+            cmd.Parameters.AddWithValue("@Destino", txtNV.Text);
+            //cmd.Parameters.AddWithValue("@Asiento",  control); //esta es la variable para los nombres de los chbt
+
+            cmd.ExecuteNonQuery();
+
+
+            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
+            dataGridView1.DataSource = LLenar_grid();
+
+
+
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            //Codigo Modificar
+            conexionBD.conectarBD();
+            string actualizar = "UPDATE tbl_aerolineas SET Id=@Id,Identificacion=@Identificacion,Estado=@Estado,Nombre=@Nombre,PaisOrigen=@PaisOrigen," +
+            "WHERE Id=@Id";
+            SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
+            cmd.Parameters.AddWithValue("@Id", txtId.Text);
+            cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+            cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
+            cmd.Parameters.AddWithValue("@HoraFecha", txtHoraFecha.Text);
+            cmd.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
+            cmd.Parameters.AddWithValue("@Destino", txtNV.Text);
+            //cmd.Parameters.AddWithValue("@Asiento", Asientos()); //esta es la variable para los nombres de los chbt
+
+
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
+            dataGridView1.DataSource = LLenar_grid();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            //Codigo Eliminar
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        { 
+            limpiar_txt();
+        }
+
+        public void limpiar_txt()
+        {
+            txtIdentificacion.Clear();
+            txtHoraFecha.Clear();
+            txtId.Clear();
+            txtNV.Clear();
+            txtUsuario.Clear();
+            txtNombre.Clear();
+
+        }
+
+        //Esta es la clase para asignar los numero de los chBoton para la Base de Datos
+        public void Asientos()
+        {
             //Parte F. Guardar el numero del asiento.
 
             string control;
-            int numero = 0; // Variable para llevar la cuenta de cuántos se han marcado.
+            int numero = 0; 
 
             if (f1.Checked)
             {
-                control = "1";
+                control = "f1";
                 numero++;
                 f1.BackColor = Color.Red;
                 f1.Enabled = false;
@@ -72,7 +147,7 @@ namespace Proyecto_p04
             }
             else if (f2.Checked)
             {
-                control = "2";
+                control = "f2";
                 numero++;
                 f2.BackColor = Color.Red;
                 f2.Enabled = false;
@@ -80,7 +155,7 @@ namespace Proyecto_p04
             }
             else if (f3.Checked)
             {
-                control = "3";
+                control = "f3";
                 numero++;
                 f3.BackColor = Color.Red;
                 f3.Enabled = false;
@@ -88,16 +163,16 @@ namespace Proyecto_p04
             }
             else if (f4.Checked)
             {
-                control = "4";
+                control = "f4";
                 numero++;
                 f4.BackColor = Color.Red;
                 f4.Enabled = false;
                 control.ToString();
             }
-            
+
             else if (f7.Checked)
             {
-                control = "7";
+                control = "f7";
                 numero++;
                 f7.BackColor = Color.Red;
                 f7.Enabled = false;
@@ -105,16 +180,16 @@ namespace Proyecto_p04
             }
             else if (f8.Checked)
             {
-                control = "8";
+                control = "f8";
                 numero++;
                 f8.BackColor = Color.Red;
                 f8.Enabled = false;
                 control.ToString();
             }
-            
+
             else if (f10.Checked)
             {
-                control = "10";
+                control = "f10";
                 numero++;
                 f10.BackColor = Color.Red;
                 f10.Enabled = false;
@@ -122,7 +197,7 @@ namespace Proyecto_p04
             }
             else if (f11.Checked)
             {
-                control = "11";
+                control = "f11";
                 numero++;
                 f11.BackColor = Color.Red;
                 f11.Enabled = false;
@@ -130,16 +205,16 @@ namespace Proyecto_p04
             }
             else if (f12.Checked)
             {
-                control = "12";
+                control = "f12";
                 numero++;
                 f12.BackColor = Color.Red;
                 f12.Enabled = false;
                 control.ToString();
             }
-            
+
             else if (f14.Checked)
             {
-                control = "14";
+                control = "f14";
                 numero++;
                 f14.BackColor = Color.Red;
                 f14.Enabled = false;
@@ -147,7 +222,7 @@ namespace Proyecto_p04
             }
             else if (f15.Checked)
             {
-                control = "15";
+                control = "f15";
                 numero++;
                 f15.BackColor = Color.Red;
                 f15.Enabled = false;
@@ -155,7 +230,7 @@ namespace Proyecto_p04
             }
             else if (f20.Checked)
             {
-                control = "20";
+                control = "f20";
                 numero++;
                 f20.BackColor = Color.Red;
                 f20.Enabled = false;
@@ -163,7 +238,7 @@ namespace Proyecto_p04
             }
             else if (f21.Checked)
             {
-                control = "21";
+                control = "f21";
                 numero++;
                 f21.BackColor = Color.Red;
                 f21.Enabled = false;
@@ -171,7 +246,7 @@ namespace Proyecto_p04
             }
             else if (f22.Checked)
             {
-                control = "22";
+                control = "f22";
                 numero++;
                 f22.BackColor = Color.Red;
                 f22.Enabled = false;
@@ -179,7 +254,7 @@ namespace Proyecto_p04
             }
             else if (f23.Checked)
             {
-                control = "23";
+                control = "f23";
                 numero++;
                 f23.BackColor = Color.Red;
                 f23.Enabled = false;
@@ -187,7 +262,7 @@ namespace Proyecto_p04
             }
             else if (f24.Checked)
             {
-                control = "24";
+                control = "f24";
                 numero++;
                 f24.BackColor = Color.Red;
                 f24.Enabled = false;
@@ -195,7 +270,7 @@ namespace Proyecto_p04
             }
             else if (f25.Checked)
             {
-                control = "25";
+                control = "f25";
                 numero++;
                 f25.BackColor = Color.Red;
                 f25.Enabled = false;
@@ -203,7 +278,7 @@ namespace Proyecto_p04
             }
             else if (f26.Checked)
             {
-                control = "26";
+                control = "f26";
                 numero++;
                 f26.BackColor = Color.Red;
                 f26.Enabled = false;
@@ -211,7 +286,7 @@ namespace Proyecto_p04
             }
             else if (f27.Checked)
             {
-                control = "27";
+                control = "f27";
                 numero++;
                 f27.BackColor = Color.Red;
                 f27.Enabled = false;
@@ -219,7 +294,7 @@ namespace Proyecto_p04
             }
             else if (f28.Checked)
             {
-                control = "28";
+                control = "f28";
                 numero++;
                 f28.BackColor = Color.Red;
                 f28.Enabled = false;
@@ -227,7 +302,7 @@ namespace Proyecto_p04
             }
             else if (f29.Checked)
             {
-                control = "29";
+                control = "f29";
                 numero++;
                 f29.BackColor = Color.Red;
                 f29.Enabled = false;
@@ -235,7 +310,7 @@ namespace Proyecto_p04
             }
             else if (f30.Checked)
             {
-                control = "30";
+                control = "f30";
                 numero++;
                 f30.BackColor = Color.Red;
                 f30.Enabled = false;
@@ -243,7 +318,7 @@ namespace Proyecto_p04
             }
             else if (f31.Checked)
             {
-                control = "31";
+                control = "f31";
                 numero++;
                 f31.BackColor = Color.Red;
                 f31.Enabled = false;
@@ -251,7 +326,7 @@ namespace Proyecto_p04
             }
             else if (f32.Checked)
             {
-                control = "32";
+                control = "f32";
                 numero++;
                 f32.BackColor = Color.Red;
                 f32.Enabled = false;
@@ -259,7 +334,7 @@ namespace Proyecto_p04
             }
             else if (f34.Checked)
             {
-                control = "34";
+                control = "f34";
                 numero++;
                 f34.BackColor = Color.Red;
                 f34.Enabled = false;
@@ -267,7 +342,7 @@ namespace Proyecto_p04
             }
             else if (f35.Checked)
             {
-                control = "35";
+                control = "f35";
                 numero++;
                 f35.BackColor = Color.Red;
                 f35.Enabled = false;
@@ -275,7 +350,7 @@ namespace Proyecto_p04
             }
             else if (f36.Checked)
             {
-                control = "36";
+                control = "f36";
                 numero++;
                 f36.BackColor = Color.Red;
                 f36.Enabled = false;
@@ -283,7 +358,7 @@ namespace Proyecto_p04
             }
             else if (f37.Checked)
             {
-                control = "37";
+                control = "f37";
                 numero++;
                 f37.BackColor = Color.Red;
                 f37.Enabled = false;
@@ -291,7 +366,7 @@ namespace Proyecto_p04
             }
             else if (f38.Checked)
             {
-                control = "38";
+                control = "f38";
                 numero++;
                 f38.BackColor = Color.Red;
                 f38.Enabled = false;
@@ -299,7 +374,7 @@ namespace Proyecto_p04
             }
             else
             {
-                control = "0";
+                control = "f0";
                 control.ToString();
             }
 
@@ -333,7 +408,7 @@ namespace Proyecto_p04
                 e4.BackColor = Color.Red;
                 e4.Enabled = false;
             }
-            
+
             else if (e7.Checked)
             {
                 control = "e7";
@@ -348,7 +423,7 @@ namespace Proyecto_p04
                 e8.BackColor = Color.Red;
                 e8.Enabled = false;
             }
-            
+
             else if (e10.Checked)
             {
                 control = "e10";
@@ -370,7 +445,7 @@ namespace Proyecto_p04
                 e12.BackColor = Color.Red;
                 e12.Enabled = false;
             }
-            
+
             else if (e14.Checked)
             {
                 control = "e14";
@@ -534,7 +609,7 @@ namespace Proyecto_p04
                 d8.BackColor = Color.Red;
                 d8.Enabled = false;
             }
-            
+
             else if (d10.Checked)
             {
                 control = "d10";
@@ -556,7 +631,7 @@ namespace Proyecto_p04
                 d12.BackColor = Color.Red;
                 d12.Enabled = false;
             }
-            
+
             else if (d14.Checked)
             {
                 control = "d14";
@@ -741,7 +816,7 @@ namespace Proyecto_p04
                 c12.BackColor = Color.Red;
                 c12.Enabled = false;
             }
-           
+
             else if (c14.Checked)
             {
                 control = "c14";
@@ -917,7 +992,7 @@ namespace Proyecto_p04
                 b4.BackColor = Color.Red;
                 b4.Enabled = false;
             }
-            
+
             else if (b7.Checked)
             {
                 control = "b7";
@@ -932,7 +1007,7 @@ namespace Proyecto_p04
                 b8.BackColor = Color.Red;
                 b8.Enabled = false;
             }
-            
+
             else if (b10.Checked)
             {
                 control = "b10";
@@ -954,7 +1029,7 @@ namespace Proyecto_p04
                 b12.BackColor = Color.Red;
                 b12.Enabled = false;
             }
-            
+
             else if (b14.Checked)
             {
                 control = "b14";
@@ -1104,8 +1179,8 @@ namespace Proyecto_p04
 
             /////////// Parte A
 
-            if(a1.Checked)
-{
+            if (a1.Checked)
+            {
                 control = "a1";
                 numero++;
                 a1.BackColor = Color.Red;
@@ -1132,7 +1207,7 @@ namespace Proyecto_p04
                 a4.BackColor = Color.Red;
                 a4.Enabled = false;
             }
-            
+
             else if (a7.Checked)
             {
                 control = "a7";
@@ -1147,7 +1222,7 @@ namespace Proyecto_p04
                 a8.BackColor = Color.Red;
                 a8.Enabled = false;
             }
-            
+
             else if (a10.Checked)
             {
                 control = "a10";
@@ -1169,7 +1244,7 @@ namespace Proyecto_p04
                 a12.BackColor = Color.Red;
                 a12.Enabled = false;
             }
-            
+
             else if (a14.Checked)
             {
                 control = "a14";
@@ -1316,53 +1391,9 @@ namespace Proyecto_p04
             }
 
 
-            conexionBD.conectarBD();
-            string insertar = "INSERT INTO tbl_aerolineas(Id,Nombre,Identificacin,HoraFecha,Usuario,Destino,Asiento) VALUES(@Id,@Nombre,@Identificacin,@HoraFecha,@Usuario,@Destino,@Asiento)";
-            SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
-            cmd.Parameters.AddWithValue("@Id", txtId.Text);
-            cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-            cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
-            cmd.Parameters.AddWithValue("@HoraFecha", txtHoraFecha.Text);
-            cmd.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
-            cmd.Parameters.AddWithValue("@Destino", txtNV.Text);
-            cmd.Parameters.AddWithValue("@Asiento",  control); //esta es la variable para los nombres de los chbt
-
-            cmd.ExecuteNonQuery();
-
-
-            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-            dataGridView1.DataSource = LLenar_grid();
-
-
-
 
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            //Codigo Modificar
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            //Codigo Eliminar
-        }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        { 
-            limpiar_txt();
-        }
-
-        public void limpiar_txt()
-        {
-            txtIdentificacion.Clear();
-            txtHoraFecha.Clear();
-            txtId.Clear();
-            txtNV.Clear();
-            txtUsuario.Clear();
-            txtNombre.Clear();
-
-        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
