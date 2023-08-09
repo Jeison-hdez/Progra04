@@ -136,7 +136,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(867, 137);
+            this.pictureBox4.Location = new System.Drawing.Point(867, 98);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(34, 34);
             this.pictureBox4.TabIndex = 392;
@@ -145,7 +145,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(772, 137);
+            this.btnLimpiar.Location = new System.Drawing.Point(772, 98);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(89, 34);
             this.btnLimpiar.TabIndex = 391;
@@ -176,7 +176,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(716, 137);
+            this.pictureBox5.Location = new System.Drawing.Point(716, 98);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(34, 34);
             this.pictureBox5.TabIndex = 388;
@@ -185,7 +185,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(621, 137);
+            this.btnEliminar.Location = new System.Drawing.Point(621, 98);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(89, 34);
             this.btnEliminar.TabIndex = 387;
@@ -215,15 +215,17 @@
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(621, 257);
+            this.txtEstado.Location = new System.Drawing.Point(621, 188);
             this.txtEstado.Multiline = true;
             this.txtEstado.Name = "txtEstado";
+            this.txtEstado.ReadOnly = true;
             this.txtEstado.Size = new System.Drawing.Size(121, 33);
             this.txtEstado.TabIndex = 393;
+            this.txtEstado.Text = "1";
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(780, 257);
+            this.txtCodigo.Location = new System.Drawing.Point(780, 188);
             this.txtCodigo.Multiline = true;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(121, 34);
@@ -253,7 +255,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(621, 238);
+            this.label2.Location = new System.Drawing.Point(621, 169);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 397;
@@ -263,7 +265,7 @@
             // 
             this.Codigo.AutoSize = true;
             this.Codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codigo.Location = new System.Drawing.Point(777, 238);
+            this.Codigo.Location = new System.Drawing.Point(777, 169);
             this.Codigo.Name = "Codigo";
             this.Codigo.Size = new System.Drawing.Size(46, 13);
             this.Codigo.TabIndex = 398;
@@ -298,6 +300,7 @@
             this.Controls.Add(this.btnSeleccionar);
             this.Name = "frmVuelos";
             this.Text = "frmAviones";
+            this.Load += new System.EventHandler(this.frmVuelos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
