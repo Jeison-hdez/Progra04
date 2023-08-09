@@ -18,21 +18,35 @@ namespace Proyecto_p04
             InitializeComponent();
         }
 
-        
+
 
         private void frmVentanilla2_Load(object sender, EventArgs e)
         {
             conexionBD.conectarBD();
             MessageBox.Show("Conexion Exitosa!!!");
-            dataGridView1.DataSource = LLenar_grid();
+            dataGridView1.DataSource = LLenar_grid1();
+            dataGridView2.DataSource = LLenar_grid2();
         }
-        public DataTable LLenar_grid()
+        public DataTable LLenar_grid1()
         {
             //se llena el grid con la tabla de vuelos
 
             conexionBD.conectarBD();
             DataTable dt = new DataTable();
             string consultar = "SELECT * FROM tbl_vuelos";
+            SqlCommand cmd = new SqlCommand(consultar, conexionBD.conectarBD());
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable LLenar_grid2()
+        {
+            //se llena el grid con la tabla de ventanilla
+
+            conexionBD.conectarBD();
+            DataTable dt = new DataTable();
+            string consultar = "SELECT * FROM tbl_ventanilla";
             SqlCommand cmd = new SqlCommand(consultar, conexionBD.conectarBD());
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -50,7 +64,7 @@ namespace Proyecto_p04
         {
             //Codigo Guardar
             conexionBD.conectarBD();
-            string insertar = "INSERT INTO tbl_ventanilla(Id,Nombre,Identificacin,HoraFecha,Usuario,Destino,Asiento,NumeroV) VALUES(@Id,@Nombre,@Identificacin,@HoraFecha,@Usuario,@Destino,@Asiento,@NumeroV)";
+            string insertar = "INSERT INTO tbl_ventanilla(Id,Nombre,Identificacion,HoraFecha,Usuario,Destino,Asiento,NumeroV) VALUES(@Id,@Nombre,@Identificacion,@HoraFecha,@Usuario,@Destino,@Asiento,@NumeroV)";
             SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
             cmd.Parameters.AddWithValue("@Id", txtId.Text);
             cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
@@ -70,7 +84,7 @@ namespace Proyecto_p04
         {
             //Codigo Modificar
             conexionBD.conectarBD();
-            string actualizar = "UPDATE tbl_ventanilla SET Id=@Id,Nombre=@Nombre,Identificacion=@Identificacion,HoraFecha=@HoraFecha,Usuario=@Usuario,Destino=@Destino,NumeroV=@NumeroV" +
+            string actualizar = "UPDATE tbl_ventanilla SET Id=@Id,Nombre=@Nombre,Identificacion=@Identificacion,HoraFecha=@HoraFecha,Usuario=@Usuario,Destino=@Destino,NumeroV=@NumeroV,Asiento=@Asiento" +
             "WHERE Id=@Id";
             SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
             cmd.Parameters.AddWithValue("@Id", txtId.Text);
@@ -1390,9 +1404,21 @@ namespace Proyecto_p04
         {
             txtVuelo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
         }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+            txtNumeroVentanilla.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
+            txtNombre.Text = dataGridView2.CurrentRow.Cells[2].Value.ToString();
+            txtIdentificacion.Text = dataGridView2.CurrentRow.Cells[3].Value.ToString();
+            txtHoraFecha.Text = dataGridView2.CurrentRow.Cells[4].Value.ToString();
+            txtUsuario.Text = dataGridView2.CurrentRow.Cells[5].Value.ToString();
+            txtVuelo.Text = dataGridView2.CurrentRow.Cells[6].Value.ToString();
+            //txtVuelo.Text = dataGridView2.CurrentRow.Cells[7].Value.ToString(); este es para el asiento
+
+        }
     }
+
 }
-
-
 
  
