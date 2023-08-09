@@ -195,7 +195,7 @@
             this.dgvAvion1.ReadOnly = true;
             this.dgvAvion1.Size = new System.Drawing.Size(483, 68);
             this.dgvAvion1.TabIndex = 13;
-            this.dgvAvion1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAvion1_CellClick);
+            
             // 
             // dgvAvion2
             // 
@@ -205,7 +205,7 @@
             this.dgvAvion2.ReadOnly = true;
             this.dgvAvion2.Size = new System.Drawing.Size(483, 72);
             this.dgvAvion2.TabIndex = 14;
-            this.dgvAvion2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAvion2_CellClick);
+            
             // 
             // dgvAvion3
             // 
@@ -215,7 +215,7 @@
             this.dgvAvion3.ReadOnly = true;
             this.dgvAvion3.Size = new System.Drawing.Size(483, 73);
             this.dgvAvion3.TabIndex = 15;
-            this.dgvAvion3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAvion3_CellClick);
+            
             // 
             // txtAvion1
             // 
