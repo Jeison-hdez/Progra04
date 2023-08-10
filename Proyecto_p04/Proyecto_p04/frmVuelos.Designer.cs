@@ -51,12 +51,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSeleccionar
@@ -137,7 +141,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1020, 140);
+            this.pictureBox4.Location = new System.Drawing.Point(1144, 138);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(34, 34);
             this.pictureBox4.TabIndex = 392;
@@ -146,7 +150,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(925, 140);
+            this.btnLimpiar.Location = new System.Drawing.Point(1049, 138);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(89, 34);
             this.btnLimpiar.TabIndex = 391;
@@ -157,7 +161,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1020, 100);
+            this.pictureBox3.Location = new System.Drawing.Point(1144, 98);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 34);
             this.pictureBox3.TabIndex = 390;
@@ -166,7 +170,7 @@
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(925, 100);
+            this.btnModificar.Location = new System.Drawing.Point(1049, 98);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(89, 34);
             this.btnModificar.TabIndex = 389;
@@ -177,7 +181,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(869, 140);
+            this.pictureBox5.Location = new System.Drawing.Point(993, 138);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(34, 34);
             this.pictureBox5.TabIndex = 388;
@@ -186,7 +190,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(774, 140);
+            this.btnEliminar.Location = new System.Drawing.Point(898, 138);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(89, 34);
             this.btnEliminar.TabIndex = 387;
@@ -197,7 +201,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(869, 100);
+            this.pictureBox6.Location = new System.Drawing.Point(993, 98);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(34, 34);
             this.pictureBox6.TabIndex = 386;
@@ -206,7 +210,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(774, 100);
+            this.btnGuardar.Location = new System.Drawing.Point(898, 98);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(89, 34);
             this.btnGuardar.TabIndex = 385;
@@ -216,18 +220,18 @@
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(774, 230);
+            this.txtEstado.Location = new System.Drawing.Point(866, 398);
             this.txtEstado.Multiline = true;
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.ReadOnly = true;
-            this.txtEstado.Size = new System.Drawing.Size(121, 33);
+            this.txtEstado.Size = new System.Drawing.Size(121, 24);
             this.txtEstado.TabIndex = 393;
             this.txtEstado.Text = "1";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1028, 431);
+            this.pictureBox2.Location = new System.Drawing.Point(1144, 489);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 34);
             this.pictureBox2.TabIndex = 396;
@@ -237,7 +241,7 @@
             // btnAtras
             // 
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(933, 431);
+            this.btnAtras.Location = new System.Drawing.Point(1049, 489);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(89, 34);
             this.btnAtras.TabIndex = 395;
@@ -249,7 +253,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(774, 211);
+            this.label2.Location = new System.Drawing.Point(866, 379);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 397;
@@ -285,12 +289,45 @@
             this.label5.TabIndex = 401;
             this.label5.Text = "Seleccione la Modelo del Avion";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(726, 214);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(452, 150);
+            this.dataGridView1.TabIndex = 402;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(726, 379);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 13);
+            this.label6.TabIndex = 404;
+            this.label6.Text = "Codigo";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(726, 398);
+            this.txtId.Multiline = true;
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtId.Size = new System.Drawing.Size(121, 24);
+            this.txtId.TabIndex = 403;
+            // 
             // frmVuelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1085, 479);
+            this.ClientSize = new System.Drawing.Size(1232, 566);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -323,6 +360,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,5 +390,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

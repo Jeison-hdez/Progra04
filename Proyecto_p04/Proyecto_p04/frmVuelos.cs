@@ -150,9 +150,22 @@ namespace Proyecto_p04
         {
             conexionBD.conectarBD();
             MessageBox.Show("Conexion Exitosa!!!");
+            dataGridView1.DataSource = LLenar_grid();
 
 
-           
+        }
+
+        public DataTable LLenar_grid()
+        {
+            //se llena el grid con la tabla de aerolina
+
+            conexionBD.conectarBD();
+            DataTable dt = new DataTable();
+            string consultar = "SELECT * FROM tbl_vuelos"; //Crear la tabla en BD para lenar el grid
+            SqlCommand cmd = new SqlCommand(consultar, conexionBD.conectarBD());
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -193,6 +206,7 @@ namespace Proyecto_p04
         {
             
             txtEstado.Clear();
+            txtId.Clear();
             txtVueloSeleccionado.Clear();
         }
 
@@ -206,6 +220,14 @@ namespace Proyecto_p04
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txtVueloSeleccionado.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtEstado.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
 
         }
     }
