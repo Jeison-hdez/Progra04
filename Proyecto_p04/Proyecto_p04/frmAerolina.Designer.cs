@@ -61,6 +61,7 @@
             // 
             // dgvAerolinea
             // 
+            this.dgvAerolinea.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAerolinea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAerolinea.Location = new System.Drawing.Point(29, 297);
             this.dgvAerolinea.Name = "dgvAerolinea";
