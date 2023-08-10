@@ -313,6 +313,7 @@
             this.Controls.Add(this.lstMarca);
             this.Controls.Add(this.lstVuelo);
             this.Controls.Add(this.btnSeleccionar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVuelos";
             this.Text = "frmAviones";
             this.Load += new System.EventHandler(this.frmVuelos_Load);

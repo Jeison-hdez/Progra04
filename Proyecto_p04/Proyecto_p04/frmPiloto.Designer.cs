@@ -208,6 +208,7 @@
             // 
             // dgvPiloto
             // 
+            this.dgvPiloto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPiloto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPiloto.Location = new System.Drawing.Point(28, 289);
             this.dgvPiloto.Name = "dgvPiloto";

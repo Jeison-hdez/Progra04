@@ -150,6 +150,8 @@ namespace Proyecto_p04
         {
             conexionBD.conectarBD();
             MessageBox.Show("Conexion Exitosa!!!");
+
+
            
         }
 
