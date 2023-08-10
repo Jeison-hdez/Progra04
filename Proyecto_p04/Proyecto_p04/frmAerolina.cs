@@ -45,9 +45,9 @@ namespace Proyecto_p04
             //para llenar los textBox= codigo, nombre, identificacion, pais de Origen, con la informacion de los grid=Aerolinea
             txtID.Text = dgvAerolinea.CurrentRow.Cells[0].Value.ToString();
             txtIdentidicacion.Text = dgvAerolinea.CurrentRow.Cells[1].Value.ToString();
-            txtEstado.Text = dgvAerolinea.CurrentRow.Cells[3].Value.ToString();
-            txtNombre.Text = dgvAerolinea.CurrentRow.Cells[4].Value.ToString();
-            txtPaisOrigen.Text = dgvAerolinea.CurrentRow.Cells[5].Value.ToString();
+            txtEstado.Text = dgvAerolinea.CurrentRow.Cells[2].Value.ToString();
+            txtNombre.Text = dgvAerolinea.CurrentRow.Cells[3].Value.ToString();
+            txtPaisOrigen.Text = dgvAerolinea.CurrentRow.Cells[4].Value.ToString();
         }
     
 
