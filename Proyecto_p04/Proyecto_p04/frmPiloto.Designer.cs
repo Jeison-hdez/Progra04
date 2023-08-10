@@ -151,7 +151,7 @@
             // 
             // txtAñosE
             // 
-            this.txtAñosE.Location = new System.Drawing.Point(522, 178);
+            this.txtAñosE.Location = new System.Drawing.Point(404, 179);
             this.txtAñosE.MaxLength = 20;
             this.txtAñosE.Multiline = true;
             this.txtAñosE.Name = "txtAñosE";
@@ -162,7 +162,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(518, 155);
+            this.label5.Location = new System.Drawing.Point(400, 156);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(173, 20);
             this.label5.TabIndex = 48;
@@ -170,7 +170,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(331, 178);
+            this.txtNombre.Location = new System.Drawing.Point(213, 179);
             this.txtNombre.MaxLength = 20;
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
@@ -181,7 +181,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(327, 155);
+            this.label4.Location = new System.Drawing.Point(209, 156);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 46;
@@ -189,7 +189,7 @@
             // 
             // txtIdentidicacion
             // 
-            this.txtIdentidicacion.Location = new System.Drawing.Point(144, 178);
+            this.txtIdentidicacion.Location = new System.Drawing.Point(26, 179);
             this.txtIdentidicacion.MaxLength = 20;
             this.txtIdentidicacion.Multiline = true;
             this.txtIdentidicacion.Name = "txtIdentidicacion";
@@ -200,7 +200,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(140, 155);
+            this.label3.Location = new System.Drawing.Point(22, 156);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 20);
             this.label3.TabIndex = 44;
@@ -259,7 +259,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 155);
+            this.label1.Location = new System.Drawing.Point(207, 221);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 42;
@@ -267,7 +267,7 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(28, 178);
+            this.txtId.Location = new System.Drawing.Point(211, 244);
             this.txtId.MaxLength = 20;
             this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
