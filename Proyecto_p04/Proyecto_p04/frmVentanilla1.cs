@@ -77,7 +77,7 @@ namespace Proyecto_p04
 
                 //Codigo Guardar
                 conexionBD.conectarBD();
-                string insertar = "INSERT INTO tbl_ventanilla(Id,Nombre,Identificacion,HoraFecha,Usuario,Destino,Asiento,NumeroV) VALUES(@Id,@Nombre,@Identificacion,@HoraFecha,@Usuario,@Destino,@Asiento,@NumeroV)";
+                string insertar = "INSERT INTO tbl_ventanilla(Id,Nombre,Identificacion,HoraFecha,Usuario,Destino,Asiento,NumeroV,Boleto) VALUES(@Id,@Nombre,@Identificacion,@HoraFecha,@Usuario,@Destino,@Asiento,@NumeroV,@Boleto)";
                 SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
                 cmd.Parameters.AddWithValue("@Id", txtId.Text);
                 cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
@@ -85,7 +85,8 @@ namespace Proyecto_p04
                 cmd.Parameters.AddWithValue("@HoraFecha", txtHoraFecha.Text);
                 cmd.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
                 cmd.Parameters.AddWithValue("@Destino", txtVuelo.Text);
-                cmd.Parameters.AddWithValue("@NumeroV", txtNumeroVentanilla);
+                cmd.Parameters.AddWithValue("@NumeroV", txtNumeroVentanilla.Text);
+                cmd.Parameters.AddWithValue("@Boleto", txtBoleto.Text);
                 //cmd.Parameters.AddWithValue("@Asiento",  control); //esta es la variable para los nombres de los chbt
 
                 cmd.ExecuteNonQuery();
@@ -110,7 +111,7 @@ namespace Proyecto_p04
                 //Codigo Modificar
 
                 conexionBD.conectarBD();
-                string actualizar = "UPDATE tbl_ventanilla SET Id=@Id,Nombre=@Nombre,Identificacion=@Identificacion,HoraFecha=@HoraFecha,Usuario=@Usuario,Destino=@Destino,NumeroV=@NumeroV,Asiento=@Asiento" +
+                string actualizar = "UPDATE tbl_ventanilla SET Id=@Id,Nombre=@Nombre,Identificacion=@Identificacion,HoraFecha=@HoraFecha,Usuario=@Usuario,Destino=@Destino,NumeroV=@NumeroV,Asiento=@Asiento,Boleto=@Boleto" +
                 "WHERE Id=@Id";
                 SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
                 cmd.Parameters.AddWithValue("@Id", txtId.Text);
@@ -119,7 +120,8 @@ namespace Proyecto_p04
                 cmd.Parameters.AddWithValue("@HoraFecha", txtHoraFecha.Text);
                 cmd.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
                 cmd.Parameters.AddWithValue("@Destino", txtVuelo.Text);
-                cmd.Parameters.AddWithValue("@NumeroV", txtNumeroVentanilla);
+                cmd.Parameters.AddWithValue("@NumeroV", txtNumeroVentanilla.Text);
+                cmd.Parameters.AddWithValue("@Boleto", txtBoleto.Text);
                 //cmd.Parameters.AddWithValue("@Asiento", Asientos()); //esta es la variable para los nombres de los chbt
 
 
@@ -178,6 +180,7 @@ namespace Proyecto_p04
             txtVuelo.Clear();
             txtUsuario.Clear();
             txtNombre.Clear();
+            txtBoleto.Clear();
 
         }
 
@@ -1473,14 +1476,16 @@ namespace Proyecto_p04
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtId.Text = dataGridView2.CurrentRow.Cells[0].Value.ToString();
-            
+            txtNumeroVentanilla.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
             txtNombre.Text = dataGridView2.CurrentRow.Cells[2].Value.ToString();
             txtIdentificacion.Text = dataGridView2.CurrentRow.Cells[3].Value.ToString();
             txtHoraFecha.Text = dataGridView2.CurrentRow.Cells[4].Value.ToString();
             txtUsuario.Text = dataGridView2.CurrentRow.Cells[5].Value.ToString();
             txtVuelo.Text = dataGridView2.CurrentRow.Cells[6].Value.ToString();
-            //txtVuelo.Text = dataGridView2.CurrentRow.Cells[7].Value.ToString(); este es para el asiento
+            //falta el asiento  [7]  //////////////////////////////////////////////////////////////////
+            txtBoleto.Text = dataGridView2.CurrentRow.Cells[8].Value.ToString();
             
+
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
