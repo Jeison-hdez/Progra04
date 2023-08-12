@@ -13,7 +13,7 @@ namespace Proyecto_p04.Clases
         public static DataTable getPaises()
         {
             DataTable dt = new DataTable();
-            SqlCommand cmd = new SqlCommand(string.Format("select * from tbl_paises order by Id asc"), conexionBD.conectarBD());
+            SqlCommand cmd = new SqlCommand(string.Format("select * from paises order by Id asc"), conexionBD.conectarBD());
             SqlDataAdapter ada = new SqlDataAdapter(cmd);
             ada.Fill(dt);
             return dt;

@@ -23,7 +23,7 @@ namespace Proyecto_p04
             conexionBD.conectarBD();
             MessageBox.Show("Conexion Exitosa!!!");
             dgvPiloto.DataSource = LLenar_grid1();
-
+            paises();
         }
         public DataTable LLenar_grid1()
         {
@@ -49,7 +49,7 @@ namespace Proyecto_p04
             cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
             cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
             cmd.Parameters.AddWithValue("@AñosExpe", txtAñosE.Text);
-            cmd.Parameters.AddWithValue("@Nacionalidad", txtNacionalidad.Text);
+            cmd.Parameters.AddWithValue("@Nacionalidad", cbPaises.SelectedIndex);
             cmd.ExecuteNonQuery();
 
 
@@ -69,7 +69,7 @@ namespace Proyecto_p04
             cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
             cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
             cmd.Parameters.AddWithValue("@AñosExpe", txtAñosE.Text);
-            cmd.Parameters.AddWithValue("@Nacionalidad", txtNacionalidad.Text);
+            cmd.Parameters.AddWithValue("@Nacionalidad", cbPaises.SelectedIndex);
 
             cmd.ExecuteNonQuery();
             MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
