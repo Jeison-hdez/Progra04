@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Proyecto_p04
 {
@@ -93,6 +94,7 @@ namespace Proyecto_p04
         {
 
             limpiar_txt();
+            
         }
 
         public void limpiar_txt()
@@ -101,7 +103,8 @@ namespace Proyecto_p04
             txtNombre.Clear();
             txtIdentidicacion.Clear();
             txtAñosE.Clear();
-        }
+            cbPaises.SelectedItem = "- Seleccione Nacionalidad";
+        } 
 
         private void dgvAerolinea_CellClick(object sender, DataGridViewCellEventArgs e)
         {
