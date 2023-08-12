@@ -23,7 +23,7 @@ namespace Proyecto_p04.Clases
         {
             int resultado = 0;
 
-            SqlCommand cmd = new SqlCommand(string.Format("select * from usuarios_permisos where id_nivel = {1} limit 1 ", gPermisos.id_boton, gPermisos.id_nivel, gPermisos.activo), conexionBD.conectarBD());
+            SqlCommand cmd = new SqlCommand(string.Format("select * from tbl_usuarios_permisos where id_nivel = {1} limit 1 ", gPermisos.id_boton, gPermisos.id_nivel, gPermisos.activo), conexionBD.conectarBD());
             try
             {
                 SqlDataReader rd = cmd.ExecuteReader();
