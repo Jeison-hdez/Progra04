@@ -23,7 +23,7 @@ namespace Proyecto_p04
             conexionBD.conectarBD();
             MessageBox.Show("Conexion Exitosa!!!");
             dgvPiloto.DataSource = LLenar_grid1();
-
+            paises();
         }
         public DataTable LLenar_grid1()
         {
@@ -49,7 +49,7 @@ namespace Proyecto_p04
             cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
             cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
             cmd.Parameters.AddWithValue("@AñosExpe", txtAñosE.Text);
-            cmd.Parameters.AddWithValue("@Nacionalidad", txtNacionalidad.Text);
+            cmd.Parameters.AddWithValue("@Nacionalidad", cbPaises.SelectedIndex);
             cmd.ExecuteNonQuery();
 
 
@@ -69,7 +69,7 @@ namespace Proyecto_p04
             cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
             cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
             cmd.Parameters.AddWithValue("@AñosExpe", txtAñosE.Text);
-            cmd.Parameters.AddWithValue("@Nacionalidad", txtNacionalidad.Text);
+            cmd.Parameters.AddWithValue("@Nacionalidad", cbPaises.SelectedIndex);
 
             cmd.ExecuteNonQuery();
             MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
@@ -101,8 +101,6 @@ namespace Proyecto_p04
             txtNombre.Clear();
             txtIdentidicacion.Clear();
             txtAñosE.Clear();
-            txtNacionalidad.Clear();
-
         }
 
         private void dgvAerolinea_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -110,8 +108,26 @@ namespace Proyecto_p04
             txtId.Text = dgvPiloto.CurrentRow.Cells[0].Value.ToString();
             txtIdentidicacion.Text = dgvPiloto.CurrentRow.Cells[1].Value.ToString();
             txtNombre.Text = dgvPiloto.CurrentRow.Cells[2].Value.ToString();
-            txtAñosE.Text = dgvPiloto.CurrentRow.Cells[3].Value.ToString();
-            txtNacionalidad.Text = dgvPiloto.CurrentRow.Cells[4].Value.ToString();
+            txtNombre.Text = dgvPiloto.CurrentRow.Cells[3].Value.ToString();
+            txtAñosE.Text = dgvPiloto.CurrentRow.Cells[4].Value.ToString();
+        }
+
+        public void paises() 
+        {
+            DataTable dt = new DataTable();
+            cbPaises.ValueMember = "id";
+            cbPaises.DisplayMember = "pais";
+            cbPaises.Items.Insert(0, " - Seleccione Nacionalidad");
+            dt = Clases.pilotosDAL.getPaises();
+            int i = 0;
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow item in dt.Rows)
+                {
+                    cbPaises.Items.Insert(Convert.ToInt32(dt.Rows[i]["id"]), dt.Rows[i]["nombre"].ToString());
+                    i++;
+                }
+            }
         }
     }
 }

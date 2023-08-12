@@ -56,6 +56,7 @@ C:\Users\Hewlett Packard\OneDrive\Documentos\GitHub\Progra04\Proyecto_p04\Proyec
 C:\Users\Hewlett Packard\OneDrive\Documentos\GitHub\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmPiloto.resources
 C:\Users\jeiso\Documents\TRABAJO\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmPiloto.resources
 C:\Users\Hewlett Packard\OneDrive\Documentos\GitHub\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmVuelos.resources
+C:\Users\jeiso\Documents\TRABAJO\Progra04\Proyecto_p04\Proyecto_p04\obj\Debug\Proyecto_p04.frmVuelos.resources
 D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\bin\Debug\Proyecto_p04.exe.config
 D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\bin\Debug\Proyecto_p04.exe
 D:\OneDrive\OneDrive - UACA Cipreses S.A\Documentos\GitHub\Progra04\Progra04\Proyecto_p04\Proyecto_p04\bin\Debug\Proyecto_p04.pdb

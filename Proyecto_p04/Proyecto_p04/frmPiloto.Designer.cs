@@ -45,10 +45,10 @@
             this.txtIdentidicacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvPiloto = new System.Windows.Forms.DataGridView();
-            this.txtNacionalidad = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.cbPaises = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -217,15 +217,6 @@
             this.dgvPiloto.TabIndex = 41;
             this.dgvPiloto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAerolinea_CellClick);
             // 
-            // txtNacionalidad
-            // 
-            this.txtNacionalidad.Location = new System.Drawing.Point(28, 244);
-            this.txtNacionalidad.MaxLength = 20;
-            this.txtNacionalidad.Multiline = true;
-            this.txtNacionalidad.Name = "txtNacionalidad";
-            this.txtNacionalidad.Size = new System.Drawing.Size(167, 26);
-            this.txtNacionalidad.TabIndex = 51;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -255,6 +246,14 @@
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = true;
             // 
+            // cbPaises
+            // 
+            this.cbPaises.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPaises.FormattingEnabled = true;
+            this.cbPaises.Location = new System.Drawing.Point(28, 244);
+            this.cbPaises.Name = "cbPaises";
+            this.cbPaises.Size = new System.Drawing.Size(159, 21);
+            this.cbPaises.TabIndex = 54;
             // label1
             // 
             this.label1.AutoSize = true;
@@ -281,9 +280,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1073, 599);
+            this.Controls.Add(this.cbPaises);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.btnAtras);
-            this.Controls.Add(this.txtNacionalidad);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtAñosE);
             this.Controls.Add(this.label5);
@@ -336,10 +335,10 @@
         private System.Windows.Forms.TextBox txtIdentidicacion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvPiloto;
-        private System.Windows.Forms.TextBox txtNacionalidad;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.ComboBox cbPaises;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtId;
     }
