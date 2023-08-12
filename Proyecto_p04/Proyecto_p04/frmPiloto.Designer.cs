@@ -254,6 +254,7 @@
             this.cbPaises.Name = "cbPaises";
             this.cbPaises.Size = new System.Drawing.Size(159, 21);
             this.cbPaises.TabIndex = 54;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;

@@ -135,11 +135,12 @@ namespace Proyecto_p04
         {
             //Codigo Guardar
             conexionBD.conectarBD();
-            string insertar = "INSERT INTO tbl_vuelos(Estado,Destino) VALUES(@Estado,@Destino)";
+            string insertar = "INSERT INTO tbl_vuelos(Estado,Destino,Piloto) VALUES(@Estado,@Destino,@Piloto)";
             SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
             
             cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
             cmd.Parameters.AddWithValue("@Destino", txtVueloSeleccionado.Text);
+            cmd.Parameters.AddWithValue("@Pilotos", txtpiloto.Text);
             cmd.ExecuteNonQuery();
 
 
@@ -150,12 +151,13 @@ namespace Proyecto_p04
         {
             conexionBD.conectarBD();
             MessageBox.Show("Conexion Exitosa!!!");
-            dataGridView1.DataSource = LLenar_grid();
+            dataGridView1.DataSource = LLenar_grid1();
+            dataGridView2.DataSource = LLenar_grid2();
 
 
         }
 
-        public DataTable LLenar_grid()
+        public DataTable LLenar_grid1()
         {
             //se llena el grid con la tabla de aerolina
 
@@ -168,16 +170,31 @@ namespace Proyecto_p04
             return dt;
         }
 
+        public DataTable LLenar_grid2()
+        {
+            //se llena el grid con la tabla de aerolina
+
+            conexionBD.conectarBD();
+            DataTable dt = new DataTable();
+            string consultar = "SELECT * FROM tbl_pilotos"; //Crear la tabla en BD para lenar el grid
+            SqlCommand cmd = new SqlCommand(consultar, conexionBD.conectarBD());
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
+
         private void btnModificar_Click(object sender, EventArgs e)
         {
             //Codigo Modificar
             conexionBD.conectarBD();
-            string actualizar = "UPDATE tbl_vuelos SET Estado=@Estado,Destino=@Destino," +
+            string actualizar = "UPDATE tbl_vuelos SET Estado=@Estado,Destino=@Destino,Piloto=@Piloto," +
             "WHERE Id=@Id";
             SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
+
             
             cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
             cmd.Parameters.AddWithValue("@Destino", txtVueloSeleccionado.Text);
+            cmd.Parameters.AddWithValue("@Piloto", txtpiloto.Text);
 
             cmd.ExecuteNonQuery();
             MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
@@ -208,6 +225,7 @@ namespace Proyecto_p04
             txtEstado.Clear();
             txtId.Clear();
             txtVueloSeleccionado.Clear();
+            txtpiloto.Clear();
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -229,6 +247,16 @@ namespace Proyecto_p04
             txtVueloSeleccionado.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             txtEstado.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
 
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtpiloto.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }

@@ -103,7 +103,7 @@ namespace Proyecto_p04
             txtNombre.Clear();
             txtIdentidicacion.Clear();
             txtAñosE.Clear();
-            cbPaises.SelectedItem = "- Seleccione Nacionalidad";
+            cbPaises.SelectedIndex = 0;
         } 
 
         private void dgvAerolinea_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -111,8 +111,8 @@ namespace Proyecto_p04
             txtId.Text = dgvPiloto.CurrentRow.Cells[0].Value.ToString();
             txtIdentidicacion.Text = dgvPiloto.CurrentRow.Cells[1].Value.ToString();
             txtNombre.Text = dgvPiloto.CurrentRow.Cells[2].Value.ToString();
-            txtNombre.Text = dgvPiloto.CurrentRow.Cells[3].Value.ToString();
             txtAñosE.Text = dgvPiloto.CurrentRow.Cells[4].Value.ToString();
+            //cbPaises.SelectedIndex = dgvPiloto.CurrentRow.Cells[5].Value.ToString();
         }
 
         public void paises() 

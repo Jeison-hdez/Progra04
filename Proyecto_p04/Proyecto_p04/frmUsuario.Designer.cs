@@ -290,6 +290,9 @@
             // cbNivel
             // 
             this.cbNivel.FormattingEnabled = true;
+            this.cbNivel.Items.AddRange(new object[] {
+            "0",
+            "1"});
             this.cbNivel.Location = new System.Drawing.Point(805, 311);
             this.cbNivel.MaxLength = 20;
             this.cbNivel.Name = "cbNivel";
@@ -299,6 +302,9 @@
             // cbEstado
             // 
             this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "0",
+            "1"});
             this.cbEstado.Location = new System.Drawing.Point(914, 311);
             this.cbEstado.MaxLength = 20;
             this.cbEstado.Name = "cbEstado";
