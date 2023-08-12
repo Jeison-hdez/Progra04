@@ -56,7 +56,7 @@ namespace Proyecto_p04.Clases
         internal static DataTable getPermisos(Usuarios usu)
         {
             DataTable dt = new DataTable();
-            SqlCommand cmd = new SqlCommand(string.Format("SELECT u.id,p.id_nivel,p.descripcion,p.boton,p.activo,IFNULL(u.boton,'No Existe') AS valor from u_botones u left JOIN usuarios_permisos p ON u.boton = p.boton and p.id_nivel = {0} where u.activo=1  ORDER BY u.id ASC", usu.idPerfil), conexionBD.conectarBD());
+            SqlCommand cmd = new SqlCommand(string.Format("SELECT u.id,p.id_nivel,p.descripcion,p.Nombre_Boton,p.Estado,isnull(u.boton,'No Existe') AS valor from tbl_botonesPermisos u left JOIN tbl_usuarios_permisos p ON u.Boton = p.Nombre_Boton and p.id_nivel = {0} where u.Estado=1  ORDER BY u.id ASC", usu.idPerfil), conexionBD.conectarBD());
             SqlDataAdapter adap = new SqlDataAdapter(cmd);
             if (dt.Rows.Count > 0)
             {

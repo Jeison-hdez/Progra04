@@ -81,12 +81,15 @@ namespace Proyecto_p04
         {
             Niveles();
             Opciones();
+            getcheck();
         }
 
         private void cbNivel_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (chkPermisos.Visible)
+            if (chkPermisos.Visible) 
+            {
                 getcheck();
+            } 
         }
 
         private void getcheck() //revisar
@@ -110,8 +113,8 @@ namespace Proyecto_p04
                 foreach (DataRow rows in bt.Rows)
                 {
 
-                    val = Convert.ToString(rows["boton"]);
-                    if (rows["boton"].ToString() == "")
+                    val = Convert.ToString(rows["Nombre_Boton"]);
+                    if (rows["Nombre_Boton"].ToString() == "")
                     {
                         chkPermisos.SetItemCheckState(ii, CheckState.Unchecked);
                         check = 0; // activo
@@ -124,7 +127,7 @@ namespace Proyecto_p04
                     else
                     {
                         idNivel = Convert.ToInt32(rows["id_nivel"]);   // Nivel
-                        check = Convert.ToInt32(rows["activo"]); // activo
+                        check = Convert.ToInt32(rows["Estado"]); // activo
                         chequear = Convert.ToBoolean(check);
 
 
@@ -170,7 +173,7 @@ namespace Proyecto_p04
                     int ii = 0;
                     foreach (DataRowView item in chkPermisos.Items)
                     {
-                        string descripcion = item["informacion"].ToString();
+                        string descripcion = item["descripcion"].ToString();
                         string boton = item["boton"].ToString();
                         string id = item["id"].ToString();
 
@@ -211,7 +214,7 @@ namespace Proyecto_p04
                     dt2 = Clases.NivelesdeUsuariosDAL.bot();
                     foreach (DataRow Row in dt2.Rows)
                     {
-                        string descripcion = Row["informacion"].ToString();
+                        string descripcion = Row["descripcion"].ToString();
                         string boton = Row["boton"].ToString();
                         string id = Row["id"].ToString();
 
@@ -220,16 +223,9 @@ namespace Proyecto_p04
                         glevel.boton = boton.ToString();
 
                      
-                        glevel.activo = Convert.ToInt32(Row["activo"].ToString());
-                      
+                        glevel.activo = Convert.ToInt32(Row["estado"].ToString());
 
-                        if (boton == "btnAdd" && glevel.id_nivel <= 6 || boton == "btnFacCierre" && glevel.id_nivel <= 6)
-                        {
-                        }
-                        else
-                        {
-                            int agregar = Clases.NivelesdeUsuariosDAL.addRegistro(glevel);
-                        }
+                        int agregar = Clases.NivelesdeUsuariosDAL.addRegistro(glevel);
                         ii++;
                     }
                     this.Cursor = Cursors.Default;
@@ -258,6 +254,20 @@ namespace Proyecto_p04
                         Opciones();
                     }
                 }
+            }
+        }
+
+        private void chkOpciones_CheckedChanged(object sender, EventArgs e)
+        {
+            bool estado = false;
+            if (chkOpciones.Checked)
+                estado = true;
+            if (!chkOpciones.Checked)
+                estado = false;
+
+            for (int i = 0; i < chkPermisos.Items.Count; i++)
+            {
+                chkPermisos.SetItemChecked(i, estado);
             }
         }
     }

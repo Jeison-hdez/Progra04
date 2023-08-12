@@ -59,6 +59,8 @@ namespace Proyecto_p04
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnVentanilla1 = new System.Windows.Forms.Button();
             this.pnlContainer = new System.Windows.Forms.Panel();
+            this.btnSesion = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.pnlTitutlo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
@@ -80,6 +82,7 @@ namespace Proyecto_p04
             this.pnlTitutlo.Size = new System.Drawing.Size(1300, 48);
             this.pnlTitutlo.TabIndex = 0;
             this.pnlTitutlo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitutlo_MouseDown);
+            this.pnlTitutlo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTitutlo_MouseMove);
             // 
             // pbRestaurar
             // 
@@ -129,6 +132,8 @@ namespace Proyecto_p04
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(153)))), ((int)(((byte)(165)))));
+            this.pnlMenu.Controls.Add(this.panel13);
+            this.pnlMenu.Controls.Add(this.btnSesion);
             this.pnlMenu.Controls.Add(this.panel12);
             this.pnlMenu.Controls.Add(this.panel11);
             this.pnlMenu.Controls.Add(this.btnManPiloto);
@@ -422,6 +427,35 @@ namespace Proyecto_p04
             this.pnlContainer.TabIndex = 2;
             this.pnlContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContainer_Paint);
             // 
+            // btnSesion
+            // 
+            this.btnSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSesion.FlatAppearance.BorderSize = 0;
+            this.btnSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.btnSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSesion.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnSesion.Image")));
+            this.btnSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSesion.Location = new System.Drawing.Point(10, 570);
+            this.btnSesion.Name = "btnSesion";
+            this.btnSesion.Size = new System.Drawing.Size(155, 32);
+            this.btnSesion.TabIndex = 19;
+            this.btnSesion.Text = "Cerrar Sesión";
+            this.btnSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSesion.UseVisualStyleBackColor = true;
+            this.btnSesion.Click += new System.EventHandler(this.btnSesion_Click);
+            // 
+            // panel13
+            // 
+            this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel13.Location = new System.Drawing.Point(0, 570);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(8, 32);
+            this.panel13.TabIndex = 12;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,5 +512,7 @@ namespace Proyecto_p04
         private System.Windows.Forms.Button btnManPiloto;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Button btnSesion;
+        private System.Windows.Forms.Panel panel13;
     }
 }
