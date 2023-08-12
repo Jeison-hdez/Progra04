@@ -45,24 +45,29 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtEstado = new System.Windows.Forms.TextBox();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAtras = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.Codigo = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSeleccionar
             // 
             this.btnSeleccionar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(12, 388);
+            this.btnSeleccionar.Location = new System.Drawing.Point(36, 428);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(88, 35);
             this.btnSeleccionar.TabIndex = 0;
@@ -76,7 +81,7 @@
             this.lstVuelo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.lstVuelo.FormattingEnabled = true;
             this.lstVuelo.ItemHeight = 16;
-            this.lstVuelo.Location = new System.Drawing.Point(12, 58);
+            this.lstVuelo.Location = new System.Drawing.Point(36, 98);
             this.lstVuelo.Name = "lstVuelo";
             this.lstVuelo.Size = new System.Drawing.Size(176, 324);
             this.lstVuelo.TabIndex = 1;
@@ -87,7 +92,7 @@
             this.lstMarca.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.lstMarca.FormattingEnabled = true;
             this.lstMarca.ItemHeight = 16;
-            this.lstMarca.Location = new System.Drawing.Point(223, 58);
+            this.lstMarca.Location = new System.Drawing.Point(274, 98);
             this.lstMarca.Name = "lstMarca";
             this.lstMarca.Size = new System.Drawing.Size(166, 324);
             this.lstMarca.TabIndex = 2;
@@ -99,7 +104,7 @@
             this.lstModelo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstModelo.FormattingEnabled = true;
             this.lstModelo.ItemHeight = 16;
-            this.lstModelo.Location = new System.Drawing.Point(423, 58);
+            this.lstModelo.Location = new System.Drawing.Point(528, 98);
             this.lstModelo.Name = "lstModelo";
             this.lstModelo.Size = new System.Drawing.Size(168, 324);
             this.lstModelo.TabIndex = 3;
@@ -109,7 +114,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(304, 9);
+            this.label1.Location = new System.Drawing.Point(336, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(321, 31);
             this.label1.TabIndex = 380;
@@ -118,7 +123,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(106, 389);
+            this.pictureBox1.Location = new System.Drawing.Point(130, 429);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 35);
             this.pictureBox1.TabIndex = 381;
@@ -127,16 +132,16 @@
             // txtVueloSeleccionado
             // 
             this.txtVueloSeleccionado.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txtVueloSeleccionado.Location = new System.Drawing.Point(147, 388);
+            this.txtVueloSeleccionado.Location = new System.Drawing.Point(171, 428);
             this.txtVueloSeleccionado.Multiline = true;
             this.txtVueloSeleccionado.Name = "txtVueloSeleccionado";
-            this.txtVueloSeleccionado.Size = new System.Drawing.Size(444, 35);
+            this.txtVueloSeleccionado.Size = new System.Drawing.Size(525, 35);
             this.txtVueloSeleccionado.TabIndex = 382;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(867, 137);
+            this.pictureBox4.Location = new System.Drawing.Point(1144, 138);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(34, 34);
             this.pictureBox4.TabIndex = 392;
@@ -145,7 +150,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(772, 137);
+            this.btnLimpiar.Location = new System.Drawing.Point(1049, 138);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(89, 34);
             this.btnLimpiar.TabIndex = 391;
@@ -156,7 +161,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(867, 58);
+            this.pictureBox3.Location = new System.Drawing.Point(1144, 98);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 34);
             this.pictureBox3.TabIndex = 390;
@@ -165,7 +170,7 @@
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(772, 58);
+            this.btnModificar.Location = new System.Drawing.Point(1049, 98);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(89, 34);
             this.btnModificar.TabIndex = 389;
@@ -176,7 +181,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(716, 137);
+            this.pictureBox5.Location = new System.Drawing.Point(993, 138);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(34, 34);
             this.pictureBox5.TabIndex = 388;
@@ -185,7 +190,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(621, 137);
+            this.btnEliminar.Location = new System.Drawing.Point(898, 138);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(89, 34);
             this.btnEliminar.TabIndex = 387;
@@ -196,7 +201,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(716, 58);
+            this.pictureBox6.Location = new System.Drawing.Point(993, 98);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(34, 34);
             this.pictureBox6.TabIndex = 386;
@@ -205,7 +210,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(621, 58);
+            this.btnGuardar.Location = new System.Drawing.Point(898, 98);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(89, 34);
             this.btnGuardar.TabIndex = 385;
@@ -215,33 +220,28 @@
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(621, 257);
+            this.txtEstado.Location = new System.Drawing.Point(866, 398);
             this.txtEstado.Multiline = true;
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(121, 33);
+            this.txtEstado.ReadOnly = true;
+            this.txtEstado.Size = new System.Drawing.Size(121, 24);
             this.txtEstado.TabIndex = 393;
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(780, 257);
-            this.txtCodigo.Multiline = true;
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(121, 34);
-            this.txtCodigo.TabIndex = 394;
+            this.txtEstado.Text = "1";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(875, 389);
+            this.pictureBox2.Location = new System.Drawing.Point(1144, 489);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 34);
             this.pictureBox2.TabIndex = 396;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // btnAtras
             // 
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(780, 389);
+            this.btnAtras.Location = new System.Drawing.Point(1049, 489);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(89, 34);
             this.btnAtras.TabIndex = 395;
@@ -253,33 +253,87 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(621, 238);
+            this.label2.Location = new System.Drawing.Point(866, 379);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 397;
             this.label2.Text = "Estado";
             // 
-            // Codigo
+            // label3
             // 
-            this.Codigo.AutoSize = true;
-            this.Codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codigo.Location = new System.Drawing.Point(777, 238);
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Size = new System.Drawing.Size(46, 13);
-            this.Codigo.TabIndex = 398;
-            this.Codigo.Text = "Codigo";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(33, 77);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(156, 18);
+            this.label3.TabIndex = 399;
+            this.label3.Text = "Seleccione el Vuelo";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(271, 77);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(234, 18);
+            this.label4.TabIndex = 400;
+            this.label4.Text = "Seleccione la Marca del Avion";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(525, 77);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(243, 18);
+            this.label5.TabIndex = 401;
+            this.label5.Text = "Seleccione la Modelo del Avion";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(726, 214);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(452, 150);
+            this.dataGridView1.TabIndex = 402;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(726, 379);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 13);
+            this.label6.TabIndex = 404;
+            this.label6.Text = "Codigo";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(726, 398);
+            this.txtId.Multiline = true;
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtId.Size = new System.Drawing.Size(121, 24);
+            this.txtId.TabIndex = 403;
             // 
             // frmVuelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(917, 435);
-            this.Controls.Add(this.Codigo);
+            this.ClientSize = new System.Drawing.Size(1232, 566);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnAtras);
-            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnLimpiar);
@@ -296,14 +350,17 @@
             this.Controls.Add(this.lstMarca);
             this.Controls.Add(this.lstVuelo);
             this.Controls.Add(this.btnSeleccionar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVuelos";
             this.Text = "frmAviones";
+            this.Load += new System.EventHandler(this.frmVuelos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,10 +384,14 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtEstado;
-        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label Codigo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

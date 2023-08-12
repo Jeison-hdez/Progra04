@@ -203,7 +203,7 @@
             this.c14 = new System.Windows.Forms.CheckBox();
             this.c12 = new System.Windows.Forms.CheckBox();
             this.c11 = new System.Windows.Forms.CheckBox();
-            this.c1 = new System.Windows.Forms.CheckBox();
+            this.c10 = new System.Windows.Forms.CheckBox();
             this.c8 = new System.Windows.Forms.CheckBox();
             this.c7 = new System.Windows.Forms.CheckBox();
             this.d21 = new System.Windows.Forms.CheckBox();
@@ -251,17 +251,13 @@
             this.f1 = new System.Windows.Forms.CheckBox();
             this.Panel_Asientos = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtDestino = new System.Windows.Forms.TextBox();
-            this.txtNV = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Usuario = new System.Windows.Forms.Label();
             this.txtHoraFecha = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.txtIdentificacion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -277,19 +273,28 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtUsuarios = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAtras = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtVuelo = new System.Windows.Forms.TextBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.txtBoleto = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Panel_Asientos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // checkBox151
             // 
             this.checkBox151.AutoSize = true;
-            this.checkBox151.Location = new System.Drawing.Point(861, 632);
+            this.checkBox151.Location = new System.Drawing.Point(861, 661);
             this.checkBox151.Name = "checkBox151";
             this.checkBox151.Size = new System.Drawing.Size(15, 14);
             this.checkBox151.TabIndex = 378;
@@ -300,7 +305,7 @@
             this.checkBox152.AutoSize = true;
             this.checkBox152.BackColor = System.Drawing.Color.Transparent;
             this.checkBox152.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.checkBox152.Location = new System.Drawing.Point(840, 632);
+            this.checkBox152.Location = new System.Drawing.Point(840, 661);
             this.checkBox152.Name = "checkBox152";
             this.checkBox152.Size = new System.Drawing.Size(15, 14);
             this.checkBox152.TabIndex = 377;
@@ -309,7 +314,7 @@
             // checkBox153
             // 
             this.checkBox153.AutoSize = true;
-            this.checkBox153.Location = new System.Drawing.Point(818, 632);
+            this.checkBox153.Location = new System.Drawing.Point(818, 661);
             this.checkBox153.Name = "checkBox153";
             this.checkBox153.Size = new System.Drawing.Size(15, 14);
             this.checkBox153.TabIndex = 376;
@@ -318,7 +323,7 @@
             // checkBox154
             // 
             this.checkBox154.AutoSize = true;
-            this.checkBox154.Location = new System.Drawing.Point(796, 633);
+            this.checkBox154.Location = new System.Drawing.Point(796, 662);
             this.checkBox154.Name = "checkBox154";
             this.checkBox154.Size = new System.Drawing.Size(15, 14);
             this.checkBox154.TabIndex = 375;
@@ -327,7 +332,7 @@
             // checkBox155
             // 
             this.checkBox155.AutoSize = true;
-            this.checkBox155.Location = new System.Drawing.Point(772, 633);
+            this.checkBox155.Location = new System.Drawing.Point(772, 662);
             this.checkBox155.Name = "checkBox155";
             this.checkBox155.Size = new System.Drawing.Size(15, 14);
             this.checkBox155.TabIndex = 374;
@@ -338,7 +343,7 @@
             this.checkBox156.AutoSize = true;
             this.checkBox156.BackColor = System.Drawing.Color.Transparent;
             this.checkBox156.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.checkBox156.Location = new System.Drawing.Point(752, 633);
+            this.checkBox156.Location = new System.Drawing.Point(752, 662);
             this.checkBox156.Name = "checkBox156";
             this.checkBox156.Size = new System.Drawing.Size(15, 14);
             this.checkBox156.TabIndex = 373;
@@ -347,7 +352,7 @@
             // checkBox157
             // 
             this.checkBox157.AutoSize = true;
-            this.checkBox157.Location = new System.Drawing.Point(731, 633);
+            this.checkBox157.Location = new System.Drawing.Point(731, 662);
             this.checkBox157.Name = "checkBox157";
             this.checkBox157.Size = new System.Drawing.Size(15, 14);
             this.checkBox157.TabIndex = 372;
@@ -356,7 +361,7 @@
             // checkBox158
             // 
             this.checkBox158.AutoSize = true;
-            this.checkBox158.Location = new System.Drawing.Point(710, 632);
+            this.checkBox158.Location = new System.Drawing.Point(710, 661);
             this.checkBox158.Name = "checkBox158";
             this.checkBox158.Size = new System.Drawing.Size(15, 14);
             this.checkBox158.TabIndex = 371;
@@ -365,7 +370,7 @@
             // checkBox159
             // 
             this.checkBox159.AutoSize = true;
-            this.checkBox159.Location = new System.Drawing.Point(689, 632);
+            this.checkBox159.Location = new System.Drawing.Point(689, 661);
             this.checkBox159.Name = "checkBox159";
             this.checkBox159.Size = new System.Drawing.Size(15, 14);
             this.checkBox159.TabIndex = 370;
@@ -374,7 +379,7 @@
             // checkBox160
             // 
             this.checkBox160.AutoSize = true;
-            this.checkBox160.Location = new System.Drawing.Point(667, 632);
+            this.checkBox160.Location = new System.Drawing.Point(667, 661);
             this.checkBox160.Name = "checkBox160";
             this.checkBox160.Size = new System.Drawing.Size(15, 14);
             this.checkBox160.TabIndex = 369;
@@ -383,7 +388,7 @@
             // checkBox161
             // 
             this.checkBox161.AutoSize = true;
-            this.checkBox161.Location = new System.Drawing.Point(646, 632);
+            this.checkBox161.Location = new System.Drawing.Point(646, 661);
             this.checkBox161.Name = "checkBox161";
             this.checkBox161.Size = new System.Drawing.Size(15, 14);
             this.checkBox161.TabIndex = 368;
@@ -394,7 +399,7 @@
             this.checkBox162.AutoSize = true;
             this.checkBox162.BackColor = System.Drawing.Color.Transparent;
             this.checkBox162.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.checkBox162.Location = new System.Drawing.Point(625, 632);
+            this.checkBox162.Location = new System.Drawing.Point(625, 661);
             this.checkBox162.Name = "checkBox162";
             this.checkBox162.Size = new System.Drawing.Size(15, 14);
             this.checkBox162.TabIndex = 367;
@@ -403,7 +408,7 @@
             // checkBox163
             // 
             this.checkBox163.AutoSize = true;
-            this.checkBox163.Location = new System.Drawing.Point(602, 632);
+            this.checkBox163.Location = new System.Drawing.Point(602, 661);
             this.checkBox163.Name = "checkBox163";
             this.checkBox163.Size = new System.Drawing.Size(15, 14);
             this.checkBox163.TabIndex = 366;
@@ -412,7 +417,7 @@
             // checkBox164
             // 
             this.checkBox164.AutoSize = true;
-            this.checkBox164.Location = new System.Drawing.Point(581, 633);
+            this.checkBox164.Location = new System.Drawing.Point(581, 662);
             this.checkBox164.Name = "checkBox164";
             this.checkBox164.Size = new System.Drawing.Size(15, 14);
             this.checkBox164.TabIndex = 365;
@@ -421,7 +426,7 @@
             // checkBox165
             // 
             this.checkBox165.AutoSize = true;
-            this.checkBox165.Location = new System.Drawing.Point(559, 633);
+            this.checkBox165.Location = new System.Drawing.Point(559, 662);
             this.checkBox165.Name = "checkBox165";
             this.checkBox165.Size = new System.Drawing.Size(15, 14);
             this.checkBox165.TabIndex = 364;
@@ -432,7 +437,7 @@
             this.checkBox166.AutoSize = true;
             this.checkBox166.BackColor = System.Drawing.Color.Transparent;
             this.checkBox166.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.checkBox166.Location = new System.Drawing.Point(539, 633);
+            this.checkBox166.Location = new System.Drawing.Point(539, 662);
             this.checkBox166.Name = "checkBox166";
             this.checkBox166.Size = new System.Drawing.Size(15, 14);
             this.checkBox166.TabIndex = 363;
@@ -441,7 +446,7 @@
             // checkBox135
             // 
             this.checkBox135.AutoSize = true;
-            this.checkBox135.Location = new System.Drawing.Point(861, 613);
+            this.checkBox135.Location = new System.Drawing.Point(861, 642);
             this.checkBox135.Name = "checkBox135";
             this.checkBox135.Size = new System.Drawing.Size(15, 14);
             this.checkBox135.TabIndex = 362;
@@ -452,7 +457,7 @@
             this.checkBox136.AutoSize = true;
             this.checkBox136.BackColor = System.Drawing.Color.Transparent;
             this.checkBox136.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.checkBox136.Location = new System.Drawing.Point(840, 613);
+            this.checkBox136.Location = new System.Drawing.Point(840, 642);
             this.checkBox136.Name = "checkBox136";
             this.checkBox136.Size = new System.Drawing.Size(15, 14);
             this.checkBox136.TabIndex = 361;
@@ -461,7 +466,7 @@
             // checkBox137
             // 
             this.checkBox137.AutoSize = true;
-            this.checkBox137.Location = new System.Drawing.Point(818, 613);
+            this.checkBox137.Location = new System.Drawing.Point(818, 642);
             this.checkBox137.Name = "checkBox137";
             this.checkBox137.Size = new System.Drawing.Size(15, 14);
             this.checkBox137.TabIndex = 360;
@@ -470,7 +475,7 @@
             // checkBox138
             // 
             this.checkBox138.AutoSize = true;
-            this.checkBox138.Location = new System.Drawing.Point(796, 614);
+            this.checkBox138.Location = new System.Drawing.Point(796, 643);
             this.checkBox138.Name = "checkBox138";
             this.checkBox138.Size = new System.Drawing.Size(15, 14);
             this.checkBox138.TabIndex = 359;
@@ -479,7 +484,7 @@
             // checkBox139
             // 
             this.checkBox139.AutoSize = true;
-            this.checkBox139.Location = new System.Drawing.Point(772, 614);
+            this.checkBox139.Location = new System.Drawing.Point(772, 643);
             this.checkBox139.Name = "checkBox139";
             this.checkBox139.Size = new System.Drawing.Size(15, 14);
             this.checkBox139.TabIndex = 358;
@@ -490,7 +495,7 @@
             this.checkBox140.AutoSize = true;
             this.checkBox140.BackColor = System.Drawing.Color.Transparent;
             this.checkBox140.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.checkBox140.Location = new System.Drawing.Point(752, 614);
+            this.checkBox140.Location = new System.Drawing.Point(752, 643);
             this.checkBox140.Name = "checkBox140";
             this.checkBox140.Size = new System.Drawing.Size(15, 14);
             this.checkBox140.TabIndex = 357;
@@ -499,7 +504,7 @@
             // checkBox141
             // 
             this.checkBox141.AutoSize = true;
-            this.checkBox141.Location = new System.Drawing.Point(731, 614);
+            this.checkBox141.Location = new System.Drawing.Point(731, 643);
             this.checkBox141.Name = "checkBox141";
             this.checkBox141.Size = new System.Drawing.Size(15, 14);
             this.checkBox141.TabIndex = 356;
@@ -508,7 +513,7 @@
             // checkBox142
             // 
             this.checkBox142.AutoSize = true;
-            this.checkBox142.Location = new System.Drawing.Point(710, 613);
+            this.checkBox142.Location = new System.Drawing.Point(710, 642);
             this.checkBox142.Name = "checkBox142";
             this.checkBox142.Size = new System.Drawing.Size(15, 14);
             this.checkBox142.TabIndex = 355;
@@ -517,7 +522,7 @@
             // checkBox143
             // 
             this.checkBox143.AutoSize = true;
-            this.checkBox143.Location = new System.Drawing.Point(689, 613);
+            this.checkBox143.Location = new System.Drawing.Point(689, 642);
             this.checkBox143.Name = "checkBox143";
             this.checkBox143.Size = new System.Drawing.Size(15, 14);
             this.checkBox143.TabIndex = 354;
@@ -526,7 +531,7 @@
             // checkBox144
             // 
             this.checkBox144.AutoSize = true;
-            this.checkBox144.Location = new System.Drawing.Point(667, 613);
+            this.checkBox144.Location = new System.Drawing.Point(667, 642);
             this.checkBox144.Name = "checkBox144";
             this.checkBox144.Size = new System.Drawing.Size(15, 14);
             this.checkBox144.TabIndex = 353;
@@ -535,7 +540,7 @@
             // checkBox145
             // 
             this.checkBox145.AutoSize = true;
-            this.checkBox145.Location = new System.Drawing.Point(646, 613);
+            this.checkBox145.Location = new System.Drawing.Point(646, 642);
             this.checkBox145.Name = "checkBox145";
             this.checkBox145.Size = new System.Drawing.Size(15, 14);
             this.checkBox145.TabIndex = 352;
@@ -546,7 +551,7 @@
             this.checkBox146.AutoSize = true;
             this.checkBox146.BackColor = System.Drawing.Color.Transparent;
             this.checkBox146.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.checkBox146.Location = new System.Drawing.Point(625, 613);
+            this.checkBox146.Location = new System.Drawing.Point(625, 642);
             this.checkBox146.Name = "checkBox146";
             this.checkBox146.Size = new System.Drawing.Size(15, 14);
             this.checkBox146.TabIndex = 351;
@@ -555,7 +560,7 @@
             // checkBox147
             // 
             this.checkBox147.AutoSize = true;
-            this.checkBox147.Location = new System.Drawing.Point(602, 613);
+            this.checkBox147.Location = new System.Drawing.Point(602, 642);
             this.checkBox147.Name = "checkBox147";
             this.checkBox147.Size = new System.Drawing.Size(15, 14);
             this.checkBox147.TabIndex = 350;
@@ -564,7 +569,7 @@
             // checkBox148
             // 
             this.checkBox148.AutoSize = true;
-            this.checkBox148.Location = new System.Drawing.Point(581, 614);
+            this.checkBox148.Location = new System.Drawing.Point(581, 643);
             this.checkBox148.Name = "checkBox148";
             this.checkBox148.Size = new System.Drawing.Size(15, 14);
             this.checkBox148.TabIndex = 349;
@@ -573,7 +578,7 @@
             // checkBox149
             // 
             this.checkBox149.AutoSize = true;
-            this.checkBox149.Location = new System.Drawing.Point(559, 614);
+            this.checkBox149.Location = new System.Drawing.Point(559, 643);
             this.checkBox149.Name = "checkBox149";
             this.checkBox149.Size = new System.Drawing.Size(15, 14);
             this.checkBox149.TabIndex = 348;
@@ -584,7 +589,7 @@
             this.checkBox150.AutoSize = true;
             this.checkBox150.BackColor = System.Drawing.Color.Transparent;
             this.checkBox150.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.checkBox150.Location = new System.Drawing.Point(539, 614);
+            this.checkBox150.Location = new System.Drawing.Point(539, 643);
             this.checkBox150.Name = "checkBox150";
             this.checkBox150.Size = new System.Drawing.Size(15, 14);
             this.checkBox150.TabIndex = 347;
@@ -593,7 +598,7 @@
             // checkBox62
             // 
             this.checkBox62.AutoSize = true;
-            this.checkBox62.Location = new System.Drawing.Point(517, 632);
+            this.checkBox62.Location = new System.Drawing.Point(517, 661);
             this.checkBox62.Name = "checkBox62";
             this.checkBox62.Size = new System.Drawing.Size(15, 14);
             this.checkBox62.TabIndex = 282;
@@ -602,7 +607,7 @@
             // checkBox63
             // 
             this.checkBox63.AutoSize = true;
-            this.checkBox63.Location = new System.Drawing.Point(489, 632);
+            this.checkBox63.Location = new System.Drawing.Point(489, 661);
             this.checkBox63.Name = "checkBox63";
             this.checkBox63.Size = new System.Drawing.Size(15, 14);
             this.checkBox63.TabIndex = 281;
@@ -611,7 +616,7 @@
             // checkBox64
             // 
             this.checkBox64.AutoSize = true;
-            this.checkBox64.Location = new System.Drawing.Point(461, 632);
+            this.checkBox64.Location = new System.Drawing.Point(461, 661);
             this.checkBox64.Name = "checkBox64";
             this.checkBox64.Size = new System.Drawing.Size(15, 14);
             this.checkBox64.TabIndex = 280;
@@ -620,7 +625,7 @@
             // checkBox65
             // 
             this.checkBox65.AutoSize = true;
-            this.checkBox65.Location = new System.Drawing.Point(438, 632);
+            this.checkBox65.Location = new System.Drawing.Point(438, 661);
             this.checkBox65.Name = "checkBox65";
             this.checkBox65.Size = new System.Drawing.Size(15, 14);
             this.checkBox65.TabIndex = 279;
@@ -631,7 +636,7 @@
             this.checkBox66.AutoSize = true;
             this.checkBox66.BackColor = System.Drawing.Color.Transparent;
             this.checkBox66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.checkBox66.Location = new System.Drawing.Point(413, 632);
+            this.checkBox66.Location = new System.Drawing.Point(413, 661);
             this.checkBox66.Name = "checkBox66";
             this.checkBox66.Size = new System.Drawing.Size(15, 14);
             this.checkBox66.TabIndex = 278;
@@ -640,7 +645,7 @@
             // checkBox67
             // 
             this.checkBox67.AutoSize = true;
-            this.checkBox67.Location = new System.Drawing.Point(391, 632);
+            this.checkBox67.Location = new System.Drawing.Point(391, 661);
             this.checkBox67.Name = "checkBox67";
             this.checkBox67.Size = new System.Drawing.Size(15, 14);
             this.checkBox67.TabIndex = 277;
@@ -649,7 +654,7 @@
             // checkBox68
             // 
             this.checkBox68.AutoSize = true;
-            this.checkBox68.Location = new System.Drawing.Point(367, 632);
+            this.checkBox68.Location = new System.Drawing.Point(367, 661);
             this.checkBox68.Name = "checkBox68";
             this.checkBox68.Size = new System.Drawing.Size(15, 14);
             this.checkBox68.TabIndex = 276;
@@ -658,7 +663,7 @@
             // checkBox69
             // 
             this.checkBox69.AutoSize = true;
-            this.checkBox69.Location = new System.Drawing.Point(342, 632);
+            this.checkBox69.Location = new System.Drawing.Point(342, 661);
             this.checkBox69.Name = "checkBox69";
             this.checkBox69.Size = new System.Drawing.Size(15, 14);
             this.checkBox69.TabIndex = 275;
@@ -669,7 +674,7 @@
             this.checkBox70.AutoSize = true;
             this.checkBox70.BackColor = System.Drawing.Color.Transparent;
             this.checkBox70.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.checkBox70.Location = new System.Drawing.Point(315, 632);
+            this.checkBox70.Location = new System.Drawing.Point(315, 661);
             this.checkBox70.Name = "checkBox70";
             this.checkBox70.Size = new System.Drawing.Size(15, 14);
             this.checkBox70.TabIndex = 274;
@@ -678,7 +683,7 @@
             // checkBox53
             // 
             this.checkBox53.AutoSize = true;
-            this.checkBox53.Location = new System.Drawing.Point(517, 614);
+            this.checkBox53.Location = new System.Drawing.Point(517, 643);
             this.checkBox53.Name = "checkBox53";
             this.checkBox53.Size = new System.Drawing.Size(15, 14);
             this.checkBox53.TabIndex = 273;
@@ -687,7 +692,7 @@
             // checkBox54
             // 
             this.checkBox54.AutoSize = true;
-            this.checkBox54.Location = new System.Drawing.Point(489, 614);
+            this.checkBox54.Location = new System.Drawing.Point(489, 643);
             this.checkBox54.Name = "checkBox54";
             this.checkBox54.Size = new System.Drawing.Size(15, 14);
             this.checkBox54.TabIndex = 272;
@@ -696,7 +701,7 @@
             // checkBox55
             // 
             this.checkBox55.AutoSize = true;
-            this.checkBox55.Location = new System.Drawing.Point(461, 614);
+            this.checkBox55.Location = new System.Drawing.Point(461, 643);
             this.checkBox55.Name = "checkBox55";
             this.checkBox55.Size = new System.Drawing.Size(15, 14);
             this.checkBox55.TabIndex = 271;
@@ -705,7 +710,7 @@
             // checkBox56
             // 
             this.checkBox56.AutoSize = true;
-            this.checkBox56.Location = new System.Drawing.Point(438, 614);
+            this.checkBox56.Location = new System.Drawing.Point(438, 643);
             this.checkBox56.Name = "checkBox56";
             this.checkBox56.Size = new System.Drawing.Size(15, 14);
             this.checkBox56.TabIndex = 270;
@@ -716,7 +721,7 @@
             this.checkBox57.AutoSize = true;
             this.checkBox57.BackColor = System.Drawing.Color.Transparent;
             this.checkBox57.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.checkBox57.Location = new System.Drawing.Point(413, 614);
+            this.checkBox57.Location = new System.Drawing.Point(413, 643);
             this.checkBox57.Name = "checkBox57";
             this.checkBox57.Size = new System.Drawing.Size(15, 14);
             this.checkBox57.TabIndex = 269;
@@ -725,7 +730,7 @@
             // checkBox58
             // 
             this.checkBox58.AutoSize = true;
-            this.checkBox58.Location = new System.Drawing.Point(391, 614);
+            this.checkBox58.Location = new System.Drawing.Point(391, 643);
             this.checkBox58.Name = "checkBox58";
             this.checkBox58.Size = new System.Drawing.Size(15, 14);
             this.checkBox58.TabIndex = 268;
@@ -734,7 +739,7 @@
             // checkBox59
             // 
             this.checkBox59.AutoSize = true;
-            this.checkBox59.Location = new System.Drawing.Point(367, 614);
+            this.checkBox59.Location = new System.Drawing.Point(367, 643);
             this.checkBox59.Name = "checkBox59";
             this.checkBox59.Size = new System.Drawing.Size(15, 14);
             this.checkBox59.TabIndex = 267;
@@ -743,7 +748,7 @@
             // checkBox60
             // 
             this.checkBox60.AutoSize = true;
-            this.checkBox60.Location = new System.Drawing.Point(342, 614);
+            this.checkBox60.Location = new System.Drawing.Point(342, 643);
             this.checkBox60.Name = "checkBox60";
             this.checkBox60.Size = new System.Drawing.Size(15, 14);
             this.checkBox60.TabIndex = 266;
@@ -754,7 +759,7 @@
             this.checkBox61.AutoSize = true;
             this.checkBox61.BackColor = System.Drawing.Color.Transparent;
             this.checkBox61.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.checkBox61.Location = new System.Drawing.Point(315, 614);
+            this.checkBox61.Location = new System.Drawing.Point(315, 643);
             this.checkBox61.Name = "checkBox61";
             this.checkBox61.Size = new System.Drawing.Size(15, 14);
             this.checkBox61.TabIndex = 265;
@@ -763,7 +768,7 @@
             // checkBox13
             // 
             this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(279, 627);
+            this.checkBox13.Location = new System.Drawing.Point(279, 656);
             this.checkBox13.Name = "checkBox13";
             this.checkBox13.Size = new System.Drawing.Size(15, 14);
             this.checkBox13.TabIndex = 228;
@@ -772,7 +777,7 @@
             // checkBox14
             // 
             this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(252, 627);
+            this.checkBox14.Location = new System.Drawing.Point(252, 656);
             this.checkBox14.Name = "checkBox14";
             this.checkBox14.Size = new System.Drawing.Size(15, 14);
             this.checkBox14.TabIndex = 227;
@@ -781,7 +786,7 @@
             // checkBox15
             // 
             this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(225, 627);
+            this.checkBox15.Location = new System.Drawing.Point(225, 656);
             this.checkBox15.Name = "checkBox15";
             this.checkBox15.Size = new System.Drawing.Size(15, 14);
             this.checkBox15.TabIndex = 226;
@@ -790,7 +795,7 @@
             // checkBox16
             // 
             this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(198, 627);
+            this.checkBox16.Location = new System.Drawing.Point(198, 656);
             this.checkBox16.Name = "checkBox16";
             this.checkBox16.Size = new System.Drawing.Size(15, 14);
             this.checkBox16.TabIndex = 225;
@@ -799,7 +804,7 @@
             // a38
             // 
             this.a38.AutoSize = true;
-            this.a38.Location = new System.Drawing.Point(844, 625);
+            this.a38.Location = new System.Drawing.Point(844, 654);
             this.a38.Name = "a38";
             this.a38.Size = new System.Drawing.Size(15, 14);
             this.a38.TabIndex = 567;
@@ -810,7 +815,7 @@
             this.a37.AutoSize = true;
             this.a37.BackColor = System.Drawing.Color.Transparent;
             this.a37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.a37.Location = new System.Drawing.Point(823, 625);
+            this.a37.Location = new System.Drawing.Point(823, 654);
             this.a37.Name = "a37";
             this.a37.Size = new System.Drawing.Size(15, 14);
             this.a37.TabIndex = 566;
@@ -819,7 +824,7 @@
             // a36
             // 
             this.a36.AutoSize = true;
-            this.a36.Location = new System.Drawing.Point(801, 625);
+            this.a36.Location = new System.Drawing.Point(801, 654);
             this.a36.Name = "a36";
             this.a36.Size = new System.Drawing.Size(15, 14);
             this.a36.TabIndex = 565;
@@ -828,7 +833,7 @@
             // a35
             // 
             this.a35.AutoSize = true;
-            this.a35.Location = new System.Drawing.Point(779, 626);
+            this.a35.Location = new System.Drawing.Point(779, 655);
             this.a35.Name = "a35";
             this.a35.Size = new System.Drawing.Size(15, 14);
             this.a35.TabIndex = 564;
@@ -837,7 +842,7 @@
             // a34
             // 
             this.a34.AutoSize = true;
-            this.a34.Location = new System.Drawing.Point(755, 626);
+            this.a34.Location = new System.Drawing.Point(755, 655);
             this.a34.Name = "a34";
             this.a34.Size = new System.Drawing.Size(15, 14);
             this.a34.TabIndex = 563;
@@ -848,7 +853,7 @@
             this.a32.AutoSize = true;
             this.a32.BackColor = System.Drawing.Color.Transparent;
             this.a32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.a32.Location = new System.Drawing.Point(735, 626);
+            this.a32.Location = new System.Drawing.Point(735, 655);
             this.a32.Name = "a32";
             this.a32.Size = new System.Drawing.Size(15, 14);
             this.a32.TabIndex = 562;
@@ -857,7 +862,7 @@
             // a31
             // 
             this.a31.AutoSize = true;
-            this.a31.Location = new System.Drawing.Point(714, 626);
+            this.a31.Location = new System.Drawing.Point(714, 655);
             this.a31.Name = "a31";
             this.a31.Size = new System.Drawing.Size(15, 14);
             this.a31.TabIndex = 561;
@@ -866,7 +871,7 @@
             // a30
             // 
             this.a30.AutoSize = true;
-            this.a30.Location = new System.Drawing.Point(693, 625);
+            this.a30.Location = new System.Drawing.Point(693, 654);
             this.a30.Name = "a30";
             this.a30.Size = new System.Drawing.Size(15, 14);
             this.a30.TabIndex = 560;
@@ -875,7 +880,7 @@
             // a29
             // 
             this.a29.AutoSize = true;
-            this.a29.Location = new System.Drawing.Point(672, 625);
+            this.a29.Location = new System.Drawing.Point(672, 654);
             this.a29.Name = "a29";
             this.a29.Size = new System.Drawing.Size(15, 14);
             this.a29.TabIndex = 559;
@@ -884,7 +889,7 @@
             // a28
             // 
             this.a28.AutoSize = true;
-            this.a28.Location = new System.Drawing.Point(650, 625);
+            this.a28.Location = new System.Drawing.Point(650, 654);
             this.a28.Name = "a28";
             this.a28.Size = new System.Drawing.Size(15, 14);
             this.a28.TabIndex = 558;
@@ -893,7 +898,7 @@
             // a27
             // 
             this.a27.AutoSize = true;
-            this.a27.Location = new System.Drawing.Point(629, 625);
+            this.a27.Location = new System.Drawing.Point(629, 654);
             this.a27.Name = "a27";
             this.a27.Size = new System.Drawing.Size(15, 14);
             this.a27.TabIndex = 557;
@@ -904,7 +909,7 @@
             this.a26.AutoSize = true;
             this.a26.BackColor = System.Drawing.Color.Transparent;
             this.a26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.a26.Location = new System.Drawing.Point(608, 625);
+            this.a26.Location = new System.Drawing.Point(608, 654);
             this.a26.Name = "a26";
             this.a26.Size = new System.Drawing.Size(15, 14);
             this.a26.TabIndex = 556;
@@ -913,7 +918,7 @@
             // a25
             // 
             this.a25.AutoSize = true;
-            this.a25.Location = new System.Drawing.Point(585, 625);
+            this.a25.Location = new System.Drawing.Point(585, 654);
             this.a25.Name = "a25";
             this.a25.Size = new System.Drawing.Size(15, 14);
             this.a25.TabIndex = 555;
@@ -922,7 +927,7 @@
             // a24
             // 
             this.a24.AutoSize = true;
-            this.a24.Location = new System.Drawing.Point(564, 626);
+            this.a24.Location = new System.Drawing.Point(564, 655);
             this.a24.Name = "a24";
             this.a24.Size = new System.Drawing.Size(15, 14);
             this.a24.TabIndex = 554;
@@ -931,7 +936,7 @@
             // a23
             // 
             this.a23.AutoSize = true;
-            this.a23.Location = new System.Drawing.Point(542, 626);
+            this.a23.Location = new System.Drawing.Point(542, 655);
             this.a23.Name = "a23";
             this.a23.Size = new System.Drawing.Size(15, 14);
             this.a23.TabIndex = 553;
@@ -942,7 +947,7 @@
             this.a22.AutoSize = true;
             this.a22.BackColor = System.Drawing.Color.Transparent;
             this.a22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.a22.Location = new System.Drawing.Point(522, 626);
+            this.a22.Location = new System.Drawing.Point(522, 655);
             this.a22.Name = "a22";
             this.a22.Size = new System.Drawing.Size(15, 14);
             this.a22.TabIndex = 552;
@@ -951,7 +956,7 @@
             // b38
             // 
             this.b38.AutoSize = true;
-            this.b38.Location = new System.Drawing.Point(844, 606);
+            this.b38.Location = new System.Drawing.Point(844, 635);
             this.b38.Name = "b38";
             this.b38.Size = new System.Drawing.Size(15, 14);
             this.b38.TabIndex = 551;
@@ -962,7 +967,7 @@
             this.b37.AutoSize = true;
             this.b37.BackColor = System.Drawing.Color.Transparent;
             this.b37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.b37.Location = new System.Drawing.Point(823, 606);
+            this.b37.Location = new System.Drawing.Point(823, 635);
             this.b37.Name = "b37";
             this.b37.Size = new System.Drawing.Size(15, 14);
             this.b37.TabIndex = 550;
@@ -971,7 +976,7 @@
             // b36
             // 
             this.b36.AutoSize = true;
-            this.b36.Location = new System.Drawing.Point(801, 606);
+            this.b36.Location = new System.Drawing.Point(801, 635);
             this.b36.Name = "b36";
             this.b36.Size = new System.Drawing.Size(15, 14);
             this.b36.TabIndex = 549;
@@ -980,7 +985,7 @@
             // b35
             // 
             this.b35.AutoSize = true;
-            this.b35.Location = new System.Drawing.Point(779, 607);
+            this.b35.Location = new System.Drawing.Point(779, 636);
             this.b35.Name = "b35";
             this.b35.Size = new System.Drawing.Size(15, 14);
             this.b35.TabIndex = 548;
@@ -989,7 +994,7 @@
             // b34
             // 
             this.b34.AutoSize = true;
-            this.b34.Location = new System.Drawing.Point(755, 607);
+            this.b34.Location = new System.Drawing.Point(755, 636);
             this.b34.Name = "b34";
             this.b34.Size = new System.Drawing.Size(15, 14);
             this.b34.TabIndex = 547;
@@ -1000,7 +1005,7 @@
             this.b32.AutoSize = true;
             this.b32.BackColor = System.Drawing.Color.Transparent;
             this.b32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.b32.Location = new System.Drawing.Point(735, 607);
+            this.b32.Location = new System.Drawing.Point(735, 636);
             this.b32.Name = "b32";
             this.b32.Size = new System.Drawing.Size(15, 14);
             this.b32.TabIndex = 546;
@@ -1009,7 +1014,7 @@
             // b31
             // 
             this.b31.AutoSize = true;
-            this.b31.Location = new System.Drawing.Point(714, 607);
+            this.b31.Location = new System.Drawing.Point(714, 636);
             this.b31.Name = "b31";
             this.b31.Size = new System.Drawing.Size(15, 14);
             this.b31.TabIndex = 545;
@@ -1018,7 +1023,7 @@
             // b30
             // 
             this.b30.AutoSize = true;
-            this.b30.Location = new System.Drawing.Point(693, 606);
+            this.b30.Location = new System.Drawing.Point(693, 635);
             this.b30.Name = "b30";
             this.b30.Size = new System.Drawing.Size(15, 14);
             this.b30.TabIndex = 544;
@@ -1027,7 +1032,7 @@
             // b29
             // 
             this.b29.AutoSize = true;
-            this.b29.Location = new System.Drawing.Point(672, 606);
+            this.b29.Location = new System.Drawing.Point(672, 635);
             this.b29.Name = "b29";
             this.b29.Size = new System.Drawing.Size(15, 14);
             this.b29.TabIndex = 543;
@@ -1036,7 +1041,7 @@
             // b28
             // 
             this.b28.AutoSize = true;
-            this.b28.Location = new System.Drawing.Point(650, 606);
+            this.b28.Location = new System.Drawing.Point(650, 635);
             this.b28.Name = "b28";
             this.b28.Size = new System.Drawing.Size(15, 14);
             this.b28.TabIndex = 542;
@@ -1045,7 +1050,7 @@
             // b27
             // 
             this.b27.AutoSize = true;
-            this.b27.Location = new System.Drawing.Point(629, 606);
+            this.b27.Location = new System.Drawing.Point(629, 635);
             this.b27.Name = "b27";
             this.b27.Size = new System.Drawing.Size(15, 14);
             this.b27.TabIndex = 541;
@@ -1056,7 +1061,7 @@
             this.b26.AutoSize = true;
             this.b26.BackColor = System.Drawing.Color.Transparent;
             this.b26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.b26.Location = new System.Drawing.Point(608, 606);
+            this.b26.Location = new System.Drawing.Point(608, 635);
             this.b26.Name = "b26";
             this.b26.Size = new System.Drawing.Size(15, 14);
             this.b26.TabIndex = 540;
@@ -1065,7 +1070,7 @@
             // b25
             // 
             this.b25.AutoSize = true;
-            this.b25.Location = new System.Drawing.Point(585, 606);
+            this.b25.Location = new System.Drawing.Point(585, 635);
             this.b25.Name = "b25";
             this.b25.Size = new System.Drawing.Size(15, 14);
             this.b25.TabIndex = 539;
@@ -1074,7 +1079,7 @@
             // b24
             // 
             this.b24.AutoSize = true;
-            this.b24.Location = new System.Drawing.Point(564, 607);
+            this.b24.Location = new System.Drawing.Point(564, 636);
             this.b24.Name = "b24";
             this.b24.Size = new System.Drawing.Size(15, 14);
             this.b24.TabIndex = 538;
@@ -1083,7 +1088,7 @@
             // b23
             // 
             this.b23.AutoSize = true;
-            this.b23.Location = new System.Drawing.Point(542, 607);
+            this.b23.Location = new System.Drawing.Point(542, 636);
             this.b23.Name = "b23";
             this.b23.Size = new System.Drawing.Size(15, 14);
             this.b23.TabIndex = 537;
@@ -1094,7 +1099,7 @@
             this.b22.AutoSize = true;
             this.b22.BackColor = System.Drawing.Color.Transparent;
             this.b22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.b22.Location = new System.Drawing.Point(522, 607);
+            this.b22.Location = new System.Drawing.Point(522, 636);
             this.b22.Name = "b22";
             this.b22.Size = new System.Drawing.Size(15, 14);
             this.b22.TabIndex = 536;
@@ -1103,7 +1108,7 @@
             // c38
             // 
             this.c38.AutoSize = true;
-            this.c38.Location = new System.Drawing.Point(844, 586);
+            this.c38.Location = new System.Drawing.Point(844, 615);
             this.c38.Name = "c38";
             this.c38.Size = new System.Drawing.Size(15, 14);
             this.c38.TabIndex = 535;
@@ -1114,7 +1119,7 @@
             this.c37.AutoSize = true;
             this.c37.BackColor = System.Drawing.Color.Transparent;
             this.c37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.c37.Location = new System.Drawing.Point(823, 586);
+            this.c37.Location = new System.Drawing.Point(823, 615);
             this.c37.Name = "c37";
             this.c37.Size = new System.Drawing.Size(15, 14);
             this.c37.TabIndex = 534;
@@ -1123,7 +1128,7 @@
             // c36
             // 
             this.c36.AutoSize = true;
-            this.c36.Location = new System.Drawing.Point(801, 586);
+            this.c36.Location = new System.Drawing.Point(801, 615);
             this.c36.Name = "c36";
             this.c36.Size = new System.Drawing.Size(15, 14);
             this.c36.TabIndex = 533;
@@ -1132,7 +1137,7 @@
             // c35
             // 
             this.c35.AutoSize = true;
-            this.c35.Location = new System.Drawing.Point(779, 587);
+            this.c35.Location = new System.Drawing.Point(779, 616);
             this.c35.Name = "c35";
             this.c35.Size = new System.Drawing.Size(15, 14);
             this.c35.TabIndex = 532;
@@ -1141,7 +1146,7 @@
             // c34
             // 
             this.c34.AutoSize = true;
-            this.c34.Location = new System.Drawing.Point(755, 587);
+            this.c34.Location = new System.Drawing.Point(755, 616);
             this.c34.Name = "c34";
             this.c34.Size = new System.Drawing.Size(15, 14);
             this.c34.TabIndex = 531;
@@ -1152,7 +1157,7 @@
             this.c32.AutoSize = true;
             this.c32.BackColor = System.Drawing.Color.Transparent;
             this.c32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.c32.Location = new System.Drawing.Point(735, 587);
+            this.c32.Location = new System.Drawing.Point(735, 616);
             this.c32.Name = "c32";
             this.c32.Size = new System.Drawing.Size(15, 14);
             this.c32.TabIndex = 530;
@@ -1161,7 +1166,7 @@
             // c31
             // 
             this.c31.AutoSize = true;
-            this.c31.Location = new System.Drawing.Point(714, 587);
+            this.c31.Location = new System.Drawing.Point(714, 616);
             this.c31.Name = "c31";
             this.c31.Size = new System.Drawing.Size(15, 14);
             this.c31.TabIndex = 529;
@@ -1170,7 +1175,7 @@
             // c30
             // 
             this.c30.AutoSize = true;
-            this.c30.Location = new System.Drawing.Point(693, 586);
+            this.c30.Location = new System.Drawing.Point(693, 615);
             this.c30.Name = "c30";
             this.c30.Size = new System.Drawing.Size(15, 14);
             this.c30.TabIndex = 528;
@@ -1179,7 +1184,7 @@
             // c29
             // 
             this.c29.AutoSize = true;
-            this.c29.Location = new System.Drawing.Point(672, 586);
+            this.c29.Location = new System.Drawing.Point(672, 615);
             this.c29.Name = "c29";
             this.c29.Size = new System.Drawing.Size(15, 14);
             this.c29.TabIndex = 527;
@@ -1188,7 +1193,7 @@
             // c28
             // 
             this.c28.AutoSize = true;
-            this.c28.Location = new System.Drawing.Point(650, 586);
+            this.c28.Location = new System.Drawing.Point(650, 615);
             this.c28.Name = "c28";
             this.c28.Size = new System.Drawing.Size(15, 14);
             this.c28.TabIndex = 526;
@@ -1197,7 +1202,7 @@
             // c27
             // 
             this.c27.AutoSize = true;
-            this.c27.Location = new System.Drawing.Point(629, 586);
+            this.c27.Location = new System.Drawing.Point(629, 615);
             this.c27.Name = "c27";
             this.c27.Size = new System.Drawing.Size(15, 14);
             this.c27.TabIndex = 525;
@@ -1208,7 +1213,7 @@
             this.c26.AutoSize = true;
             this.c26.BackColor = System.Drawing.Color.Transparent;
             this.c26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.c26.Location = new System.Drawing.Point(608, 586);
+            this.c26.Location = new System.Drawing.Point(608, 615);
             this.c26.Name = "c26";
             this.c26.Size = new System.Drawing.Size(15, 14);
             this.c26.TabIndex = 524;
@@ -1217,7 +1222,7 @@
             // c25
             // 
             this.c25.AutoSize = true;
-            this.c25.Location = new System.Drawing.Point(585, 586);
+            this.c25.Location = new System.Drawing.Point(585, 615);
             this.c25.Name = "c25";
             this.c25.Size = new System.Drawing.Size(15, 14);
             this.c25.TabIndex = 523;
@@ -1226,7 +1231,7 @@
             // c24
             // 
             this.c24.AutoSize = true;
-            this.c24.Location = new System.Drawing.Point(564, 587);
+            this.c24.Location = new System.Drawing.Point(564, 616);
             this.c24.Name = "c24";
             this.c24.Size = new System.Drawing.Size(15, 14);
             this.c24.TabIndex = 522;
@@ -1235,7 +1240,7 @@
             // c23
             // 
             this.c23.AutoSize = true;
-            this.c23.Location = new System.Drawing.Point(542, 587);
+            this.c23.Location = new System.Drawing.Point(542, 616);
             this.c23.Name = "c23";
             this.c23.Size = new System.Drawing.Size(15, 14);
             this.c23.TabIndex = 521;
@@ -1246,7 +1251,7 @@
             this.c22.AutoSize = true;
             this.c22.BackColor = System.Drawing.Color.Transparent;
             this.c22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.c22.Location = new System.Drawing.Point(522, 587);
+            this.c22.Location = new System.Drawing.Point(522, 616);
             this.c22.Name = "c22";
             this.c22.Size = new System.Drawing.Size(15, 14);
             this.c22.TabIndex = 520;
@@ -1255,7 +1260,7 @@
             // d38
             // 
             this.d38.AutoSize = true;
-            this.d38.Location = new System.Drawing.Point(844, 551);
+            this.d38.Location = new System.Drawing.Point(844, 580);
             this.d38.Name = "d38";
             this.d38.Size = new System.Drawing.Size(15, 14);
             this.d38.TabIndex = 519;
@@ -1266,7 +1271,7 @@
             this.d37.AutoSize = true;
             this.d37.BackColor = System.Drawing.Color.Transparent;
             this.d37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.d37.Location = new System.Drawing.Point(823, 551);
+            this.d37.Location = new System.Drawing.Point(823, 580);
             this.d37.Name = "d37";
             this.d37.Size = new System.Drawing.Size(15, 14);
             this.d37.TabIndex = 518;
@@ -1275,7 +1280,7 @@
             // d36
             // 
             this.d36.AutoSize = true;
-            this.d36.Location = new System.Drawing.Point(801, 551);
+            this.d36.Location = new System.Drawing.Point(801, 580);
             this.d36.Name = "d36";
             this.d36.Size = new System.Drawing.Size(15, 14);
             this.d36.TabIndex = 517;
@@ -1284,7 +1289,7 @@
             // d35
             // 
             this.d35.AutoSize = true;
-            this.d35.Location = new System.Drawing.Point(779, 552);
+            this.d35.Location = new System.Drawing.Point(779, 581);
             this.d35.Name = "d35";
             this.d35.Size = new System.Drawing.Size(15, 14);
             this.d35.TabIndex = 516;
@@ -1293,7 +1298,7 @@
             // d34
             // 
             this.d34.AutoSize = true;
-            this.d34.Location = new System.Drawing.Point(755, 552);
+            this.d34.Location = new System.Drawing.Point(755, 581);
             this.d34.Name = "d34";
             this.d34.Size = new System.Drawing.Size(15, 14);
             this.d34.TabIndex = 515;
@@ -1304,7 +1309,7 @@
             this.d32.AutoSize = true;
             this.d32.BackColor = System.Drawing.Color.Transparent;
             this.d32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.d32.Location = new System.Drawing.Point(735, 552);
+            this.d32.Location = new System.Drawing.Point(735, 581);
             this.d32.Name = "d32";
             this.d32.Size = new System.Drawing.Size(15, 14);
             this.d32.TabIndex = 514;
@@ -1313,7 +1318,7 @@
             // d31
             // 
             this.d31.AutoSize = true;
-            this.d31.Location = new System.Drawing.Point(714, 552);
+            this.d31.Location = new System.Drawing.Point(714, 581);
             this.d31.Name = "d31";
             this.d31.Size = new System.Drawing.Size(15, 14);
             this.d31.TabIndex = 513;
@@ -1322,7 +1327,7 @@
             // d30
             // 
             this.d30.AutoSize = true;
-            this.d30.Location = new System.Drawing.Point(693, 551);
+            this.d30.Location = new System.Drawing.Point(693, 580);
             this.d30.Name = "d30";
             this.d30.Size = new System.Drawing.Size(15, 14);
             this.d30.TabIndex = 512;
@@ -1331,7 +1336,7 @@
             // d29
             // 
             this.d29.AutoSize = true;
-            this.d29.Location = new System.Drawing.Point(672, 551);
+            this.d29.Location = new System.Drawing.Point(672, 580);
             this.d29.Name = "d29";
             this.d29.Size = new System.Drawing.Size(15, 14);
             this.d29.TabIndex = 511;
@@ -1340,7 +1345,7 @@
             // d28
             // 
             this.d28.AutoSize = true;
-            this.d28.Location = new System.Drawing.Point(650, 551);
+            this.d28.Location = new System.Drawing.Point(650, 580);
             this.d28.Name = "d28";
             this.d28.Size = new System.Drawing.Size(15, 14);
             this.d28.TabIndex = 510;
@@ -1349,7 +1354,7 @@
             // d27
             // 
             this.d27.AutoSize = true;
-            this.d27.Location = new System.Drawing.Point(629, 551);
+            this.d27.Location = new System.Drawing.Point(629, 580);
             this.d27.Name = "d27";
             this.d27.Size = new System.Drawing.Size(15, 14);
             this.d27.TabIndex = 509;
@@ -1360,7 +1365,7 @@
             this.d26.AutoSize = true;
             this.d26.BackColor = System.Drawing.Color.Transparent;
             this.d26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.d26.Location = new System.Drawing.Point(608, 551);
+            this.d26.Location = new System.Drawing.Point(608, 580);
             this.d26.Name = "d26";
             this.d26.Size = new System.Drawing.Size(15, 14);
             this.d26.TabIndex = 508;
@@ -1369,7 +1374,7 @@
             // d25
             // 
             this.d25.AutoSize = true;
-            this.d25.Location = new System.Drawing.Point(585, 551);
+            this.d25.Location = new System.Drawing.Point(585, 580);
             this.d25.Name = "d25";
             this.d25.Size = new System.Drawing.Size(15, 14);
             this.d25.TabIndex = 507;
@@ -1378,7 +1383,7 @@
             // d24
             // 
             this.d24.AutoSize = true;
-            this.d24.Location = new System.Drawing.Point(564, 552);
+            this.d24.Location = new System.Drawing.Point(564, 581);
             this.d24.Name = "d24";
             this.d24.Size = new System.Drawing.Size(15, 14);
             this.d24.TabIndex = 506;
@@ -1387,7 +1392,7 @@
             // d23
             // 
             this.d23.AutoSize = true;
-            this.d23.Location = new System.Drawing.Point(542, 552);
+            this.d23.Location = new System.Drawing.Point(542, 581);
             this.d23.Name = "d23";
             this.d23.Size = new System.Drawing.Size(15, 14);
             this.d23.TabIndex = 505;
@@ -1398,7 +1403,7 @@
             this.d22.AutoSize = true;
             this.d22.BackColor = System.Drawing.Color.Transparent;
             this.d22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.d22.Location = new System.Drawing.Point(522, 552);
+            this.d22.Location = new System.Drawing.Point(522, 581);
             this.d22.Name = "d22";
             this.d22.Size = new System.Drawing.Size(15, 14);
             this.d22.TabIndex = 504;
@@ -1407,7 +1412,7 @@
             // e38
             // 
             this.e38.AutoSize = true;
-            this.e38.Location = new System.Drawing.Point(844, 533);
+            this.e38.Location = new System.Drawing.Point(844, 562);
             this.e38.Name = "e38";
             this.e38.Size = new System.Drawing.Size(15, 14);
             this.e38.TabIndex = 503;
@@ -1418,7 +1423,7 @@
             this.e37.AutoSize = true;
             this.e37.BackColor = System.Drawing.Color.Transparent;
             this.e37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.e37.Location = new System.Drawing.Point(823, 533);
+            this.e37.Location = new System.Drawing.Point(823, 562);
             this.e37.Name = "e37";
             this.e37.Size = new System.Drawing.Size(15, 14);
             this.e37.TabIndex = 502;
@@ -1427,7 +1432,7 @@
             // e36
             // 
             this.e36.AutoSize = true;
-            this.e36.Location = new System.Drawing.Point(801, 533);
+            this.e36.Location = new System.Drawing.Point(801, 562);
             this.e36.Name = "e36";
             this.e36.Size = new System.Drawing.Size(15, 14);
             this.e36.TabIndex = 501;
@@ -1436,7 +1441,7 @@
             // e35
             // 
             this.e35.AutoSize = true;
-            this.e35.Location = new System.Drawing.Point(779, 534);
+            this.e35.Location = new System.Drawing.Point(779, 563);
             this.e35.Name = "e35";
             this.e35.Size = new System.Drawing.Size(15, 14);
             this.e35.TabIndex = 500;
@@ -1445,7 +1450,7 @@
             // e34
             // 
             this.e34.AutoSize = true;
-            this.e34.Location = new System.Drawing.Point(755, 534);
+            this.e34.Location = new System.Drawing.Point(755, 563);
             this.e34.Name = "e34";
             this.e34.Size = new System.Drawing.Size(15, 14);
             this.e34.TabIndex = 499;
@@ -1456,7 +1461,7 @@
             this.e32.AutoSize = true;
             this.e32.BackColor = System.Drawing.Color.Transparent;
             this.e32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.e32.Location = new System.Drawing.Point(735, 534);
+            this.e32.Location = new System.Drawing.Point(735, 563);
             this.e32.Name = "e32";
             this.e32.Size = new System.Drawing.Size(15, 14);
             this.e32.TabIndex = 498;
@@ -1465,7 +1470,7 @@
             // e31
             // 
             this.e31.AutoSize = true;
-            this.e31.Location = new System.Drawing.Point(714, 534);
+            this.e31.Location = new System.Drawing.Point(714, 563);
             this.e31.Name = "e31";
             this.e31.Size = new System.Drawing.Size(15, 14);
             this.e31.TabIndex = 497;
@@ -1474,7 +1479,7 @@
             // e30
             // 
             this.e30.AutoSize = true;
-            this.e30.Location = new System.Drawing.Point(693, 533);
+            this.e30.Location = new System.Drawing.Point(693, 562);
             this.e30.Name = "e30";
             this.e30.Size = new System.Drawing.Size(15, 14);
             this.e30.TabIndex = 496;
@@ -1483,7 +1488,7 @@
             // e29
             // 
             this.e29.AutoSize = true;
-            this.e29.Location = new System.Drawing.Point(672, 533);
+            this.e29.Location = new System.Drawing.Point(672, 562);
             this.e29.Name = "e29";
             this.e29.Size = new System.Drawing.Size(15, 14);
             this.e29.TabIndex = 495;
@@ -1492,7 +1497,7 @@
             // e28
             // 
             this.e28.AutoSize = true;
-            this.e28.Location = new System.Drawing.Point(650, 533);
+            this.e28.Location = new System.Drawing.Point(650, 562);
             this.e28.Name = "e28";
             this.e28.Size = new System.Drawing.Size(15, 14);
             this.e28.TabIndex = 494;
@@ -1501,7 +1506,7 @@
             // e27
             // 
             this.e27.AutoSize = true;
-            this.e27.Location = new System.Drawing.Point(629, 533);
+            this.e27.Location = new System.Drawing.Point(629, 562);
             this.e27.Name = "e27";
             this.e27.Size = new System.Drawing.Size(15, 14);
             this.e27.TabIndex = 493;
@@ -1512,7 +1517,7 @@
             this.e26.AutoSize = true;
             this.e26.BackColor = System.Drawing.Color.Transparent;
             this.e26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.e26.Location = new System.Drawing.Point(608, 533);
+            this.e26.Location = new System.Drawing.Point(608, 562);
             this.e26.Name = "e26";
             this.e26.Size = new System.Drawing.Size(15, 14);
             this.e26.TabIndex = 492;
@@ -1521,7 +1526,7 @@
             // e25
             // 
             this.e25.AutoSize = true;
-            this.e25.Location = new System.Drawing.Point(585, 533);
+            this.e25.Location = new System.Drawing.Point(585, 562);
             this.e25.Name = "e25";
             this.e25.Size = new System.Drawing.Size(15, 14);
             this.e25.TabIndex = 491;
@@ -1530,7 +1535,7 @@
             // e24
             // 
             this.e24.AutoSize = true;
-            this.e24.Location = new System.Drawing.Point(564, 534);
+            this.e24.Location = new System.Drawing.Point(564, 563);
             this.e24.Name = "e24";
             this.e24.Size = new System.Drawing.Size(15, 14);
             this.e24.TabIndex = 490;
@@ -1539,7 +1544,7 @@
             // e23
             // 
             this.e23.AutoSize = true;
-            this.e23.Location = new System.Drawing.Point(542, 534);
+            this.e23.Location = new System.Drawing.Point(542, 563);
             this.e23.Name = "e23";
             this.e23.Size = new System.Drawing.Size(15, 14);
             this.e23.TabIndex = 489;
@@ -1550,7 +1555,7 @@
             this.e22.AutoSize = true;
             this.e22.BackColor = System.Drawing.Color.Transparent;
             this.e22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.e22.Location = new System.Drawing.Point(522, 534);
+            this.e22.Location = new System.Drawing.Point(522, 563);
             this.e22.Name = "e22";
             this.e22.Size = new System.Drawing.Size(15, 14);
             this.e22.TabIndex = 488;
@@ -1559,7 +1564,7 @@
             // f38
             // 
             this.f38.AutoSize = true;
-            this.f38.Location = new System.Drawing.Point(844, 514);
+            this.f38.Location = new System.Drawing.Point(844, 543);
             this.f38.Name = "f38";
             this.f38.Size = new System.Drawing.Size(15, 14);
             this.f38.TabIndex = 487;
@@ -1570,7 +1575,7 @@
             this.f37.AutoSize = true;
             this.f37.BackColor = System.Drawing.Color.Transparent;
             this.f37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.f37.Location = new System.Drawing.Point(823, 514);
+            this.f37.Location = new System.Drawing.Point(823, 543);
             this.f37.Name = "f37";
             this.f37.Size = new System.Drawing.Size(15, 14);
             this.f37.TabIndex = 486;
@@ -1579,7 +1584,7 @@
             // f36
             // 
             this.f36.AutoSize = true;
-            this.f36.Location = new System.Drawing.Point(801, 514);
+            this.f36.Location = new System.Drawing.Point(801, 543);
             this.f36.Name = "f36";
             this.f36.Size = new System.Drawing.Size(15, 14);
             this.f36.TabIndex = 485;
@@ -1588,7 +1593,7 @@
             // f35
             // 
             this.f35.AutoSize = true;
-            this.f35.Location = new System.Drawing.Point(779, 515);
+            this.f35.Location = new System.Drawing.Point(779, 544);
             this.f35.Name = "f35";
             this.f35.Size = new System.Drawing.Size(15, 14);
             this.f35.TabIndex = 484;
@@ -1597,7 +1602,7 @@
             // f34
             // 
             this.f34.AutoSize = true;
-            this.f34.Location = new System.Drawing.Point(755, 515);
+            this.f34.Location = new System.Drawing.Point(755, 544);
             this.f34.Name = "f34";
             this.f34.Size = new System.Drawing.Size(15, 14);
             this.f34.TabIndex = 483;
@@ -1608,7 +1613,7 @@
             this.f32.AutoSize = true;
             this.f32.BackColor = System.Drawing.Color.Transparent;
             this.f32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.f32.Location = new System.Drawing.Point(735, 515);
+            this.f32.Location = new System.Drawing.Point(735, 544);
             this.f32.Name = "f32";
             this.f32.Size = new System.Drawing.Size(15, 14);
             this.f32.TabIndex = 482;
@@ -1617,7 +1622,7 @@
             // f31
             // 
             this.f31.AutoSize = true;
-            this.f31.Location = new System.Drawing.Point(714, 515);
+            this.f31.Location = new System.Drawing.Point(714, 544);
             this.f31.Name = "f31";
             this.f31.Size = new System.Drawing.Size(15, 14);
             this.f31.TabIndex = 481;
@@ -1626,7 +1631,7 @@
             // f30
             // 
             this.f30.AutoSize = true;
-            this.f30.Location = new System.Drawing.Point(693, 514);
+            this.f30.Location = new System.Drawing.Point(693, 543);
             this.f30.Name = "f30";
             this.f30.Size = new System.Drawing.Size(15, 14);
             this.f30.TabIndex = 480;
@@ -1635,7 +1640,7 @@
             // f29
             // 
             this.f29.AutoSize = true;
-            this.f29.Location = new System.Drawing.Point(672, 514);
+            this.f29.Location = new System.Drawing.Point(672, 543);
             this.f29.Name = "f29";
             this.f29.Size = new System.Drawing.Size(15, 14);
             this.f29.TabIndex = 479;
@@ -1644,7 +1649,7 @@
             // f28
             // 
             this.f28.AutoSize = true;
-            this.f28.Location = new System.Drawing.Point(650, 514);
+            this.f28.Location = new System.Drawing.Point(650, 543);
             this.f28.Name = "f28";
             this.f28.Size = new System.Drawing.Size(15, 14);
             this.f28.TabIndex = 478;
@@ -1653,7 +1658,7 @@
             // f27
             // 
             this.f27.AutoSize = true;
-            this.f27.Location = new System.Drawing.Point(629, 514);
+            this.f27.Location = new System.Drawing.Point(629, 543);
             this.f27.Name = "f27";
             this.f27.Size = new System.Drawing.Size(15, 14);
             this.f27.TabIndex = 477;
@@ -1664,7 +1669,7 @@
             this.f26.AutoSize = true;
             this.f26.BackColor = System.Drawing.Color.Transparent;
             this.f26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.f26.Location = new System.Drawing.Point(608, 514);
+            this.f26.Location = new System.Drawing.Point(608, 543);
             this.f26.Name = "f26";
             this.f26.Size = new System.Drawing.Size(15, 14);
             this.f26.TabIndex = 476;
@@ -1673,7 +1678,7 @@
             // f25
             // 
             this.f25.AutoSize = true;
-            this.f25.Location = new System.Drawing.Point(585, 514);
+            this.f25.Location = new System.Drawing.Point(585, 543);
             this.f25.Name = "f25";
             this.f25.Size = new System.Drawing.Size(15, 14);
             this.f25.TabIndex = 475;
@@ -1682,7 +1687,7 @@
             // f24
             // 
             this.f24.AutoSize = true;
-            this.f24.Location = new System.Drawing.Point(564, 515);
+            this.f24.Location = new System.Drawing.Point(564, 544);
             this.f24.Name = "f24";
             this.f24.Size = new System.Drawing.Size(15, 14);
             this.f24.TabIndex = 474;
@@ -1691,7 +1696,7 @@
             // f23
             // 
             this.f23.AutoSize = true;
-            this.f23.Location = new System.Drawing.Point(542, 515);
+            this.f23.Location = new System.Drawing.Point(542, 544);
             this.f23.Name = "f23";
             this.f23.Size = new System.Drawing.Size(15, 14);
             this.f23.TabIndex = 473;
@@ -1702,7 +1707,7 @@
             this.f22.AutoSize = true;
             this.f22.BackColor = System.Drawing.Color.Transparent;
             this.f22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.f22.Location = new System.Drawing.Point(522, 515);
+            this.f22.Location = new System.Drawing.Point(522, 544);
             this.f22.Name = "f22";
             this.f22.Size = new System.Drawing.Size(15, 14);
             this.f22.TabIndex = 472;
@@ -1711,7 +1716,7 @@
             // a21
             // 
             this.a21.AutoSize = true;
-            this.a21.Location = new System.Drawing.Point(500, 625);
+            this.a21.Location = new System.Drawing.Point(500, 654);
             this.a21.Name = "a21";
             this.a21.Size = new System.Drawing.Size(15, 14);
             this.a21.TabIndex = 471;
@@ -1720,7 +1725,7 @@
             // a20
             // 
             this.a20.AutoSize = true;
-            this.a20.Location = new System.Drawing.Point(472, 625);
+            this.a20.Location = new System.Drawing.Point(472, 654);
             this.a20.Name = "a20";
             this.a20.Size = new System.Drawing.Size(15, 14);
             this.a20.TabIndex = 470;
@@ -1729,7 +1734,7 @@
             // a15
             // 
             this.a15.AutoSize = true;
-            this.a15.Location = new System.Drawing.Point(444, 625);
+            this.a15.Location = new System.Drawing.Point(444, 654);
             this.a15.Name = "a15";
             this.a15.Size = new System.Drawing.Size(15, 14);
             this.a15.TabIndex = 469;
@@ -1738,7 +1743,7 @@
             // a14
             // 
             this.a14.AutoSize = true;
-            this.a14.Location = new System.Drawing.Point(421, 625);
+            this.a14.Location = new System.Drawing.Point(421, 654);
             this.a14.Name = "a14";
             this.a14.Size = new System.Drawing.Size(15, 14);
             this.a14.TabIndex = 468;
@@ -1749,7 +1754,7 @@
             this.a12.AutoSize = true;
             this.a12.BackColor = System.Drawing.Color.Transparent;
             this.a12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.a12.Location = new System.Drawing.Point(396, 625);
+            this.a12.Location = new System.Drawing.Point(396, 654);
             this.a12.Name = "a12";
             this.a12.Size = new System.Drawing.Size(15, 14);
             this.a12.TabIndex = 467;
@@ -1758,7 +1763,7 @@
             // a11
             // 
             this.a11.AutoSize = true;
-            this.a11.Location = new System.Drawing.Point(374, 625);
+            this.a11.Location = new System.Drawing.Point(374, 654);
             this.a11.Name = "a11";
             this.a11.Size = new System.Drawing.Size(15, 14);
             this.a11.TabIndex = 466;
@@ -1767,7 +1772,7 @@
             // a10
             // 
             this.a10.AutoSize = true;
-            this.a10.Location = new System.Drawing.Point(350, 625);
+            this.a10.Location = new System.Drawing.Point(350, 654);
             this.a10.Name = "a10";
             this.a10.Size = new System.Drawing.Size(15, 14);
             this.a10.TabIndex = 465;
@@ -1776,7 +1781,7 @@
             // a8
             // 
             this.a8.AutoSize = true;
-            this.a8.Location = new System.Drawing.Point(325, 625);
+            this.a8.Location = new System.Drawing.Point(325, 654);
             this.a8.Name = "a8";
             this.a8.Size = new System.Drawing.Size(15, 14);
             this.a8.TabIndex = 464;
@@ -1787,7 +1792,7 @@
             this.a7.AutoSize = true;
             this.a7.BackColor = System.Drawing.Color.Transparent;
             this.a7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.a7.Location = new System.Drawing.Point(298, 625);
+            this.a7.Location = new System.Drawing.Point(298, 654);
             this.a7.Name = "a7";
             this.a7.Size = new System.Drawing.Size(15, 14);
             this.a7.TabIndex = 463;
@@ -1796,7 +1801,7 @@
             // b21
             // 
             this.b21.AutoSize = true;
-            this.b21.Location = new System.Drawing.Point(500, 607);
+            this.b21.Location = new System.Drawing.Point(500, 636);
             this.b21.Name = "b21";
             this.b21.Size = new System.Drawing.Size(15, 14);
             this.b21.TabIndex = 462;
@@ -1805,7 +1810,7 @@
             // b20
             // 
             this.b20.AutoSize = true;
-            this.b20.Location = new System.Drawing.Point(472, 607);
+            this.b20.Location = new System.Drawing.Point(472, 636);
             this.b20.Name = "b20";
             this.b20.Size = new System.Drawing.Size(15, 14);
             this.b20.TabIndex = 461;
@@ -1814,7 +1819,7 @@
             // b15
             // 
             this.b15.AutoSize = true;
-            this.b15.Location = new System.Drawing.Point(444, 607);
+            this.b15.Location = new System.Drawing.Point(444, 636);
             this.b15.Name = "b15";
             this.b15.Size = new System.Drawing.Size(15, 14);
             this.b15.TabIndex = 460;
@@ -1823,7 +1828,7 @@
             // b14
             // 
             this.b14.AutoSize = true;
-            this.b14.Location = new System.Drawing.Point(421, 607);
+            this.b14.Location = new System.Drawing.Point(421, 636);
             this.b14.Name = "b14";
             this.b14.Size = new System.Drawing.Size(15, 14);
             this.b14.TabIndex = 459;
@@ -1834,7 +1839,7 @@
             this.b12.AutoSize = true;
             this.b12.BackColor = System.Drawing.Color.Transparent;
             this.b12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.b12.Location = new System.Drawing.Point(396, 607);
+            this.b12.Location = new System.Drawing.Point(396, 636);
             this.b12.Name = "b12";
             this.b12.Size = new System.Drawing.Size(15, 14);
             this.b12.TabIndex = 458;
@@ -1843,7 +1848,7 @@
             // b11
             // 
             this.b11.AutoSize = true;
-            this.b11.Location = new System.Drawing.Point(374, 607);
+            this.b11.Location = new System.Drawing.Point(374, 636);
             this.b11.Name = "b11";
             this.b11.Size = new System.Drawing.Size(15, 14);
             this.b11.TabIndex = 457;
@@ -1852,7 +1857,7 @@
             // b10
             // 
             this.b10.AutoSize = true;
-            this.b10.Location = new System.Drawing.Point(350, 607);
+            this.b10.Location = new System.Drawing.Point(350, 636);
             this.b10.Name = "b10";
             this.b10.Size = new System.Drawing.Size(15, 14);
             this.b10.TabIndex = 456;
@@ -1861,7 +1866,7 @@
             // b8
             // 
             this.b8.AutoSize = true;
-            this.b8.Location = new System.Drawing.Point(325, 607);
+            this.b8.Location = new System.Drawing.Point(325, 636);
             this.b8.Name = "b8";
             this.b8.Size = new System.Drawing.Size(15, 14);
             this.b8.TabIndex = 455;
@@ -1872,7 +1877,7 @@
             this.b7.AutoSize = true;
             this.b7.BackColor = System.Drawing.Color.Transparent;
             this.b7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.b7.Location = new System.Drawing.Point(298, 607);
+            this.b7.Location = new System.Drawing.Point(298, 636);
             this.b7.Name = "b7";
             this.b7.Size = new System.Drawing.Size(15, 14);
             this.b7.TabIndex = 454;
@@ -1881,7 +1886,7 @@
             // c21
             // 
             this.c21.AutoSize = true;
-            this.c21.Location = new System.Drawing.Point(500, 587);
+            this.c21.Location = new System.Drawing.Point(500, 616);
             this.c21.Name = "c21";
             this.c21.Size = new System.Drawing.Size(15, 14);
             this.c21.TabIndex = 453;
@@ -1890,7 +1895,7 @@
             // c20
             // 
             this.c20.AutoSize = true;
-            this.c20.Location = new System.Drawing.Point(472, 587);
+            this.c20.Location = new System.Drawing.Point(472, 616);
             this.c20.Name = "c20";
             this.c20.Size = new System.Drawing.Size(15, 14);
             this.c20.TabIndex = 452;
@@ -1899,7 +1904,7 @@
             // c15
             // 
             this.c15.AutoSize = true;
-            this.c15.Location = new System.Drawing.Point(444, 587);
+            this.c15.Location = new System.Drawing.Point(444, 616);
             this.c15.Name = "c15";
             this.c15.Size = new System.Drawing.Size(15, 14);
             this.c15.TabIndex = 451;
@@ -1908,7 +1913,7 @@
             // c14
             // 
             this.c14.AutoSize = true;
-            this.c14.Location = new System.Drawing.Point(421, 587);
+            this.c14.Location = new System.Drawing.Point(421, 616);
             this.c14.Name = "c14";
             this.c14.Size = new System.Drawing.Size(15, 14);
             this.c14.TabIndex = 450;
@@ -1919,7 +1924,7 @@
             this.c12.AutoSize = true;
             this.c12.BackColor = System.Drawing.Color.Transparent;
             this.c12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.c12.Location = new System.Drawing.Point(396, 587);
+            this.c12.Location = new System.Drawing.Point(396, 616);
             this.c12.Name = "c12";
             this.c12.Size = new System.Drawing.Size(15, 14);
             this.c12.TabIndex = 449;
@@ -1928,25 +1933,25 @@
             // c11
             // 
             this.c11.AutoSize = true;
-            this.c11.Location = new System.Drawing.Point(374, 587);
+            this.c11.Location = new System.Drawing.Point(374, 616);
             this.c11.Name = "c11";
             this.c11.Size = new System.Drawing.Size(15, 14);
             this.c11.TabIndex = 448;
             this.c11.UseVisualStyleBackColor = true;
             // 
-            // c1
+            // c10
             // 
-            this.c1.AutoSize = true;
-            this.c1.Location = new System.Drawing.Point(350, 587);
-            this.c1.Name = "c1";
-            this.c1.Size = new System.Drawing.Size(15, 14);
-            this.c1.TabIndex = 447;
-            this.c1.UseVisualStyleBackColor = true;
+            this.c10.AutoSize = true;
+            this.c10.Location = new System.Drawing.Point(350, 616);
+            this.c10.Name = "c10";
+            this.c10.Size = new System.Drawing.Size(15, 14);
+            this.c10.TabIndex = 447;
+            this.c10.UseVisualStyleBackColor = true;
             // 
             // c8
             // 
             this.c8.AutoSize = true;
-            this.c8.Location = new System.Drawing.Point(325, 587);
+            this.c8.Location = new System.Drawing.Point(325, 616);
             this.c8.Name = "c8";
             this.c8.Size = new System.Drawing.Size(15, 14);
             this.c8.TabIndex = 446;
@@ -1957,7 +1962,7 @@
             this.c7.AutoSize = true;
             this.c7.BackColor = System.Drawing.Color.Transparent;
             this.c7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.c7.Location = new System.Drawing.Point(298, 587);
+            this.c7.Location = new System.Drawing.Point(298, 616);
             this.c7.Name = "c7";
             this.c7.Size = new System.Drawing.Size(15, 14);
             this.c7.TabIndex = 445;
@@ -1966,7 +1971,7 @@
             // d21
             // 
             this.d21.AutoSize = true;
-            this.d21.Location = new System.Drawing.Point(501, 552);
+            this.d21.Location = new System.Drawing.Point(501, 581);
             this.d21.Name = "d21";
             this.d21.Size = new System.Drawing.Size(15, 14);
             this.d21.TabIndex = 444;
@@ -1975,7 +1980,7 @@
             // d20
             // 
             this.d20.AutoSize = true;
-            this.d20.Location = new System.Drawing.Point(473, 552);
+            this.d20.Location = new System.Drawing.Point(473, 581);
             this.d20.Name = "d20";
             this.d20.Size = new System.Drawing.Size(15, 14);
             this.d20.TabIndex = 443;
@@ -1984,7 +1989,7 @@
             // d15
             // 
             this.d15.AutoSize = true;
-            this.d15.Location = new System.Drawing.Point(445, 552);
+            this.d15.Location = new System.Drawing.Point(445, 581);
             this.d15.Name = "d15";
             this.d15.Size = new System.Drawing.Size(15, 14);
             this.d15.TabIndex = 442;
@@ -1993,7 +1998,7 @@
             // d14
             // 
             this.d14.AutoSize = true;
-            this.d14.Location = new System.Drawing.Point(422, 552);
+            this.d14.Location = new System.Drawing.Point(422, 581);
             this.d14.Name = "d14";
             this.d14.Size = new System.Drawing.Size(15, 14);
             this.d14.TabIndex = 441;
@@ -2004,7 +2009,7 @@
             this.d12.AutoSize = true;
             this.d12.BackColor = System.Drawing.Color.Transparent;
             this.d12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.d12.Location = new System.Drawing.Point(397, 552);
+            this.d12.Location = new System.Drawing.Point(397, 581);
             this.d12.Name = "d12";
             this.d12.Size = new System.Drawing.Size(15, 14);
             this.d12.TabIndex = 440;
@@ -2013,7 +2018,7 @@
             // e11
             // 
             this.e11.AutoSize = true;
-            this.e11.Location = new System.Drawing.Point(374, 533);
+            this.e11.Location = new System.Drawing.Point(374, 562);
             this.e11.Name = "e11";
             this.e11.Size = new System.Drawing.Size(15, 14);
             this.e11.TabIndex = 439;
@@ -2022,7 +2027,7 @@
             // e10
             // 
             this.e10.AutoSize = true;
-            this.e10.Location = new System.Drawing.Point(350, 535);
+            this.e10.Location = new System.Drawing.Point(350, 564);
             this.e10.Name = "e10";
             this.e10.Size = new System.Drawing.Size(15, 14);
             this.e10.TabIndex = 438;
@@ -2031,7 +2036,7 @@
             // e8
             // 
             this.e8.AutoSize = true;
-            this.e8.Location = new System.Drawing.Point(326, 535);
+            this.e8.Location = new System.Drawing.Point(326, 564);
             this.e8.Name = "e8";
             this.e8.Size = new System.Drawing.Size(15, 14);
             this.e8.TabIndex = 437;
@@ -2042,7 +2047,7 @@
             this.e7.AutoSize = true;
             this.e7.BackColor = System.Drawing.Color.Transparent;
             this.e7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.e7.Location = new System.Drawing.Point(299, 533);
+            this.e7.Location = new System.Drawing.Point(299, 562);
             this.e7.Name = "e7";
             this.e7.Size = new System.Drawing.Size(15, 14);
             this.e7.TabIndex = 436;
@@ -2051,7 +2056,7 @@
             // e21
             // 
             this.e21.AutoSize = true;
-            this.e21.Location = new System.Drawing.Point(501, 534);
+            this.e21.Location = new System.Drawing.Point(501, 563);
             this.e21.Name = "e21";
             this.e21.Size = new System.Drawing.Size(15, 14);
             this.e21.TabIndex = 435;
@@ -2060,7 +2065,7 @@
             // e20
             // 
             this.e20.AutoSize = true;
-            this.e20.Location = new System.Drawing.Point(473, 534);
+            this.e20.Location = new System.Drawing.Point(473, 563);
             this.e20.Name = "e20";
             this.e20.Size = new System.Drawing.Size(15, 14);
             this.e20.TabIndex = 434;
@@ -2069,7 +2074,7 @@
             // e15
             // 
             this.e15.AutoSize = true;
-            this.e15.Location = new System.Drawing.Point(445, 534);
+            this.e15.Location = new System.Drawing.Point(445, 563);
             this.e15.Name = "e15";
             this.e15.Size = new System.Drawing.Size(15, 14);
             this.e15.TabIndex = 433;
@@ -2078,7 +2083,7 @@
             // e14
             // 
             this.e14.AutoSize = true;
-            this.e14.Location = new System.Drawing.Point(422, 534);
+            this.e14.Location = new System.Drawing.Point(422, 563);
             this.e14.Name = "e14";
             this.e14.Size = new System.Drawing.Size(15, 14);
             this.e14.TabIndex = 432;
@@ -2089,7 +2094,7 @@
             this.e12.AutoSize = true;
             this.e12.BackColor = System.Drawing.Color.Transparent;
             this.e12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.e12.Location = new System.Drawing.Point(397, 534);
+            this.e12.Location = new System.Drawing.Point(397, 563);
             this.e12.Name = "e12";
             this.e12.Size = new System.Drawing.Size(15, 14);
             this.e12.TabIndex = 431;
@@ -2098,7 +2103,7 @@
             // d11
             // 
             this.d11.AutoSize = true;
-            this.d11.Location = new System.Drawing.Point(376, 553);
+            this.d11.Location = new System.Drawing.Point(376, 582);
             this.d11.Name = "d11";
             this.d11.Size = new System.Drawing.Size(15, 14);
             this.d11.TabIndex = 430;
@@ -2107,7 +2112,7 @@
             // d10
             // 
             this.d10.AutoSize = true;
-            this.d10.Location = new System.Drawing.Point(350, 552);
+            this.d10.Location = new System.Drawing.Point(350, 581);
             this.d10.Name = "d10";
             this.d10.Size = new System.Drawing.Size(15, 14);
             this.d10.TabIndex = 429;
@@ -2116,7 +2121,7 @@
             // d8
             // 
             this.d8.AutoSize = true;
-            this.d8.Location = new System.Drawing.Point(326, 553);
+            this.d8.Location = new System.Drawing.Point(326, 582);
             this.d8.Name = "d8";
             this.d8.Size = new System.Drawing.Size(15, 14);
             this.d8.TabIndex = 428;
@@ -2127,7 +2132,7 @@
             this.d7.AutoSize = true;
             this.d7.BackColor = System.Drawing.Color.Transparent;
             this.d7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.d7.Location = new System.Drawing.Point(299, 553);
+            this.d7.Location = new System.Drawing.Point(299, 582);
             this.d7.Name = "d7";
             this.d7.Size = new System.Drawing.Size(15, 14);
             this.d7.TabIndex = 427;
@@ -2136,7 +2141,7 @@
             // f21
             // 
             this.f21.AutoSize = true;
-            this.f21.Location = new System.Drawing.Point(501, 515);
+            this.f21.Location = new System.Drawing.Point(501, 544);
             this.f21.Name = "f21";
             this.f21.Size = new System.Drawing.Size(15, 14);
             this.f21.TabIndex = 426;
@@ -2145,7 +2150,7 @@
             // f20
             // 
             this.f20.AutoSize = true;
-            this.f20.Location = new System.Drawing.Point(473, 515);
+            this.f20.Location = new System.Drawing.Point(473, 544);
             this.f20.Name = "f20";
             this.f20.Size = new System.Drawing.Size(15, 14);
             this.f20.TabIndex = 425;
@@ -2154,7 +2159,7 @@
             // f15
             // 
             this.f15.AutoSize = true;
-            this.f15.Location = new System.Drawing.Point(445, 515);
+            this.f15.Location = new System.Drawing.Point(445, 544);
             this.f15.Name = "f15";
             this.f15.Size = new System.Drawing.Size(15, 14);
             this.f15.TabIndex = 424;
@@ -2163,7 +2168,7 @@
             // f14
             // 
             this.f14.AutoSize = true;
-            this.f14.Location = new System.Drawing.Point(422, 515);
+            this.f14.Location = new System.Drawing.Point(422, 544);
             this.f14.Name = "f14";
             this.f14.Size = new System.Drawing.Size(15, 14);
             this.f14.TabIndex = 423;
@@ -2174,7 +2179,7 @@
             this.f12.AutoSize = true;
             this.f12.BackColor = System.Drawing.Color.Transparent;
             this.f12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.f12.Location = new System.Drawing.Point(397, 515);
+            this.f12.Location = new System.Drawing.Point(397, 544);
             this.f12.Name = "f12";
             this.f12.Size = new System.Drawing.Size(15, 14);
             this.f12.TabIndex = 422;
@@ -2183,7 +2188,7 @@
             // f11
             // 
             this.f11.AutoSize = true;
-            this.f11.Location = new System.Drawing.Point(375, 515);
+            this.f11.Location = new System.Drawing.Point(375, 544);
             this.f11.Name = "f11";
             this.f11.Size = new System.Drawing.Size(15, 14);
             this.f11.TabIndex = 421;
@@ -2192,7 +2197,7 @@
             // f10
             // 
             this.f10.AutoSize = true;
-            this.f10.Location = new System.Drawing.Point(351, 515);
+            this.f10.Location = new System.Drawing.Point(351, 544);
             this.f10.Name = "f10";
             this.f10.Size = new System.Drawing.Size(15, 14);
             this.f10.TabIndex = 420;
@@ -2201,7 +2206,7 @@
             // f8
             // 
             this.f8.AutoSize = true;
-            this.f8.Location = new System.Drawing.Point(326, 515);
+            this.f8.Location = new System.Drawing.Point(326, 544);
             this.f8.Name = "f8";
             this.f8.Size = new System.Drawing.Size(15, 14);
             this.f8.TabIndex = 419;
@@ -2212,7 +2217,7 @@
             this.f7.AutoSize = true;
             this.f7.BackColor = System.Drawing.Color.Transparent;
             this.f7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.f7.Location = new System.Drawing.Point(299, 515);
+            this.f7.Location = new System.Drawing.Point(299, 544);
             this.f7.Name = "f7";
             this.f7.Size = new System.Drawing.Size(15, 14);
             this.f7.TabIndex = 418;
@@ -2221,7 +2226,7 @@
             // a4
             // 
             this.a4.AutoSize = true;
-            this.a4.Location = new System.Drawing.Point(262, 620);
+            this.a4.Location = new System.Drawing.Point(262, 649);
             this.a4.Name = "a4";
             this.a4.Size = new System.Drawing.Size(15, 14);
             this.a4.TabIndex = 417;
@@ -2230,7 +2235,7 @@
             // a3
             // 
             this.a3.AutoSize = true;
-            this.a3.Location = new System.Drawing.Point(235, 620);
+            this.a3.Location = new System.Drawing.Point(235, 649);
             this.a3.Name = "a3";
             this.a3.Size = new System.Drawing.Size(15, 14);
             this.a3.TabIndex = 416;
@@ -2239,7 +2244,7 @@
             // a2
             // 
             this.a2.AutoSize = true;
-            this.a2.Location = new System.Drawing.Point(208, 620);
+            this.a2.Location = new System.Drawing.Point(208, 649);
             this.a2.Name = "a2";
             this.a2.Size = new System.Drawing.Size(15, 14);
             this.a2.TabIndex = 415;
@@ -2248,7 +2253,7 @@
             // a1
             // 
             this.a1.AutoSize = true;
-            this.a1.Location = new System.Drawing.Point(181, 620);
+            this.a1.Location = new System.Drawing.Point(181, 649);
             this.a1.Name = "a1";
             this.a1.Size = new System.Drawing.Size(15, 14);
             this.a1.TabIndex = 414;
@@ -2257,7 +2262,7 @@
             // b4
             // 
             this.b4.AutoSize = true;
-            this.b4.Location = new System.Drawing.Point(262, 595);
+            this.b4.Location = new System.Drawing.Point(262, 624);
             this.b4.Name = "b4";
             this.b4.Size = new System.Drawing.Size(15, 14);
             this.b4.TabIndex = 413;
@@ -2266,7 +2271,7 @@
             // b3
             // 
             this.b3.AutoSize = true;
-            this.b3.Location = new System.Drawing.Point(235, 595);
+            this.b3.Location = new System.Drawing.Point(235, 624);
             this.b3.Name = "b3";
             this.b3.Size = new System.Drawing.Size(15, 14);
             this.b3.TabIndex = 412;
@@ -2275,7 +2280,7 @@
             // b2
             // 
             this.b2.AutoSize = true;
-            this.b2.Location = new System.Drawing.Point(208, 595);
+            this.b2.Location = new System.Drawing.Point(208, 624);
             this.b2.Name = "b2";
             this.b2.Size = new System.Drawing.Size(15, 14);
             this.b2.TabIndex = 411;
@@ -2284,7 +2289,7 @@
             // b1
             // 
             this.b1.AutoSize = true;
-            this.b1.Location = new System.Drawing.Point(181, 595);
+            this.b1.Location = new System.Drawing.Point(181, 624);
             this.b1.Name = "b1";
             this.b1.Size = new System.Drawing.Size(15, 14);
             this.b1.TabIndex = 410;
@@ -2293,7 +2298,7 @@
             // e4
             // 
             this.e4.AutoSize = true;
-            this.e4.Location = new System.Drawing.Point(262, 545);
+            this.e4.Location = new System.Drawing.Point(262, 574);
             this.e4.Name = "e4";
             this.e4.Size = new System.Drawing.Size(15, 14);
             this.e4.TabIndex = 409;
@@ -2302,7 +2307,7 @@
             // e3
             // 
             this.e3.AutoSize = true;
-            this.e3.Location = new System.Drawing.Point(235, 545);
+            this.e3.Location = new System.Drawing.Point(235, 574);
             this.e3.Name = "e3";
             this.e3.Size = new System.Drawing.Size(15, 14);
             this.e3.TabIndex = 408;
@@ -2311,7 +2316,7 @@
             // e2
             // 
             this.e2.AutoSize = true;
-            this.e2.Location = new System.Drawing.Point(208, 545);
+            this.e2.Location = new System.Drawing.Point(208, 574);
             this.e2.Name = "e2";
             this.e2.Size = new System.Drawing.Size(15, 14);
             this.e2.TabIndex = 407;
@@ -2320,7 +2325,7 @@
             // e1
             // 
             this.e1.AutoSize = true;
-            this.e1.Location = new System.Drawing.Point(181, 545);
+            this.e1.Location = new System.Drawing.Point(181, 574);
             this.e1.Name = "e1";
             this.e1.Size = new System.Drawing.Size(15, 14);
             this.e1.TabIndex = 406;
@@ -2329,7 +2334,7 @@
             // f4
             // 
             this.f4.AutoSize = true;
-            this.f4.Location = new System.Drawing.Point(262, 519);
+            this.f4.Location = new System.Drawing.Point(262, 548);
             this.f4.Name = "f4";
             this.f4.Size = new System.Drawing.Size(15, 14);
             this.f4.TabIndex = 405;
@@ -2338,7 +2343,7 @@
             // f3
             // 
             this.f3.AutoSize = true;
-            this.f3.Location = new System.Drawing.Point(235, 519);
+            this.f3.Location = new System.Drawing.Point(235, 548);
             this.f3.Name = "f3";
             this.f3.Size = new System.Drawing.Size(15, 14);
             this.f3.TabIndex = 404;
@@ -2347,7 +2352,7 @@
             // f2
             // 
             this.f2.AutoSize = true;
-            this.f2.Location = new System.Drawing.Point(208, 519);
+            this.f2.Location = new System.Drawing.Point(208, 548);
             this.f2.Name = "f2";
             this.f2.Size = new System.Drawing.Size(15, 14);
             this.f2.TabIndex = 403;
@@ -2358,7 +2363,7 @@
             this.f1.AutoSize = true;
             this.f1.BackColor = System.Drawing.Color.Transparent;
             this.f1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.f1.Location = new System.Drawing.Point(181, 519);
+            this.f1.Location = new System.Drawing.Point(181, 548);
             this.f1.Name = "f1";
             this.f1.Size = new System.Drawing.Size(15, 14);
             this.f1.TabIndex = 402;
@@ -2367,7 +2372,7 @@
             // Panel_Asientos
             // 
             this.Panel_Asientos.Image = ((System.Drawing.Image)(resources.GetObject("Panel_Asientos.Image")));
-            this.Panel_Asientos.Location = new System.Drawing.Point(7, 442);
+            this.Panel_Asientos.Location = new System.Drawing.Point(7, 471);
             this.Panel_Asientos.Name = "Panel_Asientos";
             this.Panel_Asientos.Size = new System.Drawing.Size(965, 256);
             this.Panel_Asientos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2378,67 +2383,29 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 415);
+            this.label10.Location = new System.Drawing.Point(6, 444);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(374, 24);
             this.label10.TabIndex = 399;
             this.label10.Text = "Selecione el Asiento de su Preferencia";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(288, 310);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 18);
-            this.label9.TabIndex = 398;
-            this.label9.Text = "Destino";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(288, 252);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 18);
-            this.label8.TabIndex = 397;
-            this.label8.Text = "Número de Vuelo";
-            // 
-            // txtDestino
-            // 
-            this.txtDestino.Location = new System.Drawing.Point(291, 331);
-            this.txtDestino.MaxLength = 20;
-            this.txtDestino.Multiline = true;
-            this.txtDestino.Name = "txtDestino";
-            this.txtDestino.ReadOnly = true;
-            this.txtDestino.Size = new System.Drawing.Size(213, 29);
-            this.txtDestino.TabIndex = 396;
-            // 
-            // txtNV
-            // 
-            this.txtNV.Location = new System.Drawing.Point(291, 273);
-            this.txtNV.MaxLength = 20;
-            this.txtNV.Multiline = true;
-            this.txtNV.Name = "txtNV";
-            this.txtNV.ReadOnly = true;
-            this.txtNV.Size = new System.Drawing.Size(213, 29);
-            this.txtNV.TabIndex = 395;
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(291, 93);
+            this.dataGridView1.Location = new System.Drawing.Point(992, 471);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(502, 144);
+            this.dataGridView1.Size = new System.Drawing.Size(336, 144);
             this.dataGridView1.TabIndex = 394;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(288, 72);
+            this.label7.Location = new System.Drawing.Point(986, 450);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(284, 18);
             this.label7.TabIndex = 393;
@@ -2447,7 +2414,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(304, 129);
+            this.label6.Location = new System.Drawing.Point(1002, 507);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 392;
@@ -2481,14 +2448,14 @@
             this.label5.TabIndex = 387;
             this.label5.Text = "Hora y fecha";
             // 
-            // txtCedula
+            // txtIdentificacion
             // 
-            this.txtCedula.Location = new System.Drawing.Point(7, 208);
-            this.txtCedula.MaxLength = 20;
-            this.txtCedula.Multiline = true;
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(213, 29);
-            this.txtCedula.TabIndex = 386;
+            this.txtIdentificacion.Location = new System.Drawing.Point(7, 208);
+            this.txtIdentificacion.MaxLength = 20;
+            this.txtIdentificacion.Multiline = true;
+            this.txtIdentificacion.Name = "txtIdentificacion";
+            this.txtIdentificacion.Size = new System.Drawing.Size(213, 29);
+            this.txtIdentificacion.TabIndex = 386;
             // 
             // label4
             // 
@@ -2541,7 +2508,7 @@
             // txtNumeroVentanilla
             // 
             this.txtNumeroVentanilla.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroVentanilla.Location = new System.Drawing.Point(678, 9);
+            this.txtNumeroVentanilla.Location = new System.Drawing.Point(870, 9);
             this.txtNumeroVentanilla.Multiline = true;
             this.txtNumeroVentanilla.Name = "txtNumeroVentanilla";
             this.txtNumeroVentanilla.ReadOnly = true;
@@ -2553,7 +2520,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(391, 9);
+            this.label1.Location = new System.Drawing.Point(583, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(293, 31);
             this.label1.TabIndex = 379;
@@ -2562,7 +2529,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1068, 133);
+            this.pictureBox4.Location = new System.Drawing.Point(1369, 137);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(34, 34);
             this.pictureBox4.TabIndex = 575;
@@ -2571,7 +2538,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(973, 133);
+            this.btnLimpiar.Location = new System.Drawing.Point(1274, 137);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(89, 34);
             this.btnLimpiar.TabIndex = 574;
@@ -2582,7 +2549,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1068, 93);
+            this.pictureBox3.Location = new System.Drawing.Point(1369, 97);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 34);
             this.pictureBox3.TabIndex = 573;
@@ -2591,7 +2558,7 @@
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(973, 93);
+            this.btnModificar.Location = new System.Drawing.Point(1274, 97);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(89, 34);
             this.btnModificar.TabIndex = 572;
@@ -2602,7 +2569,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(917, 133);
+            this.pictureBox2.Location = new System.Drawing.Point(1218, 137);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 34);
             this.pictureBox2.TabIndex = 571;
@@ -2611,7 +2578,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(822, 133);
+            this.btnEliminar.Location = new System.Drawing.Point(1123, 137);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(89, 34);
             this.btnEliminar.TabIndex = 570;
@@ -2622,7 +2589,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(917, 93);
+            this.pictureBox5.Location = new System.Drawing.Point(1218, 97);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(34, 34);
             this.pictureBox5.TabIndex = 569;
@@ -2631,7 +2598,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(822, 93);
+            this.btnGuardar.Location = new System.Drawing.Point(1123, 97);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(89, 34);
             this.btnGuardar.TabIndex = 568;
@@ -2639,23 +2606,100 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // txtUsuarios
+            // txtUsuario
             // 
-            this.txtUsuarios.Location = new System.Drawing.Point(7, 339);
-            this.txtUsuarios.MaxLength = 20;
-            this.txtUsuarios.Multiline = true;
-            this.txtUsuarios.Name = "txtUsuarios";
-            this.txtUsuarios.ReadOnly = true;
-            this.txtUsuarios.Size = new System.Drawing.Size(213, 29);
-            this.txtUsuarios.TabIndex = 576;
+            this.txtUsuario.Location = new System.Drawing.Point(7, 339);
+            this.txtUsuario.MaxLength = 20;
+            this.txtUsuario.Multiline = true;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.ReadOnly = true;
+            this.txtUsuario.Size = new System.Drawing.Size(213, 29);
+            this.txtUsuario.TabIndex = 576;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1369, 693);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox1.TabIndex = 578;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Location = new System.Drawing.Point(1274, 693);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(89, 34);
+            this.btnAtras.TabIndex = 577;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(986, 630);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(211, 18);
+            this.label8.TabIndex = 580;
+            this.label8.Text = "Número de Vuelo / Destino";
+            // 
+            // txtVuelo
+            // 
+            this.txtVuelo.Location = new System.Drawing.Point(989, 651);
+            this.txtVuelo.MaxLength = 20;
+            this.txtVuelo.Multiline = true;
+            this.txtVuelo.Name = "txtVuelo";
+            this.txtVuelo.ReadOnly = true;
+            this.txtVuelo.Size = new System.Drawing.Size(339, 29);
+            this.txtVuelo.TabIndex = 579;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(251, 93);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(845, 230);
+            this.dataGridView2.TabIndex = 581;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            // 
+            // txtBoleto
+            // 
+            this.txtBoleto.Location = new System.Drawing.Point(7, 401);
+            this.txtBoleto.MaxLength = 20;
+            this.txtBoleto.Multiline = true;
+            this.txtBoleto.Name = "txtBoleto";
+            this.txtBoleto.Size = new System.Drawing.Size(213, 29);
+            this.txtBoleto.TabIndex = 583;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(7, 375);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 18);
+            this.label9.TabIndex = 582;
+            this.label9.Text = "Costo Boleto";
             // 
             // frmVentanilla2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1124, 728);
-            this.Controls.Add(this.txtUsuarios);
+            this.ClientSize = new System.Drawing.Size(1421, 739);
+            this.Controls.Add(this.txtBoleto);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtVuelo);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnAtras);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.pictureBox3);
@@ -2784,7 +2828,7 @@
             this.Controls.Add(this.c14);
             this.Controls.Add(this.c12);
             this.Controls.Add(this.c11);
-            this.Controls.Add(this.c1);
+            this.Controls.Add(this.c10);
             this.Controls.Add(this.c8);
             this.Controls.Add(this.c7);
             this.Controls.Add(this.d21);
@@ -2832,17 +2876,13 @@
             this.Controls.Add(this.f1);
             this.Controls.Add(this.Panel_Asientos);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtDestino);
-            this.Controls.Add(this.txtNV);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Usuario);
             this.Controls.Add(this.txtHoraFecha);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtCedula);
+            this.Controls.Add(this.txtIdentificacion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label3);
@@ -2914,6 +2954,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3094,7 +3136,7 @@
         private System.Windows.Forms.CheckBox c14;
         private System.Windows.Forms.CheckBox c12;
         private System.Windows.Forms.CheckBox c11;
-        private System.Windows.Forms.CheckBox c1;
+        private System.Windows.Forms.CheckBox c10;
         private System.Windows.Forms.CheckBox c8;
         private System.Windows.Forms.CheckBox c7;
         private System.Windows.Forms.CheckBox d21;
@@ -3142,17 +3184,13 @@
         private System.Windows.Forms.CheckBox f1;
         private System.Windows.Forms.PictureBox Panel_Asientos;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtDestino;
-        private System.Windows.Forms.TextBox txtNV;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label Usuario;
         private System.Windows.Forms.TextBox txtHoraFecha;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.TextBox txtIdentificacion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label3;
@@ -3168,6 +3206,13 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txtUsuarios;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtVuelo;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox txtBoleto;
+        private System.Windows.Forms.Label label9;
     }
 }

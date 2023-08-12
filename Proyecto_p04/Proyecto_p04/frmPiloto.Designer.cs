@@ -44,13 +44,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtIdentidicacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.dgvPiloto = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnAtras = new System.Windows.Forms.Button();
             this.cbPaises = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -151,7 +151,7 @@
             // 
             // txtAñosE
             // 
-            this.txtAñosE.Location = new System.Drawing.Point(522, 178);
+            this.txtAñosE.Location = new System.Drawing.Point(404, 179);
             this.txtAñosE.MaxLength = 20;
             this.txtAñosE.Multiline = true;
             this.txtAñosE.Name = "txtAñosE";
@@ -162,7 +162,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(518, 155);
+            this.label5.Location = new System.Drawing.Point(400, 156);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(173, 20);
             this.label5.TabIndex = 48;
@@ -170,7 +170,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(331, 178);
+            this.txtNombre.Location = new System.Drawing.Point(213, 179);
             this.txtNombre.MaxLength = 20;
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
@@ -181,7 +181,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(327, 155);
+            this.label4.Location = new System.Drawing.Point(209, 156);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 46;
@@ -189,7 +189,7 @@
             // 
             // txtIdentidicacion
             // 
-            this.txtIdentidicacion.Location = new System.Drawing.Point(144, 178);
+            this.txtIdentidicacion.Location = new System.Drawing.Point(26, 179);
             this.txtIdentidicacion.MaxLength = 20;
             this.txtIdentidicacion.Multiline = true;
             this.txtIdentidicacion.Name = "txtIdentidicacion";
@@ -200,33 +200,15 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(140, 155);
+            this.label3.Location = new System.Drawing.Point(22, 156);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 20);
             this.label3.TabIndex = 44;
             this.label3.Text = "Identificacion";
             // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(28, 178);
-            this.txtCodigo.MaxLength = 20;
-            this.txtCodigo.Multiline = true;
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 26);
-            this.txtCodigo.TabIndex = 43;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 155);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "Codigo";
-            // 
             // dgvPiloto
             // 
+            this.dgvPiloto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPiloto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPiloto.Location = new System.Drawing.Point(28, 289);
             this.dgvPiloto.Name = "dgvPiloto";
@@ -272,6 +254,25 @@
             this.cbPaises.Name = "cbPaises";
             this.cbPaises.Size = new System.Drawing.Size(159, 21);
             this.cbPaises.TabIndex = 54;
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(207, 221);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Codigo";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(211, 244);
+            this.txtId.MaxLength = 20;
+            this.txtId.Multiline = true;
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(100, 26);
+            this.txtId.TabIndex = 43;
             // 
             // frmPiloto
             // 
@@ -289,7 +290,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtIdentidicacion);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPiloto);
             this.Controls.Add(this.pictureBox4);
@@ -333,12 +334,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtIdentidicacion;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvPiloto;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.ComboBox cbPaises;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

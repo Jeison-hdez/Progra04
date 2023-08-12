@@ -19,9 +19,7 @@ namespace Proyecto_p04
             CargarDatosEnListBoxes();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-        }
+        
 
         private void CargarDatosEnListBoxes()
         {
@@ -137,40 +135,61 @@ namespace Proyecto_p04
         {
             //Codigo Guardar
             conexionBD.conectarBD();
-            string insertar = "INSERT INTO tbl_vuelos(Id,Identificacin,Estado,Nombre,PaisOrigen) VALUES(@Id,@Identificacin,@Estado,@Nombre,@PaisOrigen)";
+            string insertar = "INSERT INTO tbl_vuelos(Estado,Destino) VALUES(@Estado,@Destino)";
             SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
-            cmd.Parameters.AddWithValue("@Id", txtCodigo.Text);
+            
             cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
             cmd.Parameters.AddWithValue("@Destino", txtVueloSeleccionado.Text);
             cmd.ExecuteNonQuery();
 
 
-            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-            
+            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
+        }
+
+        private void frmVuelos_Load(object sender, EventArgs e)
+        {
+            conexionBD.conectarBD();
+            MessageBox.Show("Conexion Exitosa!!!");
+            dataGridView1.DataSource = LLenar_grid();
+
+
+        }
+
+        public DataTable LLenar_grid()
+        {
+            //se llena el grid con la tabla de aerolina
+
+            conexionBD.conectarBD();
+            DataTable dt = new DataTable();
+            string consultar = "SELECT * FROM tbl_vuelos"; //Crear la tabla en BD para lenar el grid
+            SqlCommand cmd = new SqlCommand(consultar, conexionBD.conectarBD());
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             //Codigo Modificar
             conexionBD.conectarBD();
-            string actualizar = "UPDATE tbl_vuelos SET Id=@Id,Identificacion=@Identificacion,Estado=@Estado,Nombre=@Nombre,PaisOrigen=@PaisOrigen," +
+            string actualizar = "UPDATE tbl_vuelos SET Estado=@Estado,Destino=@Destino," +
             "WHERE Id=@Id";
             SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
-            cmd.Parameters.AddWithValue("@Id", txtCodigo.Text);
+            
             cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
             cmd.Parameters.AddWithValue("@Destino", txtVueloSeleccionado.Text);
 
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
+            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             //Codigo Eliminar
             conexionBD.conectarBD();
-            string eliminar = "DELETE FROM tbl_aerolineas WHERE Id=@Id";
+            string eliminar = "DELETE FROM tbl_vuelos WHERE Id=@Id";
             SqlCommand cmd = new SqlCommand(eliminar, conexionBD.conectarBD());
-            cmd.Parameters.AddWithValue("@Id", txtCodigo.Text);
+            
             cmd.ExecuteNonQuery();
 
             MessageBox.Show("Los datosfueron Eliminados!!!");
@@ -178,13 +197,16 @@ namespace Proyecto_p04
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+
             limpiar_txt();
+
         }
 
         public void limpiar_txt()
         {
-            txtCodigo.Clear();
+            
             txtEstado.Clear();
+            txtId.Clear();
             txtVueloSeleccionado.Clear();
         }
 
@@ -192,6 +214,23 @@ namespace Proyecto_p04
         {
             frmAerolina frmAerolina = new frmAerolina();
             frmAerolina.Close();
+
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txtVueloSeleccionado.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtEstado.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+
         }
     }
 }
+    
+
