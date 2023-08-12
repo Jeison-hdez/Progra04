@@ -39,6 +39,8 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.chkPermisos = new System.Windows.Forms.CheckedListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.chkOpciones = new System.Windows.Forms.CheckBox();
             this.gbDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,13 +143,34 @@
             // 
             // chkPermisos
             // 
-            this.chkPermisos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.chkPermisos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chkPermisos.FormattingEnabled = true;
-            this.chkPermisos.Location = new System.Drawing.Point(24, 142);
+            this.chkPermisos.Location = new System.Drawing.Point(24, 172);
             this.chkPermisos.Name = "chkPermisos";
-            this.chkPermisos.Size = new System.Drawing.Size(751, 289);
+            this.chkPermisos.Size = new System.Drawing.Size(751, 259);
             this.chkPermisos.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(30, 139);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Opciones:";
+            // 
+            // chkOpciones
+            // 
+            this.chkOpciones.AutoSize = true;
+            this.chkOpciones.Location = new System.Drawing.Point(93, 139);
+            this.chkOpciones.Name = "chkOpciones";
+            this.chkOpciones.Size = new System.Drawing.Size(115, 17);
+            this.chkOpciones.TabIndex = 6;
+            this.chkOpciones.Text = "Marcar/Desmarcar";
+            this.chkOpciones.UseVisualStyleBackColor = true;
+            this.chkOpciones.CheckedChanged += new System.EventHandler(this.chkOpciones_CheckedChanged);
             // 
             // frmPermisosUsuarios
             // 
@@ -155,6 +178,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.chkOpciones);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.chkPermisos);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnGuardar);
@@ -167,6 +192,7 @@
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -181,5 +207,7 @@
         private System.Windows.Forms.TextBox txtNivel;
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.CheckedListBox chkPermisos;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox chkOpciones;
     }
 }
