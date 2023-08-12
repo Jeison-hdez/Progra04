@@ -147,5 +147,118 @@ namespace Proyecto_p04
             catch { }
         }
 
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Clases.NivelesdeUsuarios glevel = new Clases.NivelesdeUsuarios();
+            glevel.id_nivel = Convert.ToInt32(cbNivel.SelectedValue);
+            glevel.id_boton = Convert.ToInt32(chkPermisos.SelectedValue);
+
+            int resultado = Clases.NivelesdeUsuariosDAL.getNivel(glevel);
+
+            DataTable dt = Clases.NivelesdeUsuariosDAL.getNivelTot(glevel);
+
+            if (dt.Rows.Count >= 1)
+            {
+
+                //if (resultado > 0)
+                //{
+                //SI EXISTE, ACUALIZAR
+                DialogResult result = MessageBox.Show(this, "Desea Actualizar este nivel? ", "Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    this.Cursor = Cursors.WaitCursor;
+                    int ii = 0;
+                    foreach (DataRowView item in chkPermisos.Items)
+                    {
+                        string descripcion = item["informacion"].ToString();
+                        string boton = item["boton"].ToString();
+                        string id = item["id"].ToString();
+
+                        glevel.id_boton = Convert.ToInt32(id);
+                        glevel.informacion = descripcion.ToString();
+                        glevel.boton = boton.ToString();
+
+                        if (chkPermisos.GetItemChecked(ii))
+                        //guardar valor en la tabla usuarios_permisos 1/0
+                        {
+                            glevel.activo = 1;
+                        }
+                        else
+                        {
+                            glevel.activo = 0;
+                        }
+
+                        int agregar = Clases.NivelesdeUsuariosDAL.updaPerm(glevel);
+                        if (agregar == 0)
+                        {  
+                        }
+                        ii++;
+                    }
+                }
+                this.Cursor = Cursors.Default;
+                MessageBox.Show(this, "Proceso terminado!", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                //SI NO EXISTE, AGREGAR
+                DialogResult result = MessageBox.Show(this, "Desea Agregar este nivel? ", "Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    this.Cursor = Cursors.WaitCursor;
+                    int ii = 0;
+                    DataTable dt2 = new DataTable();
+                    dt2 = Clases.NivelesdeUsuariosDAL.bot();
+                    foreach (DataRow Row in dt2.Rows)
+                    {
+                        string descripcion = Row["informacion"].ToString();
+                        string boton = Row["boton"].ToString();
+                        string id = Row["id"].ToString();
+
+                        glevel.id_boton = Convert.ToInt32(id);
+                        glevel.informacion = descripcion.ToString();
+                        glevel.boton = boton.ToString();
+
+                     
+                        glevel.activo = Convert.ToInt32(Row["activo"].ToString());
+                      
+
+                        if (boton == "btnAdd" && glevel.id_nivel <= 6 || boton == "btnFacCierre" && glevel.id_nivel <= 6)
+                        {
+                        }
+                        else
+                        {
+                            int agregar = Clases.NivelesdeUsuariosDAL.addRegistro(glevel);
+                        }
+                        ii++;
+                    }
+                    this.Cursor = Cursors.Default;
+                    MessageBox.Show(this, "Proceso terminado!", "Atención!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                Niveles();
+                Opciones();
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Clases.NivelesdeUsuarios delete = new Clases.NivelesdeUsuarios();
+            delete.Nombre = cbNivel.Text.Trim();
+            int resultado = Clases.NivelesdeUsuariosDAL.getlevels(delete);
+            if (resultado > 0)
+            {
+                DialogResult result = MessageBox.Show(this, "Desea eliminar este Usuario? ", "Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    int prodDel = Clases.NivelesdeUsuariosDAL.Deletelevel(delete);
+                    if (prodDel > 0)
+                    {
+                        MessageBox.Show(this, "Usuario Eliminado!", "Atención!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Niveles();
+                        Opciones();
+                    }
+                }
+            }
+        }
     }
 }

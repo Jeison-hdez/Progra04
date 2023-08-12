@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\conexionBD.cs" />
+    <Compile Include="Clases\NivelesdeUsuarios.cs" />
+    <Compile Include="Clases\NivelesdeUsuariosDAL.cs" />
     <Compile Include="Clases\NivelesUsuariosDAL.cs" />
     <Compile Include="Clases\pilotosDAL.cs" />
     <Compile Include="frmAerolina.cs">
