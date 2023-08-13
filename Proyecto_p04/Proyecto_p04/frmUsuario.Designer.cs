@@ -291,25 +291,25 @@
             // 
             this.cbNivel.FormattingEnabled = true;
             this.cbNivel.Items.AddRange(new object[] {
-            "0",
             "1"});
             this.cbNivel.Location = new System.Drawing.Point(805, 311);
             this.cbNivel.MaxLength = 20;
             this.cbNivel.Name = "cbNivel";
             this.cbNivel.Size = new System.Drawing.Size(74, 21);
             this.cbNivel.TabIndex = 25;
+            this.cbNivel.Text = "1";
             // 
             // cbEstado
             // 
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
-            "0",
             "1"});
             this.cbEstado.Location = new System.Drawing.Point(914, 311);
             this.cbEstado.MaxLength = 20;
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(74, 21);
             this.cbEstado.TabIndex = 26;
+            this.cbEstado.Text = "1";
             // 
             // pictureBox5
             // 

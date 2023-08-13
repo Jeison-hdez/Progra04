@@ -187,11 +187,10 @@ namespace Proyecto_p04
         {
             //Codigo Modificar
             conexionBD.conectarBD();
-            string actualizar = "UPDATE tbl_vuelos SET Estado=@Estado,Destino=@Destino,Piloto=@Piloto," +
-            "WHERE Id=@Id";
+            string actualizar = "UPDATE tbl_vuelos SET  Id=@Id,Estado=@Estado,Destino=@Destino,Piloto=@Piloto WHERE Id=@Id";
             SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
 
-            
+            cmd.Parameters.AddWithValue("@Id", txtId.Text);
             cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
             cmd.Parameters.AddWithValue("@Destino", txtVueloSeleccionado.Text);
             cmd.Parameters.AddWithValue("@Piloto", txtpiloto.Text);

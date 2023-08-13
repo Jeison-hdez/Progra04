@@ -62,11 +62,12 @@ namespace Proyecto_p04
         {
             //Codigo Modificar
             conexionBD.conectarBD();
-            string actualizar = "UPDATE tbl_pilotos SET Identificacion=@Identificacion,Nombre=@Nombre," +
+            string actualizar = "UPDATE tbl_pilotos SET Id=@Id,Identificacion=@Identificacion,Nombre=@Nombre," +
                 "@AñosExpe=AñosExpe,@Nacionalidad=Nacionalidad" +
             "WHERE Id=@Id";
             SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
-            
+
+            cmd.Parameters.AddWithValue("@Id", txtId.Text);
             cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
             cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
             cmd.Parameters.AddWithValue("@AñosExpe", txtAñosE.Text);
