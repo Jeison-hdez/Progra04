@@ -125,7 +125,7 @@ namespace Proyecto_p04
 
                 if (result == DialogResult.Yes)
                 {
-                    DialogResult result = MessageBox.Show("Desea modificar el usuario ?", "Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    
                     if (result == DialogResult.Yes)
                     {
                         conexionBD.conectarBD();
@@ -169,9 +169,8 @@ namespace Proyecto_p04
             {
                 DialogResult result = MessageBox.Show("¿Desea eliminar los datos?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                if (result == DialogResult.Yes)
-                {
-                    DialogResult result = MessageBox.Show("Desea eliminar el usuario ?", "Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                
+                    
                     if (result == DialogResult.Yes)
                     {
                         if (txtID.TextLength > 0)
@@ -197,7 +196,7 @@ namespace Proyecto_p04
                     }
 
                     MessageBox.Show("Datos eliminados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                
             }
             catch (Exception ex)
             {
