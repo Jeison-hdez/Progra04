@@ -235,6 +235,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.Panel_Asientos = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtEstadoV = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -288,7 +290,7 @@
             // txtVuelo
             // 
             this.txtVuelo.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVuelo.Location = new System.Drawing.Point(983, 650);
+            this.txtVuelo.Location = new System.Drawing.Point(983, 638);
             this.txtVuelo.MaxLength = 20;
             this.txtVuelo.Multiline = true;
             this.txtVuelo.Name = "txtVuelo";
@@ -300,7 +302,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(977, 629);
+            this.label8.Location = new System.Drawing.Point(977, 617);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(211, 18);
             this.label8.TabIndex = 18;
@@ -2222,12 +2224,35 @@
             this.label14.TabIndex = 622;
             this.label14.Text = "Hora de Cierre";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(977, 667);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(286, 18);
+            this.label15.TabIndex = 624;
+            this.label15.Text = "Estado de Disponibilidad (1=si/0=no)";
+            // 
+            // txtEstadoV
+            // 
+            this.txtEstadoV.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstadoV.Location = new System.Drawing.Point(983, 688);
+            this.txtEstadoV.MaxLength = 20;
+            this.txtEstadoV.Multiline = true;
+            this.txtEstadoV.Name = "txtEstadoV";
+            this.txtEstadoV.ReadOnly = true;
+            this.txtEstadoV.Size = new System.Drawing.Size(70, 29);
+            this.txtEstadoV.TabIndex = 623;
+            // 
             // frmVentanilla1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1402, 738);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.txtEstadoV);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label3);
@@ -2659,5 +2684,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox Panel_Asientos;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtEstadoV;
     }
 }

@@ -72,56 +72,63 @@ namespace Proyecto_p04
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtVuelo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            Asientos();
 
-                if (result == DialogResult.Yes)
+
+            DateTime fecha = DateTime.Now;
+            txtSalida.Text = fecha.ToString();
+
+            if (txtEstadoV.Text == "1")
+            {
+
+                try
                 {
+                    DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    Asientos();
+                    if (result == DialogResult.Yes)
+                    {
+                        //Codigo Guardar
+                        conexionBD.conectarBD();
+                        string insertar = "INSERT INTO tbl_ventanilla(Id,Nombre,Identificacion,HoraFecha,Usuario,Destino,Asiento,NumeroV,Boleto,Nacionalidad,NPasaporte,HoraEntrada,HoraSalida) VALUES(@Id,@Nombre,@Identificacion,@HoraFecha,@Usuario,@Destino,@Asiento,@NumeroV,@Boleto,@Nacionalidad,@NPasaporte,@HoraEntrada,@HoraSalida)";
+                        SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
+                        cmd.Parameters.AddWithValue("@Id", txtId.Text);
+                        cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+                        cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
+                        cmd.Parameters.AddWithValue("@HoraFecha", txtHoraFecha.Text);
+                        cmd.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
+                        cmd.Parameters.AddWithValue("@Destino", txtVuelo.Text);
+                        cmd.Parameters.AddWithValue("@NumeroV", txtNumeroVentanilla.Text);
+                        cmd.Parameters.AddWithValue("@Boleto", txtBoleto.Text);
+                        cmd.Parameters.AddWithValue("@Nacionalidad", cbNacionalidad.SelectedIndex);
+                        cmd.Parameters.AddWithValue("@NPasaporte", txtNPasaporte.Text);
+                        cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
+                        cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
 
-
-                    DateTime fecha = DateTime.Now;
-                    txtSalida.Text = fecha.ToString();
-
-
-                    //Codigo Guardar
-                    conexionBD.conectarBD();
-                    string insertar = "INSERT INTO tbl_ventanilla(Id,Nombre,Identificacion,HoraFecha,Usuario,Destino,Asiento,NumeroV,Boleto,Nacionalidad,NPasaporte,HoraEntrada,HoraSalida) VALUES(@Id,@Nombre,@Identificacion,@HoraFecha,@Usuario,@Destino,@Asiento,@NumeroV,@Boleto,@Nacionalidad,@NPasaporte,@HoraEntrada,@HoraSalida)";
-                    SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
-                    cmd.Parameters.AddWithValue("@Id", txtId.Text);
-                    cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-                    cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
-                    cmd.Parameters.AddWithValue("@HoraFecha", txtHoraFecha.Text);
-                    cmd.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
-                    cmd.Parameters.AddWithValue("@Destino", txtVuelo.Text);
-                    cmd.Parameters.AddWithValue("@NumeroV", txtNumeroVentanilla.Text);
-                    cmd.Parameters.AddWithValue("@Boleto", txtBoleto.Text);
-                    cmd.Parameters.AddWithValue("@Nacionalidad", cbNacionalidad.SelectedIndex);
-                    cmd.Parameters.AddWithValue("@NPasaporte", txtNPasaporte.Text);
-                    cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
-                    cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
-
-                    cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
+                        cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
 
 
-                    cmd.ExecuteNonQuery();
+                        cmd.ExecuteNonQuery();
 
 
-                    MessageBox.Show("Los datos fueron agregados de forma exitosa!!!");
-
-                    MessageBox.Show("Datos guardados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Los datos fueron agregados de forma exitosa!!!");
+                        dataGridView1.DataSource = LLenar_grid1();
+                    }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El vuelo ya no está disponible, selecione otro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -1500,6 +1507,12 @@ namespace Proyecto_p04
         {
             DateTime fecha = DateTime.Now;
             txtHoraFecha.Text = fecha.ToString();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtVuelo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtEstadoV.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
         }
     }
 }
