@@ -54,58 +54,120 @@ namespace Proyecto_p04
 
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
-            //Codigo Guardar
-            conexionBD.conectarBD();
-            string insertar = "INSERT INTO tbl_aerolineas(Identificacion,Estado,Descripcion,PaisOrigen) VALUES(@Identificacion,@Estado,@Descripcion,@PaisOrigen)";
-            SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
-            
-            cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
-            cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
-            cmd.Parameters.AddWithValue("@Descripcion", txtNombre.Text);
-            cmd.Parameters.AddWithValue("@PaisOrigen", txtPaisOrigen.Text);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                DialogResult result = MessageBox.Show("¿Desea limpiar los datos?", "Confirmar Limpieza", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    //Codigo Guardar
+                    conexionBD.conectarBD();
+                    string insertar = "INSERT INTO tbl_aerolineas(Identificacion,Estado,Descripcion,PaisOrigen) VALUES(@Identificacion,@Estado,@Descripcion,@PaisOrigen)";
+                    SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
+
+                    cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
+                    cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
+                    cmd.Parameters.AddWithValue("@Descripcion", txtNombre.Text);
+                    cmd.Parameters.AddWithValue("@PaisOrigen", txtPaisOrigen.Text);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Datos limpiados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
-            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-            dgvAerolinea.DataSource = LLenar_grid();
-            
+
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            //Codigo Modificar
-            conexionBD.conectarBD();
-            string actualizar = "UPDATE tbl_aerolineas SET Id=@Id,Identificacion=@Identificacion,Estado=@Estado,Nombre=@Nombre,PaisOrigen=@PaisOrigen WHERE Id=@Id";
-            SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
+            try
+            {
+                DialogResult result = MessageBox.Show("¿Desea aplicar los cambios?", "Confirmar Modificación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            cmd.Parameters.AddWithValue("@Id", txtID.Text);
-            cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
-            cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
-            cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-            cmd.Parameters.AddWithValue("@PaisOrigen", txtPaisOrigen.Text);
+                if (result == DialogResult.Yes)
+                {
+                    //Codigo Modificar
+                    conexionBD.conectarBD();
+                    string actualizar = "UPDATE tbl_aerolineas SET Id=@Id,Identificacion=@Identificacion,Estado=@Estado,Nombre=@Nombre,PaisOrigen=@PaisOrigen WHERE Id=@Id";
+                    SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
+
+                    cmd.Parameters.AddWithValue("@Id", txtID.Text);
+                    cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
+                    cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
+                    cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+                    cmd.Parameters.AddWithValue("@PaisOrigen", txtPaisOrigen.Text);
 
 
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-            dgvAerolinea.DataSource = LLenar_grid();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
+                    dgvAerolinea.DataSource = LLenar_grid();
+
+                    MessageBox.Show("Cambios aplicados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+           
+       
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //Codigo Eliminar
-            conexionBD.conectarBD();
-            string eliminar = "DELETE FROM tbl_aerolineas WHERE Id=@Id";
-            SqlCommand cmd = new SqlCommand(eliminar, conexionBD.conectarBD());
-            cmd.Parameters.AddWithValue("@Id", txtID.Text);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                DialogResult result = MessageBox.Show("¿Desea eliminar los datos?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            MessageBox.Show("Los datosfueron Eliminados!!!");
-            dgvAerolinea.DataSource = LLenar_grid();
+                if (result == DialogResult.Yes)
+                {
+                    //Codigo Eliminar
+                    conexionBD.conectarBD();
+                    string eliminar = "DELETE FROM tbl_aerolineas WHERE Id=@Id";
+                    SqlCommand cmd = new SqlCommand(eliminar, conexionBD.conectarBD());
+                    cmd.Parameters.AddWithValue("@Id", txtID.Text);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Los datosfueron Eliminados!!!");
+                    dgvAerolinea.DataSource = LLenar_grid();
+
+                    MessageBox.Show("Datos eliminados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-         limpiar_txt();
+            try
+            {
+                DialogResult result = MessageBox.Show("¿Desea limpiar los datos?", "Confirmar Limpieza", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    limpiar_txt();
+
+                    MessageBox.Show("Datos limpiados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+           
         }
 
          public void limpiar_txt()
