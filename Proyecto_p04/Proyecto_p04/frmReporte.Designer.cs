@@ -34,18 +34,18 @@ namespace Proyecto_p04
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.cbVuelos = new System.Windows.Forms.ComboBox();
+            this.cbMonetario = new System.Windows.Forms.ComboBox();
+            this.cbPasajeros = new System.Windows.Forms.ComboBox();
+            this.rbPasajeros = new System.Windows.Forms.RadioButton();
+            this.rbCortes = new System.Windows.Forms.RadioButton();
+            this.rbMoneda = new System.Windows.Forms.RadioButton();
+            this.rbVuelos = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnExcel = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
             this.dtpFechaF = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.rbVuelos = new System.Windows.Forms.RadioButton();
-            this.rbMoneda = new System.Windows.Forms.RadioButton();
-            this.rbCortes = new System.Windows.Forms.RadioButton();
-            this.rbPasajeros = new System.Windows.Forms.RadioButton();
-            this.cbPasajeros = new System.Windows.Forms.ComboBox();
-            this.cbMonetario = new System.Windows.Forms.ComboBox();
-            this.cbVuelos = new System.Windows.Forms.ComboBox();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -104,6 +104,101 @@ namespace Proyecto_p04
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos:";
             // 
+            // cbVuelos
+            // 
+            this.cbVuelos.FormattingEnabled = true;
+            this.cbVuelos.Items.AddRange(new object[] {
+            "Ventanilla 01",
+            "Ventanilla 02",
+            "Ventanilla 03",
+            "Ventanilla 04",
+            "Todas"});
+            this.cbVuelos.Location = new System.Drawing.Point(383, 61);
+            this.cbVuelos.Name = "cbVuelos";
+            this.cbVuelos.Size = new System.Drawing.Size(121, 21);
+            this.cbVuelos.TabIndex = 13;
+            // 
+            // cbMonetario
+            // 
+            this.cbMonetario.FormattingEnabled = true;
+            this.cbMonetario.Items.AddRange(new object[] {
+            "Vuelo",
+            "Ventanilla",
+            "Todos"});
+            this.cbMonetario.Location = new System.Drawing.Point(510, 61);
+            this.cbMonetario.Name = "cbMonetario";
+            this.cbMonetario.Size = new System.Drawing.Size(121, 21);
+            this.cbMonetario.TabIndex = 12;
+            this.cbMonetario.Visible = false;
+            // 
+            // cbPasajeros
+            // 
+            this.cbPasajeros.FormattingEnabled = true;
+            this.cbPasajeros.Items.AddRange(new object[] {
+            "Avión",
+            "Escala",
+            "Destino"});
+            this.cbPasajeros.Location = new System.Drawing.Point(637, 61);
+            this.cbPasajeros.Name = "cbPasajeros";
+            this.cbPasajeros.Size = new System.Drawing.Size(121, 21);
+            this.cbPasajeros.TabIndex = 11;
+            this.cbPasajeros.Visible = false;
+            // 
+            // rbPasajeros
+            // 
+            this.rbPasajeros.AutoSize = true;
+            this.rbPasajeros.Location = new System.Drawing.Point(247, 62);
+            this.rbPasajeros.Name = "rbPasajeros";
+            this.rbPasajeros.Size = new System.Drawing.Size(71, 17);
+            this.rbPasajeros.TabIndex = 10;
+            this.rbPasajeros.Text = "Pasajeros";
+            this.rbPasajeros.UseVisualStyleBackColor = true;
+            this.rbPasajeros.CheckedChanged += new System.EventHandler(this.rbPasajeros_CheckedChanged);
+            // 
+            // rbCortes
+            // 
+            this.rbCortes.AutoSize = true;
+            this.rbCortes.Location = new System.Drawing.Point(186, 62);
+            this.rbCortes.Name = "rbCortes";
+            this.rbCortes.Size = new System.Drawing.Size(55, 17);
+            this.rbCortes.TabIndex = 9;
+            this.rbCortes.Text = "Cortes";
+            this.rbCortes.UseVisualStyleBackColor = true;
+            // 
+            // rbMoneda
+            // 
+            this.rbMoneda.AutoSize = true;
+            this.rbMoneda.Location = new System.Drawing.Point(112, 62);
+            this.rbMoneda.Name = "rbMoneda";
+            this.rbMoneda.Size = new System.Drawing.Size(72, 17);
+            this.rbMoneda.TabIndex = 8;
+            this.rbMoneda.Text = "Monetario";
+            this.rbMoneda.UseVisualStyleBackColor = true;
+            this.rbMoneda.CheckedChanged += new System.EventHandler(this.rbMoneda_CheckedChanged);
+            // 
+            // rbVuelos
+            // 
+            this.rbVuelos.AutoSize = true;
+            this.rbVuelos.Checked = true;
+            this.rbVuelos.Location = new System.Drawing.Point(53, 62);
+            this.rbVuelos.Name = "rbVuelos";
+            this.rbVuelos.Size = new System.Drawing.Size(57, 17);
+            this.rbVuelos.TabIndex = 7;
+            this.rbVuelos.TabStop = true;
+            this.rbVuelos.Text = "Vuelos";
+            this.rbVuelos.UseVisualStyleBackColor = true;
+            this.rbVuelos.CheckedChanged += new System.EventHandler(this.rbVuelos_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(11, 64);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Tipo:";
+            // 
             // btnExcel
             // 
             this.btnExcel.Enabled = false;
@@ -135,109 +230,13 @@ namespace Proyecto_p04
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 114);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(776, 324);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 64);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Tipo:";
-            // 
-            // rbVuelos
-            // 
-            this.rbVuelos.AutoSize = true;
-            this.rbVuelos.Checked = true;
-            this.rbVuelos.Location = new System.Drawing.Point(53, 62);
-            this.rbVuelos.Name = "rbVuelos";
-            this.rbVuelos.Size = new System.Drawing.Size(57, 17);
-            this.rbVuelos.TabIndex = 7;
-            this.rbVuelos.TabStop = true;
-            this.rbVuelos.Text = "Vuelos";
-            this.rbVuelos.UseVisualStyleBackColor = true;
-            this.rbVuelos.CheckedChanged += new System.EventHandler(this.rbVuelos_CheckedChanged);
-            // 
-            // rbMoneda
-            // 
-            this.rbMoneda.AutoSize = true;
-            this.rbMoneda.Location = new System.Drawing.Point(112, 62);
-            this.rbMoneda.Name = "rbMoneda";
-            this.rbMoneda.Size = new System.Drawing.Size(72, 17);
-            this.rbMoneda.TabIndex = 8;
-            this.rbMoneda.Text = "Monetario";
-            this.rbMoneda.UseVisualStyleBackColor = true;
-            this.rbMoneda.CheckedChanged += new System.EventHandler(this.rbMoneda_CheckedChanged);
-            // 
-            // rbCortes
-            // 
-            this.rbCortes.AutoSize = true;
-            this.rbCortes.Location = new System.Drawing.Point(186, 62);
-            this.rbCortes.Name = "rbCortes";
-            this.rbCortes.Size = new System.Drawing.Size(55, 17);
-            this.rbCortes.TabIndex = 9;
-            this.rbCortes.Text = "Cortes";
-            this.rbCortes.UseVisualStyleBackColor = true;
-            // 
-            // rbPasajeros
-            // 
-            this.rbPasajeros.AutoSize = true;
-            this.rbPasajeros.Location = new System.Drawing.Point(247, 62);
-            this.rbPasajeros.Name = "rbPasajeros";
-            this.rbPasajeros.Size = new System.Drawing.Size(71, 17);
-            this.rbPasajeros.TabIndex = 10;
-            this.rbPasajeros.Text = "Pasajeros";
-            this.rbPasajeros.UseVisualStyleBackColor = true;
-            this.rbPasajeros.CheckedChanged += new System.EventHandler(this.rbPasajeros_CheckedChanged);
-            // 
-            // cbPasajeros
-            // 
-            this.cbPasajeros.FormattingEnabled = true;
-            this.cbPasajeros.Items.AddRange(new object[] {
-            "Avión",
-            "Escala",
-            "Destino"});
-            this.cbPasajeros.Location = new System.Drawing.Point(637, 61);
-            this.cbPasajeros.Name = "cbPasajeros";
-            this.cbPasajeros.Size = new System.Drawing.Size(121, 21);
-            this.cbPasajeros.TabIndex = 11;
-            this.cbPasajeros.Visible = false;
-            // 
-            // cbMonetario
-            // 
-            this.cbMonetario.FormattingEnabled = true;
-            this.cbMonetario.Items.AddRange(new object[] {
-            "Vuelo",
-            "Ventanilla",
-            "Todos"});
-            this.cbMonetario.Location = new System.Drawing.Point(510, 61);
-            this.cbMonetario.Name = "cbMonetario";
-            this.cbMonetario.Size = new System.Drawing.Size(121, 21);
-            this.cbMonetario.TabIndex = 12;
-            this.cbMonetario.Visible = false;
-            // 
-            // cbVuelos
-            // 
-            this.cbVuelos.FormattingEnabled = true;
-            this.cbVuelos.Items.AddRange(new object[] {
-            "Ventanilla 01",
-            "Ventanilla 02",
-            "Ventanilla 03",
-            "Ventanilla 04",
-            "Todas"});
-            this.cbVuelos.Location = new System.Drawing.Point(383, 61);
-            this.cbVuelos.Name = "cbVuelos";
-            this.cbVuelos.Size = new System.Drawing.Size(121, 21);
-            this.cbVuelos.TabIndex = 13;
             // 
             // frmReporte
             // 
