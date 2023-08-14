@@ -109,6 +109,8 @@ namespace Proyecto_p04
 
                 cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
 
+                MessageBox.Show(control.ToString());
+
                 cmd.ExecuteNonQuery();
 
 
@@ -476,11 +478,7 @@ namespace Proyecto_p04
                 f38.Enabled = false;
                 control.ToString();
             }
-            else
-            {
-                control = "f0";
-                control.ToString();
-            }
+            
 
             ///////////// parte E
 
@@ -690,10 +688,7 @@ namespace Proyecto_p04
                 e38.BackColor = Color.Red;
                 e38.Enabled = false;
             }
-            else
-            {
-                control = "e0";
-            }
+            
 
 
 
@@ -877,9 +872,7 @@ namespace Proyecto_p04
                 d38.Enabled = false;
             }
             else
-            {
-                control = "d0";
-            }
+            
 
 
 
@@ -1061,10 +1054,7 @@ namespace Proyecto_p04
                 c38.BackColor = Color.Red;
                 c38.Enabled = false;
             }
-            else
-            {
-                control = "c0";
-            }
+            
 
             ///////// parte B
 
@@ -1274,10 +1264,7 @@ namespace Proyecto_p04
                 b38.BackColor = Color.Red;
                 b38.Enabled = false;
             }
-            else
-            {
-                control = "b0";
-            }
+            
 
 
 
@@ -1482,17 +1469,14 @@ namespace Proyecto_p04
                 a37.BackColor = Color.Red;
                 a37.Enabled = false;
             }
-            else if (a38.Checked)
+            else if  (a38.Checked)
             {
                 control = "a38";
                 numero++;
                 a38.BackColor = Color.Red;
                 a38.Enabled = false;
             }
-            else
-            {
-                control = "a0";
-            }
+            
 
 
 

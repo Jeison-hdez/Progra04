@@ -1523,6 +1523,12 @@ namespace Proyecto_p04
             txtEntrada.Text = dataGridView2.CurrentRow.Cells[11].Value.ToString();
             txtSalida.Text = dataGridView2.CurrentRow.Cells[12].Value.ToString();
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            DateTime fecha = DateTime.Now;
+            txtHoraFecha.Text = fecha.ToString();
+        }
     }
 
 }

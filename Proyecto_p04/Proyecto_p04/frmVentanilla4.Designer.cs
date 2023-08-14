@@ -231,6 +231,8 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSalida = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Panel_Asientos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -238,6 +240,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // a38
@@ -2038,7 +2041,7 @@
             // 
             // txtBoleto
             // 
-            this.txtBoleto.Location = new System.Drawing.Point(15, 413);
+            this.txtBoleto.Location = new System.Drawing.Point(15, 348);
             this.txtBoleto.MaxLength = 20;
             this.txtBoleto.Multiline = true;
             this.txtBoleto.Name = "txtBoleto";
@@ -2049,7 +2052,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(15, 387);
+            this.label9.Location = new System.Drawing.Point(15, 322);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(108, 18);
             this.label9.TabIndex = 418;
@@ -2057,7 +2060,7 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(15, 351);
+            this.txtUsuario.Location = new System.Drawing.Point(15, 414);
             this.txtUsuario.MaxLength = 20;
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
@@ -2069,7 +2072,7 @@
             // 
             this.Usuario.AutoSize = true;
             this.Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Usuario.Location = new System.Drawing.Point(15, 320);
+            this.Usuario.Location = new System.Drawing.Point(15, 383);
             this.Usuario.Name = "Usuario";
             this.Usuario.Size = new System.Drawing.Size(147, 18);
             this.Usuario.TabIndex = 416;
@@ -2157,8 +2160,28 @@
             this.txtSalida.MaxLength = 20;
             this.txtSalida.Multiline = true;
             this.txtSalida.Name = "txtSalida";
+            this.txtSalida.ReadOnly = true;
             this.txtSalida.Size = new System.Drawing.Size(130, 29);
             this.txtSalida.TabIndex = 425;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(348, 283);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox1.TabIndex = 619;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Location = new System.Drawing.Point(243, 283);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(99, 34);
+            this.btnActualizar.TabIndex = 618;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
             // 
             // frmVentanilla4
             // 
@@ -2166,6 +2189,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1422, 741);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.txtSalida);
             this.Controls.Add(this.txtEntrada);
             this.Controls.Add(this.txtNPasaporte);
@@ -2379,6 +2404,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2587,5 +2613,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSalida;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }
