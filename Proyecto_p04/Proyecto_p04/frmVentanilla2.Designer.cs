@@ -287,6 +287,7 @@
             this.txtSalida = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Panel_Asientos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -2750,12 +2751,23 @@
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(140, 18);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(125, 16);
+            this.label13.TabIndex = 620;
+            this.label13.Text = "Hora de apertura";
+            // 
             // frmVentanilla2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1480, 739);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.txtSalida);
@@ -3290,5 +3302,6 @@
         private System.Windows.Forms.TextBox txtSalida;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Label label13;
     }
 }
