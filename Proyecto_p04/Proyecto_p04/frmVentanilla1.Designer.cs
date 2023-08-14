@@ -2105,7 +2105,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1453, 738);
+            this.ClientSize = new System.Drawing.Size(1386, 738);
             this.Controls.Add(this.txtBoleto);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridView2);
@@ -2305,7 +2305,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVentanilla1";
             this.Text = "frmVentanilla";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmVentanilla1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Panel_Asientos)).EndInit();

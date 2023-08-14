@@ -43,7 +43,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.Label();
@@ -52,7 +51,6 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.cbNivel = new System.Windows.Forms.ComboBox();
-            this.cbEstado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -76,7 +74,7 @@
             this.txtUsuario.MaxLength = 20;
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(155, 29);
+            this.txtUsuario.Size = new System.Drawing.Size(155, 21);
             this.txtUsuario.TabIndex = 1;
             // 
             // txtPassword
@@ -85,7 +83,7 @@
             this.txtPassword.MaxLength = 20;
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(145, 29);
+            this.txtPassword.Size = new System.Drawing.Size(145, 21);
             this.txtPassword.TabIndex = 4;
             // 
             // label2
@@ -104,7 +102,7 @@
             this.txtIdentificacion.MaxLength = 20;
             this.txtIdentificacion.Multiline = true;
             this.txtIdentificacion.Name = "txtIdentificacion";
-            this.txtIdentificacion.Size = new System.Drawing.Size(161, 29);
+            this.txtIdentificacion.Size = new System.Drawing.Size(161, 21);
             this.txtIdentificacion.TabIndex = 6;
             // 
             // label3
@@ -136,14 +134,14 @@
             this.dataGridView1.Location = new System.Drawing.Point(36, 412);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(952, 268);
+            this.dataGridView1.Size = new System.Drawing.Size(1091, 268);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(862, 173);
+            this.btnGuardar.Location = new System.Drawing.Point(36, 179);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(89, 34);
             this.btnGuardar.TabIndex = 9;
@@ -154,7 +152,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(957, 173);
+            this.pictureBox1.Location = new System.Drawing.Point(131, 179);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(34, 34);
             this.pictureBox1.TabIndex = 10;
@@ -163,7 +161,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(957, 213);
+            this.pictureBox2.Location = new System.Drawing.Point(131, 219);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 34);
             this.pictureBox2.TabIndex = 12;
@@ -172,7 +170,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(862, 213);
+            this.btnEliminar.Location = new System.Drawing.Point(36, 219);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(89, 34);
             this.btnEliminar.TabIndex = 11;
@@ -183,7 +181,7 @@
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(1013, 173);
+            this.btnModificar.Location = new System.Drawing.Point(187, 179);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(89, 34);
             this.btnModificar.TabIndex = 13;
@@ -194,21 +192,11 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1108, 173);
+            this.pictureBox3.Location = new System.Drawing.Point(282, 179);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 34);
             this.pictureBox3.TabIndex = 14;
             this.pictureBox3.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(911, 335);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 18);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Estado";
             // 
             // label6
             // 
@@ -251,7 +239,7 @@
             this.txtNombre.MaxLength = 20;
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(227, 29);
+            this.txtNombre.Size = new System.Drawing.Size(227, 21);
             this.txtNombre.TabIndex = 22;
             // 
             // label7
@@ -267,7 +255,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(1013, 213);
+            this.btnLimpiar.Location = new System.Drawing.Point(187, 219);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(89, 34);
             this.btnLimpiar.TabIndex = 23;
@@ -278,7 +266,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1108, 213);
+            this.pictureBox4.Location = new System.Drawing.Point(282, 219);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(34, 34);
             this.pictureBox4.TabIndex = 24;
@@ -286,27 +274,15 @@
             // 
             // cbNivel
             // 
+            this.cbNivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNivel.FormattingEnabled = true;
             this.cbNivel.Items.AddRange(new object[] {
-            "1"});
+            ""});
             this.cbNivel.Location = new System.Drawing.Point(805, 356);
             this.cbNivel.MaxLength = 20;
             this.cbNivel.Name = "cbNivel";
-            this.cbNivel.Size = new System.Drawing.Size(74, 21);
+            this.cbNivel.Size = new System.Drawing.Size(146, 21);
             this.cbNivel.TabIndex = 25;
-            this.cbNivel.Text = "1";
-            // 
-            // cbEstado
-            // 
-            this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Items.AddRange(new object[] {
-            "1"});
-            this.cbEstado.Location = new System.Drawing.Point(914, 356);
-            this.cbEstado.MaxLength = 20;
-            this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(74, 21);
-            this.cbEstado.TabIndex = 26;
-            this.cbEstado.Text = "1";
             // 
             // frmUsuario
             // 
@@ -314,7 +290,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1167, 712);
-            this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.cbNivel);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnLimpiar);
@@ -323,7 +298,6 @@
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.pictureBox2);
@@ -369,7 +343,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label ID;
@@ -378,6 +351,5 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.ComboBox cbNivel;
-        private System.Windows.Forms.ComboBox cbEstado;
     }
 }

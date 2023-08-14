@@ -29,6 +29,7 @@ namespace Proyecto_p04
             MessageBox.Show("Conexion Exitosa!!!");
             dataGridView1.DataSource = LLenar_grid1();
             dataGridView2.DataSource = LLenar_grid2();
+            string fecha = DateTime.Now.ToString();
 
         }
         public DataTable LLenar_grid1()

@@ -34,10 +34,10 @@ namespace Proyecto_p04
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.btnExcel = new System.Windows.Forms.Button();
+            this.btnReporte = new System.Windows.Forms.Button();
             this.dtpFechaF = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnReporte = new System.Windows.Forms.Button();
-            this.btnExcel = new System.Windows.Forms.Button();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -88,6 +88,27 @@ namespace Proyecto_p04
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos:";
             // 
+            // btnExcel
+            // 
+            this.btnExcel.Enabled = false;
+            this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
+            this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcel.Location = new System.Drawing.Point(581, 17);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(75, 23);
+            this.btnExcel.TabIndex = 5;
+            this.btnExcel.Text = "Excel";
+            this.btnExcel.UseVisualStyleBackColor = true;
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.Location = new System.Drawing.Point(500, 17);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(75, 23);
+            this.btnReporte.TabIndex = 4;
+            this.btnReporte.Text = "Ok";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            // 
             // dtpFechaF
             // 
             this.dtpFechaF.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -106,27 +127,6 @@ namespace Proyecto_p04
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(776, 324);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // btnReporte
-            // 
-            this.btnReporte.Location = new System.Drawing.Point(500, 17);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(75, 23);
-            this.btnReporte.TabIndex = 4;
-            this.btnReporte.Text = "Ok";
-            this.btnReporte.UseVisualStyleBackColor = true;
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.Enabled = false;
-            this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
-            this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExcel.Location = new System.Drawing.Point(581, 17);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(75, 23);
-            this.btnExcel.TabIndex = 5;
-            this.btnExcel.Text = "Excel";
-            this.btnExcel.UseVisualStyleBackColor = true;
             // 
             // frmReporte
             // 
