@@ -47,7 +47,7 @@ namespace Proyecto_p04
                 "VALUES(@Identificacion,@Nombre,@AñosExpe,@Nacionalidad)";
             SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
             
-            cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
+            cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
             cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
             cmd.Parameters.AddWithValue("@AñosExpe", txtAñosE.Text);
             cmd.Parameters.AddWithValue("@Nacionalidad", cbPaises.SelectedIndex);
@@ -68,7 +68,7 @@ namespace Proyecto_p04
             SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
 
             cmd.Parameters.AddWithValue("@Id", txtId.Text);
-            cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
+            cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
             cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
             cmd.Parameters.AddWithValue("@AñosExpe", txtAñosE.Text);
             cmd.Parameters.AddWithValue("@Nacionalidad", cbPaises.SelectedIndex);
@@ -102,7 +102,7 @@ namespace Proyecto_p04
         {
             txtId.Clear();
             txtNombre.Clear();
-            txtIdentidicacion.Clear();
+            txtIdentificacion.Clear();
             txtAñosE.Clear();
             cbPaises.SelectedIndex = 0;
         } 
@@ -110,10 +110,10 @@ namespace Proyecto_p04
         private void dgvAerolinea_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtId.Text = dgvPiloto.CurrentRow.Cells[0].Value.ToString();
-            txtIdentidicacion.Text = dgvPiloto.CurrentRow.Cells[1].Value.ToString();
+            txtIdentificacion.Text = dgvPiloto.CurrentRow.Cells[1].Value.ToString();
             txtNombre.Text = dgvPiloto.CurrentRow.Cells[2].Value.ToString();
-            txtAñosE.Text = dgvPiloto.CurrentRow.Cells[4].Value.ToString();
-            //cbPaises.SelectedIndex = dgvPiloto.CurrentRow.Cells[5].Value.ToString();
+            txtAñosE.Text = dgvPiloto.CurrentRow.Cells[3].Value.ToString();
+            cbPaises.SelectedItem = dgvPiloto.CurrentRow.Cells[4].Value.ToString();
         }
 
         public void paises() 
@@ -132,6 +132,11 @@ namespace Proyecto_p04
                     i++;
                 }
             }
+        }
+
+        private void cbPaises_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

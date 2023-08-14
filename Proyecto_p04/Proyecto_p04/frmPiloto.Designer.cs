@@ -42,7 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtIdentidicacion = new System.Windows.Forms.TextBox();
+            this.txtIdentificacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvPiloto = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
@@ -192,14 +192,14 @@
             this.label4.TabIndex = 46;
             this.label4.Text = "Nombre";
             // 
-            // txtIdentidicacion
+            // txtIdentificacion
             // 
-            this.txtIdentidicacion.Location = new System.Drawing.Point(26, 179);
-            this.txtIdentidicacion.MaxLength = 20;
-            this.txtIdentidicacion.Multiline = true;
-            this.txtIdentidicacion.Name = "txtIdentidicacion";
-            this.txtIdentidicacion.Size = new System.Drawing.Size(167, 26);
-            this.txtIdentidicacion.TabIndex = 45;
+            this.txtIdentificacion.Location = new System.Drawing.Point(26, 179);
+            this.txtIdentificacion.MaxLength = 20;
+            this.txtIdentificacion.Multiline = true;
+            this.txtIdentificacion.Name = "txtIdentificacion";
+            this.txtIdentificacion.Size = new System.Drawing.Size(167, 26);
+            this.txtIdentificacion.TabIndex = 45;
             // 
             // label3
             // 
@@ -242,6 +242,7 @@
             this.cbPaises.Name = "cbPaises";
             this.cbPaises.Size = new System.Drawing.Size(159, 21);
             this.cbPaises.TabIndex = 54;
+            this.cbPaises.SelectedIndexChanged += new System.EventHandler(this.cbPaises_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -275,7 +276,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtIdentidicacion);
+            this.Controls.Add(this.txtIdentificacion);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
@@ -318,7 +319,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtIdentidicacion;
+        private System.Windows.Forms.TextBox txtIdentificacion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvPiloto;
         private System.Windows.Forms.Label label6;
