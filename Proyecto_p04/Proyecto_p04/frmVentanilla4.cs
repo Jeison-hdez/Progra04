@@ -1511,7 +1511,8 @@ namespace Proyecto_p04
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-
+            DateTime fecha = DateTime.Now;
+            txtHoraFecha.Text = fecha.ToString();
         }
     }
 }
