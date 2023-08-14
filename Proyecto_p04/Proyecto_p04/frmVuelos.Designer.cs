@@ -60,6 +60,10 @@
             this.txtAerolinea = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -279,9 +283,9 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(762, 214);
+            this.dataGridView1.Location = new System.Drawing.Point(707, 214);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(568, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(669, 150);
             this.dataGridView1.TabIndex = 402;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -332,6 +336,7 @@
             this.txtpiloto.Location = new System.Drawing.Point(244, 489);
             this.txtpiloto.Multiline = true;
             this.txtpiloto.Name = "txtpiloto";
+            this.txtpiloto.ReadOnly = true;
             this.txtpiloto.Size = new System.Drawing.Size(188, 25);
             this.txtpiloto.TabIndex = 407;
             // 
@@ -360,6 +365,7 @@
             this.txtAerolinea.Location = new System.Drawing.Point(707, 489);
             this.txtAerolinea.Multiline = true;
             this.txtAerolinea.Name = "txtAerolinea";
+            this.txtAerolinea.ReadOnly = true;
             this.txtAerolinea.Size = new System.Drawing.Size(188, 25);
             this.txtAerolinea.TabIndex = 411;
             // 
@@ -384,12 +390,52 @@
             this.dataGridView3.TabIndex = 409;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(1098, 517);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(113, 20);
+            this.dateTimePicker1.TabIndex = 413;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(1044, 496);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(211, 18);
+            this.label11.TabIndex = 414;
+            this.label11.Text = "Selecione la hora de salida";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(1044, 560);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(220, 18);
+            this.label12.TabIndex = 416;
+            this.label12.Text = "Selecione la hora de llegada";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker2.Location = new System.Drawing.Point(1098, 581);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(113, 20);
+            this.dateTimePicker2.TabIndex = 415;
+            // 
             // frmVuelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1388, 692);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtAerolinea);
             this.Controls.Add(this.label10);
@@ -471,5 +517,9 @@
         private System.Windows.Forms.TextBox txtAerolinea;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }

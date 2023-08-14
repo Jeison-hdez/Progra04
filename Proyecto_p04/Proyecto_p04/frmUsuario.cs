@@ -75,7 +75,7 @@ namespace Proyecto_p04
         private void btnModificar_Click(object sender, EventArgs e)
         {
             conexionBD.conectarBD();
-            string actualizar = "UPDATE tbl_usuarios SET Id=@Id,Usuario=@Usuario,Contraseña=@Contraseña,Nombre=@Nombre,Identificacion=@Identififcacion," +
+            string actualizar = "UPDATE tbl_usuarios SET Id=@Id,Usuario=@Usuario,Contraseña=@Contraseña,Nombre=@Nombre,Identificacion=@Identificacion," +
                 "Id_Nivel=@ID-Nivel,Estado=@Estado WHERE Id=@Id";
             SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
             cmd.Parameters.AddWithValue("@Id", txtID.Text);

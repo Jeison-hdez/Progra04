@@ -135,13 +135,15 @@ namespace Proyecto_p04
         {
             //Codigo Guardar
             conexionBD.conectarBD();
-            string insertar = "INSERT INTO tbl_vuelos(Estado,Destino,Piloto,Aerolinea) VALUES(@Estado,@Destino,@Piloto,@Aerolinea)";
+            string insertar = "INSERT INTO tbl_vuelos(Estado,Destino,Piloto,Aerolinea,HoraSalida,HoraLlegada) VALUES(@Estado,@Destino,@Piloto,@Aerolinea,@HoraSalida,@HoraLlegada)";
             SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
             
             cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
             cmd.Parameters.AddWithValue("@Destino", txtVueloSeleccionado.Text);
             cmd.Parameters.AddWithValue("@Piloto", txtpiloto.Text);
             cmd.Parameters.AddWithValue("@Aerolinea", txtAerolinea.Text);
+            cmd.Parameters.AddWithValue("@HoraSalida", dateTimePicker1.ToString());
+            cmd.Parameters.AddWithValue("@HoraLlegada", dateTimePicker2.ToString());
             cmd.ExecuteNonQuery();
 
 
@@ -202,7 +204,7 @@ namespace Proyecto_p04
         {
             //Codigo Modificar
             conexionBD.conectarBD();
-            string actualizar = "UPDATE tbl_vuelos SET  Id=@Id,Estado=@Estado,Destino=@Destino,Piloto=@Piloto,Aerolinea=@Aerolinea WHERE Id=@Id";
+            string actualizar = "UPDATE tbl_vuelos SET  Id=@Id,Estado=@Estado,Destino=@Destino,Piloto=@Piloto,Aerolinea=@Aerolinea,HoraSalida=@HoraSalida,HoraLlegada=@HoraLlegada WHERE Id=@Id";
             SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
 
             cmd.Parameters.AddWithValue("@Id", txtId.Text);
@@ -210,6 +212,8 @@ namespace Proyecto_p04
             cmd.Parameters.AddWithValue("@Destino", txtVueloSeleccionado.Text);
             cmd.Parameters.AddWithValue("@Piloto", txtpiloto.Text);
             cmd.Parameters.AddWithValue("@Aerolinea", txtAerolinea.Text);
+            cmd.Parameters.AddWithValue("@HoraSalida", dateTimePicker1.ToString());
+            cmd.Parameters.AddWithValue("@HoraLlegada", dateTimePicker2.ToString());
 
             cmd.ExecuteNonQuery();
             MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
@@ -244,24 +248,17 @@ namespace Proyecto_p04
             txtAerolinea.Clear();
         }
 
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
-            frmAerolina frmAerolina = new frmAerolina();
-            frmAerolina.Close();
-
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+
             txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             txtVueloSeleccionado.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             txtEstado.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            //dateTimePicker1.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();  //Es para cuando se seleciona la celda se ponga en el dateTP...
+            //dateTimePicker2.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
 
         }
 

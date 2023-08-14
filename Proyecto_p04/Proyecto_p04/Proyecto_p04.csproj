@@ -54,6 +54,7 @@
     <Compile Include="Clases\NivelesdeUsuariosDAL.cs" />
     <Compile Include="Clases\NivelesUsuariosDAL.cs" />
     <Compile Include="Clases\pilotosDAL.cs" />
+    <Compile Include="Clases\ventanillaDAL.cs" />
     <Compile Include="frmAerolina.cs">
       <SubType>Form</SubType>
     </Compile>

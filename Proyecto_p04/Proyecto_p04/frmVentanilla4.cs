@@ -25,6 +25,10 @@ namespace Proyecto_p04
             MessageBox.Show("Conexion Exitosa!!!");
             dataGridView1.DataSource = LLenar_grid1();
             dataGridView2.DataSource = LLenar_grid2();
+            paises();
+            DateTime fecha = DateTime.Now;
+            txtEntrada.Text = fecha.ToString();
+            //txtUsuario.Text = Usuario.ToString();   //Es parea poner el ususario automatico
 
         }
         public DataTable LLenar_grid1()
@@ -60,13 +64,17 @@ namespace Proyecto_p04
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            DateTime fecha = DateTime.Now;
+            txtSalida.Text = fecha.ToString();
+
+
             try
             {
                 DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 //Codigo Guardar
                 conexionBD.conectarBD();
-                string insertar = "INSERT INTO tbl_ventanilla(Id,Nombre,Identificacion,HoraFecha,Usuario,Destino,Asiento,NumeroV,Boleto) VALUES(@Id,@Nombre,@Identificacion,@HoraFecha,@Usuario,@Destino,@Asiento,@NumeroV,@Boleto)";
+                string insertar = "INSERT INTO tbl_ventanilla(Id,Nombre,Identificacion,HoraFecha,Usuario,Destino,Asiento,NumeroV,Boleto,Nacionalidad,NPasaporte,HoraEntrada,HoraSalida) VALUES(@Id,@Nombre,@Identificacion,@HoraFecha,@Usuario,@Destino,@Asiento,@NumeroV,@Boleto,@Nacionalidad,@NPasaporte,@HoraEntrada,@HoraSalida)";
                 SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
                 cmd.Parameters.AddWithValue("@Id", txtId.Text);
                 cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
@@ -76,6 +84,11 @@ namespace Proyecto_p04
                 cmd.Parameters.AddWithValue("@Destino", txtVuelo.Text);
                 cmd.Parameters.AddWithValue("@NumeroV", txtNumeroVentanilla.Text);
                 cmd.Parameters.AddWithValue("@Boleto", txtBoleto.Text);
+                cmd.Parameters.AddWithValue("@Nacionalidad", cbNacionalidad.SelectedIndex);
+                cmd.Parameters.AddWithValue("@NPasaporte", txtNPasaporte.Text);
+                cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
+                cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
+
                 //cmd.Parameters.AddWithValue("@Asiento",  control); //esta es la variable para los nombres de los chbt
 
                 cmd.ExecuteNonQuery();
@@ -104,7 +117,7 @@ namespace Proyecto_p04
                 //Codigo Modificar
 
                 conexionBD.conectarBD();
-                string actualizar = "UPDATE tbl_ventanilla SET Id=@Id,Nombre=@Nombre,Identificacion=@Identificacion,HoraFecha=@HoraFecha,Usuario=@Usuario,Destino=@Destino,NumeroV=@NumeroV,Asiento=@Asiento,Boleto=@Boleto" +
+                string actualizar = "UPDATE tbl_ventanilla SET Id=@Id,Nombre=@Nombre,Identificacion=@Identificacion,HoraFecha=@HoraFecha,Usuario=@Usuario,Destino=@Destino,NumeroV=@NumeroV,Asiento=@Asiento,Boleto=@Boleto,Nacionalidad=@Nacionalidad,NPasaporte=@NPasaporte,HoraEntrada=@HoraEntrada,HoraSalida=@HoraSalida" +
                 "WHERE Id=@Id";
                 SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
                 cmd.Parameters.AddWithValue("@Id", txtId.Text);
@@ -115,7 +128,12 @@ namespace Proyecto_p04
                 cmd.Parameters.AddWithValue("@Destino", txtVuelo.Text);
                 cmd.Parameters.AddWithValue("@NumeroV", txtNumeroVentanilla.Text);
                 cmd.Parameters.AddWithValue("@Boleto", txtBoleto.Text);
-                //cmd.Parameters.AddWithValue("@Asiento", Asientos()); //esta es la variable para los nombres de los chbt
+                cmd.Parameters.AddWithValue("@Nacionalidad", cbNacionalidad.SelectedIndex);
+                cmd.Parameters.AddWithValue("@NPasaporte", txtNPasaporte.Text);
+                cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
+                cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
+
+                //cmd.Parameters.AddWithValue("@Asiento",  control); //esta es la variable para los nombres de los chbt
 
 
                 cmd.ExecuteNonQuery();
@@ -172,6 +190,26 @@ namespace Proyecto_p04
 
         }
 
+        public void paises()
+        {
+            DataTable dt = new DataTable();
+            cbNacionalidad.ValueMember = "id";
+            cbNacionalidad.DisplayMember = "pais";
+            cbNacionalidad.Items.Insert(0, " - Seleccione Nacionalidad");
+            dt = Clases.ventanillaDAL.getPaises();
+            int i = 0;
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow item in dt.Rows)
+                {
+                    cbNacionalidad.Items.Insert(Convert.ToInt32(dt.Rows[i]["id"]), dt.Rows[i]["nombre"].ToString());
+                    i++;
+                }
+            }
+        }
+
+
+
         public void limpiar_txt()
         {
             txtIdentificacion.Clear();
@@ -180,24 +218,14 @@ namespace Proyecto_p04
             txtVuelo.Clear();
             txtUsuario.Clear();
             txtNombre.Clear();
+            txtBoleto.Clear();
+            txtNPasaporte.Clear();
+            cbNacionalidad.SelectedIndex = 0;
+            txtSalida.Clear();
 
         }
 
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
-
-            try
-            {
-                DialogResult result = MessageBox.Show("¿Desea volver a la pantalla principal?", "Confirmar Volver", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-              
-                frmVentanilla4 frmVentanilla4 = new frmVentanilla4();
-                frmVentanilla4.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
 
         //Esta es la clase para asignar los numero de los chBoton para la Base de Datos
         public void Asientos()
@@ -1472,6 +1500,10 @@ namespace Proyecto_p04
             txtVuelo.Text = dataGridView2.CurrentRow.Cells[6].Value.ToString();
             //falta el asiento  [7]  //////////////////////////////////////////////////////////////////
             txtBoleto.Text = dataGridView2.CurrentRow.Cells[8].Value.ToString();
+            cbNacionalidad.SelectedItem = dataGridView2.CurrentRow.Cells[9].Value.ToString();
+            txtNPasaporte.Text = dataGridView2.CurrentRow.Cells[10].Value.ToString();
+            txtEntrada.Text = dataGridView2.CurrentRow.Cells[11].Value.ToString();
+            txtSalida.Text = dataGridView2.CurrentRow.Cells[12].Value.ToString();
         }
     }
 }
