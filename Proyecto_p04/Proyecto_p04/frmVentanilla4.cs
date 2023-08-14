@@ -26,8 +26,12 @@ namespace Proyecto_p04
             dataGridView1.DataSource = LLenar_grid1();
             dataGridView2.DataSource = LLenar_grid2();
             paises();
+
             DateTime fecha = DateTime.Now;
             txtEntrada.Text = fecha.ToString();
+
+            cbNacionalidad.SelectedIndex = 0;
+
             //txtUsuario.Text = Usuario.ToString();   //Es parea poner el ususario automatico
 
         }
@@ -64,6 +68,8 @@ namespace Proyecto_p04
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            Asientos();
+
             DateTime fecha = DateTime.Now;
             txtSalida.Text = fecha.ToString();
 
@@ -89,7 +95,7 @@ namespace Proyecto_p04
                 cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
                 cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
 
-                //cmd.Parameters.AddWithValue("@Asiento",  control); //esta es la variable para los nombres de los chbt
+                cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
 
                 cmd.ExecuteNonQuery();
 
@@ -133,7 +139,7 @@ namespace Proyecto_p04
                 cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
                 cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
 
-                //cmd.Parameters.AddWithValue("@Asiento",  control); //esta es la variable para los nombres de los chbt
+                cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
 
 
                 cmd.ExecuteNonQuery();
@@ -225,15 +231,16 @@ namespace Proyecto_p04
 
         }
 
-        
 
-        //Esta es la clase para asignar los numero de los chBoton para la Base de Datos
+
+        //Esta es el metodo para asignar los numero de los chBoton para la Base de Datos
+        string control;
+        int numero = 0;
         public void Asientos()
         {
             //Parte F. Guardar el numero del asiento.
 
-            string control;
-            int numero = 0;
+            
 
             if (f1.Checked)
             {
@@ -470,11 +477,7 @@ namespace Proyecto_p04
                 f38.Enabled = false;
                 control.ToString();
             }
-            else
-            {
-                control = "f0";
-                control.ToString();
-            }
+            
 
             ///////////// parte E
 
@@ -684,12 +687,7 @@ namespace Proyecto_p04
                 e38.BackColor = Color.Red;
                 e38.Enabled = false;
             }
-            else
-            {
-                control = "e0";
-            }
-
-
+            
 
             //////////// Parte D
 
@@ -870,12 +868,7 @@ namespace Proyecto_p04
                 d38.BackColor = Color.Red;
                 d38.Enabled = false;
             }
-            else
-            {
-                control = "d0";
-            }
-
-
+            
 
             /////////// parte C
 
@@ -1055,11 +1048,7 @@ namespace Proyecto_p04
                 c38.BackColor = Color.Red;
                 c38.Enabled = false;
             }
-            else
-            {
-                control = "c0";
-            }
-
+            
             ///////// parte B
 
             if (b1.Checked)
@@ -1268,12 +1257,7 @@ namespace Proyecto_p04
                 b38.BackColor = Color.Red;
                 b38.Enabled = false;
             }
-            else
-            {
-                control = "b0";
-            }
-
-
+            
 
             /////////// Parte A
 
@@ -1483,10 +1467,7 @@ namespace Proyecto_p04
                 a38.BackColor = Color.Red;
                 a38.Enabled = false;
             }
-            else
-            {
-                control = "a0";
-            }
+            
         }
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -1504,6 +1485,11 @@ namespace Proyecto_p04
             txtNPasaporte.Text = dataGridView2.CurrentRow.Cells[10].Value.ToString();
             txtEntrada.Text = dataGridView2.CurrentRow.Cells[11].Value.ToString();
             txtSalida.Text = dataGridView2.CurrentRow.Cells[12].Value.ToString();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
