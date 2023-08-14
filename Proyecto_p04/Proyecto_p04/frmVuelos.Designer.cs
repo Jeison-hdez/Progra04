@@ -238,6 +238,7 @@
             this.txtEstado.Size = new System.Drawing.Size(121, 24);
             this.txtEstado.TabIndex = 393;
             this.txtEstado.Text = "1";
+            this.txtEstado.Visible = false;
             // 
             // label2
             // 
@@ -248,6 +249,7 @@
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 397;
             this.label2.Text = "Estado";
+            this.label2.Visible = false;
             // 
             // label3
             // 
@@ -298,6 +300,7 @@
             this.label6.Size = new System.Drawing.Size(46, 13);
             this.label6.TabIndex = 404;
             this.label6.Text = "Codigo";
+            this.label6.Visible = false;
             // 
             // txtId
             // 
@@ -308,6 +311,7 @@
             this.txtId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtId.Size = new System.Drawing.Size(121, 24);
             this.txtId.TabIndex = 403;
+            this.txtId.Visible = false;
             // 
             // dataGridView2
             // 
