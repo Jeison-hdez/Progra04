@@ -22,7 +22,7 @@ namespace Proyecto_p04
         private void frmPiloto_Load(object sender, EventArgs e)
         {
             conexionBD.conectarBD();
-            MessageBox.Show("Conexion Exitosa!!!");
+            //MessageBox.Show("Conexion Exitosa!!!");
             dgvPiloto.DataSource = LLenar_grid1();
             paises();
         }
