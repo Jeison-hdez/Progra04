@@ -154,6 +154,7 @@ namespace Proyecto_p04
 
 
             MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
+            dataGridView1.DataSource = LLenar_grid1();
         }
 
         private void frmVuelos_Load(object sender, EventArgs e)
@@ -281,7 +282,7 @@ namespace Proyecto_p04
 
         private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtAerolinea.Text = dataGridView3.CurrentRow.Cells[4].Value.ToString();
+            txtAerolinea.Text = dataGridView3.CurrentRow.Cells[3].Value.ToString();
         }
     }
 }
