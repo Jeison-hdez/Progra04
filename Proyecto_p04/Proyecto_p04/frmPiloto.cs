@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Proyecto_p04
 {
@@ -61,11 +62,12 @@ namespace Proyecto_p04
         {
             //Codigo Modificar
             conexionBD.conectarBD();
-            string actualizar = "UPDATE tbl_pilotos SET Identificacion=@Identificacion,Nombre=@Nombre," +
+            string actualizar = "UPDATE tbl_pilotos SET Id=@Id,Identificacion=@Identificacion,Nombre=@Nombre," +
                 "@AñosExpe=AñosExpe,@Nacionalidad=Nacionalidad" +
             "WHERE Id=@Id";
             SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
-            
+
+            cmd.Parameters.AddWithValue("@Id", txtId.Text);
             cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
             cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
             cmd.Parameters.AddWithValue("@AñosExpe", txtAñosE.Text);
@@ -93,6 +95,7 @@ namespace Proyecto_p04
         {
 
             limpiar_txt();
+            
         }
 
         public void limpiar_txt()
@@ -101,15 +104,16 @@ namespace Proyecto_p04
             txtNombre.Clear();
             txtIdentidicacion.Clear();
             txtAñosE.Clear();
-        }
+            cbPaises.SelectedIndex = 0;
+        } 
 
         private void dgvAerolinea_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtId.Text = dgvPiloto.CurrentRow.Cells[0].Value.ToString();
             txtIdentidicacion.Text = dgvPiloto.CurrentRow.Cells[1].Value.ToString();
             txtNombre.Text = dgvPiloto.CurrentRow.Cells[2].Value.ToString();
-            txtNombre.Text = dgvPiloto.CurrentRow.Cells[3].Value.ToString();
             txtAñosE.Text = dgvPiloto.CurrentRow.Cells[4].Value.ToString();
+            //cbPaises.SelectedIndex = dgvPiloto.CurrentRow.Cells[5].Value.ToString();
         }
 
         public void paises() 
