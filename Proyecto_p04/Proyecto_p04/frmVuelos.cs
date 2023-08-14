@@ -133,12 +133,6 @@ namespace Proyecto_p04
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //Para guardar los datos de los dateTimePicker
-            txtSalida.Text = dateTimePicker1.Text;
-            txtLLegada.Text = dateTimePicker2.Text;
-      
-
-
             //Codigo Guardar
             conexionBD.conectarBD();
             string insertar = "INSERT INTO tbl_vuelos(Estado,Destino,Piloto,Aerolinea,HoraSalida,HoraLlegada) VALUES(@Estado,@Destino,@Piloto,@Aerolinea,@HoraSalida,@HoraLlegada)";
@@ -148,8 +142,8 @@ namespace Proyecto_p04
             cmd.Parameters.AddWithValue("@Destino", txtVueloSeleccionado.Text);
             cmd.Parameters.AddWithValue("@Piloto", txtpiloto.Text);
             cmd.Parameters.AddWithValue("@Aerolinea", txtAerolinea.Text);
-            cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
-            cmd.Parameters.AddWithValue("@HoraLlegada", txtLLegada.Text);
+            cmd.Parameters.AddWithValue("@HoraSalida", dateTimePicker1.ToString());
+            cmd.Parameters.AddWithValue("@HoraLlegada", dateTimePicker2.ToString());
             cmd.ExecuteNonQuery();
 
 
@@ -263,10 +257,9 @@ namespace Proyecto_p04
             txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             txtVueloSeleccionado.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             txtEstado.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            txtpiloto.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            txtAerolinea.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            txtSalida.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            txtLLegada.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            //dateTimePicker1.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();  //Es para cuando se seleciona la celda se ponga en el dateTP...
+            //dateTimePicker2.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -281,7 +274,7 @@ namespace Proyecto_p04
 
         private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtAerolinea.Text = dataGridView3.CurrentRow.Cells[4].Value.ToString();
+            txtAerolinea.Text = dataGridView3.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }

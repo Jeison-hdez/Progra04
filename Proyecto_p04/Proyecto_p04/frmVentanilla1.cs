@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
-using static Proyecto_p04.frmLogin;
 
 namespace Proyecto_p04
 {
@@ -26,26 +25,11 @@ namespace Proyecto_p04
         private void frmVentanilla1_Load(object sender, EventArgs e)
         {
 
-
-            // Accede a la variable global Usuario desde GlobalVariables
-            string usuario = GlobalVariables.Usuario;
-
-            //Muestra en un txtUsuario el usuario 
-            txtUsuario.Text = usuario;
-
-
             conexionBD.conectarBD();
             MessageBox.Show("Conexion Exitosa!!!");
             dataGridView1.DataSource = LLenar_grid1();
             dataGridView2.DataSource = LLenar_grid2();
-            paises();
-
-            DateTime fecha = DateTime.Now;
-            txtEntrada.Text = fecha.ToString();
-
-            cbNacionalidad.SelectedIndex = 0;
-
-            //txtUsuario.Text = Usuario.ToString();   //Es parea poner el ususario automatico
+            string fecha = DateTime.Now.ToString();
 
         }
         public DataTable LLenar_grid1()
@@ -88,20 +72,13 @@ namespace Proyecto_p04
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Asientos();
-            
-
-            DateTime fecha = DateTime.Now;
-            txtSalida.Text = fecha.ToString();
-
-
             try
             {
                 DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 //Codigo Guardar
                 conexionBD.conectarBD();
-                string insertar = "INSERT INTO tbl_ventanilla(Id,Nombre,Identificacion,HoraFecha,Usuario,Destino,Asiento,NumeroV,Boleto,Nacionalidad,NPasaporte,HoraEntrada,HoraSalida) VALUES(@Id,@Nombre,@Identificacion,@HoraFecha,@Usuario,@Destino,@Asiento,@NumeroV,@Boleto,@Nacionalidad,@NPasaporte,@HoraEntrada,@HoraSalida)";
+                string insertar = "INSERT INTO tbl_ventanilla(Id,Nombre,Identificacion,HoraFecha,Usuario,Destino,Asiento,NumeroV,Boleto) VALUES(@Id,@Nombre,@Identificacion,@HoraFecha,@Usuario,@Destino,@Asiento,@NumeroV,@Boleto)";
                 SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
                 cmd.Parameters.AddWithValue("@Id", txtId.Text);
                 cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
@@ -111,14 +88,8 @@ namespace Proyecto_p04
                 cmd.Parameters.AddWithValue("@Destino", txtVuelo.Text);
                 cmd.Parameters.AddWithValue("@NumeroV", txtNumeroVentanilla.Text);
                 cmd.Parameters.AddWithValue("@Boleto", txtBoleto.Text);
-                cmd.Parameters.AddWithValue("@Nacionalidad", cbNacionalidad.SelectedIndex);
-                cmd.Parameters.AddWithValue("@NPasaporte", txtNPasaporte.Text);
-                cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
-                cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
+                //cmd.Parameters.AddWithValue("@Asiento",  control); //esta es la variable para los nombres de los chbt
 
-                cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
-
-                
                 cmd.ExecuteNonQuery();
 
 
@@ -141,7 +112,7 @@ namespace Proyecto_p04
                 //Codigo Modificar
 
                 conexionBD.conectarBD();
-                string actualizar = "UPDATE tbl_ventanilla SET Id=@Id,Nombre=@Nombre,Identificacion=@Identificacion,HoraFecha=@HoraFecha,Usuario=@Usuario,Destino=@Destino,NumeroV=@NumeroV,Asiento=@Asiento,Boleto=@Boleto,Nacionalidad=@Nacionalidad,NPasaporte=@NPasaporte,HoraEntrada=@HoraEntrada,HoraSalida=@HoraSalida" +
+                string actualizar = "UPDATE tbl_ventanilla SET Id=@Id,Nombre=@Nombre,Identificacion=@Identificacion,HoraFecha=@HoraFecha,Usuario=@Usuario,Destino=@Destino,NumeroV=@NumeroV,Asiento=@Asiento,Boleto=@Boleto" +
                 "WHERE Id=@Id";
                 SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
                 cmd.Parameters.AddWithValue("@Id", txtId.Text);
@@ -152,12 +123,8 @@ namespace Proyecto_p04
                 cmd.Parameters.AddWithValue("@Destino", txtVuelo.Text);
                 cmd.Parameters.AddWithValue("@NumeroV", txtNumeroVentanilla.Text);
                 cmd.Parameters.AddWithValue("@Boleto", txtBoleto.Text);
-                cmd.Parameters.AddWithValue("@Nacionalidad", cbNacionalidad.SelectedIndex);
-                cmd.Parameters.AddWithValue("@NPasaporte", txtNPasaporte.Text);
-                cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
-                cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
+                //cmd.Parameters.AddWithValue("@Asiento", Asientos()); //esta es la variable para los nombres de los chbt
 
-                cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
@@ -192,26 +159,6 @@ namespace Proyecto_p04
             }
         }
 
-        public void paises()
-        {
-            DataTable dt = new DataTable();
-            cbNacionalidad.ValueMember = "id";
-            cbNacionalidad.DisplayMember = "pais";
-            cbNacionalidad.Items.Insert(0, " - Seleccione Nacionalidad");
-            dt = Clases.ventanillasDAL.getPaises();
-            int i = 0;
-            if (dt.Rows.Count > 0)
-            {
-                foreach (DataRow item in dt.Rows)
-                {
-                    cbNacionalidad.Items.Insert(Convert.ToInt32(dt.Rows[i]["id"]), dt.Rows[i]["nombre"].ToString());
-                    i++;
-                }
-            }
-        }
-
-
-
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             try
@@ -235,21 +182,16 @@ namespace Proyecto_p04
             txtUsuario.Clear();
             txtNombre.Clear();
             txtBoleto.Clear();
-            txtNPasaporte.Clear();
-            cbNacionalidad.SelectedIndex = 0;
-            txtSalida.Clear();
 
         }
 
         //Esta es la clase para asignar los numero de los chBoton para la Base de Datos
-
-        string control;
-        int numero = 0;
         public void Asientos()
         {
             //Parte F. Guardar el numero del asiento.
 
-            
+            string control;
+            int numero = 0; 
 
             if (f1.Checked)
             {
@@ -486,7 +428,11 @@ namespace Proyecto_p04
                 f38.Enabled = false;
                 control.ToString();
             }
-            
+            else
+            {
+                control = "f0";
+                control.ToString();
+            }
 
             ///////////// parte E
 
@@ -696,7 +642,10 @@ namespace Proyecto_p04
                 e38.BackColor = Color.Red;
                 e38.Enabled = false;
             }
-            
+            else
+            {
+                control = "e0";
+            }
 
 
 
@@ -880,7 +829,9 @@ namespace Proyecto_p04
                 d38.Enabled = false;
             }
             else
-            
+            {
+                control = "d0";
+            }
 
 
 
@@ -1062,7 +1013,10 @@ namespace Proyecto_p04
                 c38.BackColor = Color.Red;
                 c38.Enabled = false;
             }
-            
+            else
+            {
+                control = "c0";
+            }
 
             ///////// parte B
 
@@ -1272,7 +1226,10 @@ namespace Proyecto_p04
                 b38.BackColor = Color.Red;
                 b38.Enabled = false;
             }
-            
+            else
+            {
+                control = "b0";
+            }
 
 
 
@@ -1477,14 +1434,17 @@ namespace Proyecto_p04
                 a37.BackColor = Color.Red;
                 a37.Enabled = false;
             }
-            else if  (a38.Checked)
+            else if (a38.Checked)
             {
                 control = "a38";
                 numero++;
                 a38.BackColor = Color.Red;
                 a38.Enabled = false;
             }
-            
+            else
+            {
+                control = "a0";
+            }
 
 
 
@@ -1525,22 +1485,13 @@ namespace Proyecto_p04
             txtVuelo.Text = dataGridView2.CurrentRow.Cells[6].Value.ToString();
             //falta el asiento  [7]  //////////////////////////////////////////////////////////////////
             txtBoleto.Text = dataGridView2.CurrentRow.Cells[8].Value.ToString();
-            cbNacionalidad.SelectedItem = dataGridView2.CurrentRow.Cells[9].Value.ToString();
-            txtNPasaporte.Text = dataGridView2.CurrentRow.Cells[10].Value.ToString();
-            txtEntrada.Text = dataGridView2.CurrentRow.Cells[11].Value.ToString();
-            txtSalida.Text = dataGridView2.CurrentRow.Cells[12].Value.ToString();
+            
 
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
-        }
-
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            DateTime fecha = DateTime.Now;
-            txtHoraFecha.Text = fecha.ToString();
         }
     }
 }
