@@ -28,8 +28,12 @@ namespace Proyecto_p04
             dataGridView1.DataSource = LLenar_grid1();
             dataGridView2.DataSource = LLenar_grid2();
             paises();
+
             DateTime fecha = DateTime.Now;
             txtEntrada.Text = fecha.ToString();
+
+            cbNacionalidad.SelectedIndex = 0;
+
             //txtUsuario.Text = Usuario.ToString();   //Es parea poner el ususario automatico
 
         }
