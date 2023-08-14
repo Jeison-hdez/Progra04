@@ -101,7 +101,7 @@ namespace Proyecto_p04
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-
+            AbrirFormdentroForm(new frmReporte());
         }
 
         private void btnPermisos_Click(object sender, EventArgs e)
