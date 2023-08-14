@@ -73,53 +73,91 @@ namespace Proyecto_p04
 
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
-            //Codigo Guardar
-            conexionBD.conectarBD();
-            string insertar = "INSERT INTO tbl_aerolineas(Identificacion,Estado,Descripcion,PaisOrigen) VALUES(@Identificacion,@Estado,@Descripcion,@PaisOrigen)";
-            SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
+            try
+            {
+                DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    //Codigo Guardar
+                    conexionBD.conectarBD();
+                    string insertar = "INSERT INTO tbl_aerolineas(Identificacion,Estado,Descripcion,PaisOrigen) VALUES(@Identificacion,@Estado,@Descripcion,@PaisOrigen)";
+                    SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
             
-            cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
-            cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
-            cmd.Parameters.AddWithValue("@Descripcion", txtNombre.Text);
-            cmd.Parameters.AddWithValue("@PaisOrigen", cbPaises.SelectedIndex);
-            cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
+                    cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
+                    cmd.Parameters.AddWithValue("@Descripcion", txtNombre.Text);
+                    cmd.Parameters.AddWithValue("@PaisOrigen", cbPaises.SelectedIndex);
+                    cmd.ExecuteNonQuery();
 
 
-            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-            dgvAerolinea.DataSource = LLenar_grid();
-            
+                    MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
+                    dgvAerolinea.DataSource = LLenar_grid();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            //Codigo Modificar
-            conexionBD.conectarBD();
-            string actualizar = "UPDATE tbl_aerolineas SET Id=@Id,Identificacion=@Identificacion,Estado=@Estado,Nombre=@Nombre,PaisOrigen=@PaisOrigen WHERE Id=@Id";
-            SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
+            try
+            {
+                DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            cmd.Parameters.AddWithValue("@Id", txtID.Text);
-            cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
-            cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
-            cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-            cmd.Parameters.AddWithValue("@PaisOrigen", cbPaises.SelectedIndex);
+                if (result == DialogResult.Yes)
+                {
+                    //Codigo Modificar
+                    conexionBD.conectarBD();
+                    string actualizar = "UPDATE tbl_aerolineas SET Id=@Id,Identificacion=@Identificacion,Estado=@Estado,Nombre=@Nombre,PaisOrigen=@PaisOrigen WHERE Id=@Id";
+                    SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
+
+                    cmd.Parameters.AddWithValue("@Id", txtID.Text);
+                    cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
+                    cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
+                    cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+                    cmd.Parameters.AddWithValue("@PaisOrigen", cbPaises.SelectedIndex);
 
 
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-            dgvAerolinea.DataSource = LLenar_grid();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
+                    dgvAerolinea.DataSource = LLenar_grid();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //Codigo Eliminar
-            conexionBD.conectarBD();
-            string eliminar = "DELETE FROM tbl_aerolineas WHERE Id=@Id";
-            SqlCommand cmd = new SqlCommand(eliminar, conexionBD.conectarBD());
-            cmd.Parameters.AddWithValue("@Id", txtID.Text);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            MessageBox.Show("Los datosfueron Eliminados!!!");
-            dgvAerolinea.DataSource = LLenar_grid();
+                if (result == DialogResult.Yes)
+                {
+                    //Codigo Eliminar
+                    conexionBD.conectarBD();
+                    string eliminar = "DELETE FROM tbl_aerolineas WHERE Id=@Id";
+                    SqlCommand cmd = new SqlCommand(eliminar, conexionBD.conectarBD());
+                    cmd.Parameters.AddWithValue("@Id", txtID.Text);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Los datosfueron Eliminados!!!");
+                    dgvAerolinea.DataSource = LLenar_grid();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
