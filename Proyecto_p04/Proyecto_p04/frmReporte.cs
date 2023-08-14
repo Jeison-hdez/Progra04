@@ -26,5 +26,41 @@ namespace Proyecto_p04
             dtpFechaI.CustomFormat = fecha.ToString("dd/MM/yyyy HH:mm");
             dtpFechaF.CustomFormat = fecha2.ToString("dd/MM/yyyy HH:mm");
         }
+
+        private void rbPasajeros_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbPasajeros.Checked == true)
+            {
+                cbPasajeros.Visible = true;
+            }
+            else 
+            {
+                cbPasajeros.Visible = false;
+            }
+        }
+
+        private void rbMoneda_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbMoneda.Checked == true)
+            {
+                cbMonetario.Visible = true;
+            }
+            else
+            {
+                cbMonetario.Visible = false;
+            }
+        }
+
+        private void rbVuelos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbVuelos.Checked == true)
+            {
+                cbVuelos.Visible = true;
+            }
+            else
+            {
+                cbVuelos.Visible = false;
+            }
+        }
     }
 }
