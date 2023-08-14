@@ -71,6 +71,8 @@ namespace Proyecto_p04
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            Asientos();
+
             DateTime fecha = DateTime.Now;
             txtSalida.Text = fecha.ToString();
 
@@ -96,7 +98,7 @@ namespace Proyecto_p04
                 cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
                 cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
 
-                //cmd.Parameters.AddWithValue("@Asiento",  control); //esta es la variable para los nombres de los chbt
+                cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
 
                 cmd.ExecuteNonQuery();
 
@@ -135,7 +137,7 @@ namespace Proyecto_p04
                 cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
                 cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
 
-                //cmd.Parameters.AddWithValue("@Asiento",  control); //esta es la variable para los nombres de los chbt
+                cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
@@ -220,25 +222,11 @@ namespace Proyecto_p04
             txtSalida.Clear();
         }
 
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
+        
 
-            try
-            {
-                DialogResult result = MessageBox.Show("¿Desea volver a la pantalla principal?", "Confirmar Volver", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                frmVentanilla3 frmVentanilla3 = new frmVentanilla3();
-                frmVentanilla3.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
-        }
-
-        //Esta es la clase para asignar los numero de los chBoton para la Base de Datos
+        //Esta es el metodo para asignar los numero de los chBoton para la Base de Datos
+        string control;
+        int numero = 0;
         public void Asientos()
         {
             //Parte F. Guardar el numero del asiento.
@@ -481,11 +469,7 @@ namespace Proyecto_p04
                 f38.Enabled = false;
                 control.ToString();
             }
-            else
-            {
-                control = "f0";
-                control.ToString();
-            }
+            
 
             ///////////// parte E
 
@@ -695,10 +679,7 @@ namespace Proyecto_p04
                 e38.BackColor = Color.Red;
                 e38.Enabled = false;
             }
-            else
-            {
-                control = "e0";
-            }
+            
 
 
 
@@ -881,13 +862,8 @@ namespace Proyecto_p04
                 d38.BackColor = Color.Red;
                 d38.Enabled = false;
             }
-            else
-            {
-                control = "d0";
-            }
-
-
-
+            
+            
             /////////// parte C
 
             if (c7.Checked)
@@ -1066,10 +1042,7 @@ namespace Proyecto_p04
                 c38.BackColor = Color.Red;
                 c38.Enabled = false;
             }
-            else
-            {
-                control = "c0";
-            }
+            
 
             ///////// parte B
 
@@ -1279,12 +1252,7 @@ namespace Proyecto_p04
                 b38.BackColor = Color.Red;
                 b38.Enabled = false;
             }
-            else
-            {
-                control = "b0";
-            }
-
-
+            
 
             /////////// Parte A
 
@@ -1494,13 +1462,7 @@ namespace Proyecto_p04
                 a38.BackColor = Color.Red;
                 a38.Enabled = false;
             }
-            else
-            {
-                control = "a0";
-            }
-
-
-
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

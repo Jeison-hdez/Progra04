@@ -109,8 +109,7 @@ namespace Proyecto_p04
 
                 cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
 
-                MessageBox.Show(control.ToString());
-
+                
                 cmd.ExecuteNonQuery();
 
 
@@ -149,7 +148,7 @@ namespace Proyecto_p04
                 cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
                 cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
 
-                //cmd.Parameters.AddWithValue("@Asiento",  control); //esta es la variable para los nombres de los chbt
+                cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
