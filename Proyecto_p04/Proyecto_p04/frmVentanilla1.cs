@@ -123,7 +123,7 @@ namespace Proyecto_p04
 
 
                 MessageBox.Show("Los datos fueron agregados de forma exitosa!!!");
-
+                dataGridView1.DataSource = LLenar_grid1();
             }
             catch (Exception ex)
             {
@@ -161,7 +161,7 @@ namespace Proyecto_p04
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-
+                dataGridView1.DataSource = LLenar_grid1();
             }
             catch (Exception ex)
             {
@@ -184,7 +184,7 @@ namespace Proyecto_p04
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Los datos fueron Eliminados!!!");
-
+                dataGridView1.DataSource = LLenar_grid1();
             }
             catch (Exception ex)
             {

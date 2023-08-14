@@ -23,7 +23,26 @@ namespace Proyecto_p04
             conexionBD.conectarBD();
             MessageBox.Show("Conexion Exitosa!!!");
             dgvAerolinea.DataSource = LLenar_grid();
-            
+            paises();
+            cbPaises.SelectedIndex = 0;
+        }
+
+        public void paises()
+        {
+            DataTable dt = new DataTable();
+            cbPaises.ValueMember = "id";
+            cbPaises.DisplayMember = "pais";
+            cbPaises.Items.Insert(0, " - Seleccione Nacionalidad");
+            dt = Clases.aerolineaDAL.getPaises();
+            int i = 0;
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow item in dt.Rows)
+                {
+                    cbPaises.Items.Insert(Convert.ToInt32(dt.Rows[i]["id"]), dt.Rows[i]["nombre"].ToString());
+                    i++;
+                }
+            }
         }
 
 
@@ -47,7 +66,7 @@ namespace Proyecto_p04
             txtIdentidicacion.Text = dgvAerolinea.CurrentRow.Cells[1].Value.ToString();
             txtEstado.Text = dgvAerolinea.CurrentRow.Cells[2].Value.ToString();
             txtNombre.Text = dgvAerolinea.CurrentRow.Cells[3].Value.ToString();
-            txtPaisOrigen.Text = dgvAerolinea.CurrentRow.Cells[4].Value.ToString();
+            
         }
     
 
@@ -62,7 +81,7 @@ namespace Proyecto_p04
             cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
             cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
             cmd.Parameters.AddWithValue("@Descripcion", txtNombre.Text);
-            cmd.Parameters.AddWithValue("@PaisOrigen", txtPaisOrigen.Text);
+            cmd.Parameters.AddWithValue("@PaisOrigen", cbPaises.SelectedIndex);
             cmd.ExecuteNonQuery();
 
 
@@ -82,7 +101,7 @@ namespace Proyecto_p04
             cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
             cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
             cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-            cmd.Parameters.AddWithValue("@PaisOrigen", txtPaisOrigen.Text);
+            cmd.Parameters.AddWithValue("@PaisOrigen", cbPaises.SelectedIndex);
 
 
             cmd.ExecuteNonQuery();
@@ -114,19 +133,16 @@ namespace Proyecto_p04
             txtNombre.Clear();
             txtEstado.Clear();
             txtIdentidicacion.Clear();
-            txtPaisOrigen.Clear();
-            
+            cbPaises.SelectedIndex = 0;
+
+
         }
 
         private void dgvAerolinea_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
 
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
-            frmAerolina frmAerolina = new frmAerolina();
-            frmAerolina.Close();
-        }
+        
 
    
     }
