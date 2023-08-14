@@ -188,7 +188,7 @@ namespace Proyecto_p04
             cbNacionalidad.ValueMember = "id";
             cbNacionalidad.DisplayMember = "pais";
             cbNacionalidad.Items.Insert(0, " - Seleccione Nacionalidad");
-            dt = Clases.ventanillaDAL.getPaises();
+            dt = Clases.ventanillasDAL.getPaises();
             int i = 0;
             if (dt.Rows.Count > 0)
             {

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_p04.Clases
 {
-    class ventanillaDAL
+    class ventanillasDAL
     {
         public static DataTable getPaises()
         {
