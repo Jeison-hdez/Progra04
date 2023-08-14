@@ -79,6 +79,9 @@ namespace Proyecto_p04
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            Asientos();
+            
+
             DateTime fecha = DateTime.Now;
             txtSalida.Text = fecha.ToString();
 
@@ -104,7 +107,7 @@ namespace Proyecto_p04
                 cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
                 cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
 
-                //cmd.Parameters.AddWithValue("@Asiento",  control); //esta es la variable para los nombres de los chbt
+                cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
 
                 cmd.ExecuteNonQuery();
 
@@ -229,12 +232,14 @@ namespace Proyecto_p04
         }
 
         //Esta es la clase para asignar los numero de los chBoton para la Base de Datos
+
+        string control;
+        int numero = 0;
         public void Asientos()
         {
             //Parte F. Guardar el numero del asiento.
 
-            string control;
-            int numero = 0; 
+            
 
             if (f1.Checked)
             {
@@ -1538,6 +1543,12 @@ namespace Proyecto_p04
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            DateTime fecha = DateTime.Now;
+            txtHoraFecha.Text = fecha.ToString();
         }
     }
 }
