@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using static Proyecto_p04.frmLogin;
 
 namespace Proyecto_p04
 {
@@ -24,6 +25,14 @@ namespace Proyecto_p04
 
         private void frmVentanilla1_Load(object sender, EventArgs e)
         {
+
+
+            // Accede a la variable global Usuario desde GlobalVariables
+            string usuario = GlobalVariables.Usuario;
+
+            //Muestra en un txtUsuario el usuario 
+            txtUsuario.Text = usuario;
+
 
             conexionBD.conectarBD();
             MessageBox.Show("Conexion Exitosa!!!");
