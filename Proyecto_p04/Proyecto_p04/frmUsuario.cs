@@ -25,8 +25,26 @@ namespace Proyecto_p04
         private void frmUsuario_Load(object sender, EventArgs e)
         {
             conexionBD.conectarBD();
-            MessageBox.Show("Conexion Exitosa!!!");
+            //MessageBox.Show("Conexion Exitosa!!!");
             dataGridView1.DataSource = LLenar_grid();
+            niveles();
+        }
+
+        public void niveles() 
+        {
+            DataTable dt = new DataTable();
+            cbNivel.ValueMember = "nivel";
+            cbNivel.DisplayMember = "nombre";
+
+            cbNivel.DropDownStyle = ComboBoxStyle.DropDownList;
+            dt = Clases.NivelesUsuariosDAL.getNiveles();
+
+            if (dt.Rows.Count > 0)
+            {
+                cbNivel.DataSource = new BindingSource(dt, null);
+                cbNivel.DisplayMember = "descripcion";
+                cbNivel.ValueMember = "nivel";
+            }
         }
 
         //Llenar y conectar grid
@@ -49,7 +67,7 @@ namespace Proyecto_p04
             txtPassword.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             txtNombre.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             txtIdentificacion.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            
+            cbNivel.SelectedValue = Convert.ToInt32(dataGridView1.CurrentRow.Cells[5].Value.ToString());
         }
 
 
@@ -62,44 +80,79 @@ namespace Proyecto_p04
             user.Nombre = txtNombre.Text;
             user.identificacion = txtIdentificacion.Text;
 
-            int resultado = Clases.UsuariosDAL.InsertUser(user);
-
-            if (resultado > 0) 
+            if (txtNombre.TextLength > 0 && txtPassword.TextLength > 0 && txtNombre.TextLength > 0 && txtIdentificacion.TextLength > 0)
             {
-                MessageBox.Show("Los datos fueron agregados de forma exitosa!!!");
-                dataGridView1.DataSource = LLenar_grid();
+                int resultado = Clases.UsuariosDAL.InsertUser(user);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Los datos fueron agregados de forma exitosa!!!");
+                    limpiar_txt();
+                    dataGridView1.DataSource = LLenar_grid();
+                }
+            }
+            else 
+            {
+                MessageBox.Show("Necesita completar los datos para guardar el usuario");
             }
         }
 
         //Modificar datos
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            conexionBD.conectarBD();
-            string actualizar = "UPDATE tbl_usuarios SET Id=@Id,Usuario=@Usuario,Contraseña=@Contraseña,Nombre=@Nombre,Identificacion=@Identificacion," +
-                "Id_Nivel=@ID-Nivel,Estado=@Estado WHERE Id=@Id";
-            SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
-            cmd.Parameters.AddWithValue("@Id", txtID.Text);
-            cmd.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
-            cmd.Parameters.AddWithValue("@Contraseña", txtPassword.Text);
-            cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-            cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
-            
+            DialogResult result = MessageBox.Show("Desea modificar el usuario ?", "Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                conexionBD.conectarBD();
+                string actualizar = "UPDATE tbl_usuarios SET Usuario=@Usuario,Contrasena=@Contrasena,Nombre=@Nombre,Identificacion=@Identificacion," +
+                    "Id_Nivel=@ID_Nivel WHERE Id=@Id";
+                SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
+                cmd.Parameters.AddWithValue("@Id", txtID.Text);
+                cmd.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
+                cmd.Parameters.AddWithValue("@Contrasena", txtPassword.Text);
+                cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+                cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
+                cmd.Parameters.AddWithValue("@ID_Nivel", cbNivel.SelectedValue);
 
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-            dataGridView1.DataSource = LLenar_grid();
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Los datos fueron agregados de forma exitosa!!!");
+                dataGridView1.DataSource = LLenar_grid();
+                limpiar_txt();
+            }
+            else
+            {
+
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            conexionBD.conectarBD();
-            string eliminar = "DELETE FROM tbl_usuarios WHERE Id=@Id";
-            SqlCommand cmd = new SqlCommand(eliminar, conexionBD.conectarBD());
-            cmd.Parameters.AddWithValue("@Id", txtID.Text);
-            cmd.ExecuteNonQuery();
+            DialogResult result = MessageBox.Show("Desea eliminar el usuario ?", "Atención!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                if (txtID.TextLength > 0)
+                {
+                    conexionBD.conectarBD();
+                    string eliminar = "DELETE FROM tbl_usuarios WHERE Id=@Id";
+                    SqlCommand cmd = new SqlCommand(eliminar, conexionBD.conectarBD());
+                    cmd.Parameters.AddWithValue("@Id", txtID.Text);
+                    cmd.ExecuteNonQuery();
 
-            MessageBox.Show("Los datosfueron Eliminados!!!");
-            dataGridView1.DataSource = LLenar_grid();
+                    MessageBox.Show("Los datos fueron Eliminados!!!");
+                    limpiar_txt();
+                    dataGridView1.DataSource = LLenar_grid();
+                }
+                else 
+                {
+                    MessageBox.Show("Seleccione un usuario valido!");
+                }
+            }
+            else
+            {
+
+            }
+            
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

@@ -61,6 +61,12 @@
     <Compile Include="frmAerolina.Designer.cs">
       <DependentUpon>frmAerolina.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporte.Designer.cs">
+      <DependentUpon>frmReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVuelos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     <Compile Include="Clases\Usuarios.cs" />
     <EmbeddedResource Include="frmAerolina.resx">
       <DependentUpon>frmAerolina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporte.resx">
+      <DependentUpon>frmReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVuelos.resx">
       <DependentUpon>frmVuelos.cs</DependentUpon>
