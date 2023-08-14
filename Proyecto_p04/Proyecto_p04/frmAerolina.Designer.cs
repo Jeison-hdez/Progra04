@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtPaisOrigen = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
@@ -49,6 +48,7 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbPaises = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAerolinea)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -63,7 +63,7 @@
             this.dgvAerolinea.Location = new System.Drawing.Point(29, 297);
             this.dgvAerolinea.Name = "dgvAerolinea";
             this.dgvAerolinea.ReadOnly = true;
-            this.dgvAerolinea.Size = new System.Drawing.Size(785, 234);
+            this.dgvAerolinea.Size = new System.Drawing.Size(909, 234);
             this.dgvAerolinea.TabIndex = 0;
             this.dgvAerolinea.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAerolinea_CellClick);
             this.dgvAerolinea.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAerolinea_CellContentClick);
@@ -72,7 +72,7 @@
             // 
             this.gfdfg.AutoSize = true;
             this.gfdfg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gfdfg.Location = new System.Drawing.Point(25, 163);
+            this.gfdfg.Location = new System.Drawing.Point(25, 154);
             this.gfdfg.Name = "gfdfg";
             this.gfdfg.Size = new System.Drawing.Size(28, 20);
             this.gfdfg.TabIndex = 1;
@@ -80,7 +80,8 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(29, 186);
+            this.txtID.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(29, 177);
             this.txtID.MaxLength = 20;
             this.txtID.Multiline = true;
             this.txtID.Name = "txtID";
@@ -92,7 +93,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(141, 34);
+            this.label2.Location = new System.Drawing.Point(184, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(603, 55);
             this.label2.TabIndex = 3;
@@ -100,8 +101,9 @@
             // 
             // txtIdentidicacion
             // 
-            this.txtIdentidicacion.Location = new System.Drawing.Point(151, 186);
-            this.txtIdentidicacion.MaxLength = 20;
+            this.txtIdentidicacion.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdentidicacion.Location = new System.Drawing.Point(29, 249);
+            this.txtIdentidicacion.MaxLength = 50;
             this.txtIdentidicacion.Multiline = true;
             this.txtIdentidicacion.Name = "txtIdentidicacion";
             this.txtIdentidicacion.Size = new System.Drawing.Size(167, 26);
@@ -111,7 +113,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 232);
+            this.label3.Location = new System.Drawing.Point(211, 226);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 20);
             this.label3.TabIndex = 4;
@@ -119,8 +121,9 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(29, 255);
-            this.txtNombre.MaxLength = 20;
+            this.txtNombre.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(215, 249);
+            this.txtNombre.MaxLength = 50;
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(167, 26);
@@ -130,26 +133,17 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(147, 163);
+            this.label4.Location = new System.Drawing.Point(25, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Nombre";
             // 
-            // txtPaisOrigen
-            // 
-            this.txtPaisOrigen.Location = new System.Drawing.Point(219, 255);
-            this.txtPaisOrigen.MaxLength = 20;
-            this.txtPaisOrigen.Multiline = true;
-            this.txtPaisOrigen.Name = "txtPaisOrigen";
-            this.txtPaisOrigen.Size = new System.Drawing.Size(167, 26);
-            this.txtPaisOrigen.TabIndex = 9;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(215, 232);
+            this.label5.Location = new System.Drawing.Point(401, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(126, 20);
             this.label5.TabIndex = 8;
@@ -158,7 +152,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(780, 209);
+            this.pictureBox4.Location = new System.Drawing.Point(904, 217);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(34, 34);
             this.pictureBox4.TabIndex = 32;
@@ -167,7 +161,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(685, 209);
+            this.btnLimpiar.Location = new System.Drawing.Point(809, 217);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(89, 34);
             this.btnLimpiar.TabIndex = 31;
@@ -178,7 +172,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(780, 169);
+            this.pictureBox3.Location = new System.Drawing.Point(904, 177);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 34);
             this.pictureBox3.TabIndex = 30;
@@ -187,7 +181,7 @@
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(685, 169);
+            this.btnModificar.Location = new System.Drawing.Point(809, 177);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(89, 34);
             this.btnModificar.TabIndex = 29;
@@ -198,7 +192,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(629, 209);
+            this.pictureBox2.Location = new System.Drawing.Point(753, 217);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 34);
             this.pictureBox2.TabIndex = 28;
@@ -207,7 +201,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(534, 209);
+            this.btnEliminar.Location = new System.Drawing.Point(658, 217);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(89, 34);
             this.btnEliminar.TabIndex = 27;
@@ -218,7 +212,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(629, 169);
+            this.pictureBox1.Location = new System.Drawing.Point(753, 177);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(34, 34);
             this.pictureBox1.TabIndex = 26;
@@ -227,7 +221,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(534, 169);
+            this.btnGuardar.Location = new System.Drawing.Point(658, 177);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(89, 34);
             this.btnGuardar.TabIndex = 25;
@@ -237,7 +231,8 @@
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(354, 186);
+            this.txtEstado.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstado.Location = new System.Drawing.Point(151, 177);
             this.txtEstado.MaxLength = 20;
             this.txtEstado.Multiline = true;
             this.txtEstado.Name = "txtEstado";
@@ -250,18 +245,29 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(350, 163);
+            this.label1.Location = new System.Drawing.Point(147, 154);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 20);
             this.label1.TabIndex = 33;
             this.label1.Text = "Estado";
+            // 
+            // cbPaises
+            // 
+            this.cbPaises.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPaises.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPaises.FormattingEnabled = true;
+            this.cbPaises.Location = new System.Drawing.Point(405, 249);
+            this.cbPaises.Name = "cbPaises";
+            this.cbPaises.Size = new System.Drawing.Size(182, 23);
+            this.cbPaises.TabIndex = 55;
             // 
             // frmAerolina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(859, 655);
+            this.ClientSize = new System.Drawing.Size(965, 655);
+            this.Controls.Add(this.cbPaises);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox4);
@@ -272,7 +278,6 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.txtPaisOrigen);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label4);
@@ -306,7 +311,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtPaisOrigen;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnLimpiar;
@@ -318,5 +322,6 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbPaises;
     }
 }

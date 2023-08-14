@@ -23,7 +23,26 @@ namespace Proyecto_p04
             conexionBD.conectarBD();
             MessageBox.Show("Conexion Exitosa!!!");
             dgvAerolinea.DataSource = LLenar_grid();
-            
+            paises();
+            cbPaises.SelectedIndex = 0;
+        }
+
+        public void paises()
+        {
+            DataTable dt = new DataTable();
+            cbPaises.ValueMember = "id";
+            cbPaises.DisplayMember = "pais";
+            cbPaises.Items.Insert(0, " - Seleccione Nacionalidad");
+            dt = Clases.aerolineaDAL.getPaises();
+            int i = 0;
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow item in dt.Rows)
+                {
+                    cbPaises.Items.Insert(Convert.ToInt32(dt.Rows[i]["id"]), dt.Rows[i]["nombre"].ToString());
+                    i++;
+                }
+            }
         }
 
 
@@ -47,127 +66,65 @@ namespace Proyecto_p04
             txtIdentidicacion.Text = dgvAerolinea.CurrentRow.Cells[1].Value.ToString();
             txtEstado.Text = dgvAerolinea.CurrentRow.Cells[2].Value.ToString();
             txtNombre.Text = dgvAerolinea.CurrentRow.Cells[3].Value.ToString();
-            txtPaisOrigen.Text = dgvAerolinea.CurrentRow.Cells[4].Value.ToString();
+            
         }
     
 
 
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                DialogResult result = MessageBox.Show("¿Desea limpiar los datos?", "Confirmar Limpieza", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    //Codigo Guardar
-                    conexionBD.conectarBD();
-                    string insertar = "INSERT INTO tbl_aerolineas(Identificacion,Estado,Descripcion,PaisOrigen) VALUES(@Identificacion,@Estado,@Descripcion,@PaisOrigen)";
-                    SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
-
-                    cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
-                    cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
-                    cmd.Parameters.AddWithValue("@Descripcion", txtNombre.Text);
-                    cmd.Parameters.AddWithValue("@PaisOrigen", txtPaisOrigen.Text);
-                    cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Datos limpiados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //Codigo Guardar
+            conexionBD.conectarBD();
+            string insertar = "INSERT INTO tbl_aerolineas(Identificacion,Estado,Descripcion,PaisOrigen) VALUES(@Identificacion,@Estado,@Descripcion,@PaisOrigen)";
+            SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
+            
+            cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
+            cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
+            cmd.Parameters.AddWithValue("@Descripcion", txtNombre.Text);
+            cmd.Parameters.AddWithValue("@PaisOrigen", cbPaises.SelectedIndex);
+            cmd.ExecuteNonQuery();
 
 
-
+            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
+            dgvAerolinea.DataSource = LLenar_grid();
+            
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DialogResult result = MessageBox.Show("¿Desea aplicar los cambios?", "Confirmar Modificación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //Codigo Modificar
+            conexionBD.conectarBD();
+            string actualizar = "UPDATE tbl_aerolineas SET Id=@Id,Identificacion=@Identificacion,Estado=@Estado,Nombre=@Nombre,PaisOrigen=@PaisOrigen WHERE Id=@Id";
+            SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
 
-                if (result == DialogResult.Yes)
-                {
-                    //Codigo Modificar
-                    conexionBD.conectarBD();
-                    string actualizar = "UPDATE tbl_aerolineas SET Id=@Id,Identificacion=@Identificacion,Estado=@Estado,Nombre=@Nombre,PaisOrigen=@PaisOrigen WHERE Id=@Id";
-                    SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
-
-                    cmd.Parameters.AddWithValue("@Id", txtID.Text);
-                    cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
-                    cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
-                    cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-                    cmd.Parameters.AddWithValue("@PaisOrigen", txtPaisOrigen.Text);
+            cmd.Parameters.AddWithValue("@Id", txtID.Text);
+            cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
+            cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
+            cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+            cmd.Parameters.AddWithValue("@PaisOrigen", cbPaises.SelectedIndex);
 
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-                    dgvAerolinea.DataSource = LLenar_grid();
-
-                    MessageBox.Show("Cambios aplicados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
-           
-       
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
+            dgvAerolinea.DataSource = LLenar_grid();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DialogResult result = MessageBox.Show("¿Desea eliminar los datos?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //Codigo Eliminar
+            conexionBD.conectarBD();
+            string eliminar = "DELETE FROM tbl_aerolineas WHERE Id=@Id";
+            SqlCommand cmd = new SqlCommand(eliminar, conexionBD.conectarBD());
+            cmd.Parameters.AddWithValue("@Id", txtID.Text);
+            cmd.ExecuteNonQuery();
 
-                if (result == DialogResult.Yes)
-                {
-                    //Codigo Eliminar
-                    conexionBD.conectarBD();
-                    string eliminar = "DELETE FROM tbl_aerolineas WHERE Id=@Id";
-                    SqlCommand cmd = new SqlCommand(eliminar, conexionBD.conectarBD());
-                    cmd.Parameters.AddWithValue("@Id", txtID.Text);
-                    cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Los datosfueron Eliminados!!!");
-                    dgvAerolinea.DataSource = LLenar_grid();
-
-                    MessageBox.Show("Datos eliminados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
+            MessageBox.Show("Los datosfueron Eliminados!!!");
+            dgvAerolinea.DataSource = LLenar_grid();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DialogResult result = MessageBox.Show("¿Desea limpiar los datos?", "Confirmar Limpieza", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    limpiar_txt();
-
-                    MessageBox.Show("Datos limpiados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
-           
+         limpiar_txt();
         }
 
          public void limpiar_txt()
@@ -176,19 +133,16 @@ namespace Proyecto_p04
             txtNombre.Clear();
             txtEstado.Clear();
             txtIdentidicacion.Clear();
-            txtPaisOrigen.Clear();
-            
+            cbPaises.SelectedIndex = 0;
+
+
         }
 
         private void dgvAerolinea_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
 
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
-            frmAerolina frmAerolina = new frmAerolina();
-            frmAerolina.Close();
-        }
+        
 
    
     }

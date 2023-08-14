@@ -127,7 +127,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(336, 9);
+            this.label1.Location = new System.Drawing.Point(458, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(321, 31);
             this.label1.TabIndex = 380;
@@ -144,10 +144,11 @@
             // 
             // txtVueloSeleccionado
             // 
-            this.txtVueloSeleccionado.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtVueloSeleccionado.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVueloSeleccionado.Location = new System.Drawing.Point(171, 428);
             this.txtVueloSeleccionado.Multiline = true;
             this.txtVueloSeleccionado.Name = "txtVueloSeleccionado";
+            this.txtVueloSeleccionado.ReadOnly = true;
             this.txtVueloSeleccionado.Size = new System.Drawing.Size(525, 35);
             this.txtVueloSeleccionado.TabIndex = 382;
             // 
@@ -233,6 +234,7 @@
             // 
             // txtEstado
             // 
+            this.txtEstado.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstado.Location = new System.Drawing.Point(1068, 399);
             this.txtEstado.Multiline = true;
             this.txtEstado.Name = "txtEstado";
@@ -306,6 +308,7 @@
             // 
             // txtId
             // 
+            this.txtId.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.Location = new System.Drawing.Point(928, 399);
             this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
@@ -339,6 +342,7 @@
             // 
             // txtpiloto
             // 
+            this.txtpiloto.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpiloto.Location = new System.Drawing.Point(244, 489);
             this.txtpiloto.Multiline = true;
             this.txtpiloto.Name = "txtpiloto";
@@ -368,6 +372,7 @@
             // 
             // txtAerolinea
             // 
+            this.txtAerolinea.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAerolinea.Location = new System.Drawing.Point(707, 489);
             this.txtAerolinea.Multiline = true;
             this.txtAerolinea.Name = "txtAerolinea";
@@ -434,6 +439,7 @@
             // 
             // txtSalida
             // 
+            this.txtSalida.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSalida.Location = new System.Drawing.Point(1150, 513);
             this.txtSalida.Multiline = true;
             this.txtSalida.Name = "txtSalida";
@@ -444,6 +450,7 @@
             // 
             // txtLLegada
             // 
+            this.txtLLegada.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLLegada.Location = new System.Drawing.Point(1150, 605);
             this.txtLLegada.Multiline = true;
             this.txtLLegada.Name = "txtLLegada";

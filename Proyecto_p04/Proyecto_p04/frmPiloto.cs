@@ -25,6 +25,7 @@ namespace Proyecto_p04
             //MessageBox.Show("Conexion Exitosa!!!");
             dgvPiloto.DataSource = LLenar_grid1();
             paises();
+            cbPaises.SelectedIndex = 0;
         }
         public DataTable LLenar_grid1()
         {
