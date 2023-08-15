@@ -95,7 +95,7 @@ namespace Proyecto_p04
                 try
                 {
                     if (txtNombre.TextLength > 0 && txtId.TextLength > 0 && txtIdentificacion.TextLength > 0 && txtNPasaporte.TextLength > 0 && txtBoleto.TextLength > 0 && txtHoraFecha.TextLength > 0 && txtSalida.TextLength > 0 && txtEntrada.TextLength > 0 && txtVuelo.TextLength > 0 && txtEstadoV.TextLength > 0 &&
-                        cbNacionalidad.SelectedIndex != -1 && cbNacionalidad.SelectedIndex != 0)
+                        cbNacionalidad.SelectedIndex != -1 && cbNacionalidad.SelectedIndex != 0 && control != null)
                     {
 
                         DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -121,7 +121,7 @@ namespace Proyecto_p04
                             cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
 
                             cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
-
+                            MessageBox.Show(control);
 
                             cmd.ExecuteNonQuery();
 

@@ -269,7 +269,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(631, 380);
+            this.label7.Location = new System.Drawing.Point(386, 380);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(284, 18);
             this.label7.TabIndex = 14;
@@ -279,10 +279,10 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(634, 401);
+            this.dataGridView1.Location = new System.Drawing.Point(384, 401);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(756, 144);
+            this.dataGridView1.Size = new System.Drawing.Size(1006, 144);
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -2228,7 +2228,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(986, 606);
+            this.label15.Location = new System.Drawing.Point(986, 619);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(286, 18);
             this.label15.TabIndex = 624;
@@ -2237,7 +2237,7 @@
             // txtEstadoV
             // 
             this.txtEstadoV.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstadoV.Location = new System.Drawing.Point(992, 627);
+            this.txtEstadoV.Location = new System.Drawing.Point(992, 640);
             this.txtEstadoV.MaxLength = 20;
             this.txtEstadoV.Multiline = true;
             this.txtEstadoV.Name = "txtEstadoV";

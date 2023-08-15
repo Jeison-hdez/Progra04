@@ -94,7 +94,7 @@ namespace Proyecto_p04
                 try
                 {
                     if (txtNombre.TextLength > 0 && txtId.TextLength > 0 && txtIdentificacion.TextLength > 0 && txtNPasaporte.TextLength > 0 && txtBoleto.TextLength > 0 && txtHoraFecha.TextLength > 0 && txtSalida.TextLength > 0 && txtEntrada.TextLength > 0 && txtVuelo.TextLength > 0 && txtEstadoV.TextLength > 0 &&
-                        cbNacionalidad.SelectedIndex != -1 && cbNacionalidad.SelectedIndex != 0)
+                        cbNacionalidad.SelectedIndex != -1 && cbNacionalidad.SelectedIndex != 0 && control != null)
                     {
 
                         DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -120,7 +120,7 @@ namespace Proyecto_p04
                             cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
 
                             cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
-
+                            MessageBox.Show(control);
 
                             cmd.ExecuteNonQuery();
 
@@ -1527,7 +1527,7 @@ namespace Proyecto_p04
         {
             DataTable dt = new DataTable();
             string vuelo;
-            txtVuelo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtVuelo.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             vuelo = txtVuelo.Text;
             dt = Clases.ventanillasDAL.getAsientoV(vuelo);
             if (dt.Rows.Count > 0)
@@ -1554,7 +1554,7 @@ namespace Proyecto_p04
                 }
             }
 
-            txtEstadoV.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            txtEstadoV.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
         }
 
 
