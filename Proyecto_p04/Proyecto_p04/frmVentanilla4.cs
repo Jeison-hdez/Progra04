@@ -19,7 +19,7 @@ namespace Proyecto_p04
             InitializeComponent();
         }
 
-      
+
         private void frmVentanilla4_Load(object sender, EventArgs e)
         {
             // Accede a la variable global Usuario desde GlobalVariables
@@ -72,7 +72,7 @@ namespace Proyecto_p04
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -224,8 +224,8 @@ namespace Proyecto_p04
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            
-                    limpiar_txt();
+
+            limpiar_txt();
 
         }
 
@@ -1570,8 +1570,6 @@ namespace Proyecto_p04
             txtEstadoV.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
         }
 
-
-
-
     }
 }
+
