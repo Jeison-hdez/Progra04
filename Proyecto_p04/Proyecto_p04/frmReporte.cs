@@ -62,5 +62,26 @@ namespace Proyecto_p04
                 cbVuelos.Visible = false;
             }
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            
+            if (rbVuelos.Checked == true) 
+            {
+            
+            }
+            if (rbMoneda.Checked == true) 
+            {
+            
+            }
+            if (rbCortes.Checked == true) 
+            {
+            
+            }
+            if (rbPasajeros.Checked == true) 
+            {
+            
+            }
+        }
     }
 }

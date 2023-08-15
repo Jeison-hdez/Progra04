@@ -219,6 +219,7 @@ namespace Proyecto_p04
             this.btnReporte.TabIndex = 4;
             this.btnReporte.Text = "Ok";
             this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // dtpFechaF
             // 
