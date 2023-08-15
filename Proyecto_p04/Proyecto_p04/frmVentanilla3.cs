@@ -1503,9 +1503,38 @@ namespace Proyecto_p04
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataTable dt = new DataTable();
+            string vuelo;
             txtVuelo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            vuelo = txtVuelo.Text;
+            dt = Clases.ventanillasDAL.getAsientoV(vuelo);
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow item in dt.Rows)
+                {
+                    string descripcion = item["Asiento"].ToString();
+                    // Buscar el control checkbox por su nombre en el formulario
+                    CheckBox checkBox = this.Controls[descripcion] as CheckBox;
+
+                    // Verificar si se encontró el checkbox y luego seleccionarlo
+                    if (checkBox != null)
+                    {
+                        checkBox.Checked = true;
+                        checkBox.Enabled = false;
+                        checkBox.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        checkBox.Checked = false;
+                        checkBox.Enabled = true;
+
+                    }
+                }
+            }
+
             txtEstadoV.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
         }
+
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {

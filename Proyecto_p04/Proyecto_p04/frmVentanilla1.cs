@@ -1540,11 +1540,22 @@ namespace Proyecto_p04
                 foreach (DataRow item in dt.Rows)
                 {
                     string descripcion = item["Asiento"].ToString();
-                    CheckBox MycheckBox = new CheckBox();
+                    // Buscar el control checkbox por su nombre en el formulario
+                    CheckBox checkBox = this.Controls[descripcion] as CheckBox;
 
-                    MycheckBox.Name = descripcion;
-
-                    MycheckBox.Checked = true;
+                    // Verificar si se encontró el checkbox y luego seleccionarlo
+                    if (checkBox != null)
+                    {
+                        checkBox.Checked = true;
+                        checkBox.Enabled = false;
+                        checkBox.BackColor = Color.Red;
+                    }
+                    else
+                    { 
+                    checkBox.Checked = false;
+                    checkBox.Enabled = true;
+                    
+                    }
                 }
             }
 
