@@ -38,7 +38,7 @@ namespace Proyecto_p04
             MessageBox.Show("Conexion Exitosa!!!");
             dataGridView1.DataSource = LLenar_grid1();
             dataGridView2.DataSource = LLenar_grid2();
-            dataGridView2.Columns[1].Width = 50;
+            //dataGridView2.Columns[1].Width = 50;
 
             paises();
 
@@ -166,34 +166,43 @@ namespace Proyecto_p04
         {
             try
             {
-                DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
+                if (txtNombre.TextLength > 0 && txtId.TextLength > 0 && txtIdentificacion.TextLength > 0 && txtNPasaporte.TextLength > 0 && txtBoleto.TextLength > 0 && txtHoraFecha.TextLength > 0 && txtSalida.TextLength > 0 && txtEntrada.TextLength > 0 && txtVuelo.TextLength > 0 && txtEstadoV.TextLength > 0 &&
+                        cbNacionalidad.SelectedIndex != -1 && cbNacionalidad.SelectedIndex != 0 && control != null)
                 {
-                    //Codigo Modificar
 
-                    conexionBD.conectarBD();
-                    string actualizar = "UPDATE tbl_ventanilla SET Id=@Id,Nombre=@Nombre,Identificacion=@Identificacion,HoraFecha=@HoraFecha,Usuario=@Usuario,Destino=@Destino,NumeroV=@NumeroV,Asiento=@Asiento,Boleto=@Boleto,Nacionalidad=@Nacionalidad,NPasaporte=@NPasaporte,HoraEntrada=@HoraEntrada,HoraSalida=@HoraSalida" +
-                    "WHERE Id=@Id";
-                    SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
-                    cmd.Parameters.AddWithValue("@Id", txtId.Text);
-                    cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-                    cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
-                    cmd.Parameters.AddWithValue("@HoraFecha", txtHoraFecha.Text);
-                    cmd.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
-                    cmd.Parameters.AddWithValue("@Destino", txtVuelo.Text);
-                    cmd.Parameters.AddWithValue("@NumeroV", txtNumeroVentanilla.Text);
-                    cmd.Parameters.AddWithValue("@Boleto", txtBoleto.Text);
-                    cmd.Parameters.AddWithValue("@Nacionalidad", cbNacionalidad.SelectedIndex);
-                    cmd.Parameters.AddWithValue("@NPasaporte", txtNPasaporte.Text);
-                    cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
-                    cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
+                    DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
+                    if (result == DialogResult.Yes)
+                    {
+                        //Codigo Modificar
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-                    dataGridView1.DataSource = LLenar_grid1();
+                        conexionBD.conectarBD();
+                        string actualizar = "UPDATE tbl_ventanilla SET Id=@Id,Nombre=@Nombre,Identificacion=@Identificacion,HoraFecha=@HoraFecha,Usuario=@Usuario,Destino=@Destino,NumeroV=@NumeroV,Asiento=@Asiento,Boleto=@Boleto,Nacionalidad=@Nacionalidad,NPasaporte=@NPasaporte,HoraEntrada=@HoraEntrada,HoraSalida=@HoraSalida" +
+                        "WHERE Id=@Id";
+                        SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
+                        cmd.Parameters.AddWithValue("@Id", txtId.Text);
+                        cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+                        cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
+                        cmd.Parameters.AddWithValue("@HoraFecha", txtHoraFecha.Text);
+                        cmd.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
+                        cmd.Parameters.AddWithValue("@Destino", txtVuelo.Text);
+                        cmd.Parameters.AddWithValue("@NumeroV", txtNumeroVentanilla.Text);
+                        cmd.Parameters.AddWithValue("@Boleto", txtBoleto.Text);
+                        cmd.Parameters.AddWithValue("@Nacionalidad", cbNacionalidad.SelectedIndex);
+                        cmd.Parameters.AddWithValue("@NPasaporte", txtNPasaporte.Text);
+                        cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
+                        cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
+
+                        cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
+                        dataGridView1.DataSource = LLenar_grid1();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Necesita completar los datos para Modificar Correctamente");
                 }
             }
             catch (Exception ex)
@@ -1561,7 +1570,7 @@ namespace Proyecto_p04
                 }
             }
 
-            txtEstadoV.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txtEstadoV.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
         }
 
         
@@ -1596,3 +1605,4 @@ namespace Proyecto_p04
         }
     }
 }
+

@@ -1554,7 +1554,7 @@ namespace Proyecto_p04
                 }
             }
 
-            txtEstadoV.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txtEstadoV.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
         }
 
 

@@ -1505,7 +1505,7 @@ namespace Proyecto_p04
         {
             DataTable dt = new DataTable();
             string vuelo;
-            txtVuelo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtVuelo.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             vuelo = txtVuelo.Text;
             dt = Clases.ventanillasDAL.getAsientoV(vuelo);
             if (dt.Rows.Count > 0)
