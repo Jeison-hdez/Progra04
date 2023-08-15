@@ -53,7 +53,7 @@ namespace Proyecto_p04
             {
                 cbMonetario.Visible = false;
                 cbVentanilla.Visible = false;
-                cbVuelosNombres.Visible = true;
+                cbVuelosNombres.Visible = false;
             }
         }
 
@@ -61,7 +61,7 @@ namespace Proyecto_p04
         {
             if (rbVuelos.Checked == true)
             {
-                cbVentanilla.Visible = true;
+                cbVentanilla.Visible = false;
             }
             else
             {
@@ -145,7 +145,7 @@ namespace Proyecto_p04
             if (dt.Rows.Count > 0)
             {
                 cbVuelosNombres.DataSource = new BindingSource(dt, null);
-                cbVuelosNombres.DisplayMember = "descripcion";
+                cbVuelosNombres.DisplayMember = "destino";
                 cbVuelosNombres.ValueMember = "id";
             }
         }
@@ -187,14 +187,13 @@ namespace Proyecto_p04
 
                 if (dt.Rows.Count > 0) 
                 {
-                    for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                    for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
                     {
                         for (int j = 0; j < dataGridView1.Columns.Count; j++)
                         {
-                            if (dataGridView1.Rows[i].Cells[j].Value.ToString() != null)
-                            {
+                            
                                 worksheet.Cells[i + 8, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
-                            }
+                            
                         }
                         ii = i;
                     }
