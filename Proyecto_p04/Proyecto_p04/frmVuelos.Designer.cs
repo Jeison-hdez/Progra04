@@ -66,6 +66,9 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.txtSalida = new System.Windows.Forms.TextBox();
             this.txtLLegada = new System.Windows.Forms.TextBox();
+            this.cbEstadoV = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -155,7 +158,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1166, 174);
+            this.pictureBox4.Location = new System.Drawing.Point(1335, 174);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(34, 34);
             this.pictureBox4.TabIndex = 392;
@@ -164,7 +167,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(1071, 174);
+            this.btnLimpiar.Location = new System.Drawing.Point(1240, 174);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(89, 34);
             this.btnLimpiar.TabIndex = 391;
@@ -175,7 +178,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1166, 134);
+            this.pictureBox3.Location = new System.Drawing.Point(1335, 134);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 34);
             this.pictureBox3.TabIndex = 390;
@@ -184,7 +187,7 @@
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(1071, 134);
+            this.btnModificar.Location = new System.Drawing.Point(1240, 134);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(89, 34);
             this.btnModificar.TabIndex = 389;
@@ -195,7 +198,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(1015, 174);
+            this.pictureBox5.Location = new System.Drawing.Point(1184, 174);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(34, 34);
             this.pictureBox5.TabIndex = 388;
@@ -204,7 +207,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(920, 174);
+            this.btnEliminar.Location = new System.Drawing.Point(1089, 174);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(89, 34);
             this.btnEliminar.TabIndex = 387;
@@ -215,7 +218,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(1015, 134);
+            this.pictureBox6.Location = new System.Drawing.Point(1184, 134);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(34, 34);
             this.pictureBox6.TabIndex = 386;
@@ -224,7 +227,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(920, 134);
+            this.btnGuardar.Location = new System.Drawing.Point(1089, 134);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(89, 34);
             this.btnGuardar.TabIndex = 385;
@@ -235,7 +238,7 @@
             // txtEstado
             // 
             this.txtEstado.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstado.Location = new System.Drawing.Point(1068, 399);
+            this.txtEstado.Location = new System.Drawing.Point(909, 144);
             this.txtEstado.Multiline = true;
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.ReadOnly = true;
@@ -248,7 +251,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1068, 380);
+            this.label2.Location = new System.Drawing.Point(909, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 397;
@@ -299,7 +302,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(928, 380);
+            this.label6.Location = new System.Drawing.Point(769, 125);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 13);
             this.label6.TabIndex = 404;
@@ -309,7 +312,7 @@
             // txtId
             // 
             this.txtId.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(928, 399);
+            this.txtId.Location = new System.Drawing.Point(769, 144);
             this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
@@ -404,7 +407,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(975, 517);
+            this.dateTimePicker1.Location = new System.Drawing.Point(973, 408);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(121, 20);
             this.dateTimePicker1.TabIndex = 413;
@@ -413,7 +416,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(924, 496);
+            this.label11.Location = new System.Drawing.Point(922, 387);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(211, 18);
             this.label11.TabIndex = 414;
@@ -423,7 +426,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(924, 588);
+            this.label12.Location = new System.Drawing.Point(922, 479);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(220, 18);
             this.label12.TabIndex = 416;
@@ -432,7 +435,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(975, 609);
+            this.dateTimePicker2.Location = new System.Drawing.Point(973, 500);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(121, 20);
             this.dateTimePicker2.TabIndex = 415;
@@ -440,7 +443,7 @@
             // txtSalida
             // 
             this.txtSalida.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalida.Location = new System.Drawing.Point(1150, 513);
+            this.txtSalida.Location = new System.Drawing.Point(1148, 404);
             this.txtSalida.Multiline = true;
             this.txtSalida.Name = "txtSalida";
             this.txtSalida.ReadOnly = true;
@@ -451,7 +454,7 @@
             // txtLLegada
             // 
             this.txtLLegada.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLLegada.Location = new System.Drawing.Point(1150, 605);
+            this.txtLLegada.Location = new System.Drawing.Point(1148, 496);
             this.txtLLegada.Multiline = true;
             this.txtLLegada.Name = "txtLLegada";
             this.txtLLegada.ReadOnly = true;
@@ -459,12 +462,48 @@
             this.txtLLegada.Size = new System.Drawing.Size(198, 24);
             this.txtLLegada.TabIndex = 418;
             // 
+            // cbEstadoV
+            // 
+            this.cbEstadoV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstadoV.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstadoV.FormattingEnabled = true;
+            this.cbEstadoV.Items.AddRange(new object[] {
+            "1",
+            "0"});
+            this.cbEstadoV.Location = new System.Drawing.Point(1115, 592);
+            this.cbEstadoV.Name = "cbEstadoV";
+            this.cbEstadoV.Size = new System.Drawing.Size(91, 23);
+            this.cbEstadoV.TabIndex = 421;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(1013, 553);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(288, 18);
+            this.label13.TabIndex = 422;
+            this.label13.Text = "Selecione si el Vuelo esta disponible:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(1015, 571);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(285, 18);
+            this.label14.TabIndex = 423;
+            this.label14.Text = "1 = Si disponeble / 0 = No disponible";
+            // 
             // frmVuelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1388, 692);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.cbEstadoV);
             this.Controls.Add(this.txtLLegada);
             this.Controls.Add(this.txtSalida);
             this.Controls.Add(this.label12);
@@ -558,5 +597,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.TextBox txtSalida;
         private System.Windows.Forms.TextBox txtLLegada;
+        private System.Windows.Forms.ComboBox cbEstadoV;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }

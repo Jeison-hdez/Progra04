@@ -148,7 +148,7 @@ namespace Proyecto_p04
 
                     //Codigo Guardar
                     conexionBD.conectarBD();
-                    string insertar = "INSERT INTO tbl_vuelos(Estado,Destino,Piloto,Aerolinea,HoraSalida,HoraLlegada) VALUES(@Estado,@Destino,@Piloto,@Aerolinea,@HoraSalida,@HoraLlegada)";
+                    string insertar = "INSERT INTO tbl_vuelos(Estado,Destino,Piloto,Aerolinea,HoraSalida,HoraLlegada,EstadoV) VALUES(@Estado,@Destino,@Piloto,@Aerolinea,@HoraSalida,@HoraLlegada,@EstadoV)";
                     SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
 
                     cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
@@ -157,7 +157,13 @@ namespace Proyecto_p04
                     cmd.Parameters.AddWithValue("@Aerolinea", txtAerolinea.Text);
                     cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
                     cmd.Parameters.AddWithValue("@HoraLlegada", txtLLegada.Text);
-                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@EstadoV", cbEstadoV.SelectedItem);
+                    int resulta = cmd.ExecuteNonQuery();
+                    if (resulta == 0)
+                    {
+                        MessageBox.Show("Hcaen falta datos");
+                    }
+                    
 
 
                     MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
@@ -168,7 +174,7 @@ namespace Proyecto_p04
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Hcaen falta datos, por favor verificar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -233,9 +239,14 @@ namespace Proyecto_p04
 
                 if (result == DialogResult.Yes)
                 {
+                    //Para guardar los datos de los dateTimePicker
+                    txtSalida.Text = dateTimePicker1.Text;
+                    txtLLegada.Text = dateTimePicker2.Text;
+
+
                     //Codigo Modificar
                     conexionBD.conectarBD();
-                    string actualizar = "UPDATE tbl_vuelos SET  Id=@Id,Estado=@Estado,Destino=@Destino,Piloto=@Piloto,Aerolinea=@Aerolinea,HoraSalida=@HoraSalida,HoraLlegada=@HoraLlegada WHERE Id=@Id";
+                    string actualizar = "UPDATE tbl_vuelos SET  Estado=@Estado,Destino=@Destino,Piloto=@Piloto,Aerolinea=@Aerolinea,HoraSalida=@HoraSalida,HoraLlegada=@HoraLlegada,EstadoV=@EstadoV WHERE Id=@Id";
                     SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
 
                     cmd.Parameters.AddWithValue("@Id", txtId.Text);
@@ -243,13 +254,15 @@ namespace Proyecto_p04
                     cmd.Parameters.AddWithValue("@Destino", txtVueloSeleccionado.Text);
                     cmd.Parameters.AddWithValue("@Piloto", txtpiloto.Text);
                     cmd.Parameters.AddWithValue("@Aerolinea", txtAerolinea.Text);
-                    cmd.Parameters.AddWithValue("@HoraSalida", dateTimePicker1.ToString());
-                    cmd.Parameters.AddWithValue("@HoraLlegada", dateTimePicker2.ToString());
+                    cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
+                    cmd.Parameters.AddWithValue("@HoraLlegada", txtLLegada.Text);
+                    cmd.Parameters.AddWithValue("@EstadoV", cbEstadoV.SelectedItem);
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
+                    MessageBox.Show("Los datos fueron agregados de forma exitosa!!!");
 
                     MessageBox.Show("Cambios aplicados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView1.DataSource = LLenar_grid1();
                 }
             }
             catch (Exception ex)
@@ -275,16 +288,18 @@ namespace Proyecto_p04
                     string eliminar = "DELETE FROM tbl_vuelos WHERE Id=@Id";
                     SqlCommand cmd = new SqlCommand(eliminar, conexionBD.conectarBD());
 
+                    cmd.Parameters.AddWithValue("@Id", txtId.Text);
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Los datosfueron Eliminados!!!");
 
                     MessageBox.Show("Datos eliminados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView1.DataSource = LLenar_grid1();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error, debe selecionar la ID que desea Eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -318,6 +333,8 @@ namespace Proyecto_p04
             txtVueloSeleccionado.Clear();
             txtpiloto.Clear();
             txtAerolinea.Clear();
+            txtSalida.Clear();
+            txtLLegada.Clear();
         }
 
         
@@ -333,6 +350,7 @@ namespace Proyecto_p04
             txtAerolinea.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             txtSalida.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             txtLLegada.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
