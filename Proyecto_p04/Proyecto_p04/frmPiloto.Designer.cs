@@ -38,7 +38,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtAñosE = new System.Windows.Forms.TextBox();
+            this.txtAnosE = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -154,15 +154,15 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // txtAñosE
+            // txtAnosE
             // 
-            this.txtAñosE.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAñosE.Location = new System.Drawing.Point(405, 237);
-            this.txtAñosE.MaxLength = 50;
-            this.txtAñosE.Multiline = true;
-            this.txtAñosE.Name = "txtAñosE";
-            this.txtAñosE.Size = new System.Drawing.Size(169, 26);
-            this.txtAñosE.TabIndex = 49;
+            this.txtAnosE.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnosE.Location = new System.Drawing.Point(405, 237);
+            this.txtAnosE.MaxLength = 50;
+            this.txtAnosE.Multiline = true;
+            this.txtAnosE.Name = "txtAnosE";
+            this.txtAnosE.Size = new System.Drawing.Size(169, 26);
+            this.txtAnosE.TabIndex = 49;
             // 
             // label5
             // 
@@ -277,7 +277,7 @@
             this.ClientSize = new System.Drawing.Size(1097, 599);
             this.Controls.Add(this.cbPaises);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtAñosE);
+            this.Controls.Add(this.txtAnosE);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label4);
@@ -320,7 +320,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txtAñosE;
+        private System.Windows.Forms.TextBox txtAnosE;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label4;

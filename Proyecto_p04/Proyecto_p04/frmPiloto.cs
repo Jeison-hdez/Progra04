@@ -22,7 +22,7 @@ namespace Proyecto_p04
         private void frmPiloto_Load(object sender, EventArgs e)
         {
             conexionBD.conectarBD();
-            //MessageBox.Show("Conexion Exitosa!!!");
+            MessageBox.Show("Conexion Exitosa!!!");
             dgvPiloto.DataSource = LLenar_grid1();
             paises();
             cbPaises.SelectedIndex = 0;
@@ -45,27 +45,34 @@ namespace Proyecto_p04
 
             try
             {
-                DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
+                if (txtNombre.TextLength > 0 && txtId.TextLength > 0 && txtIdentificacion.TextLength > 0 && txtAnosE.TextLength > 0 && cbPaises.SelectedIndex != -1 && cbPaises.SelectedIndex != 0)
                 {
-                    ///Codigo Guardar
-                    conexionBD.conectarBD();
-                    string insertar = "INSERT INTO tbl_pilotos(Identificacion,Nombre,AñosExpe,Nacionalidad) " +
-                        "VALUES(@Identificacion,@Nombre,@AñosExpe,@Nacionalidad)";
-                    SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
 
-                    cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
-                    cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-                    cmd.Parameters.AddWithValue("@AñosExpe", txtAñosE.Text);
-                    cmd.Parameters.AddWithValue("@Nacionalidad", cbPaises.SelectedIndex);
-                    cmd.ExecuteNonQuery();
+                    DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        ///Codigo Guardar
+                        conexionBD.conectarBD();
+                        string insertar = "INSERT INTO tbl_pilotos(Identificacion,Nombre,AnosExpe,Nacionalidad) " +
+                            "VALUES(@Identificacion,@Nombre,@AnosExpe,@Nacionalidad)";
+                        SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
+
+                        cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
+                        cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+                        cmd.Parameters.AddWithValue("@AnosExpe", txtAnosE.Text);
+                        cmd.Parameters.AddWithValue("@Nacionalidad", cbPaises.SelectedIndex);
+                        cmd.ExecuteNonQuery();
 
 
-                    MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-                    dgvPiloto.DataSource = LLenar_grid1();
-
-                    MessageBox.Show("Datos guardados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                       
+                        MessageBox.Show("Datos guardados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dgvPiloto.DataSource = LLenar_grid1();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Necesita completar los datos para guardar el usuario");
                 }
             }
             catch (Exception ex)
@@ -85,24 +92,21 @@ namespace Proyecto_p04
 
                 if (result == DialogResult.Yes)
                 {
-                    //Codigo Modificar
-                    conexionBD.conectarBD();
-                    string actualizar = "UPDATE tbl_pilotos SET Id=@Id,Identificacion=@Identificacion,Nombre=@Nombre," +
-                        "@AñosExpe=AñosExpe,@Nacionalidad=Nacionalidad" +
-                    "WHERE Id=@Id";
-                    SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
+                    string Id = txtId.Text;
+                    string nombre = txtNombre.Text;
+                    string Identificacion = txtIdentificacion.Text;
+                    string AnosExpe = txtAnosE.Text;
+                    int Nacionalidad = cbPaises.SelectedIndex;
+                    int resultado = Clases.pilotosDAL.updaPiloto(nombre, Identificacion,AnosExpe,Nacionalidad.ToString(),Id);
 
-                    cmd.Parameters.AddWithValue("@Id", txtId.Text);
-                    cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
-                    cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-                    cmd.Parameters.AddWithValue("@AñosExpe", txtAñosE.Text);
-                    cmd.Parameters.AddWithValue("@Nacionalidad", cbPaises.SelectedIndex);
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("Los datos fueron agregados de forma exitosa!!!");
+                        limpiar_txt();
+                        dgvPiloto.DataSource = LLenar_grid1();
+                    }
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-                    dgvPiloto.DataSource = LLenar_grid1();
-
-                    MessageBox.Show("Cambios aplicados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                 }
             }
             catch (Exception ex)
@@ -133,6 +137,7 @@ namespace Proyecto_p04
                     dgvPiloto.DataSource = LLenar_grid1();
 
                     MessageBox.Show("Datos eliminados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvPiloto.DataSource = LLenar_grid1();
                 }
             }
             catch (Exception ex)
@@ -172,7 +177,7 @@ namespace Proyecto_p04
             txtId.Clear();
             txtNombre.Clear();
             txtIdentificacion.Clear();
-            txtAñosE.Clear();
+            txtAnosE.Clear();
             cbPaises.SelectedIndex = 0;
         } 
 
@@ -181,7 +186,7 @@ namespace Proyecto_p04
             txtId.Text = dgvPiloto.CurrentRow.Cells[0].Value.ToString();
             txtIdentificacion.Text = dgvPiloto.CurrentRow.Cells[1].Value.ToString();
             txtNombre.Text = dgvPiloto.CurrentRow.Cells[2].Value.ToString();
-            txtAñosE.Text = dgvPiloto.CurrentRow.Cells[3].Value.ToString();
+            txtAnosE.Text = dgvPiloto.CurrentRow.Cells[3].Value.ToString();
             cbPaises.SelectedItem = dgvPiloto.CurrentRow.Cells[4].Value.ToString();
         }
 

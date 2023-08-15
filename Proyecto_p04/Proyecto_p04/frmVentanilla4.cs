@@ -77,48 +77,64 @@ namespace Proyecto_p04
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Asientos();
 
+
+            Asientos();
 
             DateTime fecha = DateTime.Now;
             txtSalida.Text = fecha.ToString();
+
+
 
             if (txtEstadoV.Text == "1")
             {
 
                 try
                 {
-                    DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                    if (result == DialogResult.Yes)
+                    if (txtNombre.TextLength > 0 && txtId.TextLength > 0 && txtIdentificacion.TextLength > 0 && txtNPasaporte.TextLength > 0 && txtBoleto.TextLength > 0 && txtHoraFecha.TextLength > 0 && txtSalida.TextLength > 0 && txtEntrada.TextLength > 0 && txtVuelo.TextLength > 0 && txtEstadoV.TextLength > 0 &&
+                        cbNacionalidad.SelectedIndex != -1 && cbNacionalidad.SelectedIndex != 0 && control != null)
                     {
-                        //Codigo Guardar
-                        conexionBD.conectarBD();
-                        string insertar = "INSERT INTO tbl_ventanilla(Id,Nombre,Identificacion,HoraFecha,Usuario,Destino,Asiento,NumeroV,Boleto,Nacionalidad,NPasaporte,HoraEntrada,HoraSalida) VALUES(@Id,@Nombre,@Identificacion,@HoraFecha,@Usuario,@Destino,@Asiento,@NumeroV,@Boleto,@Nacionalidad,@NPasaporte,@HoraEntrada,@HoraSalida)";
-                        SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
-                        cmd.Parameters.AddWithValue("@Id", txtId.Text);
-                        cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-                        cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
-                        cmd.Parameters.AddWithValue("@HoraFecha", txtHoraFecha.Text);
-                        cmd.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
-                        cmd.Parameters.AddWithValue("@Destino", txtVuelo.Text);
-                        cmd.Parameters.AddWithValue("@NumeroV", txtNumeroVentanilla.Text);
-                        cmd.Parameters.AddWithValue("@Boleto", txtBoleto.Text);
-                        cmd.Parameters.AddWithValue("@Nacionalidad", cbNacionalidad.SelectedIndex);
-                        cmd.Parameters.AddWithValue("@NPasaporte", txtNPasaporte.Text);
-                        cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
-                        cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
 
-                        cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
+                        DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+
+                            //Codigo Guardar
+                            conexionBD.conectarBD();
+                            string insertar = "INSERT INTO tbl_ventanilla(Id,Nombre,Identificacion,HoraFecha,Usuario,Destino,Asiento,NumeroV,Boleto,Nacionalidad,NPasaporte,HoraEntrada,HoraSalida) VALUES(@Id,@Nombre,@Identificacion,@HoraFecha,@Usuario,@Destino,@Asiento,@NumeroV,@Boleto,@Nacionalidad,@NPasaporte,@HoraEntrada,@HoraSalida)";
+                            SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
+                            cmd.Parameters.AddWithValue("@Id", txtId.Text);
+                            cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+                            cmd.Parameters.AddWithValue("@Identificacion", txtIdentificacion.Text);
+                            cmd.Parameters.AddWithValue("@HoraFecha", txtHoraFecha.Text);
+                            cmd.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
+                            cmd.Parameters.AddWithValue("@Destino", txtVuelo.Text);
+                            cmd.Parameters.AddWithValue("@NumeroV", txtNumeroVentanilla.Text);
+                            cmd.Parameters.AddWithValue("@Boleto", txtBoleto.Text);
+                            cmd.Parameters.AddWithValue("@Nacionalidad", cbNacionalidad.SelectedIndex);
+                            cmd.Parameters.AddWithValue("@NPasaporte", txtNPasaporte.Text);
+                            cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
+                            cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
+
+                            cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
+                            MessageBox.Show(control);
+
+                            cmd.ExecuteNonQuery();
 
 
-                        cmd.ExecuteNonQuery();
-
-
-                        MessageBox.Show("Los datos fueron agregados de forma exitosa!!!");
-                        dataGridView1.DataSource = LLenar_grid1();
+                            MessageBox.Show("Los datos fueron agregados de forma exitosa!!!");
+                            dataGridView1.DataSource = LLenar_grid1();
+                        }
                     }
+                    else
+                    {
+                        MessageBox.Show("Necesita completar los datos para guardar el usuario");
+
+                    }
+
                 }
+
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -134,11 +150,9 @@ namespace Proyecto_p04
         }
         private void btnModificar_Click(object sender, EventArgs e)
         {
-
-
             try
             {
-                DialogResult result = MessageBox.Show("¿Desea aplicar los cambios?", "Confirmar Modificación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
@@ -165,8 +179,7 @@ namespace Proyecto_p04
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-
-                    MessageBox.Show("Cambios aplicados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView1.DataSource = LLenar_grid1();
                 }
             }
             catch (Exception ex)
@@ -174,15 +187,13 @@ namespace Proyecto_p04
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
             try
             {
-                DialogResult result = MessageBox.Show("¿Desea eliminar los datos?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
@@ -194,15 +205,13 @@ namespace Proyecto_p04
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Los datos fueron Eliminados!!!");
-
-                    MessageBox.Show("Datos eliminados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView1.DataSource = LLenar_grid1();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -1511,8 +1520,39 @@ namespace Proyecto_p04
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataTable dt = new DataTable();
+            string vuelo;
             txtVuelo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            vuelo = txtVuelo.Text;
+            dt = Clases.ventanillasDAL.getAsientoV(vuelo);
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow item in dt.Rows)
+                {
+                    string descripcion = item["Asiento"].ToString();
+                    // Buscar el control checkbox por su nombre en el formulario
+                    CheckBox checkBox = this.Controls[descripcion] as CheckBox;
+
+                    // Verificar si se encontró el checkbox y luego seleccionarlo
+                    if (checkBox != null)
+                    {
+                        checkBox.Checked = true;
+                        checkBox.Enabled = false;
+                        checkBox.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        checkBox.Checked = false;
+                        checkBox.Enabled = true;
+
+                    }
+                }
+            }
+
             txtEstadoV.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
         }
+
+
+
     }
 }
