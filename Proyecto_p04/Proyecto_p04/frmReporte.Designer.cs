@@ -41,12 +41,12 @@ namespace Proyecto_p04
             this.rbPasajeros = new System.Windows.Forms.RadioButton();
             this.rbCortes = new System.Windows.Forms.RadioButton();
             this.rbMoneda = new System.Windows.Forms.RadioButton();
+            this.rbVuelos = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.btnExcel = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
             this.dtpFechaF = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.rbVuelos = new System.Windows.Forms.RadioButton();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -100,7 +100,7 @@ namespace Proyecto_p04
             this.gbDatos.Controls.Add(this.label1);
             this.gbDatos.Location = new System.Drawing.Point(12, 12);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(854, 106);
+            this.gbDatos.Size = new System.Drawing.Size(913, 106);
             this.gbDatos.TabIndex = 3;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos:";
@@ -109,7 +109,7 @@ namespace Proyecto_p04
             // cbVuelosNombres
             // 
             this.cbVuelosNombres.FormattingEnabled = true;
-            this.cbVuelosNombres.Location = new System.Drawing.Point(624, 60);
+            this.cbVuelosNombres.Location = new System.Drawing.Point(672, 58);
             this.cbVuelosNombres.Name = "cbVuelosNombres";
             this.cbVuelosNombres.Size = new System.Drawing.Size(206, 21);
             this.cbVuelosNombres.TabIndex = 16;
@@ -123,7 +123,7 @@ namespace Proyecto_p04
             "Ventanilla 02",
             "Ventanilla 03",
             "Ventanilla 04"});
-            this.cbVentanilla.Location = new System.Drawing.Point(346, 60);
+            this.cbVentanilla.Location = new System.Drawing.Point(394, 58);
             this.cbVentanilla.Name = "cbVentanilla";
             this.cbVentanilla.Size = new System.Drawing.Size(136, 21);
             this.cbVentanilla.TabIndex = 13;
@@ -135,7 +135,7 @@ namespace Proyecto_p04
             this.cbMonetario.Items.AddRange(new object[] {
             "Vuelo",
             "Ventanilla"});
-            this.cbMonetario.Location = new System.Drawing.Point(205, 60);
+            this.cbMonetario.Location = new System.Drawing.Point(253, 58);
             this.cbMonetario.Name = "cbMonetario";
             this.cbMonetario.Size = new System.Drawing.Size(135, 21);
             this.cbMonetario.TabIndex = 12;
@@ -149,7 +149,7 @@ namespace Proyecto_p04
             "Avión",
             "Escala",
             "Destino"});
-            this.cbPasajeros.Location = new System.Drawing.Point(488, 60);
+            this.cbPasajeros.Location = new System.Drawing.Point(536, 58);
             this.cbPasajeros.Name = "cbPasajeros";
             this.cbPasajeros.Size = new System.Drawing.Size(130, 21);
             this.cbPasajeros.TabIndex = 11;
@@ -158,7 +158,7 @@ namespace Proyecto_p04
             // rbPasajeros
             // 
             this.rbPasajeros.AutoSize = true;
-            this.rbPasajeros.Location = new System.Drawing.Point(131, 64);
+            this.rbPasajeros.Location = new System.Drawing.Point(170, 62);
             this.rbPasajeros.Name = "rbPasajeros";
             this.rbPasajeros.Size = new System.Drawing.Size(71, 17);
             this.rbPasajeros.TabIndex = 10;
@@ -183,11 +183,25 @@ namespace Proyecto_p04
             this.rbMoneda.AutoSize = true;
             this.rbMoneda.Location = new System.Drawing.Point(53, 62);
             this.rbMoneda.Name = "rbMoneda";
-            this.rbMoneda.Size = new System.Drawing.Size(72, 17);
+            this.rbMoneda.Size = new System.Drawing.Size(115, 17);
             this.rbMoneda.TabIndex = 8;
-            this.rbMoneda.Text = "Monetario";
+            this.rbMoneda.Text = "Monetario y Vuelos";
             this.rbMoneda.UseVisualStyleBackColor = true;
             this.rbMoneda.CheckedChanged += new System.EventHandler(this.rbMoneda_CheckedChanged);
+            // 
+            // rbVuelos
+            // 
+            this.rbVuelos.AutoSize = true;
+            this.rbVuelos.Checked = true;
+            this.rbVuelos.Location = new System.Drawing.Point(733, 19);
+            this.rbVuelos.Name = "rbVuelos";
+            this.rbVuelos.Size = new System.Drawing.Size(57, 17);
+            this.rbVuelos.TabIndex = 7;
+            this.rbVuelos.TabStop = true;
+            this.rbVuelos.Text = "Vuelos";
+            this.rbVuelos.UseVisualStyleBackColor = true;
+            this.rbVuelos.Visible = false;
+            this.rbVuelos.CheckedChanged += new System.EventHandler(this.rbVuelos_CheckedChanged);
             // 
             // label3
             // 
@@ -240,29 +254,15 @@ namespace Proyecto_p04
             this.dataGridView1.Location = new System.Drawing.Point(12, 124);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(854, 314);
+            this.dataGridView1.Size = new System.Drawing.Size(913, 314);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // rbVuelos
-            // 
-            this.rbVuelos.AutoSize = true;
-            this.rbVuelos.Checked = true;
-            this.rbVuelos.Location = new System.Drawing.Point(733, 19);
-            this.rbVuelos.Name = "rbVuelos";
-            this.rbVuelos.Size = new System.Drawing.Size(57, 17);
-            this.rbVuelos.TabIndex = 7;
-            this.rbVuelos.TabStop = true;
-            this.rbVuelos.Text = "Vuelos";
-            this.rbVuelos.UseVisualStyleBackColor = true;
-            this.rbVuelos.Visible = false;
-            this.rbVuelos.CheckedChanged += new System.EventHandler(this.rbVuelos_CheckedChanged);
             // 
             // frmReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(878, 450);
+            this.ClientSize = new System.Drawing.Size(937, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gbDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
