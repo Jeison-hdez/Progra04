@@ -17,13 +17,6 @@ namespace Proyecto_p04
             InitializeComponent();
         }
 
-        //Variable global de usuario
-        public static class GlobalVariables
-        {
-            public static string Usuario { get; set; }
-        }
-
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -35,8 +28,6 @@ namespace Proyecto_p04
             {
                 Login(txtPassword.Text.Trim(), txtUsuario.Text.Trim());
             }
-
-            GlobalVariables.Usuario = txtUsuario.Text;
         }
 
         public void Login(string pass, string usuario)
