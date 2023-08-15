@@ -124,9 +124,9 @@ namespace Proyecto_p04
                     SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
 
                     cmd.Parameters.AddWithValue("@Id", txtID.Text);
-                    cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
+                    cmd.Parameters.AddWithValue("@Identificacion", txtNombre.Text);
                     cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
-                    cmd.Parameters.AddWithValue("@Descripcion", txtNombre.Text);
+                    cmd.Parameters.AddWithValue("@Descripcion", txtIdentidicacion.Text);
                     cmd.Parameters.AddWithValue("@PaisOrigen", cbPaises.SelectedIndex);
 
 

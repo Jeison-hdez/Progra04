@@ -1550,6 +1550,8 @@ namespace Proyecto_p04
         }
 
 
+
+
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtId.Text = dataGridView2.CurrentRow.Cells[0].Value.ToString();
