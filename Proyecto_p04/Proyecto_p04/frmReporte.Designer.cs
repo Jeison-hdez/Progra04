@@ -34,7 +34,7 @@ namespace Proyecto_p04
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gbDatos = new System.Windows.Forms.GroupBox();
-            this.cbVuelos = new System.Windows.Forms.ComboBox();
+            this.cbVentanilla = new System.Windows.Forms.ComboBox();
             this.cbMonetario = new System.Windows.Forms.ComboBox();
             this.cbPasajeros = new System.Windows.Forms.ComboBox();
             this.rbPasajeros = new System.Windows.Forms.RadioButton();
@@ -46,6 +46,7 @@ namespace Proyecto_p04
             this.btnReporte = new System.Windows.Forms.Button();
             this.dtpFechaF = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cbVuelosNombres = new System.Windows.Forms.ComboBox();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -80,10 +81,10 @@ namespace Proyecto_p04
             // 
             // gbDatos
             // 
-            this.gbDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.gbDatos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbDatos.Controls.Add(this.cbVuelos);
+            this.gbDatos.Controls.Add(this.cbVuelosNombres);
+            this.gbDatos.Controls.Add(this.cbVentanilla);
             this.gbDatos.Controls.Add(this.cbMonetario);
             this.gbDatos.Controls.Add(this.cbPasajeros);
             this.gbDatos.Controls.Add(this.rbPasajeros);
@@ -99,37 +100,38 @@ namespace Proyecto_p04
             this.gbDatos.Controls.Add(this.label1);
             this.gbDatos.Location = new System.Drawing.Point(12, 12);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(776, 96);
+            this.gbDatos.Size = new System.Drawing.Size(854, 106);
             this.gbDatos.TabIndex = 3;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos:";
+            this.gbDatos.Enter += new System.EventHandler(this.gbDatos_Enter);
             // 
-            // cbVuelos
+            // cbVentanilla
             // 
-            this.cbVuelos.FormattingEnabled = true;
-            this.cbVuelos.Items.AddRange(new object[] {
+            this.cbVentanilla.FormattingEnabled = true;
+            this.cbVentanilla.Items.AddRange(new object[] {
             "Ventanilla 01",
             "Ventanilla 02",
             "Ventanilla 03",
-            "Ventanilla 04",
-            "Todas"});
-            this.cbVuelos.Location = new System.Drawing.Point(383, 61);
-            this.cbVuelos.Name = "cbVuelos";
-            this.cbVuelos.Size = new System.Drawing.Size(121, 21);
-            this.cbVuelos.TabIndex = 13;
+            "Ventanilla 04"});
+            this.cbVentanilla.Location = new System.Drawing.Point(407, 61);
+            this.cbVentanilla.Name = "cbVentanilla";
+            this.cbVentanilla.Size = new System.Drawing.Size(121, 21);
+            this.cbVentanilla.TabIndex = 13;
+            this.cbVentanilla.Visible = false;
             // 
             // cbMonetario
             // 
             this.cbMonetario.FormattingEnabled = true;
             this.cbMonetario.Items.AddRange(new object[] {
             "Vuelo",
-            "Ventanilla",
-            "Todos"});
-            this.cbMonetario.Location = new System.Drawing.Point(510, 61);
+            "Ventanilla"});
+            this.cbMonetario.Location = new System.Drawing.Point(275, 61);
             this.cbMonetario.Name = "cbMonetario";
             this.cbMonetario.Size = new System.Drawing.Size(121, 21);
             this.cbMonetario.TabIndex = 12;
             this.cbMonetario.Visible = false;
+            this.cbMonetario.SelectedIndexChanged += new System.EventHandler(this.cbMonetario_SelectedIndexChanged);
             // 
             // cbPasajeros
             // 
@@ -138,7 +140,7 @@ namespace Proyecto_p04
             "Avión",
             "Escala",
             "Destino"});
-            this.cbPasajeros.Location = new System.Drawing.Point(637, 61);
+            this.cbPasajeros.Location = new System.Drawing.Point(538, 61);
             this.cbPasajeros.Name = "cbPasajeros";
             this.cbPasajeros.Size = new System.Drawing.Size(121, 21);
             this.cbPasajeros.TabIndex = 11;
@@ -147,7 +149,7 @@ namespace Proyecto_p04
             // rbPasajeros
             // 
             this.rbPasajeros.AutoSize = true;
-            this.rbPasajeros.Location = new System.Drawing.Point(247, 62);
+            this.rbPasajeros.Location = new System.Drawing.Point(190, 62);
             this.rbPasajeros.Name = "rbPasajeros";
             this.rbPasajeros.Size = new System.Drawing.Size(71, 17);
             this.rbPasajeros.TabIndex = 10;
@@ -158,12 +160,14 @@ namespace Proyecto_p04
             // rbCortes
             // 
             this.rbCortes.AutoSize = true;
-            this.rbCortes.Location = new System.Drawing.Point(186, 62);
+            this.rbCortes.Location = new System.Drawing.Point(672, 21);
             this.rbCortes.Name = "rbCortes";
             this.rbCortes.Size = new System.Drawing.Size(55, 17);
             this.rbCortes.TabIndex = 9;
             this.rbCortes.Text = "Cortes";
             this.rbCortes.UseVisualStyleBackColor = true;
+            this.rbCortes.Visible = false;
+            this.rbCortes.CheckedChanged += new System.EventHandler(this.rbCortes_CheckedChanged);
             // 
             // rbMoneda
             // 
@@ -210,6 +214,7 @@ namespace Proyecto_p04
             this.btnExcel.TabIndex = 5;
             this.btnExcel.Text = "Excel";
             this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // btnReporte
             // 
@@ -231,20 +236,32 @@ namespace Proyecto_p04
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 114);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 124);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 324);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(854, 314);
             this.dataGridView1.TabIndex = 4;
+            // 
+            // cbVuelosNombres
+            // 
+            this.cbVuelosNombres.FormattingEnabled = true;
+            this.cbVuelosNombres.Location = new System.Drawing.Point(665, 61);
+            this.cbVuelosNombres.Name = "cbVuelosNombres";
+            this.cbVuelosNombres.Size = new System.Drawing.Size(183, 21);
+            this.cbVuelosNombres.TabIndex = 16;
+            this.cbVuelosNombres.Visible = false;
             // 
             // frmReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(878, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gbDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -275,6 +292,7 @@ namespace Proyecto_p04
         private System.Windows.Forms.RadioButton rbCortes;
         private System.Windows.Forms.ComboBox cbPasajeros;
         private System.Windows.Forms.ComboBox cbMonetario;
-        private System.Windows.Forms.ComboBox cbVuelos;
+        private System.Windows.Forms.ComboBox cbVentanilla;
+        private System.Windows.Forms.ComboBox cbVuelosNombres;
     }
 }
