@@ -45,7 +45,7 @@ namespace Proyecto_p04
 
             try
             {
-                if (txtNombre.TextLength > 0 && txtId.TextLength > 0 && txtIdentificacion.TextLength > 0 && txtAnosE.TextLength > 0 && cbPaises.SelectedIndex != -1 && cbPaises.SelectedIndex != 0)
+                if (txtNombre.TextLength > 0 && txtIdentificacion.TextLength > 0 && txtAnosE.TextLength > 0 && cbPaises.SelectedIndex != -1 && cbPaises.SelectedIndex != 0)
                 {
 
                     DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
