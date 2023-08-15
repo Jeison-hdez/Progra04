@@ -18,5 +18,16 @@ namespace Proyecto_p04.Clases
             ada.Fill(dt);
             return dt;
         }
+
+        public static int updaPiloto(string nombre, string Identificacion, string AnosExpe, string Nacionalidad, string Id)
+        {
+            int resultado = 0;
+            SqlCommand cmd = new SqlCommand(string.Format("update tbl_pilotos set Nombre='{0}', Identificacion='{1}', AnosExpe='{2}', Nacionalidad='{3}' where Id='{4}'", nombre,Identificacion,AnosExpe,Nacionalidad,Id), conexionBD.conectarBD());
+            resultado = cmd.ExecuteNonQuery();
+            return resultado;
+        }
+
     }
+
+   
 }

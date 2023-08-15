@@ -75,25 +75,32 @@ namespace Proyecto_p04
         {
             try
             {
-                DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
+                if (txtNombre.TextLength > 0 && txtIdentidicacion.TextLength > 0  && cbPaises.SelectedIndex != -1 && cbPaises.SelectedIndex != 0)
                 {
-                    //Codigo Guardar
-                    conexionBD.conectarBD();
-                    string insertar = "INSERT INTO tbl_aerolineas(Identificacion,Estado,Descripcion,PaisOrigen) VALUES(@Identificacion,@Estado,@Descripcion,@PaisOrigen)";
-                    SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
-            
-                    cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
-                    cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
-                    cmd.Parameters.AddWithValue("@Descripcion", txtNombre.Text);
-                    cmd.Parameters.AddWithValue("@PaisOrigen", cbPaises.SelectedIndex);
-                    cmd.ExecuteNonQuery();
+                    DialogResult result = MessageBox.Show("¿Desea guardar los datos?", "Confirmar Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        //Codigo Guardar
+                        conexionBD.conectarBD();
+                        string insertar = "INSERT INTO tbl_aerolineas(Identificacion,Estado,Descripcion,PaisOrigen) VALUES(@Identificacion,@Estado,@Descripcion,@PaisOrigen)";
+                        SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
+
+                        cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
+                        cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
+                        cmd.Parameters.AddWithValue("@Descripcion", txtNombre.Text);
+                        cmd.Parameters.AddWithValue("@PaisOrigen", cbPaises.SelectedIndex);
+                        cmd.ExecuteNonQuery();
 
 
-                    MessageBox.Show("Los datosfueron agregados de forma exitosa!!!");
-                    dgvAerolinea.DataSource = LLenar_grid();
+                        MessageBox.Show("Los datos fueron agregados de forma exitosa!!!");
+                        dgvAerolinea.DataSource = LLenar_grid();
 
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Necesita completar los datos para guardar el usuario");
                 }
             }
             catch (Exception ex)
@@ -113,13 +120,13 @@ namespace Proyecto_p04
                 {
                     //Codigo Modificar
                     conexionBD.conectarBD();
-                    string actualizar = "UPDATE tbl_aerolineas SET Id=@Id,Identificacion=@Identificacion,Estado=@Estado,Nombre=@Nombre,PaisOrigen=@PaisOrigen WHERE Id=@Id";
+                    string actualizar = "UPDATE tbl_aerolineas SET Identificacion=@Identificacion,Estado=@Estado,Descripcion=@Descripcion,PaisOrigen=@PaisOrigen WHERE Id=@Id";
                     SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
 
                     cmd.Parameters.AddWithValue("@Id", txtID.Text);
                     cmd.Parameters.AddWithValue("@Identificacion", txtIdentidicacion.Text);
                     cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
-                    cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+                    cmd.Parameters.AddWithValue("@Descripcion", txtNombre.Text);
                     cmd.Parameters.AddWithValue("@PaisOrigen", cbPaises.SelectedIndex);
 
 
