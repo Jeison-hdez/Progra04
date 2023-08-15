@@ -1537,10 +1537,14 @@ namespace Proyecto_p04
             dt = Clases.ventanillasDAL.getAsientoV(vuelo);
             if (dt.Rows.Count > 0)
             {
-                foreach (DataRowView item in dt.Rows)
+                foreach (DataRow item in dt.Rows)
                 {
                     string descripcion = item["Asiento"].ToString();
-                    
+                    CheckBox MycheckBox = new CheckBox();
+
+                    MycheckBox.Name = descripcion;
+
+                    MycheckBox.Checked = true;
                 }
             }
 
