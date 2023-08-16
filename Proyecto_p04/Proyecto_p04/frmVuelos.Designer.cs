@@ -69,6 +69,10 @@
             this.cbEstadoV = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbSi = new System.Windows.Forms.RadioButton();
+            this.rbNo = new System.Windows.Forms.RadioButton();
+            this.cbPaises = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -77,13 +81,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSeleccionar
             // 
             this.btnSeleccionar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(36, 428);
+            this.btnSeleccionar.Location = new System.Drawing.Point(36, 500);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(88, 35);
             this.btnSeleccionar.TabIndex = 0;
@@ -97,9 +102,9 @@
             this.lstVuelo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.lstVuelo.FormattingEnabled = true;
             this.lstVuelo.ItemHeight = 16;
-            this.lstVuelo.Location = new System.Drawing.Point(36, 98);
+            this.lstVuelo.Location = new System.Drawing.Point(12, 98);
             this.lstVuelo.Name = "lstVuelo";
-            this.lstVuelo.Size = new System.Drawing.Size(176, 324);
+            this.lstVuelo.Size = new System.Drawing.Size(208, 324);
             this.lstVuelo.TabIndex = 1;
             // 
             // lstMarca
@@ -108,9 +113,9 @@
             this.lstMarca.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.lstMarca.FormattingEnabled = true;
             this.lstMarca.ItemHeight = 16;
-            this.lstMarca.Location = new System.Drawing.Point(227, 98);
+            this.lstMarca.Location = new System.Drawing.Point(248, 98);
             this.lstMarca.Name = "lstMarca";
-            this.lstMarca.Size = new System.Drawing.Size(166, 324);
+            this.lstMarca.Size = new System.Drawing.Size(174, 324);
             this.lstMarca.TabIndex = 2;
             this.lstMarca.SelectedIndexChanged += new System.EventHandler(this.lstMarca_SelectedIndexChanged);
             // 
@@ -139,7 +144,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(130, 429);
+            this.pictureBox1.Location = new System.Drawing.Point(130, 501);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 35);
             this.pictureBox1.TabIndex = 381;
@@ -148,7 +153,7 @@
             // txtVueloSeleccionado
             // 
             this.txtVueloSeleccionado.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVueloSeleccionado.Location = new System.Drawing.Point(171, 428);
+            this.txtVueloSeleccionado.Location = new System.Drawing.Point(171, 500);
             this.txtVueloSeleccionado.Multiline = true;
             this.txtVueloSeleccionado.Name = "txtVueloSeleccionado";
             this.txtVueloSeleccionado.ReadOnly = true;
@@ -262,7 +267,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(33, 77);
+            this.label3.Location = new System.Drawing.Point(9, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 18);
             this.label3.TabIndex = 399;
@@ -325,7 +330,7 @@
             // 
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(36, 517);
+            this.dataGridView2.Location = new System.Drawing.Point(18, 592);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(404, 150);
@@ -337,7 +342,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(33, 496);
+            this.label7.Location = new System.Drawing.Point(15, 571);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(205, 18);
             this.label7.TabIndex = 406;
@@ -346,7 +351,7 @@
             // txtpiloto
             // 
             this.txtpiloto.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpiloto.Location = new System.Drawing.Point(244, 489);
+            this.txtpiloto.Location = new System.Drawing.Point(226, 564);
             this.txtpiloto.Multiline = true;
             this.txtpiloto.Name = "txtpiloto";
             this.txtpiloto.ReadOnly = true;
@@ -357,7 +362,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(241, 468);
+            this.label8.Location = new System.Drawing.Point(223, 543);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(100, 18);
             this.label8.TabIndex = 408;
@@ -367,7 +372,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(704, 468);
+            this.label9.Location = new System.Drawing.Point(686, 543);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(140, 18);
             this.label9.TabIndex = 412;
@@ -376,7 +381,7 @@
             // txtAerolinea
             // 
             this.txtAerolinea.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAerolinea.Location = new System.Drawing.Point(707, 489);
+            this.txtAerolinea.Location = new System.Drawing.Point(689, 564);
             this.txtAerolinea.Multiline = true;
             this.txtAerolinea.Name = "txtAerolinea";
             this.txtAerolinea.ReadOnly = true;
@@ -387,7 +392,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(470, 496);
+            this.label10.Location = new System.Drawing.Point(452, 571);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(231, 18);
             this.label10.TabIndex = 410;
@@ -397,7 +402,7 @@
             // 
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(473, 517);
+            this.dataGridView3.Location = new System.Drawing.Point(455, 592);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.Size = new System.Drawing.Size(422, 150);
@@ -495,12 +500,63 @@
             this.label14.TabIndex = 423;
             this.label14.Text = "1 = Si disponeble / 0 = No disponible";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cbPaises);
+            this.groupBox1.Controls.Add(this.rbNo);
+            this.groupBox1.Controls.Add(this.rbSi);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(171, 436);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(525, 58);
+            this.groupBox1.TabIndex = 424;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "¿El vuelo posee escala?";
+            // 
+            // rbSi
+            // 
+            this.rbSi.AutoSize = true;
+            this.rbSi.Location = new System.Drawing.Point(6, 32);
+            this.rbSi.Name = "rbSi";
+            this.rbSi.Size = new System.Drawing.Size(87, 20);
+            this.rbSi.TabIndex = 0;
+            this.rbSi.TabStop = true;
+            this.rbSi.Text = "Si posee";
+            this.rbSi.UseVisualStyleBackColor = true;
+            this.rbSi.CheckedChanged += new System.EventHandler(this.rbSi_CheckedChanged);
+            // 
+            // rbNo
+            // 
+            this.rbNo.AutoSize = true;
+            this.rbNo.Location = new System.Drawing.Point(124, 32);
+            this.rbNo.Name = "rbNo";
+            this.rbNo.Size = new System.Drawing.Size(93, 20);
+            this.rbNo.TabIndex = 1;
+            this.rbNo.TabStop = true;
+            this.rbNo.Text = "No posee";
+            this.rbNo.UseVisualStyleBackColor = true;
+            this.rbNo.CheckedChanged += new System.EventHandler(this.rbNo_CheckedChanged);
+            // 
+            // cbPaises
+            // 
+            this.cbPaises.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPaises.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPaises.FormattingEnabled = true;
+            this.cbPaises.Items.AddRange(new object[] {
+            "No Escala",
+            "Seleccione Escala"});
+            this.cbPaises.Location = new System.Drawing.Point(223, 29);
+            this.cbPaises.Name = "cbPaises";
+            this.cbPaises.Size = new System.Drawing.Size(177, 23);
+            this.cbPaises.TabIndex = 425;
+            // 
             // frmVuelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1388, 692);
+            this.ClientSize = new System.Drawing.Size(1388, 757);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.cbEstadoV);
@@ -553,6 +609,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -600,5 +658,9 @@
         private System.Windows.Forms.ComboBox cbEstadoV;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbNo;
+        private System.Windows.Forms.RadioButton rbSi;
+        private System.Windows.Forms.ComboBox cbPaises;
     }
 }
