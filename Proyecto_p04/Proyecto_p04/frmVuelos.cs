@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -271,7 +272,28 @@ namespace Proyecto_p04
                 lstModelo.Items.Add("767");
                 lstModelo.Items.Add("777");
                 lstModelo.Items.Add("787 Dreamliner");
-                
+
+                string imageUrl = "https://www.pngall.com/wp-content/uploads/5/Flying-Aeroplane-PNG-Clipart.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
+
+
             }
             if (lstMarca.SelectedItem == "Airbus")
             {
@@ -281,7 +303,29 @@ namespace Proyecto_p04
                 lstModelo.Items.Add("a330");
                 lstModelo.Items.Add("a350");
                 lstModelo.Items.Add("a380");
-                
+
+
+                string imageUrl = "https://www.pngmart.com/files/6/Airbus-PNG-Photos.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                           // Mostrar la imagen en el PictureBox
+                           pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
+
+
 
             }
             if (lstMarca.SelectedItem == "Embraer")
@@ -291,8 +335,26 @@ namespace Proyecto_p04
                 lstModelo.Items.Add("E-Jet E2");
                 lstModelo.Items.Add("ERJ 145");
                 lstModelo.Items.Add("Phenom 300");
-                
 
+                string imageUrl = "https://patriotaviation.mx/wp-content/uploads/2020/08/PHENOM300-2.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
 
             }
             if (lstMarca.SelectedItem == "Bombardier")
@@ -302,6 +364,26 @@ namespace Proyecto_p04
                 lstModelo.Items.Add("Serie CRJ");
                 lstModelo.Items.Add("Global Express");
                 lstModelo.Items.Add("Serie Challenger de Bombardier");
+
+                string imageUrl = "https://uploads-ssl.webflow.com/5efdba023305d23112eed72e/5f905ea1dfc7479755d11312_portfolio_item_global6000_2.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
 
 
 
@@ -314,7 +396,25 @@ namespace Proyecto_p04
                 lstModelo.Items.Add("208 caravana");
                 lstModelo.Items.Add("Serie de citas de Cessna");
 
+                string imageUrl = "https://www.aerolineasejecutivas.com/static/fab1ccabdcbbb62914a7ce0925c5f1c3/ee604/thumbnail.png"; // Obtener el enlace de la imagen desde el cuadro de texto
 
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
 
             }
             if (lstMarca.SelectedItem == "Dassault")
@@ -323,7 +423,27 @@ namespace Proyecto_p04
 
                 lstModelo.Items.Add("Rafale");
                 lstModelo.Items.Add("Serie Dassault Falcon");
-                
+
+                string imageUrl = "https://globaljet.aero/sites/default/files/2023-03/Exterior%20for%20Web_better%20quality.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
+
             }
             if (lstMarca.SelectedItem == "Fokker")
             {
@@ -331,6 +451,26 @@ namespace Proyecto_p04
 
                 lstModelo.Items.Add("F27 Amistad");
                 lstModelo.Items.Add("F50");
+
+                string imageUrl = "https://www.airline-empires.com/uploads/gallery/album_564/med_gallery_24652_564_145811.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
 
             }
             if (lstMarca.SelectedItem == "Gulfstream")
@@ -340,13 +480,59 @@ namespace Proyecto_p04
                 lstModelo.Items.Add("G550");
                 lstModelo.Items.Add("G650");
 
+                string imageUrl = "https://businessaircraft.bombardier.com/sites/default/files/2018-05/DDBA0457_Global7500_RightSide_V1.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
+
+
             }
+
+
+
+
             if (lstMarca.SelectedItem == "Hawker")
             {
                 lstModelo.Items.Clear();
 
                 lstModelo.Items.Add("4000");
                 lstModelo.Items.Add("800");
+
+                string imageUrl = "https://patriotaviation.mx/wp-content/uploads/2020/08/HAWKER700-1.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
+
 
             }
             if (lstMarca.SelectedItem == "Lockheed Martin")
@@ -356,6 +542,26 @@ namespace Proyecto_p04
                 lstModelo.Items.Add("F-22 Raptor");
                 lstModelo.Items.Add("C-130 Hércules");
 
+                string imageUrl = "https://w7.pngwing.com/pngs/706/600/png-transparent-airplane-fighter-aircraft-lockheed-p-3-orion-helicopter-air-force-airplane-fighter-aircraft-airplane-helicopter.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
+
             }
             if (lstMarca.SelectedItem == "McDonnell-Douglas")
             {
@@ -363,6 +569,26 @@ namespace Proyecto_p04
 
                 lstModelo.Items.Add("MD-80");
                 lstModelo.Items.Add("F/A-18");
+
+                string imageUrl = "https://www.lne.es/ideas/aviones/images/avion07.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
 
             }
             if (lstMarca.SelectedItem == "Piper")
@@ -372,13 +598,54 @@ namespace Proyecto_p04
                 lstModelo.Items.Add("PA-28 Cherokee");
                 lstModelo.Items.Add("PA-34 Séneca");
 
+                string imageUrl = "https://www.sud-rc.fr/img/cms/Avion/PIPER-PA-38-TOMAHAWK-1830mm-ARF-Jamara-012150.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
+
+
             }
             if (lstMarca.SelectedItem == "Saab")
             {
                 lstModelo.Items.Clear();
 
                 lstModelo.Items.Add("JAS 39 Gripen");
-                
+
+                string imageUrl = "https://www.swiftair.com/wp-content/uploads/2018/04/EMB120.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
+
 
             }
             if (lstMarca.SelectedItem == "Sujoi")
@@ -387,6 +654,27 @@ namespace Proyecto_p04
 
                 lstModelo.Items.Add("Su-27");
                 lstModelo.Items.Add("Su-35");
+
+                string imageUrl = "https://4.bp.blogspot.com/-oC7yrVYZTQM/T8d-XwJdBdI/AAAAAAAAD54/HrDmTfxuOaI/s1600/Sukhoi+Superjet+100.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
+
             }
             if (lstMarca.SelectedItem == "Tupolev")
             {
@@ -394,6 +682,27 @@ namespace Proyecto_p04
 
                 lstModelo.Items.Add("Tu-154");
                 lstModelo.Items.Add("Tu-204");
+
+                string imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/KLM_Boeing_747.png/800px-KLM_Boeing_747.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
+
             }
             if (lstMarca.SelectedItem == "Antonov")
             {
@@ -401,6 +710,27 @@ namespace Proyecto_p04
 
                 lstModelo.Items.Add("An-124 Ruslán");
                 lstModelo.Items.Add("An-225 Mriya");
+
+                string imageUrl = "https://www.avico.com/wp-content/uploads/2021/12/an225.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
+
             }
             if (lstMarca.SelectedItem == "Beechcraft")
             {
@@ -408,13 +738,55 @@ namespace Proyecto_p04
 
                 lstModelo.Items.Add("Serie King Air ");
                 lstModelo.Items.Add("Bonanza");
+
+                string imageUrl = "https://www.aerolineasejecutivas.com/static/0dfcfcb0b10cd69fe7cd3271210fc8b4/ee604/thumbnail.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
+
+
             }
             if (lstMarca.SelectedItem == "Emivest Aerospace")
             {
                 lstModelo.Items.Clear();
 
                 lstModelo.Items.Add("SJ30");
-                
+
+                string imageUrl = "https://w7.pngwing.com/pngs/969/875/png-transparent-bombardier-challenger-600-series-flight-aircraft-syberjet-sj30-air-travel-aircraft-mode-of-transport-flight-airplane.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
+
             }
             if (lstMarca.SelectedItem == "Ilyushin")
             {
@@ -422,6 +794,27 @@ namespace Proyecto_p04
 
                 lstModelo.Items.Add("Il-76");
                 lstModelo.Items.Add("Il-96");
+
+                string imageUrl = "https://www.avico.com/wp-content/uploads/2021/12/maxresdefault-removebg-preview.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
+
             }
             if (lstMarca.SelectedItem == "KAI")
             {
@@ -429,6 +822,27 @@ namespace Proyecto_p04
 
                 lstModelo.Items.Add("T-50 Águila Dorada");
                 lstModelo.Items.Add(" KF-X ");
+
+
+                string imageUrl = "https://www.swiftair.com/wp-content/uploads/2018/01/ATR42.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+
+                try
+                {
+                    // Descargar la imagen desde el enlace
+                    using (WebClient webClient = new WebClient())
+                    {
+                        byte[] imageBytes = webClient.DownloadData(imageUrl);
+                        using (var stream = new System.IO.MemoryStream(imageBytes))
+                        {
+                            // Mostrar la imagen en el PictureBox
+                            pbAviones.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
             }
         }
 
