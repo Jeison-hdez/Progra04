@@ -87,7 +87,7 @@ namespace Proyecto_p04
                     user.Nombre = txtNombre.Text;
                     user.identificacion = txtIdentificacion.Text;
 
-                    if (txtNombre.TextLength > 0 && txtPassword.TextLength > 0 && txtNombre.TextLength > 0 && txtIdentificacion.TextLength > 0)
+                    if (txtUsuario.TextLength > 0 && txtPassword.TextLength > 0 && txtNombre.TextLength > 0 && txtIdentificacion.TextLength > 0)
                     {
                         int resultado = Clases.UsuariosDAL.InsertUser(user);
 

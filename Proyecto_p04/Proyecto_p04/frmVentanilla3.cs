@@ -24,7 +24,7 @@ namespace Proyecto_p04
         private void frmVentanilla3_Load(object sender, EventArgs e)
         {
             // Accede a la variable global Usuario desde GlobalVariables
-            string usuario = GlobalVariables.Usuario;
+            string usuario = Globales.Usuario;
 
             //Muestra en un txtUsuario el usuario 
             txtUsuario.Text = usuario;
