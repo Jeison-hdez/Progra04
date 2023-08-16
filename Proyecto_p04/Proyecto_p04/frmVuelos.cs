@@ -452,7 +452,7 @@ namespace Proyecto_p04
                 lstModelo.Items.Add("F27 Amistad");
                 lstModelo.Items.Add("F50");
 
-                string imageUrl = "https://www.airline-empires.com/uploads/gallery/album_564/med_gallery_24652_564_145811.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+                string imageUrl = "https://flyings.net/images/aircraft/V3_.png"; // Obtener el enlace de la imagen desde el cuadro de texto
 
                 try
                 {
@@ -563,14 +563,14 @@ namespace Proyecto_p04
                 }
 
             }
-            if (lstMarca.SelectedItem == "McDonnell-Douglas")
+            if (lstMarca.SelectedItem == "McDonnell Douglas")
             {
                 lstModelo.Items.Clear();
 
                 lstModelo.Items.Add("MD-80");
                 lstModelo.Items.Add("F/A-18");
 
-                string imageUrl = "https://www.lne.es/ideas/aviones/images/avion07.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+                string imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/McDonnell_Douglas_DC-10.svg/1280px-McDonnell_Douglas_DC-10.svg.png"; // Obtener el enlace de la imagen desde el cuadro de texto
 
                 try
                 {
@@ -683,7 +683,7 @@ namespace Proyecto_p04
                 lstModelo.Items.Add("Tu-154");
                 lstModelo.Items.Add("Tu-204");
 
-                string imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/KLM_Boeing_747.png/800px-KLM_Boeing_747.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+                string imageUrl = "https://www.aviationtoday.com/wp-content/uploads/2016/12/368_image.png"; // Obtener el enlace de la imagen desde el cuadro de texto
 
                 try
                 {
