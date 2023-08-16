@@ -860,8 +860,9 @@ namespace Proyecto_p04
                     string vueloSeleccionado = lstVuelo.SelectedItem.ToString();
                     string marcaSeleccionada = lstMarca.SelectedItem.ToString();
                     string modeloSeleccionado = lstModelo.SelectedItem.ToString();
-                    
-                    txtVueloSeleccionado.Text = $"{vueloSeleccionado}{",(Vuelo Directo)"} - {marcaSeleccionada} - {modeloSeleccionado}";
+                    string Escala = cbPaises.SelectedItem.ToString();
+
+                    txtVueloSeleccionado.Text = $"{vueloSeleccionado}{",(Escala: " + Escala + ")"} - {marcaSeleccionada} - {modeloSeleccionado}";
 
                 }
                 else
@@ -870,7 +871,7 @@ namespace Proyecto_p04
                     string marcaSeleccionada = lstMarca.SelectedItem.ToString();
                     string modeloSeleccionado = lstModelo.SelectedItem.ToString();
                     string Escala = cbPaises.SelectedItem.ToString();
-                    txtVueloSeleccionado.Text = $"{vueloSeleccionado}{",(Escala: " + Escala + ")"} - {marcaSeleccionada} - {modeloSeleccionado}";
+                    txtVueloSeleccionado.Text = $"{vueloSeleccionado}{",(Vuelo Directo)"} - {marcaSeleccionada} - {modeloSeleccionado}";
 
                 }
 
