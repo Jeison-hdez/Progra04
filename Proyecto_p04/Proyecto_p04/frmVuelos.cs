@@ -441,7 +441,7 @@ namespace Proyecto_p04
         {
             if (lstVuelo.SelectedItem != null && lstMarca.SelectedItem != null && lstModelo.SelectedItem != null)
             {
-                if (rbNo.Checked)
+                if (cbescala.Checked)
                 {
                     string vueloSeleccionado = lstVuelo.SelectedItem.ToString();
                     string marcaSeleccionada = lstMarca.SelectedItem.ToString();
@@ -450,7 +450,7 @@ namespace Proyecto_p04
                     txtVueloSeleccionado.Text = $"{vueloSeleccionado}{",(Vuelo Directo)"} - {marcaSeleccionada} - {modeloSeleccionado}";
 
                 }
-                if (rbSi.Checked)
+                else
                 {
                     string vueloSeleccionado = lstVuelo.SelectedItem.ToString();
                     string marcaSeleccionada = lstMarca.SelectedItem.ToString();
@@ -494,7 +494,7 @@ namespace Proyecto_p04
 
                     //Codigo Guardar
                     conexionBD.conectarBD();
-                    string insertar = "INSERT INTO tbl_vuelos(Estado,Destino,Piloto,Aerolinea,HoraSalida,HoraLlegada,EstadoV) VALUES(@Estado,@Destino,@Piloto,@Aerolinea,@HoraSalida,@HoraLlegada,@EstadoV)";
+                    string insertar = "INSERT INTO tbl_vuelos(Estado,Destino,Piloto,Aerolinea,HoraSalida,HoraLlegada,EstadoV,Escala) VALUES(@Estado,@Destino,@Piloto,@Aerolinea,@HoraSalida,@HoraLlegada,@EstadoV,@Escala)";
                     SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
 
                     cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
@@ -504,6 +504,8 @@ namespace Proyecto_p04
                     cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
                     cmd.Parameters.AddWithValue("@HoraLlegada", txtLLegada.Text);
                     cmd.Parameters.AddWithValue("@EstadoV", cbEstadoV.SelectedItem);
+                    cmd.Parameters.AddWithValue("@Escala", txtescala.Text);
+
                     int resulta = cmd.ExecuteNonQuery();
                     if (resulta == 0)
                     {
@@ -535,6 +537,7 @@ namespace Proyecto_p04
             dataGridView2.DataSource = LLenar_grid2();
             dataGridView3.DataSource = LLenar_grid3();
             paises();
+            
 
 
         }
@@ -597,7 +600,7 @@ namespace Proyecto_p04
 
                     //Codigo Modificar
                     conexionBD.conectarBD();
-                    string actualizar = "UPDATE tbl_vuelos SET  Estado=@Estado,Destino=@Destino,Piloto=@Piloto,Aerolinea=@Aerolinea,HoraSalida=@HoraSalida,HoraLlegada=@HoraLlegada,EstadoV=@EstadoV WHERE Id=@Id";
+                    string actualizar = "UPDATE tbl_vuelos SET  Estado=@Estado,Destino=@Destino,Piloto=@Piloto,Aerolinea=@Aerolinea,HoraSalida=@HoraSalida,HoraLlegada=@HoraLlegada,EstadoV=@EstadoV,Escala=@Escala WHERE Id=@Id";
                     SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
 
                     cmd.Parameters.AddWithValue("@Id", txtId.Text);
@@ -608,9 +611,10 @@ namespace Proyecto_p04
                     cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
                     cmd.Parameters.AddWithValue("@HoraLlegada", txtLLegada.Text);
                     cmd.Parameters.AddWithValue("@EstadoV", cbEstadoV.SelectedItem);
+                    cmd.Parameters.AddWithValue("@Escala", txtescala.Text);
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Los datos fueron agregados de forma exitosa!!!");
+                    MessageBox.Show("Los datos fueron cambiados de forma exitosa!!!");
 
                     MessageBox.Show("Cambios aplicados exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dataGridView1.DataSource = LLenar_grid1();
@@ -701,6 +705,7 @@ namespace Proyecto_p04
             txtAerolinea.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             txtSalida.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             txtLLegada.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            txtescala.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
 
         }
 
@@ -719,18 +724,7 @@ namespace Proyecto_p04
             txtAerolinea.Text = dataGridView3.CurrentRow.Cells[3].Value.ToString();
         }
 
-        private void rbNo_CheckedChanged(object sender, EventArgs e)
-        {
-            cbPaises.Enabled = false;
-            cbPaises.SelectedItem = "No Escala";
-        }
-
-        private void rbSi_CheckedChanged(object sender, EventArgs e)
-        {
-            cbPaises.Enabled = true;
-            cbPaises.SelectedItem = "Seleccione Escala";
-
-        }
+        
 
         public void paises()
         {
@@ -750,6 +744,22 @@ namespace Proyecto_p04
             }
         }
 
+        private void cbescala_CheckedChanged(object sender, EventArgs e)
+        {
+
+           if(cbescala.Checked)
+            {
+                cbPaises.SelectedItem = "Seleccione Escala";
+                cbPaises.Enabled = true;
+                txtescala.Text = "1";
+            }
+            else
+            {
+                cbPaises.SelectedItem = "No Escala";
+                cbPaises.Enabled = false;
+                txtescala.Text = "0";
+            }
+        }
     }
 }
     

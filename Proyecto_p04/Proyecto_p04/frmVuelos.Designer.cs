@@ -70,9 +70,9 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbSi = new System.Windows.Forms.RadioButton();
-            this.rbNo = new System.Windows.Forms.RadioButton();
             this.cbPaises = new System.Windows.Forms.ComboBox();
+            this.cbescala = new System.Windows.Forms.CheckBox();
+            this.txtescala = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -502,40 +502,16 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtescala);
+            this.groupBox1.Controls.Add(this.cbescala);
             this.groupBox1.Controls.Add(this.cbPaises);
-            this.groupBox1.Controls.Add(this.rbNo);
-            this.groupBox1.Controls.Add(this.rbSi);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(171, 436);
+            this.groupBox1.Location = new System.Drawing.Point(36, 436);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(525, 58);
             this.groupBox1.TabIndex = 424;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "¿El vuelo posee escala?";
-            // 
-            // rbSi
-            // 
-            this.rbSi.AutoSize = true;
-            this.rbSi.Location = new System.Drawing.Point(6, 32);
-            this.rbSi.Name = "rbSi";
-            this.rbSi.Size = new System.Drawing.Size(87, 20);
-            this.rbSi.TabIndex = 0;
-            this.rbSi.TabStop = true;
-            this.rbSi.Text = "Si posee";
-            this.rbSi.UseVisualStyleBackColor = true;
-            this.rbSi.CheckedChanged += new System.EventHandler(this.rbSi_CheckedChanged);
-            // 
-            // rbNo
-            // 
-            this.rbNo.AutoSize = true;
-            this.rbNo.Location = new System.Drawing.Point(124, 32);
-            this.rbNo.Name = "rbNo";
-            this.rbNo.Size = new System.Drawing.Size(93, 20);
-            this.rbNo.TabIndex = 1;
-            this.rbNo.TabStop = true;
-            this.rbNo.Text = "No posee";
-            this.rbNo.UseVisualStyleBackColor = true;
-            this.rbNo.CheckedChanged += new System.EventHandler(this.rbNo_CheckedChanged);
             // 
             // cbPaises
             // 
@@ -545,10 +521,33 @@
             this.cbPaises.Items.AddRange(new object[] {
             "No Escala",
             "Seleccione Escala"});
-            this.cbPaises.Location = new System.Drawing.Point(223, 29);
+            this.cbPaises.Location = new System.Drawing.Point(38, 29);
             this.cbPaises.Name = "cbPaises";
             this.cbPaises.Size = new System.Drawing.Size(177, 23);
             this.cbPaises.TabIndex = 425;
+            // 
+            // cbescala
+            // 
+            this.cbescala.AutoSize = true;
+            this.cbescala.Checked = true;
+            this.cbescala.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbescala.Location = new System.Drawing.Point(17, 33);
+            this.cbescala.Name = "cbescala";
+            this.cbescala.Size = new System.Drawing.Size(15, 14);
+            this.cbescala.TabIndex = 425;
+            this.cbescala.UseVisualStyleBackColor = true;
+            this.cbescala.CheckedChanged += new System.EventHandler(this.cbescala_CheckedChanged);
+            // 
+            // txtescala
+            // 
+            this.txtescala.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtescala.Location = new System.Drawing.Point(234, 27);
+            this.txtescala.Multiline = true;
+            this.txtescala.Name = "txtescala";
+            this.txtescala.ReadOnly = true;
+            this.txtescala.Size = new System.Drawing.Size(75, 25);
+            this.txtescala.TabIndex = 425;
+            this.txtescala.Visible = false;
             // 
             // frmVuelos
             // 
@@ -659,8 +658,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rbNo;
-        private System.Windows.Forms.RadioButton rbSi;
         private System.Windows.Forms.ComboBox cbPaises;
+        private System.Windows.Forms.CheckBox cbescala;
+        private System.Windows.Forms.TextBox txtescala;
     }
 }
