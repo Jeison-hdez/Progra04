@@ -853,7 +853,7 @@ namespace Proyecto_p04
 
         private void btnVerVuelos_Click_1(object sender, EventArgs e)
         {
-            if (lstVuelo.SelectedItem != null && lstMarca.SelectedItem != null && lstModelo.SelectedItem != null)
+            if (lstVuelo.SelectedItem != null && lstMarca.SelectedItem != null && lstModelo.SelectedItem != null && cbPaises.SelectedItem != "Seleccione Escala")
             {
                 if (cbescala.Checked)
                 {
