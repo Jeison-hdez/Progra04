@@ -41,13 +41,16 @@
             this.chkPermisos = new System.Windows.Forms.CheckedListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.chkOpciones = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatos
             // 
             this.gbDatos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbDatos.Controls.Add(this.pictureBox1);
             this.gbDatos.Controls.Add(this.btnCrear);
             this.gbDatos.Controls.Add(this.cbNivel);
             this.gbDatos.Controls.Add(this.label2);
@@ -172,6 +175,16 @@
             this.chkOpciones.UseVisualStyleBackColor = true;
             this.chkOpciones.CheckedChanged += new System.EventHandler(this.chkOpciones_CheckedChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(493, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmPermisosUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,6 +204,7 @@
             this.Load += new System.EventHandler(this.frmPermisosUsuarios_Load);
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,5 +223,6 @@
         private System.Windows.Forms.CheckedListBox chkPermisos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox chkOpciones;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
