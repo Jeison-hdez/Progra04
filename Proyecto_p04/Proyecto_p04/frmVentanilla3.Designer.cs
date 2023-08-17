@@ -238,6 +238,9 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txtEstadoV = new System.Windows.Forms.TextBox();
             this.txtEscala = new System.Windows.Forms.TextBox();
+            this.txtEscalaC = new System.Windows.Forms.TextBox();
+            this.cbEscala = new System.Windows.Forms.CheckBox();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Panel_Asientos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -2247,7 +2250,7 @@
             // txtEscala
             // 
             this.txtEscala.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEscala.Location = new System.Drawing.Point(15, 718);
+            this.txtEscala.Location = new System.Drawing.Point(15, 751);
             this.txtEscala.MaxLength = 20;
             this.txtEscala.Multiline = true;
             this.txtEscala.Name = "txtEscala";
@@ -2256,12 +2259,47 @@
             this.txtEscala.TabIndex = 629;
             this.txtEscala.Visible = false;
             // 
+            // txtEscalaC
+            // 
+            this.txtEscalaC.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEscalaC.Location = new System.Drawing.Point(15, 786);
+            this.txtEscalaC.MaxLength = 20;
+            this.txtEscalaC.Multiline = true;
+            this.txtEscalaC.Name = "txtEscalaC";
+            this.txtEscalaC.ReadOnly = true;
+            this.txtEscalaC.Size = new System.Drawing.Size(70, 29);
+            this.txtEscalaC.TabIndex = 630;
+            this.txtEscalaC.Visible = false;
+            // 
+            // cbEscala
+            // 
+            this.cbEscala.AutoSize = true;
+            this.cbEscala.Location = new System.Drawing.Point(262, 735);
+            this.cbEscala.Name = "cbEscala";
+            this.cbEscala.Size = new System.Drawing.Size(15, 14);
+            this.cbEscala.TabIndex = 632;
+            this.cbEscala.UseVisualStyleBackColor = true;
+            this.cbEscala.CheckedChanged += new System.EventHandler(this.cbEscala_CheckedChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(186, 712);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(180, 18);
+            this.label16.TabIndex = 631;
+            this.label16.Text = "¿Se dirige a la Escala?";
+            // 
             // frmVentanilla3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1417, 835);
+            this.Controls.Add(this.cbEscala);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.txtEscalaC);
             this.Controls.Add(this.txtEscala);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label7);
@@ -2698,5 +2736,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtEstadoV;
         private System.Windows.Forms.TextBox txtEscala;
+        private System.Windows.Forms.TextBox txtEscalaC;
+        private System.Windows.Forms.CheckBox cbEscala;
+        private System.Windows.Forms.Label label16;
     }
 }
