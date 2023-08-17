@@ -1902,7 +1902,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1292, 111);
+            this.pictureBox4.Location = new System.Drawing.Point(1262, 111);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(34, 34);
             this.pictureBox4.TabIndex = 196;
@@ -1911,7 +1911,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(1197, 109);
+            this.btnLimpiar.Location = new System.Drawing.Point(1167, 109);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(89, 34);
             this.btnLimpiar.TabIndex = 195;
@@ -1922,7 +1922,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1292, 71);
+            this.pictureBox3.Location = new System.Drawing.Point(1262, 71);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 34);
             this.pictureBox3.TabIndex = 194;
@@ -1931,7 +1931,7 @@
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(1197, 69);
+            this.btnModificar.Location = new System.Drawing.Point(1167, 69);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(89, 34);
             this.btnModificar.TabIndex = 193;
@@ -1942,7 +1942,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1141, 109);
+            this.pictureBox2.Location = new System.Drawing.Point(1111, 109);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 34);
             this.pictureBox2.TabIndex = 192;
@@ -1951,7 +1951,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(1046, 109);
+            this.btnEliminar.Location = new System.Drawing.Point(1016, 109);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(89, 34);
             this.btnEliminar.TabIndex = 191;
@@ -1962,7 +1962,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(1141, 69);
+            this.pictureBox5.Location = new System.Drawing.Point(1111, 69);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(34, 34);
             this.pictureBox5.TabIndex = 190;
@@ -1971,7 +1971,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(1046, 69);
+            this.btnGuardar.Location = new System.Drawing.Point(1016, 69);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(89, 34);
             this.btnGuardar.TabIndex = 189;
