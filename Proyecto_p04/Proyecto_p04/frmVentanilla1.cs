@@ -1603,6 +1603,11 @@ namespace Proyecto_p04
             DateTime fecha = DateTime.Now;
             txtHoraFecha.Text = fecha.ToString();
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
