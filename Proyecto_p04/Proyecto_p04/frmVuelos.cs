@@ -952,7 +952,7 @@ namespace Proyecto_p04
             dataGridView2.DataSource = LLenar_grid2();
             dataGridView3.DataSource = LLenar_grid3();
             paises();
-            
+            cbPaises.SelectedItem = "Seleccione Escala";
 
 
         }
