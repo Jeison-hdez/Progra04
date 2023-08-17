@@ -237,6 +237,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.txtEstadoV = new System.Windows.Forms.TextBox();
+            this.txtEscala = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -2245,12 +2246,25 @@
             this.txtEstadoV.Size = new System.Drawing.Size(70, 29);
             this.txtEstadoV.TabIndex = 623;
             // 
+            // txtEscala
+            // 
+            this.txtEscala.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEscala.Location = new System.Drawing.Point(992, 689);
+            this.txtEscala.MaxLength = 20;
+            this.txtEscala.Multiline = true;
+            this.txtEscala.Name = "txtEscala";
+            this.txtEscala.ReadOnly = true;
+            this.txtEscala.Size = new System.Drawing.Size(70, 29);
+            this.txtEscala.TabIndex = 625;
+            this.txtEscala.Visible = false;
+            // 
             // frmVentanilla1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1402, 817);
+            this.Controls.Add(this.txtEscala);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txtEstadoV);
@@ -2686,5 +2700,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtEstadoV;
+        private System.Windows.Forms.TextBox txtEscala;
     }
 }
