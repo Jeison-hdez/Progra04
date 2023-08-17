@@ -542,7 +542,7 @@ namespace Proyecto_p04
                 lstModelo.Items.Add("F-22 Raptor");
                 lstModelo.Items.Add("C-130 Hércules");
 
-                string imageUrl = "https://w7.pngwing.com/pngs/706/600/png-transparent-airplane-fighter-aircraft-lockheed-p-3-orion-helicopter-air-force-airplane-fighter-aircraft-airplane-helicopter.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+                string imageUrl = "https://actualidadaeroespacial.com/wp-content/uploads/2021/08/SE-Aeronautics-presento-su-revolucionario-avion-SE-200-020821.png"; // Obtener el enlace de la imagen desde el cuadro de texto
 
                 try
                 {
@@ -570,7 +570,7 @@ namespace Proyecto_p04
                 lstModelo.Items.Add("MD-80");
                 lstModelo.Items.Add("F/A-18");
 
-                string imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/McDonnell_Douglas_DC-10.svg/1280px-McDonnell_Douglas_DC-10.svg.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+                string imageUrl = "https://www.pngkit.com/png/full/73-739497_avion-mcdonnell-douglas-dc-10.png"; // Obtener el enlace de la imagen desde el cuadro de texto
 
                 try
                 {
@@ -648,7 +648,7 @@ namespace Proyecto_p04
 
 
             }
-            if (lstMarca.SelectedItem == "Sujoi")
+            if (lstMarca.SelectedItem == "Sukhoi")
             {
                 lstModelo.Items.Clear();
 
@@ -767,7 +767,7 @@ namespace Proyecto_p04
 
                 lstModelo.Items.Add("SJ30");
 
-                string imageUrl = "https://w7.pngwing.com/pngs/969/875/png-transparent-bombardier-challenger-600-series-flight-aircraft-syberjet-sj30-air-travel-aircraft-mode-of-transport-flight-airplane.png"; // Obtener el enlace de la imagen desde el cuadro de texto
+                string imageUrl = "https://o.remove.bg/downloads/65ded647-2e31-444c-8803-514fd47f6c00/png-transparent-bombardier-challenger-600-series-flight-aircraft-syberjet-sj30-air-travel-aircraft-mode-of-transport-flight-airplane-removebg-preview.png "; // Obtener el enlace de la imagen desde el cuadro de texto
 
                 try
                 {
