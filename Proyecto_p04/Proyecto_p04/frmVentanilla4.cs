@@ -102,7 +102,7 @@ namespace Proyecto_p04
 
                             //Codigo Guardar
                             conexionBD.conectarBD();
-                            string insertar = "INSERT INTO tbl_ventanilla(Id,Nombre,Identificacion,HoraFecha,Usuario,Destino,Asiento,NumeroV,Boleto,Nacionalidad,NPasaporte,HoraEntrada,HoraSalida,EscalaV) VALUES(@Id,@Nombre,@Identificacion,@HoraFecha,@Usuario,@Destino,@Asiento,@NumeroV,@Boleto,@Nacionalidad,@NPasaporte,@HoraEntrada,@HoraSalida,@EscalaV)";
+                            string insertar = "INSERT INTO tbl_ventanilla(Id,Nombre,Identificacion,HoraFecha,Usuario,Destino,Asiento,NumeroV,Boleto,Nacionalidad,NPasaporte,HoraEntrada,HoraSalida,EscalaV,EscalaC) VALUES(@Id,@Nombre,@Identificacion,@HoraFecha,@Usuario,@Destino,@Asiento,@NumeroV,@Boleto,@Nacionalidad,@NPasaporte,@HoraEntrada,@HoraSalida,@EscalaV,@EscalaC)";
                             SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
                             cmd.Parameters.AddWithValue("@Id", txtId.Text);
                             cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
@@ -117,6 +117,7 @@ namespace Proyecto_p04
                             cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
                             cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
                             cmd.Parameters.AddWithValue("@EscalaV", txtEscala.Text);
+                            cmd.Parameters.AddWithValue("@EscalaC", txtEscalaC.Text);
 
                             cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
                             MessageBox.Show(control);
@@ -164,7 +165,7 @@ namespace Proyecto_p04
                         //Codigo Modificar
 
                         conexionBD.conectarBD();
-                        string actualizar = "UPDATE tbl_ventanilla SET Id=@Id,Nombre=@Nombre,Identificacion=@Identificacion,HoraFecha=@HoraFecha,Usuario=@Usuario,Destino=@Destino,NumeroV=@NumeroV,Asiento=@Asiento,Boleto=@Boleto,Nacionalidad=@Nacionalidad,NPasaporte=@NPasaporte,HoraEntrada=@HoraEntrada,HoraSalida=@HoraSalida,EscalaV=@EscalaV" +
+                        string actualizar = "UPDATE tbl_ventanilla SET Id=@Id,Nombre=@Nombre,Identificacion=@Identificacion,HoraFecha=@HoraFecha,Usuario=@Usuario,Destino=@Destino,NumeroV=@NumeroV,Asiento=@Asiento,Boleto=@Boleto,Nacionalidad=@Nacionalidad,NPasaporte=@NPasaporte,HoraEntrada=@HoraEntrada,HoraSalida=@HoraSalida,EscalaV=@EscalaV,EscalaC=@EscalaC" +
                         "WHERE Id=@Id";
                         SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
                         cmd.Parameters.AddWithValue("@Id", txtId.Text);
@@ -180,6 +181,7 @@ namespace Proyecto_p04
                         cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
                         cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
                         cmd.Parameters.AddWithValue("@EscalaV", txtEscala.Text);
+                        cmd.Parameters.AddWithValue("@EscalaC", txtEscalaC.Text);
 
                         cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
 
@@ -1530,6 +1532,8 @@ namespace Proyecto_p04
             txtNPasaporte.Text = dataGridView2.CurrentRow.Cells[10].Value.ToString();
             txtEntrada.Text = dataGridView2.CurrentRow.Cells[11].Value.ToString();
             txtSalida.Text = dataGridView2.CurrentRow.Cells[12].Value.ToString();
+            txtEscala.Text = dataGridView2.CurrentRow.Cells[13].Value.ToString();
+            txtEscalaC.Text = dataGridView2.CurrentRow.Cells[14].Value.ToString();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -1569,10 +1573,46 @@ namespace Proyecto_p04
                 }
             }
 
+
+            if (txtEscala.Text == "1")
+            {
+                cbEscala.Enabled = false;
+            }
+            else
+            {
+                cbEscala.Enabled = true;
+            }
+
+
+
             txtEstadoV.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
             txtEscala.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
         }
 
+        private void txtEscalaC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbEscala_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtEscala.Text == "1")
+            {
+
+                if (cbEscala.Checked)
+                {
+
+                    txtEscalaC.Text = "1";
+
+                }
+                else
+                {
+                    txtEscalaC.Text = "0";
+                }
+
+            }
+
+        }
     }
 }
 
