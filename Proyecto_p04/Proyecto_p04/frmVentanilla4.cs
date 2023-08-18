@@ -1578,11 +1578,14 @@ namespace Proyecto_p04
             {
                 cbEscala.Enabled = false;
             }
-            else
+            if (txtEscala.Text == "0")
             {
+                cbEscala.Checked = false;
+                txtEscalaC.Text = "0";
                 cbEscala.Enabled = true;
-            }
 
+
+            }
 
 
             txtEstadoV.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
@@ -1596,21 +1599,17 @@ namespace Proyecto_p04
 
         private void cbEscala_CheckedChanged(object sender, EventArgs e)
         {
-            if (txtEscala.Text == "1")
+            if (cbEscala.Checked)
             {
 
-                if (cbEscala.Checked)
-                {
-
-                    txtEscalaC.Text = "1";
-
-                }
-                else
-                {
-                    txtEscalaC.Text = "0";
-                }
+                txtEscalaC.Text = "1";
 
             }
+            else
+            {
+                txtEscalaC.Text = "0";
+            }
+
 
         }
     }

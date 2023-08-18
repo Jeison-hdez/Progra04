@@ -2271,6 +2271,7 @@
             this.txtEscalaC.ReadOnly = true;
             this.txtEscalaC.Size = new System.Drawing.Size(70, 29);
             this.txtEscalaC.TabIndex = 626;
+            this.txtEscalaC.Text = "1";
             this.txtEscalaC.Visible = false;
             // 
             // label16
@@ -2286,6 +2287,8 @@
             // cbEscala
             // 
             this.cbEscala.AutoSize = true;
+            this.cbEscala.Checked = true;
+            this.cbEscala.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbEscala.Location = new System.Drawing.Point(250, 716);
             this.cbEscala.Name = "cbEscala";
             this.cbEscala.Size = new System.Drawing.Size(15, 14);
