@@ -61,6 +61,7 @@
     <Compile Include="Clases\pilotosDAL.cs" />
     <Compile Include="Clases\reportesDAL.cs" />
     <Compile Include="Clases\ventanillasDAL.cs" />
+    <Compile Include="Clases\vuelosDAL.cs" />
     <Compile Include="frmAerolina.cs">
       <SubType>Form</SubType>
     </Compile>

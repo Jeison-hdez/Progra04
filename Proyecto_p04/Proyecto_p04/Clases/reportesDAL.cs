@@ -55,5 +55,25 @@ namespace Proyecto_p04.Clases
             da.Fill(dt);
             return dt;
         }
+
+        public static DataTable getVuelosCerrados()
+        {
+            DataTable dt = new DataTable();
+            string consultar = "SELECT * FROM tbl_vuelos where estadoV=0";
+            SqlCommand cmd = new SqlCommand(consultar, conexionBD.conectarBD());
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
+
+        public static DataTable getDatosVuelo(int id)
+        {
+            DataTable dt = new DataTable();
+            string consultar = "SELECT * FROM tbl_vuelos where id={0}";
+            SqlCommand cmd = new SqlCommand(string.Format(consultar,id), conexionBD.conectarBD());
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
     }
 }

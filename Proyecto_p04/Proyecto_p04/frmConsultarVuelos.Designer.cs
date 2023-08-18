@@ -2093,6 +2093,7 @@ namespace Proyecto_p04
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmConsultarVuelos";
             this.Text = "frmConsultarVuelos";
+            this.Load += new System.EventHandler(this.frmConsultarVuelos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Panel_Asientos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
