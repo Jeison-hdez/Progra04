@@ -119,7 +119,7 @@ namespace Proyecto_p04
                             cmd.Parameters.AddWithValue("@NPasaporte", txtNPasaporte.Text);
                             cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
                             cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
-                            cmd.Parameters.AddWithValue("@EscalaV", txtEscala.Text);
+                            //cmd.Parameters.AddWithValue("@EscalaV", txtEscala.Text);
 
                             cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
                             MessageBox.Show(control);
@@ -182,7 +182,7 @@ namespace Proyecto_p04
                         cmd.Parameters.AddWithValue("@NPasaporte", txtNPasaporte.Text);
                         cmd.Parameters.AddWithValue("@HoraEntrada", txtEntrada.Text);
                         cmd.Parameters.AddWithValue("@HoraSalida", txtSalida.Text);
-                        cmd.Parameters.AddWithValue("@EscalaV", txtEscala.Text);
+                        //cmd.Parameters.AddWithValue("@EscalaV", txtEscala.Text);
 
                         cmd.Parameters.AddWithValue("@Asiento", control.ToString()); //esta es la variable para los nombres de los chbt
 
@@ -1549,7 +1549,7 @@ namespace Proyecto_p04
             }
 
             txtEstadoV.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-            txtEscala.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+            //txtEscala.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
         }
 
 
