@@ -1597,23 +1597,20 @@ namespace Proyecto_p04
 
             if (txtEscala.Text == "1")
             {
-                cbEscala.Enabled = false;
+                cbEscala.Enabled = true;
             }
             if (txtEscala.Text == "0")
             {
                 cbEscala.Checked = false;
                 txtEscalaC.Text = "0";
-                cbEscala.Enabled = true;
+
 
 
             }
 
-
-
             txtEstadoV.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
             txtEscala.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
         }
-
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {

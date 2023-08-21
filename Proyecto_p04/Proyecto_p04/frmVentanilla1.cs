@@ -1619,13 +1619,13 @@ namespace Proyecto_p04
 
             if (txtEscala.Text == "1")
             {
-                cbEscala.Enabled = false;
+                cbEscala.Enabled = true;
             }
             if (txtEscala.Text == "0")
             {
                 cbEscala.Checked = false;
                 txtEscalaC.Text = "0";
-                cbEscala.Enabled = true;
+                
                 
                 
             }
@@ -1669,8 +1669,6 @@ namespace Proyecto_p04
         private void cbEscala_CheckedChanged(object sender, EventArgs e)
         {
 
-
-            
                 
                 if (cbEscala.Checked)
                 {
@@ -1684,16 +1682,6 @@ namespace Proyecto_p04
                 }
             
             
-
-
-
-            
-               
-                
-
-            
-            
-
         }
     }
 }

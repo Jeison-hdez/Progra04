@@ -2284,7 +2284,7 @@
             // txtEscalaC
             // 
             this.txtEscalaC.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEscalaC.Location = new System.Drawing.Point(21, 753);
+            this.txtEscalaC.Location = new System.Drawing.Point(221, 713);
             this.txtEscalaC.MaxLength = 20;
             this.txtEscalaC.Multiline = true;
             this.txtEscalaC.Name = "txtEscalaC";
@@ -2292,7 +2292,6 @@
             this.txtEscalaC.Size = new System.Drawing.Size(70, 29);
             this.txtEscalaC.TabIndex = 632;
             this.txtEscalaC.Text = "1";
-            this.txtEscalaC.Visible = false;
             // 
             // frmVentanilla4
             // 
