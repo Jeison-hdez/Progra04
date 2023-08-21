@@ -1243,7 +1243,7 @@ namespace Proyecto_p04
             // a20
             // 
             this.a20.AutoSize = true;
-            this.a20.Location = new System.Drawing.Point(517, 582);
+            this.a20.Location = new System.Drawing.Point(514, 582);
             this.a20.Name = "a20";
             this.a20.Size = new System.Drawing.Size(15, 14);
             this.a20.TabIndex = 259;
@@ -1328,7 +1328,7 @@ namespace Proyecto_p04
             // b20
             // 
             this.b20.AutoSize = true;
-            this.b20.Location = new System.Drawing.Point(517, 564);
+            this.b20.Location = new System.Drawing.Point(514, 564);
             this.b20.Name = "b20";
             this.b20.Size = new System.Drawing.Size(15, 14);
             this.b20.TabIndex = 250;
@@ -1413,7 +1413,7 @@ namespace Proyecto_p04
             // c20
             // 
             this.c20.AutoSize = true;
-            this.c20.Location = new System.Drawing.Point(517, 544);
+            this.c20.Location = new System.Drawing.Point(513, 544);
             this.c20.Name = "c20";
             this.c20.Size = new System.Drawing.Size(15, 14);
             this.c20.TabIndex = 241;
@@ -1753,7 +1753,7 @@ namespace Proyecto_p04
             // a3
             // 
             this.a3.AutoSize = true;
-            this.a3.Location = new System.Drawing.Point(270, 577);
+            this.a3.Location = new System.Drawing.Point(263, 577);
             this.a3.Name = "a3";
             this.a3.Size = new System.Drawing.Size(15, 14);
             this.a3.TabIndex = 205;
@@ -1771,7 +1771,7 @@ namespace Proyecto_p04
             // a1
             // 
             this.a1.AutoSize = true;
-            this.a1.Location = new System.Drawing.Point(215, 577);
+            this.a1.Location = new System.Drawing.Point(208, 577);
             this.a1.Name = "a1";
             this.a1.Size = new System.Drawing.Size(15, 14);
             this.a1.TabIndex = 203;
@@ -1789,7 +1789,7 @@ namespace Proyecto_p04
             // b3
             // 
             this.b3.AutoSize = true;
-            this.b3.Location = new System.Drawing.Point(270, 552);
+            this.b3.Location = new System.Drawing.Point(263, 552);
             this.b3.Name = "b3";
             this.b3.Size = new System.Drawing.Size(15, 14);
             this.b3.TabIndex = 201;
@@ -1807,7 +1807,7 @@ namespace Proyecto_p04
             // b1
             // 
             this.b1.AutoSize = true;
-            this.b1.Location = new System.Drawing.Point(215, 552);
+            this.b1.Location = new System.Drawing.Point(208, 552);
             this.b1.Name = "b1";
             this.b1.Size = new System.Drawing.Size(15, 14);
             this.b1.TabIndex = 199;
@@ -1825,7 +1825,7 @@ namespace Proyecto_p04
             // e3
             // 
             this.e3.AutoSize = true;
-            this.e3.Location = new System.Drawing.Point(270, 502);
+            this.e3.Location = new System.Drawing.Point(263, 502);
             this.e3.Name = "e3";
             this.e3.Size = new System.Drawing.Size(15, 14);
             this.e3.TabIndex = 197;
@@ -1843,7 +1843,7 @@ namespace Proyecto_p04
             // e1
             // 
             this.e1.AutoSize = true;
-            this.e1.Location = new System.Drawing.Point(215, 502);
+            this.e1.Location = new System.Drawing.Point(208, 502);
             this.e1.Name = "e1";
             this.e1.Size = new System.Drawing.Size(15, 14);
             this.e1.TabIndex = 195;
@@ -1861,7 +1861,7 @@ namespace Proyecto_p04
             // f3
             // 
             this.f3.AutoSize = true;
-            this.f3.Location = new System.Drawing.Point(270, 476);
+            this.f3.Location = new System.Drawing.Point(263, 476);
             this.f3.Name = "f3";
             this.f3.Size = new System.Drawing.Size(15, 14);
             this.f3.TabIndex = 193;
@@ -1870,7 +1870,7 @@ namespace Proyecto_p04
             // f2
             // 
             this.f2.AutoSize = true;
-            this.f2.Location = new System.Drawing.Point(236, 476);
+            this.f2.Location = new System.Drawing.Point(235, 476);
             this.f2.Name = "f2";
             this.f2.Size = new System.Drawing.Size(15, 14);
             this.f2.TabIndex = 192;
@@ -1881,7 +1881,7 @@ namespace Proyecto_p04
             this.f1.AutoSize = true;
             this.f1.BackColor = System.Drawing.Color.Transparent;
             this.f1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.f1.Location = new System.Drawing.Point(215, 476);
+            this.f1.Location = new System.Drawing.Point(208, 476);
             this.f1.Name = "f1";
             this.f1.Size = new System.Drawing.Size(15, 14);
             this.f1.TabIndex = 191;

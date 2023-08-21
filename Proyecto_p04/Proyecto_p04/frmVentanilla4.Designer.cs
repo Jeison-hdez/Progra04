@@ -2293,7 +2293,6 @@
             this.txtEscalaC.TabIndex = 632;
             this.txtEscalaC.Text = "1";
             this.txtEscalaC.Visible = false;
-            this.txtEscalaC.TextChanged += new System.EventHandler(this.txtEscalaC_TextChanged);
             // 
             // frmVentanilla4
             // 

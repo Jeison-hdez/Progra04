@@ -75,6 +75,50 @@ namespace Proyecto_p04
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataTable dt = new DataTable();
+            string vuelo;
+            txtVuelo.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            vuelo = txtVuelo.Text;
+            dt = Clases.ventanillasDAL.getAsientoV(vuelo);
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow item in dt.Rows)
+                {
+                    string descripcion = item["Asiento"].ToString();
+                    // Buscar el control checkbox por su nombre en el formulario
+                    CheckBox checkBox = this.Controls[descripcion] as CheckBox;
+
+                    // Verificar si se encontró el checkbox y luego seleccionarlo
+                    if (checkBox != null)
+                    {
+                        checkBox.Checked = true;
+                        checkBox.Enabled = false;
+                        checkBox.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        checkBox.Checked = false;
+                        checkBox.Enabled = true;
+
+                    }
+                }
+            }
+
+            if (txtEscala.Text == "1")
+            {
+                cbEscala.Enabled = false;
+            }
+            if (txtEscala.Text == "0")
+            {
+                cbEscala.Checked = false;
+                txtEscalaC.Text = "0";
+                cbEscala.Enabled = true;
+
+
+            }
+
+            txtEstadoV.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            txtEscala.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
             txtVuelo.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
         }
 
