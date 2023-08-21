@@ -62,6 +62,8 @@ namespace Proyecto_p04
             this.btnVentanilla1 = new System.Windows.Forms.Button();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnConsultaVuelo = new System.Windows.Forms.Button();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.pnlTitutlo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
@@ -82,7 +84,7 @@ namespace Proyecto_p04
             this.pnlTitutlo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitutlo.Location = new System.Drawing.Point(0, 0);
             this.pnlTitutlo.Name = "pnlTitutlo";
-            this.pnlTitutlo.Size = new System.Drawing.Size(1300, 48);
+            this.pnlTitutlo.Size = new System.Drawing.Size(1300, 31);
             this.pnlTitutlo.TabIndex = 0;
             this.pnlTitutlo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitutlo_MouseDown);
             this.pnlTitutlo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTitutlo_MouseMove);
@@ -91,7 +93,7 @@ namespace Proyecto_p04
             // 
             this.pbRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("pbRestaurar.Image")));
-            this.pbRestaurar.Location = new System.Drawing.Point(1246, 12);
+            this.pbRestaurar.Location = new System.Drawing.Point(1246, 6);
             this.pbRestaurar.Name = "pbRestaurar";
             this.pbRestaurar.Size = new System.Drawing.Size(18, 19);
             this.pbRestaurar.TabIndex = 3;
@@ -102,7 +104,7 @@ namespace Proyecto_p04
             // 
             this.pbMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pbMinimizar.Image")));
-            this.pbMinimizar.Location = new System.Drawing.Point(1222, 12);
+            this.pbMinimizar.Location = new System.Drawing.Point(1222, 6);
             this.pbMinimizar.Name = "pbMinimizar";
             this.pbMinimizar.Size = new System.Drawing.Size(18, 19);
             this.pbMinimizar.TabIndex = 2;
@@ -113,7 +115,7 @@ namespace Proyecto_p04
             // 
             this.pbMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("pbMaximizar.Image")));
-            this.pbMaximizar.Location = new System.Drawing.Point(1246, 12);
+            this.pbMaximizar.Location = new System.Drawing.Point(1246, 6);
             this.pbMaximizar.Name = "pbMaximizar";
             this.pbMaximizar.Size = new System.Drawing.Size(18, 19);
             this.pbMaximizar.TabIndex = 1;
@@ -125,7 +127,7 @@ namespace Proyecto_p04
             // 
             this.pbCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbCerrar.Image")));
-            this.pbCerrar.Location = new System.Drawing.Point(1270, 12);
+            this.pbCerrar.Location = new System.Drawing.Point(1270, 6);
             this.pbCerrar.Name = "pbCerrar";
             this.pbCerrar.Size = new System.Drawing.Size(18, 19);
             this.pbCerrar.TabIndex = 0;
@@ -135,6 +137,8 @@ namespace Proyecto_p04
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(153)))), ((int)(((byte)(165)))));
+            this.pnlMenu.Controls.Add(this.panel14);
+            this.pnlMenu.Controls.Add(this.btnConsultaVuelo);
             this.pnlMenu.Controls.Add(this.panel13);
             this.pnlMenu.Controls.Add(this.btnSesion);
             this.pnlMenu.Controls.Add(this.panel12);
@@ -160,16 +164,16 @@ namespace Proyecto_p04
             this.pnlMenu.Controls.Add(this.panel1);
             this.pnlMenu.Controls.Add(this.btnVentanilla1);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlMenu.Location = new System.Drawing.Point(0, 48);
+            this.pnlMenu.Location = new System.Drawing.Point(0, 31);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(164, 602);
+            this.pnlMenu.Size = new System.Drawing.Size(164, 619);
             this.pnlMenu.TabIndex = 1;
             // 
             // panel13
             // 
             this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
-            this.panel13.Location = new System.Drawing.Point(0, 570);
+            this.panel13.Location = new System.Drawing.Point(0, 587);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(8, 32);
             this.panel13.TabIndex = 12;
@@ -185,7 +189,7 @@ namespace Proyecto_p04
             this.btnSesion.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnSesion.Image")));
             this.btnSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSesion.Location = new System.Drawing.Point(10, 570);
+            this.btnSesion.Location = new System.Drawing.Point(10, 587);
             this.btnSesion.Name = "btnSesion";
             this.btnSesion.Size = new System.Drawing.Size(155, 32);
             this.btnSesion.TabIndex = 19;
@@ -454,21 +458,46 @@ namespace Proyecto_p04
             this.pnlContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlContainer.Controls.Add(this.pictureBox1);
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(164, 48);
+            this.pnlContainer.Location = new System.Drawing.Point(164, 31);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(1136, 602);
+            this.pnlContainer.Size = new System.Drawing.Size(1136, 619);
             this.pnlContainer.TabIndex = 2;
             this.pnlContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContainer_Paint);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1493, 886);
+            this.pictureBox1.Size = new System.Drawing.Size(1134, 617);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnConsultaVuelo
+            // 
+            this.btnConsultaVuelo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultaVuelo.FlatAppearance.BorderSize = 0;
+            this.btnConsultaVuelo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.btnConsultaVuelo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultaVuelo.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultaVuelo.Location = new System.Drawing.Point(9, 403);
+            this.btnConsultaVuelo.Name = "btnConsultaVuelo";
+            this.btnConsultaVuelo.Size = new System.Drawing.Size(226, 32);
+            this.btnConsultaVuelo.TabIndex = 20;
+            this.btnConsultaVuelo.Text = "   Consultar Vuelo";
+            this.btnConsultaVuelo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultaVuelo.UseVisualStyleBackColor = true;
+            this.btnConsultaVuelo.Click += new System.EventHandler(this.btnConsultaVuelo_Click);
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(76)))), ((int)(((byte)(97)))));
+            this.panel14.Location = new System.Drawing.Point(0, 403);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(8, 32);
+            this.panel14.TabIndex = 12;
             // 
             // frmPrincipal
             // 
@@ -531,5 +560,7 @@ namespace Proyecto_p04
         private System.Windows.Forms.Button btnSesion;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Button btnConsultaVuelo;
     }
 }

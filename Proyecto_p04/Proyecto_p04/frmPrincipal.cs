@@ -294,5 +294,10 @@ namespace Proyecto_p04
 
             }
         }
+
+        private void btnConsultaVuelo_Click(object sender, EventArgs e)
+        {
+            AbrirFormdentroForm(new frmConsultarVuelos());
+        }
     }
 }
