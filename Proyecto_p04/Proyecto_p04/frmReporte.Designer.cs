@@ -111,7 +111,7 @@ namespace Proyecto_p04
             this.cbVuelosNombres.FormattingEnabled = true;
             this.cbVuelosNombres.Location = new System.Drawing.Point(672, 58);
             this.cbVuelosNombres.Name = "cbVuelosNombres";
-            this.cbVuelosNombres.Size = new System.Drawing.Size(206, 21);
+            this.cbVuelosNombres.Size = new System.Drawing.Size(235, 21);
             this.cbVuelosNombres.TabIndex = 16;
             this.cbVuelosNombres.Visible = false;
             // 
