@@ -431,6 +431,7 @@
             this.cbescala.Size = new System.Drawing.Size(15, 14);
             this.cbescala.TabIndex = 425;
             this.cbescala.UseVisualStyleBackColor = true;
+            this.cbescala.CheckedChanged += new System.EventHandler(this.cbescala_CheckedChanged_1);
             // 
             // cbPaises
             // 
@@ -438,7 +439,7 @@
             this.cbPaises.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPaises.FormattingEnabled = true;
             this.cbPaises.Items.AddRange(new object[] {
-            "No Escala",
+            "Vuelo Directo",
             "Seleccione Escala"});
             this.cbPaises.Location = new System.Drawing.Point(38, 29);
             this.cbPaises.Name = "cbPaises";
@@ -484,6 +485,7 @@
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.Size = new System.Drawing.Size(422, 150);
             this.dataGridView3.TabIndex = 433;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // label8
             // 
@@ -524,6 +526,7 @@
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(422, 150);
             this.dataGridView2.TabIndex = 429;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick_1);
             // 
             // txtVueloSeleccionado
             // 
@@ -532,7 +535,7 @@
             this.txtVueloSeleccionado.Multiline = true;
             this.txtVueloSeleccionado.Name = "txtVueloSeleccionado";
             this.txtVueloSeleccionado.ReadOnly = true;
-            this.txtVueloSeleccionado.Size = new System.Drawing.Size(525, 35);
+            this.txtVueloSeleccionado.Size = new System.Drawing.Size(393, 35);
             this.txtVueloSeleccionado.TabIndex = 428;
             // 
             // pictureBox1
@@ -554,6 +557,7 @@
             this.btnSeleccionar.TabIndex = 426;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // frmVuelos
             // 

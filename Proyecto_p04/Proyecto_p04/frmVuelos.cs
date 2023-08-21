@@ -853,33 +853,7 @@ namespace Proyecto_p04
 
         private void btnVerVuelos_Click_1(object sender, EventArgs e)
         {
-            if (lstVuelo.SelectedItem != null && lstMarca.SelectedItem != null && lstModelo.SelectedItem != null && cbPaises.SelectedItem != "Seleccione Escala")
-            {
-                if (cbescala.Checked)
-                {
-                    string vueloSeleccionado = lstVuelo.SelectedItem.ToString();
-                    string marcaSeleccionada = lstMarca.SelectedItem.ToString();
-                    string modeloSeleccionado = lstModelo.SelectedItem.ToString();
-                    string Escala = cbPaises.SelectedItem.ToString();
-
-                    txtVueloSeleccionado.Text = $"{vueloSeleccionado}{",(Escala: " + Escala + ")"} - {marcaSeleccionada} - {modeloSeleccionado}";
-
-                }
-                else
-                {
-                    string vueloSeleccionado = lstVuelo.SelectedItem.ToString();
-                    string marcaSeleccionada = lstMarca.SelectedItem.ToString();
-                    string modeloSeleccionado = lstModelo.SelectedItem.ToString();
-                    string Escala = cbPaises.SelectedItem.ToString();
-                    txtVueloSeleccionado.Text = $"{vueloSeleccionado}{",(Vuelo Directo)"} - {marcaSeleccionada} - {modeloSeleccionado}";
-
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("Por favor, selecciona un vuelo, una marca y un modelo antes de hacer clic en 'Seleccionar'.");
-            }
+            
         }
 
         private void lstModelo_SelectedIndexChanged(object sender, EventArgs e)
@@ -909,7 +883,7 @@ namespace Proyecto_p04
 
                     //Codigo Guardar
                     conexionBD.conectarBD();
-                    string insertar = "INSERT INTO tbl_vuelos(Estado,Destino,Piloto,Aerolinea,HoraSalida,HoraLlegada,EstadoV,Escala) VALUES(@Estado,@Destino,@Piloto,@Aerolinea,@HoraSalida,@HoraLlegada,@EstadoV,@Escala)";
+                    string insertar = "INSERT INTO tbl_vuelos(Estado,Destino,Piloto,Aerolinea,HoraSalida,HoraLlegada,EstadoV,Escala,DestinoEscala) VALUES(@Estado,@Destino,@Piloto,@Aerolinea,@HoraSalida,@HoraLlegada,@EstadoV,@Escala,@DestinoEscala)";
                     SqlCommand cmd = new SqlCommand(insertar, conexionBD.conectarBD());
 
                     cmd.Parameters.AddWithValue("@Estado", txtEstado.Text);
@@ -920,6 +894,7 @@ namespace Proyecto_p04
                     cmd.Parameters.AddWithValue("@HoraLlegada", txtLLegada.Text);
                     cmd.Parameters.AddWithValue("@EstadoV", cbEstadoV.SelectedItem);
                     cmd.Parameters.AddWithValue("@Escala", txtescala.Text);
+                    cmd.Parameters.AddWithValue("@DestinoEscala", cbPaises.SelectedItem);
 
                     int resulta = cmd.ExecuteNonQuery();
                     if (resulta == 0)
@@ -1015,7 +990,7 @@ namespace Proyecto_p04
 
                     //Codigo Modificar
                     conexionBD.conectarBD();
-                    string actualizar = "UPDATE tbl_vuelos SET  Estado=@Estado,Destino=@Destino,Piloto=@Piloto,Aerolinea=@Aerolinea,HoraSalida=@HoraSalida,HoraLlegada=@HoraLlegada,EstadoV=@EstadoV,Escala=@Escala WHERE Id=@Id";
+                    string actualizar = "UPDATE tbl_vuelos SET  Estado=@Estado,Destino=@Destino,Piloto=@Piloto,Aerolinea=@Aerolinea,HoraSalida=@HoraSalida,HoraLlegada=@HoraLlegada,EstadoV=@EstadoV,Escala=@Escala,DestinoEscala=@DestinoEscala WHERE Id=@Id";
                     SqlCommand cmd = new SqlCommand(actualizar, conexionBD.conectarBD());
 
                     cmd.Parameters.AddWithValue("@Id", txtId.Text);
@@ -1027,6 +1002,7 @@ namespace Proyecto_p04
                     cmd.Parameters.AddWithValue("@HoraLlegada", txtLLegada.Text);
                     cmd.Parameters.AddWithValue("@EstadoV", cbEstadoV.SelectedItem);
                     cmd.Parameters.AddWithValue("@Escala", txtescala.Text);
+                    cmd.Parameters.AddWithValue("@DestinoEscala", cbPaises.SelectedItem);
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Los datos fueron cambiados de forma exitosa!!!");
@@ -1121,23 +1097,11 @@ namespace Proyecto_p04
             txtSalida.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             txtLLegada.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
             txtescala.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            cbPaises.SelectedItem = dataGridView1.CurrentRow.Cells[8].Value.ToString();
 
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtpiloto.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
-        }
-
-        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtAerolinea.Text = dataGridView3.CurrentRow.Cells[3].Value.ToString();
-        }
+        
 
         
 
@@ -1162,7 +1126,12 @@ namespace Proyecto_p04
         private void cbescala_CheckedChanged(object sender, EventArgs e)
         {
 
-           if(cbescala.Checked)
+           
+        }
+
+        private void cbescala_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (cbescala.Checked)
             {
                 cbPaises.SelectedItem = "Seleccione Escala";
                 cbPaises.Enabled = true;
@@ -1170,10 +1139,51 @@ namespace Proyecto_p04
             }
             else
             {
-                cbPaises.SelectedItem = "No Escala";
+                cbPaises.SelectedItem = "Vuelo Directo";
                 cbPaises.Enabled = false;
                 txtescala.Text = "0";
             }
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            if (lstVuelo.SelectedItem != null && lstMarca.SelectedItem != null && lstModelo.SelectedItem != null)
+            {
+                if (cbescala.Checked)
+                {
+                    string vueloSeleccionado = lstVuelo.SelectedItem.ToString();
+                    string marcaSeleccionada = lstMarca.SelectedItem.ToString();
+                    string modeloSeleccionado = lstModelo.SelectedItem.ToString();
+                    string Escala = cbPaises.SelectedItem.ToString();
+
+                    txtVueloSeleccionado.Text = $"{vueloSeleccionado}{",(Escala: " + Escala + ")"} - {marcaSeleccionada} - {modeloSeleccionado}";
+
+                }
+                else
+                {
+                    string vueloSeleccionado = lstVuelo.SelectedItem.ToString();
+                    string marcaSeleccionada = lstMarca.SelectedItem.ToString();
+                    string modeloSeleccionado = lstModelo.SelectedItem.ToString();
+                    string Escala = cbPaises.SelectedItem.ToString();
+                    txtVueloSeleccionado.Text = $"{vueloSeleccionado}{",(Vuelo Directo)"} - {marcaSeleccionada} - {modeloSeleccionado}";
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecciona un vuelo, una marca y un modelo antes de hacer clic en 'Seleccionar'.");
+            }
+        }
+
+        private void dataGridView2_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtpiloto.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtAerolinea.Text = dataGridView3.CurrentRow.Cells[3].Value.ToString();
         }
     }
 }
