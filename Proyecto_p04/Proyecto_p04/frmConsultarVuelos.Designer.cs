@@ -211,7 +211,12 @@ namespace Proyecto_p04
             this.f1 = new System.Windows.Forms.CheckBox();
             this.Panel_Asientos = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Panel_Asientos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -229,14 +234,15 @@ namespace Proyecto_p04
             this.cbVuelo.FormattingEnabled = true;
             this.cbVuelo.Location = new System.Drawing.Point(77, 28);
             this.cbVuelo.Name = "cbVuelo";
-            this.cbVuelo.Size = new System.Drawing.Size(330, 21);
+            this.cbVuelo.Size = new System.Drawing.Size(414, 21);
             this.cbVuelo.TabIndex = 1;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(413, 26);
+            this.btnBuscar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(497, 21);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(75, 33);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -313,7 +319,7 @@ namespace Proyecto_p04
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(705, 26);
+            this.progressBar1.Location = new System.Drawing.Point(337, 197);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(326, 23);
             this.progressBar1.TabIndex = 7;
@@ -1905,12 +1911,44 @@ namespace Proyecto_p04
             this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 189;
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(631, 21);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 33);
+            this.btnLimpiar.TabIndex = 357;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(574, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(44, 38);
+            this.pictureBox1.TabIndex = 358;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(712, 21);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 33);
+            this.pictureBox2.TabIndex = 359;
+            this.pictureBox2.TabStop = false;
+            // 
             // frmConsultarVuelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1058, 684);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.a38);
             this.Controls.Add(this.a37);
             this.Controls.Add(this.a36);
@@ -2095,6 +2133,8 @@ namespace Proyecto_p04
             this.Text = "frmConsultarVuelos";
             this.Load += new System.EventHandler(this.frmConsultarVuelos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Panel_Asientos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2282,5 +2322,8 @@ namespace Proyecto_p04
         private System.Windows.Forms.CheckBox f1;
         private System.Windows.Forms.PictureBox Panel_Asientos;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
