@@ -78,6 +78,7 @@ namespace Proyecto_p04
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             DataTable dt = new DataTable();
             string vuelo;
             txtVuelo.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
@@ -107,6 +108,8 @@ namespace Proyecto_p04
                 }
             }
 
+
+
             if (txtEscala.Text == "1")
             {
                 cbEscala.Enabled = false;
@@ -117,11 +120,13 @@ namespace Proyecto_p04
                 txtEscalaC.Text = "0";
                 cbEscala.Enabled = true;
 
-
             }
 
             txtEstadoV.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
             txtEscala.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+
+
+            Cursor.Current = Cursors.Default;
         }
 
         
