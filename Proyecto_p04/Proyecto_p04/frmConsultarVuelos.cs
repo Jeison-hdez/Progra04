@@ -21,14 +21,19 @@ namespace Proyecto_p04
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
+            int escala = 0;
             int destino = Convert.ToInt32(cbVuelo.SelectedValue);
             dt = Clases.reportesDAL.getDatosVuelo(destino);
             if (dt.Rows.Count > 0) 
             {
                 foreach (DataRow row in dt.Rows)
                 {
-                    int escala = 0;
-                    string nombre_escala = "";
+                    escala = Convert.ToInt32(row["Escala"].ToString());
+                    string nombre_escala = row["destinoEscala"].ToString();
+                }
+                if (escala > 0) 
+                {
+                
                 }
                 valorX = 12;
                 pnlAvion.Location = new Point(45, 165);
