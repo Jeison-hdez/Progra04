@@ -75,5 +75,15 @@ namespace Proyecto_p04.Clases
             da.Fill(dt);
             return dt;
         }
+
+        public static DataTable getDatosVueloEscala(int id)
+        {
+            DataTable dt = new DataTable();
+            string consultar = "select * from tbl_ventanilla where Destino = '{0}' and EscalaC=1";
+            SqlCommand cmd = new SqlCommand(string.Format(consultar, id), conexionBD.conectarBD());
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
     }
 }
