@@ -100,7 +100,7 @@ namespace Proyecto_p04
             this.gbDatos.Controls.Add(this.label1);
             this.gbDatos.Location = new System.Drawing.Point(12, 12);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(913, 106);
+            this.gbDatos.Size = new System.Drawing.Size(1017, 106);
             this.gbDatos.TabIndex = 3;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos:";
@@ -111,7 +111,7 @@ namespace Proyecto_p04
             this.cbVuelosNombres.FormattingEnabled = true;
             this.cbVuelosNombres.Location = new System.Drawing.Point(672, 58);
             this.cbVuelosNombres.Name = "cbVuelosNombres";
-            this.cbVuelosNombres.Size = new System.Drawing.Size(235, 21);
+            this.cbVuelosNombres.Size = new System.Drawing.Size(339, 21);
             this.cbVuelosNombres.TabIndex = 16;
             this.cbVuelosNombres.Visible = false;
             // 
@@ -254,7 +254,7 @@ namespace Proyecto_p04
             this.dataGridView1.Location = new System.Drawing.Point(12, 124);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(913, 314);
+            this.dataGridView1.Size = new System.Drawing.Size(1017, 314);
             this.dataGridView1.TabIndex = 4;
             // 
             // frmReporte
@@ -262,7 +262,7 @@ namespace Proyecto_p04
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(937, 450);
+            this.ClientSize = new System.Drawing.Size(1041, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gbDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

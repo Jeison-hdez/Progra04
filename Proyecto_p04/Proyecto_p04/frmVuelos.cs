@@ -767,7 +767,7 @@ namespace Proyecto_p04
 
                 lstModelo.Items.Add("SJ30");
 
-                string imageUrl = "https://o.remove.bg/downloads/65ded647-2e31-444c-8803-514fd47f6c00/png-transparent-bombardier-challenger-600-series-flight-aircraft-syberjet-sj30-air-travel-aircraft-mode-of-transport-flight-airplane-removebg-preview.png "; // Obtener el enlace de la imagen desde el cuadro de texto
+                string imageUrl = "https://i.pinimg.com/originals/bd/d0/f2/bdd0f242457806d4f24adb5c3ed6a9ff.png"; // Obtener el enlace de la imagen desde el cuadro de texto
 
                 try
                 {

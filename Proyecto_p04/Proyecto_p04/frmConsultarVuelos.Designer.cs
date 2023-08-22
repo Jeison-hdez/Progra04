@@ -229,12 +229,12 @@ namespace Proyecto_p04
             this.cbVuelo.FormattingEnabled = true;
             this.cbVuelo.Location = new System.Drawing.Point(77, 28);
             this.cbVuelo.Name = "cbVuelo";
-            this.cbVuelo.Size = new System.Drawing.Size(239, 21);
+            this.cbVuelo.Size = new System.Drawing.Size(330, 21);
             this.cbVuelo.TabIndex = 1;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(322, 27);
+            this.btnBuscar.Location = new System.Drawing.Point(413, 26);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 2;
